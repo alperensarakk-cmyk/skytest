@@ -1,0 +1,73 @@
+# Codemagic — Flutter iOS → App Store Connect
+#
+# Önkoşullar:
+# - Team settings → Integrations → Developer Portal: App Store Connect API key (.p8, Issuer ID, Key ID).
+#   Aşağıdaki `app_store_connect` adı, bu entegrasyonda verdiğiniz key adıyla birebir aynı olmalı.
+# - Code signing identities: App Store dağıtım sertifikası + bu bundle için provisioning profile
+#   (yükleme veya API key ile fetch/generate).
+# - Xcode `PRODUCT_BUNDLE_IDENTIFIER` = com.skytest.skytest_app (App Store kaydıyla aynı olmalı).
+# - İsteğe bağlı: App → Environment variables → APP_STORE_APPLE_ID (ASC’deki sayısal uygulama ID’si)
+#   tanımlarsanız build-number bir önceki mağaza sürümüne göre otomatik artar.
+# - `ios/Podfile` yoksa: `flutter pub get` sonrası `cd ios && pod install` için önce standart Podfile gerekir.
+
+workflows:
+  ios-app-store:
+    name: iOS App Store Release
+    max_build_duration: 120
+    instance_type: mac_mini_m2
+
+    integrations:
+      # Codemagic’te oluşturduğunuz App Store Connect API key’inin adı (ör. "Skytest ASC").
+      app_store_connect: Skytest ASC
+
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: com.skytest.skytest_app
+
+      flutter: stable
+      xcode: latest
+      cocoapods: default
+
+      vars:
+        BUNDLE_ID: com.skytest.skytest_app
+
+    scripts:
+      - name: Set up code signing settings on Xcode project
+        script: |
+          xcode-project use-profiles
+
+      - name: Get Flutter packages
+        script: |
+          flutter pub get
+
+      - name: Install CocoaPods dependencies
+        script: |
+          find . -name "Podfile" -execdir pod install \;
+
+      - name: Flutter build ipa
+        script: |
+          set -e
+          if [ -n "${APP_STORE_APPLE_ID:-}" ]; then
+            BN=$(($(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID") + 1))
+            flutter build ipa --release \
+              --build-number="$BN" \
+              --export-options-plist=/Users/builder/export_options.plist
+          else
+            flutter build ipa --release \
+              --export-options-plist=/Users/builder/export_options.plist
+          fi
+
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+
+    publishing:
+      app_store_connect:
+        auth: integration
+        # IPA yüklenir; TestFlight beta incelemesine gönderir (isteğe bağlı gruplar aşağıda).
+        submit_to_testflight: true
+        # beta_groups:
+        #   - Internal Testers
+        # App Store incelemesine otomatik göndermek için true yapın (metadata hazırsa).
+        submit_to_app_store: false

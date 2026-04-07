@@ -1,0 +1,6 @@
+# Copy to key.properties and fill in passwords (key.properties is gitignored).
+storePassword=YOUR_STORE_PASSWORD
+keyPassword=YOUR_KEY_PASSWORD
+keyAlias=skytest
+# Path relative to android/app/
+storeFile=skytest.jks

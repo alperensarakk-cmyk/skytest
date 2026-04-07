@@ -1,0 +1,66 @@
+{
+  "10": {
+    "Yapi": 2,
+    "Ceviri": 3,
+    "Kelime": 1,
+    "Okuma": 2,
+    "Cumle_Tamamlama": 1,
+    "Bosluk_Doldurma": 1
+  },
+  "20": {
+    "Yapi": 6,
+    "Ceviri": 6,
+    "Kelime": 2,
+    "Okuma": 4,
+    "Cumle_Tamamlama": 1,
+    "Bosluk_Doldurma": 1
+  },
+  "30": {
+    "Yapi": 10,
+    "Ceviri": 8,
+    "Kelime": 3,
+    "Okuma": 6,
+    "Cumle_Tamamlama": 2,
+    "Bosluk_Doldurma": 1
+  },
+  "40": {
+    "Yapi": 14,
+    "Ceviri": 11,
+    "Kelime": 4,
+    "Okuma": 8,
+    "Cumle_Tamamlama": 2,
+    "Bosluk_Doldurma": 1
+  },
+  "50": {
+    "Yapi": 17,
+    "Ceviri": 14,
+    "Kelime": 5,
+    "Okuma": 10,
+    "Cumle_Tamamlama": 2,
+    "Bosluk_Doldurma": 2
+  },
+  "60": {
+    "Yapi": 20,
+    "Ceviri": 17,
+    "Kelime": 6,
+    "Okuma": 12,
+    "Cumle_Tamamlama": 3,
+    "Bosluk_Doldurma": 2
+  },
+  "70": {
+    "Yapi": 23,
+    "Ceviri": 20,
+    "Kelime": 7,
+    "Okuma": 14,
+    "Cumle_Tamamlama": 4,
+    "Bosluk_Doldurma": 2
+  },
+  "80": {
+    "Yapi": 28,
+    "Ceviri": 22,
+    "Kelime": 8,
+    "Okuma": 16,
+    "Cumle_Tamamlama": 4,
+    "Bosluk_Doldurma": 2
+  }
+}
