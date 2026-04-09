@@ -5,7 +5,7 @@
 #   Aşağıdaki `app_store_connect` adı, bu entegrasyonda verdiğiniz key adıyla birebir aynı olmalı.
 # - Code signing identities: App Store dağıtım sertifikası + bu bundle için provisioning profile
 #   (yükleme veya API key ile fetch/generate).
-# - Xcode `PRODUCT_BUNDLE_IDENTIFIER` = com.skytest.skytest_app (App Store kaydıyla aynı olmalı).
+# - Xcode `PRODUCT_BUNDLE_IDENTIFIER` = com.aerotest.app (App Store kaydıyla aynı olmalı).
 # - İsteğe bağlı: App → Environment variables → APP_STORE_APPLE_ID (ASC’deki sayısal uygulama ID’si)
 #   tanımlarsanız build-number bir önceki mağaza sürümüne göre otomatik artar.
 # - `ios/Podfile` yoksa: `flutter pub get` sonrası `cd ios && pod install` için önce standart Podfile gerekir.
@@ -17,20 +17,20 @@ workflows:
     instance_type: mac_mini_m2
 
     integrations:
-      # Codemagic’te oluşturduğunuz App Store Connect API key’inin adı (ör. "Skytest ASC").
-      app_store_connect: Skytest ASC
+      # Codemagic’te oluşturduğunuz App Store Connect API key’inin adı (ör. "AeroTest ASC").
+      app_store_connect: AeroTest ASC
 
     environment:
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.skytest.skytest_app
+        bundle_identifier: com.aerotest.app
 
       flutter: stable
       xcode: latest
       cocoapods: default
 
       vars:
-        BUNDLE_ID: com.skytest.skytest_app
+        BUNDLE_ID: com.aerotest.app
 
     scripts:
       - name: Set up code signing settings on Xcode project
