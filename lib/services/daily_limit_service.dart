@@ -6,10 +6,12 @@ import 'premium_service.dart';
 class DailyLimitService {
   DailyLimitService._();
 
-  static const int freeExamQuestionsPerDay = 10;
-  static const int freeKonuPerDay          = 5;
-  static const int freeKaliplarCardsPerDay = 5;
-  static const int freeKelimePerDay        = 10;
+  static const int freeDailyLimit = 10;
+
+  static const int freeExamQuestionsPerDay = freeDailyLimit;
+  static const int freeKonuPerDay          = freeDailyLimit;
+  static const int freeKaliplarCardsPerDay = freeDailyLimit;
+  static const int freeKelimePerDay        = freeDailyLimit;
 
   static const _kDate       = 'daily_limit_date_yyyy_mm_dd';
   static const _kExamQ      = 'daily_limit_exam_questions';
@@ -83,7 +85,7 @@ class DailyLimitService {
     await prefs.setInt(_kKonuQ, cur + 1);
   }
 
-  /// Ücretsiz: en fazla [freeKaliplarCardsPerDay] kart (indeks 0..4).
+  /// Ücretsiz: en fazla [freeKaliplarCardsPerDay] kart (0 tabanlı indeks).
   static Future<int> kaliplarMaxAllowedIndex() async {
     if (await _isPremium()) return 1 << 30;
     return freeKaliplarCardsPerDay - 1;

@@ -121,7 +121,7 @@ class _KelimeScreenState extends State<KelimeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  _InfoCard(poolTotal: _tumKelimeler!.length),
+                  const _InfoCard(),
                   const SizedBox(height: 16),
                   _YanlisCard(
                     count: _kelimeYanlisCount,
@@ -149,8 +149,7 @@ class _KelimeScreenState extends State<KelimeScreen> {
 // ─── Karşılama Kartı ──────────────────────────────────────────────────────────
 
 class _InfoCard extends StatelessWidget {
-  const _InfoCard({required this.poolTotal});
-  final int poolTotal;
+  const _InfoCard();
 
   @override
   Widget build(BuildContext context) {
@@ -202,15 +201,6 @@ class _InfoCard extends StatelessWidget {
             'Çoktan seçmeli sorularla çalış; kelimeler her oturumda karışık gelir. '
             'Yanlış yaptıklarını tekrar listene ekle, doğru yaptıklarını listeden çıkar.',
             style: TextStyle(color: _cMuted, fontSize: 13, height: 1.65),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            'Havuzda $poolTotal kelime',
-            style: TextStyle(
-              color: _cPurple.withValues(alpha: 0.85),
-              fontSize: 12,
-              fontWeight: FontWeight.w600,
-            ),
           ),
           const SizedBox(height: 16),
           Wrap(
