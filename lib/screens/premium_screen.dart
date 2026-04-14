@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -46,6 +47,21 @@ class _PremiumScreenState extends State<PremiumScreen> {
 
   String _priceLine(String productId, String fallback) =>
       _priceByProductId[productId] ?? fallback;
+
+  /// Offering yokken mağaza adı (web / masaüstü için genel ifade).
+  String _fallbackPricingHint() {
+    if (kIsWeb) {
+      return 'Fiyatlar mağaza üzerinden gösterilir; yanıt verilmezse aşağıdaki tutarlar bilgi amaçlıdır.';
+    }
+    switch (defaultTargetPlatform) {
+      case TargetPlatform.iOS:
+        return 'Fiyatlar App Store üzerinden gösterilir; mağaza yanıt vermezse aşağıdaki tutarlar bilgi amaçlıdır.';
+      case TargetPlatform.android:
+        return 'Fiyatlar Google Play üzerinden gösterilir; mağaza yanıt vermezse aşağıdaki tutarlar bilgi amaçlıdır.';
+      default:
+        return 'Fiyatlar mağaza üzerinden gösterilir; mağaza yanıt vermezse aşağıdaki tutarlar bilgi amaçlıdır.';
+    }
+  }
 
   Future<void> _buy(String productId) async {
     setState(() => _busyProductId = productId);
@@ -168,7 +184,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
             _loadingOfferings
                 ? 'Paketler yükleniyor…'
                 : (_offerings?.current == null
-                    ? 'Fiyatlar Google Play üzerinden gösterilir; mağaza yanıt vermezse aşağıdaki tutarlar bilgi amaçlıdır.'
+                    ? _fallbackPricingHint()
                     : 'Tüm içeriğe sınırsız erişim.'),
             textAlign: TextAlign.center,
             style: const TextStyle(color: _cMuted, fontSize: 13, height: 1.45),

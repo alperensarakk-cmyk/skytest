@@ -8,7 +8,10 @@
 # - Xcode `PRODUCT_BUNDLE_IDENTIFIER` = com.aerotest.app (App Store kaydıyla aynı olmalı).
 # - İsteğe bağlı: App → Environment variables → APP_STORE_APPLE_ID (ASC’deki sayısal uygulama ID’si)
 #   tanımlarsanız build-number bir önceki mağaza sürümüne göre otomatik artar.
+# - RevenueCat iOS public SDK key: App → Environment variables → REVENUECAT_IOS_API_KEY (appl_..., şifreli).
+#   flutter build ipa için --dart-define ile enjekte edilir (release’de test_ anahtarı yerine kullanılır).
 # - `ios/Podfile` yoksa: `flutter pub get` sonrası `cd ios && pod install` için önce standart Podfile gerekir.
+# - Export compliance: `ios/Runner/Info.plist` → `ITSAppUsesNonExemptEncryption` = false (standart HTTPS vb. muaf).
 
 workflows:
   ios-app-store:
@@ -31,6 +34,7 @@ workflows:
 
       vars:
         BUNDLE_ID: com.aerotest.app
+        # REVENUECAT_IOS_API_KEY: Team/App variables’da tanımlayın (şifreli). appl_ ile başlar.
 
     scripts:
       - name: Set up code signing settings on Xcode project
@@ -52,9 +56,11 @@ workflows:
             BN=$(($(app-store-connect get-latest-app-store-build-number "$APP_STORE_APPLE_ID") + 1))
             flutter build ipa --release \
               --build-number="$BN" \
+              --dart-define=REVENUECAT_IOS_API_KEY="${REVENUECAT_IOS_API_KEY:-}" \
               --export-options-plist=/Users/builder/export_options.plist
           else
             flutter build ipa --release \
+              --dart-define=REVENUECAT_IOS_API_KEY="${REVENUECAT_IOS_API_KEY:-}" \
               --export-options-plist=/Users/builder/export_options.plist
           fi
 

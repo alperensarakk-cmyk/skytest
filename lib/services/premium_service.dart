@@ -29,7 +29,8 @@ class PremiumService {
 
     try {
       await Purchases.setLogLevel(kDebugMode ? LogLevel.debug : LogLevel.info);
-      final rcKey = Platform.isAndroid
+      // Android: Play public key (`goog_...`). iOS: App Store / test (`appl_...` / `test_...`).
+      final String rcKey = Platform.isAndroid
           ? RevenueCatConfig.apiKeyAndroid
           : RevenueCatConfig.apiKeyIos;
       await Purchases.configure(PurchasesConfiguration(rcKey));
@@ -158,8 +159,8 @@ class PremiumService {
   }
 
   /// RevenueCat: önce mevcut offering içindeki paket, yoksa mağaza ürünü doğrudan
-  /// (`getProducts` + `purchaseStoreProduct`) — offerings boş olsa bile Play
-  /// ürünü tanımlıysa satın alma ekranı açılabilir.
+  /// (`getProducts` + `purchaseStoreProduct`) — offerings boş olsa bile App Store /
+  /// Play’de ürün tanımlıysa satın alma ekranı açılabilir.
   static Future<PurchaseOutcome> purchaseProduct(String productId) async {
     if (!_configured) {
       debugPrint('PremiumService: Purchases.configure başarısız veya çağrılmadı');
