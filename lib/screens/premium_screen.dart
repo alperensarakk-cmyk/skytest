@@ -1,6 +1,9 @@
+import 'dart:io' show Platform;
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../config/revenuecat_config.dart';
 import '../services/premium_service.dart';
@@ -9,6 +12,11 @@ import '../theme/app_theme.dart';
 const _cMuted = Color(0xFFA1B5D8);
 const _cGold = Color(0xFFFFD60A);
 const _cCard = Color(0xFF1C2541);
+
+const _kPrivacyPolicyUrl =
+    'https://www.freeprivacypolicy.com/live/237c6580-ec2a-442b-be65-a061d8a8b457';
+const _kTermsOfUseUrl =
+    'https://www.apple.com/legal/internet-services/itunes/dev/stdeula/';
 
 class PremiumScreen extends StatefulWidget {
   const PremiumScreen({super.key});
@@ -74,8 +82,9 @@ class _PremiumScreenState extends State<PremiumScreen> {
         PurchaseOutcome.successStore => 'Premium etkinleştirildi!',
         PurchaseOutcome.sdkNotConfigured =>
           'Ödeme sistemi hazır değil. Uygulamayı yeniden başlatıp tekrar deneyin.',
-        PurchaseOutcome.productUnavailable =>
-          'Ürün bulunamadı. Google Play ve RevenueCat\'te ürün kimliklerinin eşleştiğinden emin olun.',
+        PurchaseOutcome.productUnavailable => Platform.isIOS
+            ? 'Ürün bulunamadı. App Store ve RevenueCat\'te ürün kimliklerinin eşleştiğinden emin olun.'
+            : 'Ürün bulunamadı. Google Play ve RevenueCat\'te ürün kimliklerinin eşleştiğinden emin olun.',
         PurchaseOutcome.failed =>
           'Satın alma tamamlanamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.',
         PurchaseOutcome.cancelled => null,
@@ -126,6 +135,19 @@ class _PremiumScreenState extends State<PremiumScreen> {
       }
     } finally {
       if (mounted) setState(() => _busyProductId = null);
+    }
+  }
+
+  Future<void> _launchLegalUrl(String urlString) async {
+    final uri = Uri.parse(urlString);
+    final ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
+    if (!ok && mounted) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Bağlantı açılamadı.'),
+          behavior: SnackBarBehavior.floating,
+        ),
+      );
     }
   }
 
@@ -238,6 +260,56 @@ class _PremiumScreenState extends State<PremiumScreen> {
                 ),
               ),
             ),
+          ),
+          const SizedBox(height: 20),
+          Wrap(
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            spacing: 8,
+            runSpacing: 4,
+            children: [
+              TextButton(
+                onPressed: () => _launchLegalUrl(_kPrivacyPolicyUrl),
+                style: TextButton.styleFrom(
+                  foregroundColor: _cMuted,
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  minimumSize: Size.zero,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+                child: const Text(
+                  'Gizlilik Politikası',
+                  style: TextStyle(
+                    fontSize: 13,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Color(0xFFA1B5D8),
+                  ),
+                ),
+              ),
+              Text(
+                '·',
+                style: TextStyle(
+                  color: _cMuted.withValues(alpha: 0.5),
+                  fontSize: 13,
+                ),
+              ),
+              TextButton(
+                onPressed: () => _launchLegalUrl(_kTermsOfUseUrl),
+                style: TextButton.styleFrom(
+                  foregroundColor: _cMuted,
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  minimumSize: Size.zero,
+                  tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                ),
+                child: const Text(
+                  'Kullanım Koşulları',
+                  style: TextStyle(
+                    fontSize: 13,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Color(0xFFA1B5D8),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
