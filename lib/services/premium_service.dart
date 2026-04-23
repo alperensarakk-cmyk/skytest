@@ -124,9 +124,38 @@ class PremiumService {
   static Future<Offerings?> fetchOfferings() async {
     if (!_configured) return null;
     try {
-      return await Purchases.getOfferings();
-    } catch (_) {
+      final offerings = await Purchases.getOfferings();
+      _debugLogOfferings(offerings);
+      return offerings;
+    } on PlatformException catch (e, st) {
+      _debugLogRevenueCatPlatformError('fetchOfferings', e);
+      debugPrintStack(stackTrace: st);
       return null;
+    } catch (e, st) {
+      debugPrint('PremiumService.fetchOfferings: $e');
+      debugPrintStack(stackTrace: st);
+      return null;
+    }
+  }
+
+  /// Debug: tüm offering kimlikleri, current ve paket → mağaza ürün id eşlemesi.
+  static void _debugLogOfferings(Offerings offerings) {
+    debugPrint(
+      'PremiumService.fetchOfferings: allOfferingIds=[${offerings.all.keys.join(", ")}] '
+      'current=${offerings.current?.identifier ?? "(none)"}',
+    );
+    for (final entry in offerings.all.entries) {
+      final off = entry.value;
+      final pkgLines = off.availablePackages
+          .map(
+            (p) =>
+                '${p.identifier}→${p.storeProduct.identifier}(${p.packageType.name})',
+          )
+          .join('; ');
+      debugPrint(
+        'PremiumService.fetchOfferings: offering "${off.identifier}" '
+        'packages=[$pkgLines]',
+      );
     }
   }
 
@@ -181,8 +210,12 @@ class PremiumService {
     late final List<StoreProduct> products;
     try {
       products = await Purchases.getProducts([productId]);
+    } on PlatformException catch (e, st) {
+      _debugLogRevenueCatPlatformError('getProducts($productId)', e);
+      debugPrintStack(stackTrace: st);
+      return PurchaseOutcome.failed;
     } catch (e, st) {
-      debugPrint('PremiumService.getProducts: $e');
+      debugPrint('PremiumService.getProducts($productId): $e');
       debugPrintStack(stackTrace: st);
       return PurchaseOutcome.failed;
     }
@@ -203,18 +236,31 @@ class PremiumService {
       final info = await purchase();
       await _applyCustomerInfo(info);
       return PurchaseOutcome.successStore;
-    } on PlatformException catch (e) {
+    } on PlatformException catch (e, st) {
       if (PurchasesErrorHelper.getErrorCode(e) ==
           PurchasesErrorCode.purchaseCancelledError) {
         return PurchaseOutcome.cancelled;
       }
-      debugPrint('PremiumService purchase: $e');
+      _debugLogRevenueCatPlatformError('purchase', e);
+      debugPrintStack(stackTrace: st);
       return PurchaseOutcome.failed;
     } catch (e, st) {
-      debugPrint('PremiumService purchase: $e');
+      debugPrint('PremiumService purchase (non-PlatformException): $e');
       debugPrintStack(stackTrace: st);
       return PurchaseOutcome.failed;
     }
+  }
+
+  static void _debugLogRevenueCatPlatformError(
+    String context,
+    PlatformException e,
+  ) {
+    final PurchasesErrorCode purchasesCode =
+        PurchasesErrorHelper.getErrorCode(e);
+    debugPrint(
+      'PremiumService.$context: PurchasesErrorCode=$purchasesCode '
+      'platformCode=${e.code} message=${e.message} details=${e.details}',
+    );
   }
 }
 
