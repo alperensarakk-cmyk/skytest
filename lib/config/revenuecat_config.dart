@@ -1,7 +1,10 @@
+import 'package:flutter/foundation.dart' show defaultTargetPlatform, TargetPlatform;
+
 /// RevenueCat — Play / App Store ürün kimlikleri ve entitlement.
 ///
 /// **iOS:** Bundle ID `com.aerotest.app` · RevenueCat dashboard uygulama id: `app42949d7901`
-/// **Ürünler:** [productMonthly] vb. hem mağazalarda hem RevenueCat’te `aerotest_*` olmalı.
+/// **App Store ürünleri:** [productMonthlyIos] vb. — ASC ve RevenueCat ile birebir aynı olmalı.
+/// **Google Play:** [productMonthlyAndroid] vb. — Play Console ve RevenueCat ile aynı olmalı.
 class RevenueCatConfig {
   RevenueCatConfig._();
 
@@ -35,12 +38,34 @@ class RevenueCatConfig {
     return apiKeyIosSandbox;
   }
 
-  // ── Entitlement & ürün kimlikleri (Android + iOS aynı) ────────────────────
+  // ── Entitlement & ürün kimlikleri (platforma göre [productMonthly] getter’ları) ──
 
   /// RevenueCat → Entitlements → Identifier
   static const String entitlementId = 'Premium';
 
-  static const String productMonthly = 'aerotest_monthly';
-  static const String productQuarterly = 'aerotest_quarterly';
-  static const String productYearly = 'aerotest_yearly';
+  /// Google Play ürün kimlikleri.
+  static const String productMonthlyAndroid = 'aerotest_monthly';
+  static const String productQuarterlyAndroid = 'aerotest_quarterly';
+  static const String productYearlyAndroid = 'aerotest_yearly';
+
+  /// App Store ürün kimlikleri.
+  static const String productMonthlyIos = 'com.aerotest.app.sub.monthly';
+  static const String productQuarterlyIos = 'com.aerotest.app.sub.quarterly';
+  static const String productYearlyIos = 'com.aerotest.app.sub.yearly';
+
+  /// Mağaza + RevenueCat’te kullanılacak ürün id’si (iOS / diğer).
+  static String get productMonthly =>
+      defaultTargetPlatform == TargetPlatform.iOS
+          ? productMonthlyIos
+          : productMonthlyAndroid;
+
+  static String get productQuarterly =>
+      defaultTargetPlatform == TargetPlatform.iOS
+          ? productQuarterlyIos
+          : productQuarterlyAndroid;
+
+  static String get productYearly =>
+      defaultTargetPlatform == TargetPlatform.iOS
+          ? productYearlyIos
+          : productYearlyAndroid;
 }

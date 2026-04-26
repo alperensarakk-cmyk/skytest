@@ -122,7 +122,12 @@ class PremiumService {
   }
 
   static Future<Offerings?> fetchOfferings() async {
-    if (!_configured) return null;
+    if (!_configured) {
+      debugPrint(
+        '[RevenueCat] getOfferings: atlandı (Purchases.configure yok / başarısız)',
+      );
+      return null;
+    }
     try {
       final offerings = await Purchases.getOfferings();
       _debugLogOfferings(offerings);
@@ -138,25 +143,41 @@ class PremiumService {
     }
   }
 
-  /// Debug: tüm offering kimlikleri, current ve paket → mağaza ürün id eşlemesi.
+  /// Flutter konsolu: [RevenueCat] getOfferings sonucu — offering’ler ve paketler.
   static void _debugLogOfferings(Offerings offerings) {
-    debugPrint(
-      'PremiumService.fetchOfferings: allOfferingIds=[${offerings.all.keys.join(", ")}] '
-      'current=${offerings.current?.identifier ?? "(none)"}',
-    );
+    final ids = offerings.all.keys.join(', ');
+    final cur = offerings.current?.identifier ?? '(yok)';
+    debugPrint('[RevenueCat] getOfferings ─────────────────────────────');
+    debugPrint('[RevenueCat] getOfferings: offering sayısı=${offerings.all.length}');
+    debugPrint('[RevenueCat] getOfferings: tüm id\'ler=[$ids]');
+    debugPrint('[RevenueCat] getOfferings: current offering id=$cur');
+
     for (final entry in offerings.all.entries) {
       final off = entry.value;
-      final pkgLines = off.availablePackages
-          .map(
-            (p) =>
-                '${p.identifier}→${p.storeProduct.identifier}(${p.packageType.name})',
-          )
-          .join('; ');
+      final metaKeys = off.metadata.keys.join(', ');
       debugPrint(
-        'PremiumService.fetchOfferings: offering "${off.identifier}" '
-        'packages=[$pkgLines]',
+        '[RevenueCat] offering "${off.identifier}" '
+        'serverDescription="${off.serverDescription}" metadataKeys=[$metaKeys]',
       );
+      if (off.availablePackages.isEmpty) {
+        debugPrint('[RevenueCat]   └ paket yok (availablePackages boş)');
+        continue;
+      }
+      var i = 0;
+      for (final p in off.availablePackages) {
+        i++;
+        final sp = p.storeProduct;
+        debugPrint(
+          '[RevenueCat]   paket#$i packageId=${p.identifier} '
+          'packageType=${p.packageType.name} '
+          'storeProductId=${sp.identifier} '
+          'price=${sp.priceString} (${sp.currencyCode}) '
+          'title="${sp.title}" '
+          'subscriptionPeriod=${sp.subscriptionPeriod ?? "-"}',
+        );
+      }
     }
+    debugPrint('[RevenueCat] getOfferings (son) ─────────────────────────');
   }
 
   static Package? findPackage(Offerings? offerings, String productId) {
