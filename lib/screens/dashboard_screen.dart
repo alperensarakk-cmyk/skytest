@@ -125,32 +125,7 @@ class DashboardScreen extends StatelessWidget {
                       ),
                     ),
                     const Spacer(),
-                    ValueListenableBuilder<bool>(
-                      valueListenable: PremiumService.isPremiumNotifier,
-                      builder: (context, _, __) {
-                        if (!PremiumService.showPremiumDashboardCta) {
-                          return const SizedBox.shrink();
-                        }
-                        return TextButton(
-                          onPressed: () =>
-                              Navigator.pushNamed(context, '/premium'),
-                          style: TextButton.styleFrom(
-                            foregroundColor: const Color(0xFFFFD60A),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 4, vertical: 0),
-                            minimumSize: Size.zero,
-                            tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                          ),
-                          child: const Text(
-                            '👑 Premium\'a Geç',
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w700,
-                            ),
-                          ),
-                        );
-                      },
-                    ),
+                    const _DashboardPremiumCta(),
                   ],
                 ),
                 const SizedBox(height: 2),
@@ -679,6 +654,76 @@ class _ModeCard extends StatelessWidget {
             ),
           ),
         ],
+      ),
+    );
+  }
+}
+
+/// Ana sayfa sağ üst: abonelik değilken CTA; premium iken kalan gün + yine `/premium`.
+class _DashboardPremiumCta extends StatefulWidget {
+  const _DashboardPremiumCta();
+
+  @override
+  State<_DashboardPremiumCta> createState() => _DashboardPremiumCtaState();
+}
+
+class _DashboardPremiumCtaState extends State<_DashboardPremiumCta>
+    with WidgetsBindingObserver {
+  static const Color _gold = Color(0xFFFFD60A);
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addObserver(this);
+    PremiumService.isPremiumNotifier.addListener(_onChanged);
+    PremiumService.premiumExpirationNotifier.addListener(_onChanged);
+  }
+
+  void _onChanged() {
+    if (mounted) setState(() {});
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    PremiumService.isPremiumNotifier.removeListener(_onChanged);
+    PremiumService.premiumExpirationNotifier.removeListener(_onChanged);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed && mounted) setState(() {});
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isPremium = PremiumService.isPremiumNotifier.value;
+    final days = PremiumService.premiumCalendarDaysRemaining();
+
+    final String label;
+    if (!isPremium) {
+      label = '👑 Premium\'a Geç';
+    } else if (days != null) {
+      label = '👑 Premium ol · $days gün kaldı';
+    } else {
+      label = '👑 Premium ol';
+    }
+
+    return TextButton(
+      onPressed: () => Navigator.pushNamed(context, '/premium'),
+      style: TextButton.styleFrom(
+        foregroundColor: _gold,
+        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 0),
+        minimumSize: Size.zero,
+        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+      ),
+      child: Text(
+        label,
+        style: const TextStyle(
+          fontSize: 11,
+          fontWeight: FontWeight.w700,
+        ),
       ),
     );
   }

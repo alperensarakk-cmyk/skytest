@@ -13,9 +13,13 @@ class PremiumService {
   PremiumService._();
 
   static const _kPremiumCached = 'premium_cached_local';
+  static const _kPremiumExpirationIso = 'premium_expiration_iso';
   static const _kSignedInEmail = 'signed_in_user_email';
 
   static final ValueNotifier<bool> isPremiumNotifier = ValueNotifier(false);
+  /// Mağaza (RevenueCat) aboneliğinin bitişi; yalnızca RC önbelleği true iken anlamlıdır.
+  static final ValueNotifier<DateTime?> premiumExpirationNotifier =
+      ValueNotifier<DateTime?>(null);
   static bool _configured = false;
 
   static Future<void> initialize() async {
@@ -76,30 +80,61 @@ class PremiumService {
   }
 
   static Future<void> _loadCached() async {
+    final p = await SharedPreferences.getInstance();
+    final rc = p.getBool(_kPremiumCached) ?? false;
+    if (rc) {
+      final iso = p.getString(_kPremiumExpirationIso);
+      premiumExpirationNotifier.value = (iso != null && iso.isNotEmpty)
+          ? DateTime.tryParse(iso)
+          : null;
+    } else {
+      premiumExpirationNotifier.value = null;
+    }
     await _syncPremiumNotifier();
   }
 
-  static Future<void> _saveCached(bool v) async {
+  static Future<void> _saveCached(
+    bool v, {
+    String? expirationIso,
+  }) async {
     final p = await SharedPreferences.getInstance();
     await p.setBool(_kPremiumCached, v);
+    if (v) {
+      if (expirationIso != null && expirationIso.isNotEmpty) {
+        await p.setString(_kPremiumExpirationIso, expirationIso);
+        premiumExpirationNotifier.value = DateTime.tryParse(expirationIso);
+      } else {
+        await p.remove(_kPremiumExpirationIso);
+        premiumExpirationNotifier.value = null;
+      }
+    } else {
+      await p.remove(_kPremiumExpirationIso);
+      premiumExpirationNotifier.value = null;
+    }
     await _syncPremiumNotifier();
   }
 
   static Future<void> _applyCustomerInfo(CustomerInfo info) async {
     final e = info.entitlements.all[RevenueCatConfig.entitlementId];
     final active = e?.isActive == true;
-    await _saveCached(active);
+    final iso = active ? e?.expirationDate : null;
+    await _saveCached(active, expirationIso: iso);
   }
 
   /// Limit kontrolleri: mağaza (RC) || debug build || admin e-postası.
   static Future<bool> isPremiumUser() async => isPremiumNotifier.value;
 
-  /// Ana ekran "Premium'a Geç" butonu.
-  /// Debug'ta `isDeveloperMode` notifier'ı true yaptığı için buton hep gizlenirdi;
-  /// burada debug build'de CTA yine gösterilir (premium sayfasına girmek için).
-  /// Release APK'da yalnızca gerçekten premium değilken gösterilir.
-  static bool get showPremiumDashboardCta =>
-      isDeveloperMode || !isPremiumNotifier.value;
+  /// Yerel gün (takvim); mağaza bitiş tarihi yoksa null.
+  static int? premiumCalendarDaysRemaining() {
+    final exp = premiumExpirationNotifier.value;
+    if (exp == null) return null;
+    final now = DateTime.now();
+    final expLocal = exp.toLocal();
+    final today = DateTime(now.year, now.month, now.day);
+    final expDay = DateTime(expLocal.year, expLocal.month, expLocal.day);
+    final d = expDay.difference(today).inDays;
+    return d < 0 ? 0 : d;
+  }
 
   /// Uygulama açılışında / sekme dönüşünde.
   static Future<void> syncFromRevenueCat() async {
