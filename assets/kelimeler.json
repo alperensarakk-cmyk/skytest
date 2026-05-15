@@ -5334,5 +5334,405 @@
     "modul": "Modül 7 - Bakım Uygulamaları",
     "ornek_cumle": "The damage was found in zone 121 as defined in the Structural Repair Manual.",
     "ipucu": "ATA zone sistemi: 100=Fuselage, 200=Wing, 300=Empennage, 400=Engines, 500=Landing Gear."
+  },
+  {
+    "id": 5001,
+    "ingilizce": "Adhere",
+    "turkce": "Yapışmak / Sadık Kalmak",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "The technician must strictly adhere to the safety precautions specified in the AMM.",
+    "ipucu": "Havacılıkta iki anlamı da kritiktir: Hem bir yüzeyin bir yere 'yapışması' (bonding) hem de talimatlara/kurallara 'sadık kalmak/uymak' (comply with) anlamında kullanılır."
+  },
+  {
+    "id": 5002,
+    "ingilizce": "Corrode",
+    "turkce": "Aşınmak / Korozyona Uğramak",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Aluminum surfaces may corrode rapidly if the protective coating is damaged.",
+    "ipucu": "Metal yüzeylerin kimyasal reaksiyon sonucu bozulmasını ifade eder. Sınavlarda korozyon çeşitleri (pitting, exfoliation) ile birlikte sorulur."
+  },
+  {
+    "id": 5003,
+    "ingilizce": "Deplete",
+    "turkce": "Tüketmek / Boşaltmak",
+    "modul": "Modül 11 - Uçak Yapı ve Sistemleri",
+    "ornek_cumle": "Excessive use of the emergency battery will deplete its charge quickly.",
+    "ipucu": "Bir kaynağın (enerji, oksijen, basınç) bitmesi veya kritik seviyeye inmesi durumunda kullanılır. 'Empty' kelimesinin daha teknik versiyonudur."
+  },
+  {
+    "id": 5004,
+    "ingilizce": "Inhibit",
+    "turkce": "Engellemek / Yasaklamak / Durdurmak",
+    "modul": "Modül 11 / Modül 13",
+    "ornek_cumle": "The landing gear retraction is inhibited while the aircraft is on the ground.",
+    "ipucu": "Bir sistemin çalışmasının bir mantık veya emniyet kilidi tarafından 'otomatik olarak engellenmesi' durumunda kullanılır. 'Prevent' ile yakın anlamlıdır."
+  },
+  {
+    "id": 5005,
+    "ingilizce": "Mandatory",
+    "turkce": "Zorunlu",
+    "modul": "Modül 10 - Havacılık Mevzuatı",
+    "ornek_cumle": "Compliance with Service Bulletins is mandatory for the continued airworthiness of the aircraft.",
+    "ipucu": "Yasal olarak yapılması gereken, opsiyonel olmayan işler için kullanılır. AD (Airworthiness Directive) ilanları daima 'mandatory'dir."
+  },
+  {
+    "id": 5006,
+    "ingilizce": "Obstruct",
+    "turkce": "Tıkamak / Engel Olmak / Kapatmak",
+    "modul": "Modül 8 - Temel Aerodinamik",
+    "ornek_cumle": "Ice accumulation can obstruct the pitot tube, leading to incorrect airspeed readings.",
+    "ipucu": "Bir kanalın, borunun veya hava akışının fiziksel olarak tıkanması durumunda kullanılır. Pitot-static sistem sorularında banko kelimedir."
+  },
+  {
+    "id": 5007,
+    "ingilizce": "Rectify",
+    "turkce": "Düzeltmek / Arızayı Gidermek",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "The maintenance crew must rectify the hydraulic leak before the next flight.",
+    "ipucu": "Bir hatayı veya arızayı (fault/defect) 'gidermek' anlamında kullanılan profesyonel bakım terimidir. 'Fix' kelimesinin sınav halidir."
+  },
+  {
+    "id": 5008,
+    "ingilizce": "Subsequent",
+    "turkce": "Sonraki / Ardıl",
+    "modul": "Modül 7",
+    "ornek_cumle": "Check the filter after the initial test and all subsequent operations.",
+    "ipucu": "Zaman dizininde bir olaydan 'sonra gelen' eylemleri anlatır. 'Next' yerine manuellerde bu kelime tercih edilir."
+  },
+  {
+    "id": 5009,
+    "ingilizce": "Uphold",
+    "turkce": "Sürdürmek / Desteklemek / Onaylamak",
+    "modul": "Modül 9 - İnsan Faktörleri",
+    "ornek_cumle": "All personnel must uphold the highest standards of safety in the hangar.",
+    "ipucu": "Mevcut bir standardı, kuralı veya emniyet seviyesini korumak ve ona sahip çıkmak anlamında kullanılır."
+  },
+  {
+    "id": 5010,
+    "ingilizce": "Volatile",
+    "turkce": "Uçucu / Kararsız",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Aviation fuel is a volatile liquid that evaporates quickly at room temperature.",
+    "ipucu": "Sıvıların kolayca buharlaşma özelliğini anlatır. Kimyasal maddeler ve yakıtlarla ilgili emniyet uyarılarında sık geçer."
+  },
+  {
+    "id": 5011,
+    "ingilizce": "Deteriorate",
+    "turkce": "Kötüleşmek / Bozulmak",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "If the weather conditions deteriorate, all outdoor maintenance activities must stop.",
+    "ipucu": "Genellikle hava durumu veya bir parçanın kondisyonunun (durumunun) zamanla kötüye gitmesini anlatmak için kullanılır. 'Worsen' kelimesinin teknik karşılığıdır."
+  },
+  {
+    "id": 5013,
+    "ingilizce": "Exceed",
+    "turkce": "Aşmak / Limiti Geçmek",
+    "modul": "Modül 11 - Uçak Yapı ve Sistemleri",
+    "ornek_cumle": "Do not exceed the maximum torque value specified for the engine bolts.",
+    "ipucu": "Havacılıkta limitlerin (sıcaklık, basınç, tork, zaman) aşılmasını ifade eden en temel kelimedir. Sınavların vazgeçilmezidir."
+  },
+  {
+    "id": 5014,
+    "ingilizce": "Impede",
+    "turkce": "Engellemek / Geciktirmek",
+    "modul": "Modül 8 - Temel Aerodinamik",
+    "ornek_cumle": "Ice formation on the leading edge can impede the airflow over the wing.",
+    "ipucu": "Bir sürecin veya akışın (hava akışı vb.) yavaşlamasına veya engellenmesine neden olan durumlar için kullanılır."
+  },
+  {
+    "id": 5016,
+    "ingilizce": "Precise",
+    "turkce": "Hassas / Tam / Kesin",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "The alignment of the flight controls requires precise measurements.",
+    "ipucu": "Ölçümlerin ve ayarların toleranslar dahilinde, tam ve hatasız yapılması gerektiğini belirtir. 'Accurate' ile benzerdir."
+  },
+  {
+    "id": 5017,
+    "ingilizce": "Redundant",
+    "turkce": "Yedekli / Gereğinden Fazla",
+    "modul": "Modül 11 - Uçak Yapı ve Sistemleri",
+    "ornek_cumle": "Modern aircraft have redundant hydraulic systems to ensure safety in case of a failure.",
+    "ipucu": "Emniyet için bir sistemin yedeğinin (ikinci veya üçüncü bir hat) bulunması durumudur. Havacılık emniyetinin temel kavramıdır."
+  },
+  {
+    "id": 5019,
+    "ingilizce": "Subject to",
+    "turkce": "-e Tabi Olmak / Maruz Kalmak",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Landing gears are subject to high stress during every landing operation.",
+    "ipucu": "Bir parçanın veya sistemin belirli bir kuvvete, kurala veya etkiye (stres, korozyon, denetim) maruz kalması durumunu anlatır."
+  },
+  {
+    "id": 5021,
+    "ingilizce": "Abnormal",
+    "turkce": "Normal Olmayan / Anormal",
+    "modul": "Modül 11 - Uçak Yapı ve Sistemleri",
+    "ornek_cumle": "Any abnormal noise or vibration must be reported to the maintenance supervisor.",
+    "ipucu": "Sistemlerin standart çalışma dışındaki davranışlarını (ses, titreşim, koku) nitelemek için kullanılır. Genellikle 'Unusual' ile eş anlamlıdır."
+  },
+  {
+    "id": 5022,
+    "ingilizce": "Conspicuous",
+    "turkce": "Göze Çarpan / Belirgin",
+    "modul": "Modül 9 - İnsan Faktörleri",
+    "ornek_cumle": "Warning signs should be placed in a conspicuous location near high-voltage areas.",
+    "ipucu": "İnsan faktörleri modülünde, uyarı levhalarının veya hataların 'kolayca fark edilebilir' olması gerektiğini anlatırken kullanılır."
+  },
+  {
+    "id": 5023,
+    "ingilizce": "Degrade",
+    "turkce": "Vasıf Kaybetmek / Performans Düşmesi",
+    "modul": "Modül 11 - Sistemler",
+    "ornek_cumle": "The system's performance will degrade if the sensors are not calibrated properly.",
+    "ipucu": "Bir sistemin tamamen bozulması değil, veriminin veya kalitesinin 'kademeli olarak azalması' durumudur. Havacılıkta 'degraded mode' (kısıtlı mod) olarak sık geçer."
+  },
+  {
+    "id": 5025,
+    "ingilizce": "Incidental",
+    "turkce": "Tesadüfi / İkincil",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "Check for any incidental damage caused by the tool while performing the task.",
+    "ipucu": "Bir ana işlem yapılırken, 'istemeden/yanlışlıkla' oluşan yan hasarları veya durumları ifade eder."
+  },
+  {
+    "id": 5026,
+    "ingilizce": "Magnitude",
+    "turkce": "Büyüklük / Şiddet",
+    "modul": "Modül 8 - Temel Aerodinamik",
+    "ornek_cumle": "The magnitude of the lift force depends on the angle of attack and airspeed.",
+    "ipucu": "Kuvvetlerin, depremlerin veya matematiksel değerlerin 'niceliksel büyüklüğünü' anlatmak için kullanılan teknik bir terimdir."
+  },
+  {
+    "id": 5027,
+    "ingilizce": "Negligible",
+    "turkce": "İhmal Edilebilir / Çok Küçük",
+    "modul": "Modül 7 / Modül 11",
+    "ornek_cumle": "Small scratches on the paint are usually considered negligible in terms of safety.",
+    "ipucu": "Hasarın o kadar küçük olduğunu ve emniyeti etkilemediği için 'hesaba katılmasa da olur' dendiği durumlarda kullanılır."
+  },
+  {
+    "id": 5028,
+    "ingilizce": "Propagate",
+    "turkce": "Yayılmak / İlerlemek",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Micro-cracks can propagate rapidly under continuous cyclic stress.",
+    "ipucu": "Özellikle yapısal çatlakların (cracks) malzeme üzerinde 'ilerlemesi/büyümesi' veya dalgaların yayılması anlamındadır."
+  },
+  {
+    "id": 5029,
+    "ingilizce": "Simulate",
+    "turkce": "Taklit Etmek / Simüle Etmek",
+    "modul": "Modül 7 / Modül 11",
+    "ornek_cumle": "The technician used a special tool to simulate a high-pressure signal.",
+    "ipucu": "Bir durumu gerçekmiş gibi yapay olarak oluşturmak. Testler sırasında (örneğin yangın uyarısı testi) sisteme sahte sinyal göndermek için kullanılır."
+  },
+  {
+    "id": 5030,
+    "ingilizce": "Violation",
+    "turkce": "İhlal",
+    "modul": "Modül 9 / Modül 10",
+    "ornek_cumle": "Performing maintenance without a manual is a major violation of aviation regulations.",
+    "ipucu": "Kuralın bilerek veya bilmeyerek 'çiğnenmesi'. İnsan faktörlerinde 'error' (hata) ve 'violation' (ihlal) farkı sık sorulur."
+  },
+  {
+    "id": 5031,
+    "ingilizce": "Anticipate",
+    "turkce": "Öngörmek / Beklemek",
+    "modul": "Modül 9 - İnsan Faktörleri",
+    "ornek_cumle": "Experienced technicians can anticipate potential problems before they occur.",
+    "ipucu": "İnsan faktörlerinde 'durumsal farkındalık' (situational awareness) ile ilişkilidir. Bir olayı gerçekleşmeden önce tahmin edip hazırlıklı olma durumudur."
+  },
+  {
+    "id": 5032,
+    "ingilizce": "Compensate",
+    "turkce": "Telafi Etmek / Dengelemek",
+    "modul": "Modül 11 - Uçak Sistemleri",
+    "ornek_cumle": "The autopilot system will compensate for the crosswind during the approach.",
+    "ipucu": "Bir sistemdeki eksikliği, hatayı veya dış etkeni (rüzgar, basınç kaybı vb.) başka bir etkiyle dengeleme işlemidir."
+  },
+  {
+    "id": 5033,
+    "ingilizce": "Consecutive",
+    "turkce": "Ardışık / Birbirini İzleyen",
+    "modul": "Modül 7 / Modül 10",
+    "ornek_cumle": "The inspection must be performed during three consecutive maintenance checks.",
+    "ipucu": "Araya başka bir şey girmeden arka arkaya gelen olaylar için kullanılır. Zaman sınırları ve periyodik bakımlarda sık geçer."
+  },
+  {
+    "id": 5034,
+    "ingilizce": "Distortion",
+    "turkce": "Biçim Bozukluğu / Distorsiyon",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Excessive heat during welding can cause structural distortion of the metal.",
+    "ipucu": "Malzemenin orijinal şeklinin ısı, baskı veya darbe sonucu eğilmesi veya bükülmesi durumudur."
+  },
+  {
+    "id": 5036,
+    "ingilizce": "Integrity",
+    "turkce": "Bütünlük / Sağlamlık",
+    "modul": "Modül 11 - Uçak Yapısı",
+    "ornek_cumle": "Regular inspections are necessary to ensure the structural integrity of the fuselage.",
+    "ipucu": "Bir yapının görevini yapabilecek kadar sağlam ve bir bütün halinde olmasıdır. 'Structural integrity' (yapısal bütünlük) kalıbı çok popülerdir."
+  },
+  {
+    "id": 5039,
+    "ingilizce": "Rigid",
+    "turkce": "Sert / Esnemez / Rijit",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "The hydraulic system uses rigid lines in areas where no movement occurs.",
+    "ipucu": "Esnek olmayan (flexible karşıtı), bükülmez boru veya yapılar için kullanılan teknik terimdir."
+  },
+  {
+    "id": 5040,
+    "ingilizce": "Trace",
+    "turkce": "İz / Eser Miktarda",
+    "modul": "Modül 7 / Modül 11",
+    "ornek_cumle": "The laboratory found traces of water in the fuel sample.",
+    "ipucu": "Havacılıkta iki anlamı da çıkar: Hem bir arızanın 'izini sürmek' hem de bir sıvının içinde bulunan 'çok küçük miktardaki' yabancı madde."
+  },
+  {
+    "id": 5041,
+    "ingilizce": "Adverse",
+    "turkce": "Olumsuz / Ters / Aksi",
+    "modul": "Modül 8 - Temel Aerodinamik",
+    "ornek_cumle": "Ice accumulation on the wings has an adverse effect on the aircraft's lift capability.",
+    "ipucu": "Genellikle 'adverse weather conditions' (olumsuz hava koşulları) veya 'adverse effect' (olumsuz etki) kalıplarıyla, emniyeti tehdit eden durumları nitelemek için kullanılır."
+  },
+  {
+    "id": 5042,
+    "ingilizce": "Coincide",
+    "turkce": "Aynı Zamana Rastlamak / Çakışmak",
+    "modul": "Modül 7 / Modül 9",
+    "ornek_cumle": "The inspection intervals must not coincide with the major overhaul periods.",
+    "ipucu": "İki olayın veya zaman diliminin birbiriyle 'üst üste binmesi' veya aynı anda gerçekleşmesi durumudur. Bakım planlaması sorularında karşınıza çıkabilir."
+  },
+  {
+    "id": 5043,
+    "ingilizce": "Exert",
+    "turkce": "Kullanmak / Uygulamak / Sarf Etmek",
+    "modul": "Modül 11 - Hidrolik Sistemler",
+    "ornek_cumle": "The hydraulic actuator can exert enough force to move the flight control surfaces.",
+    "ipucu": "Özellikle fiziksel bir kuvvetin (force) veya basıncın (pressure) bir nesne üzerine 'uygulanması' anlamında kullanılan teknik bir fiildir."
+  },
+  {
+    "id": 5045,
+    "ingilizce": "Liable to",
+    "turkce": "Eğilimli Olmak / Maruz Kalma Riski Bulunmak",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Magnesium alloys are liable to corrode if they are exposed to salt water.",
+    "ipucu": "Bir parçanın veya maddenin belirli bir olumsuz duruma (korozyon, çatlama vb.) karşı 'hassas' veya 'risk altında' olduğunu belirtir."
+  },
+  {
+    "id": 5046,
+    "ingilizce": "Notify",
+    "turkce": "Bildirmek / Haber Vermek",
+    "modul": "Modül 10 - Havacılık Mevzuatı",
+    "ornek_cumle": "The operator must notify the authorities immediately after a major incident.",
+    "ipucu": "Resmi bir durumu, arızayı veya olayı ilgili birime/kişiye bildirmek anlamında kullanılan 'inform' fiilinin teknik ve resmi halidir."
+  },
+  {
+    "id": 5048,
+    "ingilizce": "Retention",
+    "turkce": "Tutma / Muhafaza Etme",
+    "modul": "Modül 11 - Yakıt ve Yağ Sistemleri",
+    "ornek_cumle": "Check the fluid retention capability of the seal under high pressure.",
+    "ipucu": "Bir sistemin sıvıyı veya basıncı 'içeride tutabilme' yeteneğidir. Ayrıca 'knowledge retention' (bilgiyi akılda tutma) olarak İnsan Faktörlerinde de geçer."
+  },
+  {
+    "id": 5049,
+    "ingilizce": "Sustain",
+    "turkce": "Sürdürmek / Maruz Kalmak / Hasar Almak",
+    "modul": "Modül 11 - Uçak Yapısı",
+    "ornek_cumle": "The fuselage can sustain significant loads during a hard landing.",
+    "ipucu": "Havacılıkta iki yönlüdür: Hem bir seviyeyi 'korumak/devam ettirmek' hem de bir darbeye/hasara 'maruz kalıp ona dayanmak' anlamında kullanılır."
+  },
+  {
+    "id": 5050,
+    "ingilizce": "Validity",
+    "turkce": "Geçerlilik",
+    "modul": "Modül 10 - Havacılık Mevzuatı",
+    "ornek_cumle": "The validity of the Certificate of Airworthiness depends on regular maintenance.",
+    "ipucu": "Lisansların, sertifikaların veya kalibrasyonların 'geçerlilik süresini' veya durumunu nitelemek için kullanılır."
+  },
+  {
+    "id": 5051,
+    "ingilizce": "Adequately",
+    "turkce": "Yeterli Seviyede / Gerektiği Gibi",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "The components must be adequately protected against corrosion during storage.",
+    "ipucu": "İşlemin sadece 'yapılmış' olması yetmez, 'yeterli kalitede' yapılması gerektiğini vurgular. 'Adequate' sıfatının zarf halidir."
+  },
+  {
+    "id": 5052,
+    "ingilizce": "Circumference",
+    "turkce": "Çevre Uzunluğu / Çeper",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Examine the entire circumference of the tire for any cuts or bulges.",
+    "ipucu": "Dairesel nesnelerin (lastik, boru, gövde kesiti) etrafını, yani tüm çevresini nitelemek için kullanılır."
+  },
+  {
+    "id": 5053,
+    "ingilizce": "Determine",
+    "turkce": "Belirlemek / Tespit Etmek / Karar Vermek",
+    "modul": "Modül 10 - Havacılık Mevzuatı",
+    "ornek_cumle": "The inspection is performed to determine the serviceability of the part.",
+    "ipucu": "Bir parçanın durumuna (uçabilir/uçamaz) karar vermek veya bir arızanın nedenini 'kesin olarak saptamak' anlamındadır."
+  },
+  {
+    "id": 5054,
+    "ingilizce": "Equivalent",
+    "turkce": "Eşdeğer / Muadil",
+    "modul": "Modül 7 / Modül 10",
+    "ornek_cumle": "You can use an equivalent tool if the original one is not available.",
+    "ipucu": "Farklı marka veya model olsa da aynı işi, aynı kalitede gören malzeme veya aletler için kullanılan yasal bir terimdir."
+  },
+  {
+    "id": 5055,
+    "ingilizce": "Intact",
+    "turkce": "Hasarsız / Bozulmamış / Tam",
+    "modul": "Modül 11 - Uçak Yapısı",
+    "ornek_cumle": "The safety seal must be intact before the fire extinguisher is used.",
+    "ipucu": "Bir yapının veya mühürün orijinal halini koruması, parçalanmamış veya kurcalanmamış olması durumudur."
+  },
+  {
+    "id": 5056,
+    "ingilizce": "Interval",
+    "turkce": "Aralık / Periyot",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "The maintenance interval for this task is 500 flight hours.",
+    "ipucu": "İki bakım arasındaki zaman, uçuş saati veya iniş sayısı gibi 'aralıkları' ifade eder."
+  },
+  {
+    "id": 5057,
+    "ingilizce": "Nuisance",
+    "turkce": "Rahatsızlık Veren / Gereksiz / Yalancı (Alarm)",
+    "modul": "Modül 11 - Uyarı Sistemleri",
+    "ornek_cumle": "The software update aims to reduce nuisance warnings in the cockpit.",
+    "ipucu": "Gerçek bir tehlike olmadığı halde sistemi meşgul eden 'gereksiz' veya 'yanıltıcı' uyarılar/durumlar için kullanılır."
+  },
+  {
+    "id": 5058,
+    "ingilizce": "Proximity",
+    "turkce": "Yakınlık",
+    "modul": "Modül 11 - Aviyonik",
+    "ornek_cumle": "The proximity sensor detects the position of the landing gear.",
+    "ipucu": "Fiziksel yakınlık. 'Proximity sensor' (yakınlık sensörü) havacılıkta hareketli parçaların konumunu belirlemede çok yaygındır."
+  },
+  {
+    "id": 5059,
+    "ingilizce": "Severe",
+    "turkce": "Sert / Şiddetli / Ağır",
+    "modul": "Modül 8 / Modül 11",
+    "ornek_cumle": "The aircraft encountered severe turbulence over the mountains.",
+    "ipucu": "Hava olaylarının (türbülans vb.) veya hasarların (korozyon vb.) en üst seviyedeki şiddetini nitelemek için kullanılır."
+  },
+  {
+    "id": 5060,
+    "ingilizce": "Tightness",
+    "turkce": "Sıkılık / Sızdırmazlık",
+    "modul": "Modül 7 - Bakım Uygulamaları",
+    "ornek_cumle": "Check the tightness of the fluid connections for any signs of leakage.",
+    "ipucu": "Hem bir bağlantının ne kadar sıkı (torklanmış) olduğunu hem de bir sızdırmazlık durumunu anlatabilir."
   }
 ]

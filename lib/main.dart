@@ -1,7 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'firebase_options.dart';
 import 'theme/app_theme.dart';
 import 'screens/main_shell.dart';
 import 'screens/konular_screen.dart';
@@ -12,6 +14,8 @@ import 'screens/yanlislarim_screen.dart';
 import 'screens/kelime_screen.dart';
 import 'screens/kelime_yanlislarim_screen.dart';
 import 'screens/premium_screen.dart';
+import 'screens/sky_fight_lobby_screen.dart';
+import 'screens/challenge_screen.dart';
 import 'services/daily_limit_service.dart';
 import 'services/premium_service.dart';
 
@@ -23,6 +27,7 @@ Future<void> main() async {
       statusBarIconBrightness: Brightness.light,
     ),
   );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await PremiumService.initialize();
   await DailyLimitService.ensureDay();
   runApp(const AeroTestApp());
@@ -58,6 +63,8 @@ class AeroTestApp extends StatelessWidget {
         '/kelime':          (_) => const KelimeScreen(),
         '/kelime_yanlislar':(_) => const KelimeYanlislarimScreen(),
         '/premium':         (_) => const PremiumScreen(),
+        '/sky_fight':       (_) => const SkyFightLobbyScreen(),
+        '/challenge':       (_) => const ChallengeHomeScreen(),
       },
     );
   }

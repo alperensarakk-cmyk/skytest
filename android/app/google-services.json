@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1000304765370",
+    "project_id": "aerotest-skyfight",
+    "storage_bucket": "aerotest-skyfight.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000304765370:android:b84ff2118219931cd3d583",
+        "android_client_info": {
+          "package_name": "com.skytest.skytest_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCcJyQBP8E2DDMx5i199OGEWe4BGHLiBj0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

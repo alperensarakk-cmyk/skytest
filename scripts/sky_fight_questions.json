@@ -1,0 +1,3135 @@
+[
+  {
+    "id": 1,
+    "type": "terminology",
+    "question": "Uçağın her uçuş öncesinde yapılan dış muayenesi hangisidir?",
+    "options": {
+      "A": "Internal inspection",
+      "B": "Walk-around inspection",
+      "C": "Detailed structural inspection",
+      "D": "Non-destructive test"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 2,
+    "type": "definition",
+    "question": "Bir parçanın yüzeyinde darbe sonucu oluşan hafif çöküntüye ne denir?",
+    "options": {
+      "A": "Dent",
+      "B": "Gouge",
+      "C": "Crack",
+      "D": "Crazing"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 3,
+    "type": "terminology",
+    "question": "Arıza giderme veya sorun çözme işlemlerine ne ad verilir?",
+    "options": {
+      "A": "Adjustment",
+      "B": "Lubrication",
+      "C": "Troubleshooting",
+      "D": "Removal"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 4,
+    "type": "definition",
+    "question": "Dökümanlarda 'aksi belirtilmedikçe' anlamına gelen kalıp hangisidir?",
+    "options": {
+      "A": "As required",
+      "B": "Unless otherwise specified",
+      "C": "If necessary",
+      "D": "Subject to approval"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 5,
+    "type": "terminology",
+    "question": "Parça numaralarını ve montaj sıralamasını bulmak için hangi kılavuz kullanılır?",
+    "options": {
+      "A": "Aircraft Maintenance Manual",
+      "B": "Structural Repair Manual",
+      "C": "Illustrated Parts Catalog",
+      "D": "Minimum Equipment List"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 6,
+    "type": "definition",
+    "question": "Sıvıların sızmasını önlemek için kullanılan sızdırmazlık elemanı nedir?",
+    "options": {
+      "A": "Fastener",
+      "B": "Sealant",
+      "C": "Adhesive",
+      "D": "Solvent"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 7,
+    "type": "terminology",
+    "question": "Uçaktaki bir sistemin 'gayrifaal' olduğunu belirten terim hangisidir?",
+    "options": {
+      "A": "Serviceable",
+      "B": "Operative",
+      "C": "Inoperative",
+      "D": "Adjusted"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 8,
+    "type": "definition",
+    "question": "Sıkma torkunu hassas şekilde ölçmek için kullanılan anahtar hangisidir?",
+    "options": {
+      "A": "Adjustable wrench",
+      "B": "Torque wrench",
+      "C": "Allen key",
+      "D": "Pliers"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 9,
+    "type": "terminology",
+    "question": "Uçak gövdesindeki yapısal tamirler için hangi dökümana bakılır?",
+    "options": {
+      "A": "AMM",
+      "B": "IPC",
+      "C": "SRM",
+      "D": "WDM"
+    },
+    "correct": "C",
+    "difficulty": "medium"
+  },
+  {
+    "id": 10,
+    "type": "definition",
+    "question": "Kompozit yüzeylerde görülen çok ince yüzeysel çatlaklara ne denir?",
+    "options": {
+      "A": "Scratch",
+      "B": "Crazing",
+      "C": "Nick",
+      "D": "Erosion"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 11,
+    "type": "terminology",
+    "question": "Bir parçanın yerinden sökülmesi işlemine ne denir?",
+    "options": {
+      "A": "Installation",
+      "B": "Removal",
+      "C": "Replacement",
+      "D": "Discard"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 12,
+    "type": "definition",
+    "question": "Motorun yakıt verilmeden sadece hava ile döndürülmesine ne denir?",
+    "options": {
+      "A": "Wet motoring",
+      "B": "Dry motoring",
+      "C": "Static run",
+      "D": "Hot start"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 13,
+    "type": "terminology",
+    "question": "Uçuş emniyeti için 'zorunlu' olan modifikasyon yayınlarına ne denir?",
+    "options": {
+      "A": "Service Bulletin",
+      "B": "Airworthiness Directive",
+      "C": "Task Card",
+      "D": "Work Order"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 14,
+    "type": "definition",
+    "question": "Parçalar arasındaki çok küçük boşlukları ölçmeye yarayan metal yaprakçıklar nedir?",
+    "options": {
+      "A": "Vernier caliper",
+      "B": "Feeler gauge",
+      "C": "Micrometer",
+      "D": "Depth gauge"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 15,
+    "type": "terminology",
+    "question": "Havacılıkta 'Yabancı Madde Hasarı' anlamına gelen kısaltma hangisidir?",
+    "options": {
+      "A": "FOB",
+      "B": "FOD",
+      "C": "FFS",
+      "D": "FDA"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 16,
+    "type": "definition",
+    "question": "Gözle yapılan detaylı inceleme türüne ne ad verilir?",
+    "options": {
+      "A": "Visual inspection",
+      "B": "NDT inspection",
+      "C": "Operational test",
+      "D": "Functional check"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 17,
+    "type": "terminology",
+    "question": "Uçağın tüm bakım adımlarının bulunduğu temel ana döküman hangisidir?",
+    "options": {
+      "A": "AMM",
+      "B": "MEL",
+      "C": "FCOM",
+      "D": "CDL"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 18,
+    "type": "definition",
+    "question": "Bir parçanın servis ömrünün dolması nedeniyle atılması işlemine ne denir?",
+    "options": {
+      "A": "Repair",
+      "B": "Discard",
+      "C": "Overhaul",
+      "D": "Modification"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 19,
+    "type": "terminology",
+    "question": "Kablolama ve elektriksel şemalar için hangi döküman kullanılır?",
+    "options": {
+      "A": "SRM",
+      "B": "WDM",
+      "C": "AMM",
+      "D": "IPC"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 20,
+    "type": "definition",
+    "question": "Malzemenin yüzeyinden parça kopması şeklinde oluşan aşınmaya ne denir?",
+    "options": {
+      "A": "Pitting",
+      "B": "Erosion",
+      "C": "Corrosion",
+      "D": "Abrasion"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 21,
+    "type": "terminology",
+    "question": "Bir parçanın üzerindeki koruyucu tabakanın kimyasal olarak bozulmasına ne denir?",
+    "options": {
+      "A": "Erosion",
+      "B": "Corrosion",
+      "C": "Abrasion",
+      "D": "Crazing"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 22,
+    "type": "definition",
+    "question": "Motorun normal çalışması sırasında çıkan itki kuvvetine ne ad verilir?",
+    "options": {
+      "A": "Drag",
+      "B": "Lift",
+      "C": "Thrust",
+      "D": "Weight"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 23,
+    "type": "terminology",
+    "question": "Uçağın ağırlık merkezini ve denge hesaplarını içeren döküman hangisidir?",
+    "options": {
+      "A": "Weight and Balance Manual",
+      "B": "AMM",
+      "C": "Flight Manual",
+      "D": "IPC"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 24,
+    "type": "definition",
+    "question": "Vida veya somunların gevşemesini önlemek için kullanılan emniyet teli uygulamasına ne denir?",
+    "options": {
+      "A": "Safety wiring",
+      "B": "Locking bolt",
+      "C": "Bonding",
+      "D": "Grounding"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 25,
+    "type": "terminology",
+    "question": "Uçağın statik elektrik yükünü boşaltmak için kullanılan parçalara ne denir?",
+    "options": {
+      "A": "Static dischargers",
+      "B": "Antennas",
+      "C": "Vortex generators",
+      "D": "Fairings"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 26,
+    "type": "definition",
+    "question": "Bir malzemenin yüzeyinde keskin bir cisimle oluşan derin çiziğe ne denir?",
+    "options": {
+      "A": "Scratch",
+      "B": "Gouge",
+      "C": "Puncture",
+      "D": "Nick"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 27,
+    "type": "terminology",
+    "question": "Sistemlerin belirli aralıklarla yapılan bakım kontrollerine ne denir?",
+    "options": {
+      "A": "Unscheduled maintenance",
+      "B": "Scheduled maintenance",
+      "C": "On-condition maintenance",
+      "D": "Hard time maintenance"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 28,
+    "type": "definition",
+    "question": "Metal yüzeylerdeki boyayı kaldırmak için kullanılan kimyasal madde nedir?",
+    "options": {
+      "A": "Solvent",
+      "B": "Paint stripper",
+      "C": "Degreaser",
+      "D": "Sealant"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 29,
+    "type": "terminology",
+    "question": "Uçak lastiklerinin aşırı ısınmasını önleyen emniyet elemanı hangisidir?",
+    "options": {
+      "A": "Relief valve",
+      "B": "Thermal fuse",
+      "C": "Check valve",
+      "D": "Bypass valve"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 30,
+    "type": "definition",
+    "question": "Parçaların birbirine sürtünmesini azaltmak için yapılan işlem nedir?",
+    "options": {
+      "A": "Cleaning",
+      "B": "Lubrication",
+      "C": "Finishing",
+      "D": "Sealing"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 31,
+    "type": "terminology",
+    "question": "Uçağın iniş takımlarının açılıp kapanmasını sağlayan sistem hangisidir?",
+    "options": {
+      "A": "Pneumatic system",
+      "B": "Hydraulic system",
+      "C": "Oxygen system",
+      "D": "Fuel system"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 32,
+    "type": "definition",
+    "question": "Havadaki nemin uçak yüzeyinde donmasıyla oluşan yapı nedir?",
+    "options": {
+      "A": "Icing",
+      "B": "De-icing",
+      "C": "Anti-icing",
+      "D": "Ice accretion"
+    },
+    "correct": "D",
+    "difficulty": "hard"
+  },
+  {
+    "id": 33,
+    "type": "terminology",
+    "question": "Arıza durumunda uçağın uçuşa verilebileceği minimum ekipman listesi nedir?",
+    "options": {
+      "A": "MEL",
+      "B": "AMM",
+      "C": "CDL",
+      "D": "SRM"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 34,
+    "type": "definition",
+    "question": "Bir parçanın teknik ömrünü tamamlamadan önce değiştirilmesine ne denir?",
+    "options": {
+      "A": "Overhaul",
+      "B": "Premature removal",
+      "C": "Modification",
+      "D": "Restoration"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 35,
+    "type": "terminology",
+    "question": "Hidrolik kaçaklarını kontrol etmek için yapılan test nedir?",
+    "options": {
+      "A": "Leak check",
+      "B": "Flow test",
+      "C": "Pressure test",
+      "D": "Operational check"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 36,
+    "type": "definition",
+    "question": "Uçağın yerde emniyete alınması işlemine ne denir?",
+    "options": {
+      "A": "Parking and chocking",
+      "B": "Parking",
+      "C": "Chocking only",
+      "D": "Towing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 37,
+    "type": "terminology",
+    "question": "Yüzeydeki çatlakları tespit etmek için kullanılan yöntem nedir?",
+    "options": {
+      "A": "NDT",
+      "B": "AMM",
+      "C": "IPC",
+      "D": "SRM"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 38,
+    "type": "definition",
+    "question": "Yüksek basınçlı havanın motordan alınmasına ne denir?",
+    "options": {
+      "A": "Air intake",
+      "B": "Bleed air",
+      "C": "Exhaust",
+      "D": "Bypass air"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 39,
+    "type": "terminology",
+    "question": "Aerodinamik düzgünlüğü sağlayan kaplamalara ne denir?",
+    "options": {
+      "A": "Flaps",
+      "B": "Fairings",
+      "C": "Slats",
+      "D": "Ailerons"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 40,
+    "type": "definition",
+    "question": "Tekrarlanan yükler sonucu oluşan malzeme hasarı nedir?",
+    "options": {
+      "A": "Fatigue",
+      "B": "Stress",
+      "C": "Strain",
+      "D": "Failure"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 41,
+    "type": "terminology",
+    "question": "Bir parçanın yerinden sökülüp yenisiyle değiştirilmesi işlemine ne denir?",
+    "options": {
+      "A": "Repair",
+      "B": "Replacement",
+      "C": "Overhaul",
+      "D": "Cleaning"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 42,
+    "type": "definition",
+    "question": "Motorun çalıştırılmadan önce dışarıdan bir hava kaynağıyla döndürülmesi işlemine ne denir?",
+    "options": {
+      "A": "Cold cranking",
+      "B": "Motoring",
+      "C": "Windmilling",
+      "D": "Static run"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 43,
+    "type": "terminology",
+    "question": "Uçağın yakıt deposu içindeki sızıntıları önleyen kimyasal dolgu maddesi nedir?",
+    "options": {
+      "A": "Solvent",
+      "B": "Sealant",
+      "C": "Lubricant",
+      "D": "Adhesive"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 44,
+    "type": "definition",
+    "question": "Havacılıkta 'bir dökümanın güncellenmiş yeni hali' anlamına gelen terim hangisidir?",
+    "options": {
+      "A": "Amendment",
+      "B": "Revision",
+      "C": "Issue",
+      "D": "Edition"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 45,
+    "type": "terminology",
+    "question": "Hangi döküman uçağın eksik parçalarla uçup uçamayacağını belirtir?",
+    "options": {
+      "A": "MEL",
+      "B": "AMM",
+      "C": "CDL",
+      "D": "SRM"
+    },
+    "correct": "C",
+    "difficulty": "hard"
+  },
+  {
+    "id": 46,
+    "type": "definition",
+    "question": "Uçak üzerindeki tüm elektriksel bağlantıların (grounding/bonding) kontrolü işlemine ne denir?",
+    "options": {
+      "A": "Bonding check",
+      "B": "Circuit test",
+      "C": "Load test",
+      "D": "Static test"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 47,
+    "type": "terminology",
+    "question": "Bir parçanın orijinal boyutlarına geri getirilmesi işlemine ne denir?",
+    "options": {
+      "A": "Modification",
+      "B": "Restoration",
+      "C": "Inspection",
+      "D": "Discard"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 48,
+    "type": "definition",
+    "question": "Metal yorgunluğu nedeniyle oluşan kılcal çatlaklara ne ad verilir?",
+    "options": {
+      "A": "Hairline crack",
+      "B": "Deep scratch",
+      "C": "Gouge",
+      "D": "Puncture"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 49,
+    "type": "terminology",
+    "question": "Uçak lastiğinin janttan ayrılmasını önleyen emniyet elemanı hangisidir?",
+    "options": {
+      "A": "Safety pin",
+      "B": "Locking bolt",
+      "C": "Fuse plug",
+      "D": "Cotter pin"
+    },
+    "correct": "C",
+    "difficulty": "hard"
+  },
+  {
+    "id": 50,
+    "type": "definition",
+    "question": "Hidrolik veya yakıt hatlarındaki havayı boşaltma işlemine ne denir?",
+    "options": {
+      "A": "Draining",
+      "B": "Bleeding",
+      "C": "Purging",
+      "D": "Ventilation"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 51,
+    "type": "terminology",
+    "question": "Uçakta yangın algılama ve söndürme sistemine ne ad verilir?",
+    "options": {
+      "A": "Anti-ice system",
+      "B": "Fire protection system",
+      "C": "Environmental control system",
+      "D": "Pneumatic system"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 52,
+    "type": "definition",
+    "question": "Sıvıların akışkanlığa karşı gösterdiği dirence ne denir?",
+    "options": {
+      "A": "Density",
+      "B": "Viscosity",
+      "C": "Pressure",
+      "D": "Flow rate"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 53,
+    "type": "terminology",
+    "question": "Uçak iniş takımlarının yerde olup olmadığını algılayan sensör nedir?",
+    "options": {
+      "A": "Pitot tube",
+      "B": "Weight on wheels (WOW) switch",
+      "C": "Altimeter",
+      "D": "Gyroscope"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 54,
+    "type": "definition",
+    "question": "Pervane veya motor pallerinin açısını değiştiren mekanizmaya ne denir?",
+    "options": {
+      "A": "Governor",
+      "B": "Actuator",
+      "C": "Pitch control system",
+      "D": "Stator"
+    },
+    "correct": "C",
+    "difficulty": "medium"
+  },
+  {
+    "id": 55,
+    "type": "terminology",
+    "question": "Korozyonu önlemek için metal yüzeyine uygulanan ilk kat boya nedir?",
+    "options": {
+      "A": "Primer",
+      "B": "Topcoat",
+      "C": "Solvent",
+      "D": "Stripper"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 56,
+    "type": "definition",
+    "question": "Bir parçanın AMM'de belirtilen şekilde ayarlanması işlemine ne denir?",
+    "options": {
+      "A": "Calibration",
+      "B": "Adjustment",
+      "C": "Modification",
+      "D": "Installation"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 57,
+    "type": "terminology",
+    "question": "Acil durumlarda elektrik sağlayan ram air turbine sistemi nedir?",
+    "options": {
+      "A": "APU",
+      "B": "RAT",
+      "C": "GPU",
+      "D": "Battery"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 58,
+    "type": "definition",
+    "question": "Uçak yüzeyinde oluşan küçük metal çapaklarına ne denir?",
+    "options": {
+      "A": "Burr",
+      "B": "Dent",
+      "C": "Nick",
+      "D": "Scratch"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 59,
+    "type": "terminology",
+    "question": "Motor itiş yönünü tersine çeviren sistem nedir?",
+    "options": {
+      "A": "Afterburner",
+      "B": "Thrust reverser",
+      "C": "Bypass duct",
+      "D": "Exhaust cone"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 60,
+    "type": "definition",
+    "question": "Tüm sistemlerin çalıştığını doğrulamak için yapılan test nedir?",
+    "options": {
+      "A": "Operational check",
+      "B": "Functional test",
+      "C": "Final inspection",
+      "D": "Pre-flight check"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 61,
+    "type": "terminology",
+    "question": "Yapısal tamir limitlerini belirleyen terim nedir?",
+    "options": {
+      "A": "Safety margin",
+      "B": "Allowable damage limit",
+      "C": "Load factor",
+      "D": "Structural margin"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 62,
+    "type": "definition",
+    "question": "Metal yüzeyde kimyasal etkiyle oluşan çukurlaşma nedir?",
+    "options": {
+      "A": "Pitting corrosion",
+      "B": "Erosion",
+      "C": "Exfoliation",
+      "D": "Fretting"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 63,
+    "type": "terminology",
+    "question": "Bakım işlemlerinde kullanılan adım adım talimat kartı nedir?",
+    "options": {
+      "A": "Job card",
+      "B": "Task card",
+      "C": "Work order",
+      "D": "Logbook"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 64,
+    "type": "definition",
+    "question": "Uçağın ana gövde iskeletini oluşturan yapısal eleman nedir?",
+    "options": {
+      "A": "Frame",
+      "B": "Fairing",
+      "C": "Cowling",
+      "D": "Skin"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 65,
+    "type": "terminology",
+    "question": "Elektriksel sürekliliği sağlamak için yapılan bağlantı nedir?",
+    "options": {
+      "A": "Grounding",
+      "B": "Bonding",
+      "C": "Insulation",
+      "D": "Shielding"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 66,
+    "type": "definition",
+    "question": "Geçici olarak yapılan onarım türü nedir?",
+    "options": {
+      "A": "Permanent repair",
+      "B": "Interim repair",
+      "C": "Final fix",
+      "D": "Modification"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 67,
+    "type": "terminology",
+    "question": "Bir yüzeydeki deliği kapatmak için kullanılan parça nedir?",
+    "options": {
+      "A": "Splice",
+      "B": "Patch",
+      "C": "Shim",
+      "D": "Fastener"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 68,
+    "type": "definition",
+    "question": "Motorun ilk dönme hareketine geçirilmesi işlemine ne denir?",
+    "options": {
+      "A": "Windmilling",
+      "B": "Cranking",
+      "C": "Idling",
+      "D": "Spooling"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 69,
+    "type": "terminology",
+    "question": "Teknik dökümanda uygulanabilirlik alanı nedir?",
+    "options": {
+      "A": "Description",
+      "B": "Effectivity",
+      "C": "Procedure",
+      "D": "Reference"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 70,
+    "type": "definition",
+    "question": "Sıvı kaçaklarını tespit etmek için kullanılan boyalı test yöntemi nedir?",
+    "options": {
+      "A": "Dye penetrant test",
+      "B": "X-ray",
+      "C": "Eddy current",
+      "D": "Ultrasonic"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 71,
+    "type": "terminology",
+    "question": "Uçağın pitch kontrol yüzeyi hangisidir?",
+    "options": {
+      "A": "Aileron",
+      "B": "Elevator",
+      "C": "Rudder",
+      "D": "Spoiler"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 72,
+    "type": "definition",
+    "question": "Kabloları yapıya temas ettirmeyen koruyucu parça nedir?",
+    "options": {
+      "A": "Clamp",
+      "B": "Grommet",
+      "C": "Connector",
+      "D": "Spacer"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 73,
+    "type": "terminology",
+    "question": "Hidrolik sistemde basıncı depolayan ünite nedir?",
+    "options": {
+      "A": "Reservoir",
+      "B": "Accumulator",
+      "C": "Pump",
+      "D": "Actuator"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 74,
+    "type": "definition",
+    "question": "Teknik dökümanda zorunluluğu belirten kelime nedir?",
+    "options": {
+      "A": "Should",
+      "B": "Must",
+      "C": "May",
+      "D": "Could"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 75,
+    "type": "terminology",
+    "question": "Aşınmayı azaltan burç tipi parça nedir?",
+    "options": {
+      "A": "Bearing",
+      "B": "Bushing",
+      "C": "Washer",
+      "D": "Nut"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 76,
+    "type": "definition",
+    "question": "Arıza kök nedenini bulma işlemine ne denir?",
+    "options": {
+      "A": "Rectification",
+      "B": "Troubleshooting",
+      "C": "Replacement",
+      "D": "Adjustment"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 77,
+    "type": "terminology",
+    "question": "Hız ölçüm sisteminin dış sensörü nedir?",
+    "options": {
+      "A": "Static port",
+      "B": "Pitot probe",
+      "C": "TAT probe",
+      "D": "AoA sensor"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 78,
+    "type": "definition",
+    "question": "Servis dışı durumdaki parça için kullanılan terim nedir?",
+    "options": {
+      "A": "Expired",
+      "B": "Unserviceable",
+      "C": "Defective",
+      "D": "Faulty"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 79,
+    "type": "terminology",
+    "question": "Uçağı çekmek için kullanılan çubuk nedir?",
+    "options": {
+      "A": "Tow bar",
+      "B": "Tug",
+      "C": "Jack",
+      "D": "Chock"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 80,
+    "type": "definition",
+    "question": "Egzoz gaz sıcaklığını ölçen sistem nedir?",
+    "options": {
+      "A": "N1",
+      "B": "EGT",
+      "C": "EPR",
+      "D": "ITT"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 81,
+    "type": "terminology",
+    "question": "Sistemde akışı engelleyen durum nedir?",
+    "options": {
+      "A": "Leakage",
+      "B": "Clogging",
+      "C": "Seizure",
+      "D": "Bypass"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 82,
+    "type": "definition",
+    "question": "Aşırı ısınma durumu nedir?",
+    "options": {
+      "A": "Overheat",
+      "B": "Overload",
+      "C": "Overspeed",
+      "D": "Overpressure"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 83,
+    "type": "terminology",
+    "question": "Pervane ucu ile gövde arasındaki boşluk nedir?",
+    "options": {
+      "A": "Gap",
+      "B": "Clearance",
+      "C": "Tip clearance",
+      "D": "Tolerance"
+    },
+    "correct": "C",
+    "difficulty": "hard"
+  },
+  {
+    "id": 84,
+    "type": "definition",
+    "question": "Limit dışına çıkan durum nedir?",
+    "options": {
+      "A": "Out of limits",
+      "B": "In limits",
+      "C": "Acceptable",
+      "D": "Serviceable"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 85,
+    "type": "terminology",
+    "question": "Uçağın ana elektrik dağıtım sistemi nedir?",
+    "options": {
+      "A": "Busbar",
+      "B": "Feeder",
+      "C": "Relay",
+      "D": "Connector"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 86,
+    "type": "definition",
+    "question": "Uçağın servise verilmesi işlemi nedir?",
+    "options": {
+      "A": "Release to service",
+      "B": "Flight approval",
+      "C": "Check-out",
+      "D": "Maintenance release"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 87,
+    "type": "terminology",
+    "question": "Kompozit katman ayrılması nedir?",
+    "options": {
+      "A": "Delamination",
+      "B": "Disbonding",
+      "C": "Exfoliation",
+      "D": "Erosion"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 88,
+    "type": "definition",
+    "question": "Bağlantı elemanlarının genel adı nedir?",
+    "options": {
+      "A": "Fasteners",
+      "B": "Washers",
+      "C": "Gaskets",
+      "D": "Clamps"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 89,
+    "type": "terminology",
+    "question": "Kabin basınç kontrol valfi nedir?",
+    "options": {
+      "A": "Inflow valve",
+      "B": "Outflow valve",
+      "C": "Relief valve",
+      "D": "Safety valve"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 90,
+    "type": "definition",
+    "question": "Sağ/sol yönlü parça tanımı nedir?",
+    "options": {
+      "A": "Handed",
+      "B": "Directional",
+      "C": "Symmetrical",
+      "D": "Aligned"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 91,
+    "type": "terminology",
+    "question": "Antenlerin yerleşim planı nedir?",
+    "options": {
+      "A": "Wiring diagram",
+      "B": "Antenna layout",
+      "C": "Communication chart",
+      "D": "Equipment list"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 92,
+    "type": "definition",
+    "question": "Dinamik sızdırmazlık elemanı nedir?",
+    "options": {
+      "A": "O-ring",
+      "B": "Gasket",
+      "C": "Packing",
+      "D": "Seal"
+    },
+    "correct": "D",
+    "difficulty": "hard"
+  },
+  {
+    "id": 93,
+    "type": "terminology",
+    "question": "Atık su tahliye sistemi nedir?",
+    "options": {
+      "A": "Potable water system",
+      "B": "Drain system",
+      "C": "Waste system",
+      "D": "Fuel vent system"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 94,
+    "type": "definition",
+    "question": "İnsan yaralanma riski taşıyan uyarı nedir?",
+    "options": {
+      "A": "Warning",
+      "B": "Caution",
+      "C": "Note",
+      "D": "Remark"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 95,
+    "type": "definition",
+    "question": "Ekipman zarar riski taşıyan uyarı nedir?",
+    "options": {
+      "A": "Warning",
+      "B": "Caution",
+      "C": "Note",
+      "D": "Remark"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 96,
+    "type": "terminology",
+    "question": "Motor hız göstergesi nedir?",
+    "options": {
+      "A": "N1 indicator",
+      "B": "Tachometer",
+      "C": "Oil pressure gauge",
+      "D": "Fuel flow meter"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 97,
+    "type": "definition",
+    "question": "Uçak gövdesinde enine yapısal eleman nedir?",
+    "options": {
+      "A": "Stringer",
+      "B": "Longeron",
+      "C": "Frame",
+      "D": "Rib"
+    },
+    "correct": "C",
+    "difficulty": "hard"
+  },
+  {
+    "id": 98,
+    "type": "terminology",
+    "question": "Sıvı seviye ölçüm çubuğu nedir?",
+    "options": {
+      "A": "Dipstick",
+      "B": "Probe",
+      "C": "Float",
+      "D": "Sensor"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 99,
+    "type": "definition",
+    "question": "Yüzey temizleme solventi nedir?",
+    "options": {
+      "A": "Solvent",
+      "B": "Acid",
+      "C": "Water",
+      "D": "Fuel"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 100,
+    "type": "terminology",
+    "question": "Uçağı parkta sabitlemek için kullanılan takoz nedir?",
+    "options": {
+      "A": "Blocks",
+      "B": "Chocks",
+      "C": "Stops",
+      "D": "Pins"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 101,
+    "type": "terminology",
+    "question": "Uçağın yerde emniyete alınması (park edilmesi) işlemi hangisidir?",
+    "options": {
+      "A": "Mooring",
+      "B": "Securing aircraft",
+      "C": "Docking",
+      "D": "Anchoring"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 102,
+    "type": "definition",
+    "question": "Uçağın hareket etmesini önlemek için tekerlek önüne konulan takozlara ne denir?",
+    "options": {
+      "A": "Pins",
+      "B": "Chocks",
+      "C": "Blocks",
+      "D": "Stops"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 103,
+    "type": "terminology",
+    "question": "Uçak sistemlerinde 'serviceable condition' ne anlama gelir?",
+    "options": {
+      "A": "Unusable",
+      "B": "Inoperative",
+      "C": "Airworthy condition",
+      "D": "Scrapped"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 104,
+    "type": "definition",
+    "question": "Bir parçanın üretici limitleri içinde olup kullanılabilir durumda olması neyi ifade eder?",
+    "options": {
+      "A": "Out of limits",
+      "B": "Serviceable",
+      "C": "Deferred",
+      "D": "Rejected"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 105,
+    "type": "terminology",
+    "question": "Uçak bakımında kullanılan 'minimum equipment list' kısaltması hangisidir?",
+    "options": {
+      "A": "MEL",
+      "B": "CDL",
+      "C": "SRM",
+      "D": "AMM"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 106,
+    "type": "definition",
+    "question": "Eksik yapısal parçalarla uçuşa izin veren liste hangisidir?",
+    "options": {
+      "A": "MEL",
+      "B": "CDL",
+      "C": "IPC",
+      "D": "WDM"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 107,
+    "type": "terminology",
+    "question": "Parça numarası ve exploded view bilgisi hangi dokümanda bulunur?",
+    "options": {
+      "A": "AMM",
+      "B": "IPC",
+      "C": "SRM",
+      "D": "FCOM"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 108,
+    "type": "definition",
+    "question": "Yapısal hasar limitleri ve repair data hangi dokümanda yer alır?",
+    "options": {
+      "A": "SRM",
+      "B": "MEL",
+      "C": "AMM",
+      "D": "IPC"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 109,
+    "type": "terminology",
+    "question": "Uçak bakımında 'removal and installation' işlemi neyi ifade eder?",
+    "options": {
+      "A": "Only repair",
+      "B": "Only inspection",
+      "C": "Component change",
+      "D": "Painting"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 110,
+    "type": "definition",
+    "question": "Bir arızanın kök nedenini bulma sürecine ne denir?",
+    "options": {
+      "A": "Inspection",
+      "B": "Troubleshooting",
+      "C": "Calibration",
+      "D": "Replacement"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 111,
+    "type": "terminology",
+    "question": "Uçak hidrolik sisteminde basınç üreten ana ünite hangisidir?",
+    "options": {
+      "A": "Pump",
+      "B": "Valve",
+      "C": "Reservoir",
+      "D": "Filter"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 112,
+    "type": "definition",
+    "question": "Sistem içindeki akış yönünü kontrol eden eleman nedir?",
+    "options": {
+      "A": "Valve",
+      "B": "Pump",
+      "C": "Motor",
+      "D": "Actuator"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 113,
+    "type": "terminology",
+    "question": "Elektrik devresini aşırı akımdan koruyan eleman nedir?",
+    "options": {
+      "A": "Relay",
+      "B": "Circuit Breaker",
+      "C": "Busbar",
+      "D": "Switch"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 114,
+    "type": "definition",
+    "question": "Uçakta elektrik dağıtım sistemine ne denir?",
+    "options": {
+      "A": "Bus system",
+      "B": "Fuel system",
+      "C": "Hydraulic system",
+      "D": "Bleed system"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 115,
+    "type": "terminology",
+    "question": "Motor çalıştırma sırasında yağsız döndürme işlemi hangisidir?",
+    "options": {
+      "A": "Wet motoring",
+      "B": "Dry motoring",
+      "C": "Hot start",
+      "D": "Run-up"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 116,
+    "type": "definition",
+    "question": "Motorun yakıt verilerek çalıştırılmasına ne denir?",
+    "options": {
+      "A": "Start sequence",
+      "B": "Engine start",
+      "C": "Motoring",
+      "D": "Cranking"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 117,
+    "type": "terminology",
+    "question": "Uçakta kabin basıncını kontrol eden ana sistem hangisidir?",
+    "options": {
+      "A": "Pressurization system",
+      "B": "Fuel system",
+      "C": "Hydraulic system",
+      "D": "Electrical system"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 118,
+    "type": "definition",
+    "question": "Kabindeki hava çıkışını düzenleyen valf hangisidir?",
+    "options": {
+      "A": "Inflow valve",
+      "B": "Outflow valve",
+      "C": "Check valve",
+      "D": "Relief valve"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 119,
+    "type": "terminology",
+    "question": "Uçakta buzlanmayı önleme sistemine ne denir?",
+    "options": {
+      "A": "Anti-ice system",
+      "B": "Fire system",
+      "C": "Fuel system",
+      "D": "Brake system"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 120,
+    "type": "definition",
+    "question": "Oluşmuş buzun temizlenmesi işlemine ne denir?",
+    "options": {
+      "A": "Anti-icing",
+      "B": "De-icing",
+      "C": "Cooling",
+      "D": "Heating"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 121,
+    "type": "terminology",
+    "question": "Uçakta yapısal çatlakları tespit etmek için kullanılan yöntem nedir?",
+    "options": {
+      "A": "Visual check",
+      "B": "NDT",
+      "C": "Leak test",
+      "D": "Load test"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 122,
+    "type": "definition",
+    "question": "Manyetik parçacıklarla çatlak tespiti hangi NDT yöntemidir?",
+    "options": {
+      "A": "Ultrasonic",
+      "B": "Eddy current",
+      "C": "Magnetic particle inspection",
+      "D": "Radiographic"
+    },
+    "correct": "C",
+    "difficulty": "hard"
+  },
+  {
+    "id": 123,
+    "type": "terminology",
+    "question": "Uçak yapısında stres taşıyan uzunlamasına eleman nedir?",
+    "options": {
+      "A": "Stringer",
+      "B": "Frame",
+      "C": "Panel",
+      "D": "Skin"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 124,
+    "type": "definition",
+    "question": "Gövdeyi çevresel olarak destekleyen yapısal eleman nedir?",
+    "options": {
+      "A": "Frame",
+      "B": "Stringer",
+      "C": "Beam",
+      "D": "Rod"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 125,
+    "type": "terminology",
+    "question": "Uçakta elektriksel topraklama işlemine ne denir?",
+    "options": {
+      "A": "Bonding",
+      "B": "Grounding",
+      "C": "Shielding",
+      "D": "Insulation"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 126,
+    "type": "definition",
+    "question": "Parçalar arasında elektriksel sürekliliği sağlama işlemine ne denir?",
+    "options": {
+      "A": "Bonding",
+      "B": "Sealing",
+      "C": "Painting",
+      "D": "Locking"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 127,
+    "type": "terminology",
+    "question": "Uçak lastiğinin janttan ayrılmasını önleyen emniyet parçası nedir?",
+    "options": {
+      "A": "Cotter pin",
+      "B": "Fuse plug",
+      "C": "Valve core",
+      "D": "Spacer"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 128,
+    "type": "definition",
+    "question": "Lastik iç basıncını aşırı sıcaklıkta boşaltan güvenlik parçası nedir?",
+    "options": {
+      "A": "Relief valve",
+      "B": "Fuse plug",
+      "C": "Check valve",
+      "D": "Bleed valve"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 129,
+    "type": "terminology",
+    "question": "Uçakta thrust reverser görevi nedir?",
+    "options": {
+      "A": "Increase lift",
+      "B": "Reverse engine thrust",
+      "C": "Reduce fuel",
+      "D": "Increase speed"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 130,
+    "type": "definition",
+    "question": "Motorun çıkış gücünü ters yönde yönlendiren sistem nedir?",
+    "options": {
+      "A": "Reverser system",
+      "B": "Bleed system",
+      "C": "Fuel system",
+      "D": "Ignition system"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 131,
+    "type": "terminology",
+    "question": "Uçakta yakıt akışını ölçen sistem hangisidir?",
+    "options": {
+      "A": "Fuel flow meter",
+      "B": "Fuel pump",
+      "C": "Fuel valve",
+      "D": "Fuel tank"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 132,
+    "type": "definition",
+    "question": "Motor sıcaklığını izleyen gösterge hangisidir?",
+    "options": {
+      "A": "EGT",
+      "B": "N1",
+      "C": "RPM",
+      "D": "Torque"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 133,
+    "type": "terminology",
+    "question": "Uçak fren sisteminde basıncı kontrol eden ünite nedir?",
+    "options": {
+      "A": "Brake control valve",
+      "B": "Pump",
+      "C": "Reservoir",
+      "D": "Actuator"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 134,
+    "type": "definition",
+    "question": "Uçak bakımında 'deferred defect' neyi ifade eder?",
+    "options": {
+      "A": "Immediate repair",
+      "B": "Postponed defect",
+      "C": "Resolved defect",
+      "D": "Inspected item"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 135,
+    "type": "terminology",
+    "question": "Uçakta acil elektrik kaynağı sağlayan sistem nedir?",
+    "options": {
+      "A": "APU",
+      "B": "Battery",
+      "C": "RAT",
+      "D": "GPU"
+    },
+    "correct": "C",
+    "difficulty": "medium"
+  },
+  {
+    "id": 136,
+    "type": "definition",
+    "question": "Uçak bakımında 'work order' neyi ifade eder?",
+    "options": {
+      "A": "Uçuş planı",
+      "B": "Bakım emri",
+      "C": "Yakıt formu",
+      "D": "Kabin checklist"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 137,
+    "type": "terminology",
+    "question": "Uçak sistemlerinde 'functional test' neyi doğrular?",
+    "options": {
+      "A": "Görünüm",
+      "B": "Çalışma performansı",
+      "C": "Renk",
+      "D": "Ağırlık"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 138,
+    "type": "definition",
+    "question": "Bir sistemin tamamen çalışır durumda olduğunu doğrulayan test hangisidir?",
+    "options": {
+      "A": "Leak test",
+      "B": "Functional test",
+      "C": "Visual inspection",
+      "D": "Static test"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 139,
+    "type": "terminology",
+    "question": "Uçak yüzeyindeki boya altı primer katmanı ne işe yarar?",
+    "options": {
+      "A": "Dekorasyon",
+      "B": "Korozyon koruma",
+      "C": "Ağırlık artırma",
+      "D": "Hız artırma"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 140,
+    "type": "definition",
+    "question": "Uçakta 'out of tolerance' neyi ifade eder?",
+    "options": {
+      "A": "Limit içinde",
+      "B": "Kabul edilebilir",
+      "C": "Limit dışında",
+      "D": "Yeni parça"
+    },
+    "correct": "C",
+    "difficulty": "easy"
+  },
+  {
+    "id": 141,
+    "type": "terminology",
+    "question": "Uçak bakımında 'release to service' ne anlama gelir?",
+    "options": {
+      "A": "Uçuşa çıkamaz",
+      "B": "Bakım tamamlandı ve onaylandı",
+      "C": "Parça siparişi",
+      "D": "İptal edilen işlem"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 142,
+    "type": "terminology",
+    "question": "Uçağın yerde emniyete alınması için kullanılan genel işlem hangisidir?",
+    "options": {
+      "A": "Docking",
+      "B": "Securing aircraft",
+      "C": "Anchoring",
+      "D": "Parking gear only"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 143,
+    "type": "definition",
+    "question": "Uçağın tekerleklerinin hareketini engellemek için kullanılan ekipman nedir?",
+    "options": {
+      "A": "Chocks",
+      "B": "Pins",
+      "C": "Locks",
+      "D": "Brakes only"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 144,
+    "type": "terminology",
+    "question": "AMM kısaltması neyi ifade eder?",
+    "options": {
+      "A": "Aircraft Maintenance Manual",
+      "B": "Air Module Manual",
+      "C": "Aircraft Management Manual",
+      "D": "Assembly Maintenance Module"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 145,
+    "type": "definition",
+    "question": "IPC dokümanı ne için kullanılır?",
+    "options": {
+      "A": "Troubleshooting",
+      "B": "Part identification",
+      "C": "Structural repair limits",
+      "D": "Flight planning"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 146,
+    "type": "terminology",
+    "question": "SRM neyi ifade eder?",
+    "options": {
+      "A": "System Repair Manual",
+      "B": "Structural Repair Manual",
+      "C": "Standard Repair Method",
+      "D": "Service Reference Manual"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 147,
+    "type": "definition",
+    "question": "MEL dokümanı neyi tanımlar?",
+    "options": {
+      "A": "Minimum Equipment List",
+      "B": "Maintenance Error List",
+      "C": "Mandatory Equipment List",
+      "D": "Module Equipment Layout"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 148,
+    "type": "terminology",
+    "question": "Uçakta elektrik dağıtım sistemi genel adı nedir?",
+    "options": {
+      "A": "Bus system",
+      "B": "Fuel system",
+      "C": "Hydraulic loop",
+      "D": "Air system"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 149,
+    "type": "definition",
+    "question": "Circuit breaker ne işe yarar?",
+    "options": {
+      "A": "Increase voltage",
+      "B": "Protect circuit from overload",
+      "C": "Store electricity",
+      "D": "Convert AC to DC"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 150,
+    "type": "terminology",
+    "question": "Hydraulic systemde basınç üreten ana parça nedir?",
+    "options": {
+      "A": "Reservoir",
+      "B": "Pump",
+      "C": "Filter",
+      "D": "Valve only"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 151,
+    "type": "definition",
+    "question": "Valve ne işe yarar?",
+    "options": {
+      "A": "Flow control",
+      "B": "Power generation",
+      "C": "Heat transfer",
+      "D": "Structural support"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 152,
+    "type": "terminology",
+    "question": "Uçakta yakıt akışını ölçen sistem nedir?",
+    "options": {
+      "A": "Fuel gauge system",
+      "B": "Fuel flow system",
+      "C": "Fuel pump system",
+      "D": "Fuel tank system"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 153,
+    "type": "definition",
+    "question": "Serviceable condition neyi ifade eder?",
+    "options": {
+      "A": "Unusable part",
+      "B": "Usable within limits",
+      "C": "Scrap material",
+      "D": "Deferred item"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 154,
+    "type": "terminology",
+    "question": "Unserviceable ne anlama gelir?",
+    "options": {
+      "A": "Ready for use",
+      "B": "Not fit for use",
+      "C": "Optional use",
+      "D": "New part"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 155,
+    "type": "definition",
+    "question": "Torque wrench ne için kullanılır?",
+    "options": {
+      "A": "Measure length",
+      "B": "Apply controlled torque",
+      "C": "Cut material",
+      "D": "Measure voltage"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 156,
+    "type": "terminology",
+    "question": "Uçakta yağlama işlemi neyi ifade eder?",
+    "options": {
+      "A": "Cleaning",
+      "B": "Lubrication",
+      "C": "Painting",
+      "D": "Sealing"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 157,
+    "type": "definition",
+    "question": "Inspection ne demektir?",
+    "options": {
+      "A": "Replacement",
+      "B": "Checking condition",
+      "C": "Repairing",
+      "D": "Painting"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 158,
+    "type": "terminology",
+    "question": "NDT neyi ifade eder?",
+    "options": {
+      "A": "Non-Destructive Testing",
+      "B": "New Design Technique",
+      "C": "Normal Damage Test",
+      "D": "Noise Detection Test"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 159,
+    "type": "definition",
+    "question": "Visual inspection ne demektir?",
+    "options": {
+      "A": "X-ray test",
+      "B": "Görsel kontrol",
+      "C": "Load test",
+      "D": "Pressure test"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 160,
+    "type": "terminology",
+    "question": "Uçakta grounding neyi ifade eder?",
+    "options": {
+      "A": "Painting process",
+      "B": "Electrical connection to earth",
+      "C": "Fuel transfer",
+      "D": "Hydraulic control"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 161,
+    "type": "definition",
+    "question": "Bonding ne işe yarar?",
+    "options": {
+      "A": "Increase resistance",
+      "B": "Electrical continuity",
+      "C": "Reduce weight",
+      "D": "Increase speed"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 162,
+    "type": "terminology",
+    "question": "Outflow valve neyi kontrol eder?",
+    "options": {
+      "A": "Fuel flow",
+      "B": "Cabin pressure outflow",
+      "C": "Hydraulic pressure",
+      "D": "Oil pressure"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 163,
+    "type": "definition",
+    "question": "Pressurization system amacı nedir?",
+    "options": {
+      "A": "Fuel transfer",
+      "B": "Cabin pressure control",
+      "C": "Engine cooling",
+      "D": "Brake control"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 164,
+    "type": "terminology",
+    "question": "De-icing neyi ifade eder?",
+    "options": {
+      "A": "Prevent icing",
+      "B": "Remove ice",
+      "C": "Increase heat",
+      "D": "Cool system"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 165,
+    "type": "definition",
+    "question": "Anti-icing ne yapar?",
+    "options": {
+      "A": "Prevents ice formation",
+      "B": "Ice removal",
+      "C": "Engine cooling",
+      "D": "Fuel heating"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 166,
+    "type": "terminology",
+    "question": "EGT neyi ölçer?",
+    "options": {
+      "A": "Fuel pressure",
+      "B": "Exhaust gas temperature",
+      "C": "Oil level",
+      "D": "Air speed"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 167,
+    "type": "definition",
+    "question": "N1 göstergesi neyi ifade eder?",
+    "options": {
+      "A": "Fuel flow",
+      "B": "Low pressure spool speed",
+      "C": "Hydraulic pressure",
+      "D": "Cabin pressure"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 168,
+    "type": "terminology",
+    "question": "RAT sistemi ne sağlar?",
+    "options": {
+      "A": "Fuel backup",
+      "B": "Emergency power",
+      "C": "Hydraulic cooling",
+      "D": "Cabin air"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 169,
+    "type": "definition",
+    "question": "APU ne işe yarar?",
+    "options": {
+      "A": "Main engine",
+      "B": "Ground power substitute",
+      "C": "Brake system",
+      "D": "Flight control"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 170,
+    "type": "terminology",
+    "question": "GPU neyi ifade eder?",
+    "options": {
+      "A": "Ground Power Unit",
+      "B": "General Power Unit",
+      "C": "Gas Pressure Unit",
+      "D": "Ground Pump Unit"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 171,
+    "type": "definition",
+    "question": "Leak check ne için yapılır?",
+    "options": {
+      "A": "Paint quality",
+      "B": "Sızdırmazlık kontrolü",
+      "C": "Speed test",
+      "D": "Load test"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 172,
+    "type": "terminology",
+    "question": "Structural repair neyi kapsar?",
+    "options": {
+      "A": "Cabin cleaning",
+      "B": "Structural damage repair",
+      "C": "Fuel refilling",
+      "D": "Painting only"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 173,
+    "type": "definition",
+    "question": "Fatigue neyi ifade eder?",
+    "options": {
+      "A": "Instant failure",
+      "B": "Repeated stress damage",
+      "C": "Corrosion only",
+      "D": "Impact damage"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 174,
+    "type": "terminology",
+    "question": "Corrosion neyi ifade eder?",
+    "options": {
+      "A": "Mechanical wear",
+      "B": "Chemical degradation",
+      "C": "Heat damage",
+      "D": "Electrical failure"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 175,
+    "type": "definition",
+    "question": "Erosion ne anlama gelir?",
+    "options": {
+      "A": "Material removal by fluid/air",
+      "B": "Electrical failure",
+      "C": "Fuel leak",
+      "D": "Paint defect"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 176,
+    "type": "terminology",
+    "question": "FOD neyi ifade eder?",
+    "options": {
+      "A": "Fuel Oil Damage",
+      "B": "Foreign Object Damage",
+      "C": "Flight Operation Delay",
+      "D": "Final Output Data"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 177,
+    "type": "definition",
+    "question": "Work order neyi ifade eder?",
+    "options": {
+      "A": "Flight clearance",
+      "B": "Maintenance instruction",
+      "C": "Fuel request",
+      "D": "Passenger list"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 178,
+    "type": "terminology",
+    "question": "Task card ne içerir?",
+    "options": {
+      "A": "Flight plan",
+      "B": "Step-by-step maintenance task",
+      "C": "Fuel data",
+      "D": "Cabin layout"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 179,
+    "type": "definition",
+    "question": "AMM referansı ne için kullanılır?",
+    "options": {
+      "A": "Flight planning",
+      "B": "Maintenance procedures",
+      "C": "Passenger info",
+      "D": "Fuel calculation"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 180,
+    "type": "terminology",
+    "question": "CDL neyi ifade eder?",
+    "options": {
+      "A": "Configuration Deviation List",
+      "B": "Component Damage List",
+      "C": "Critical Data Log",
+      "D": "Control Deviation Level"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 181,
+    "type": "definition",
+    "question": "Unscheduled maintenance ne demektir?",
+    "options": {
+      "A": "Planned check",
+      "B": "Unexpected repair",
+      "C": "Routine inspection",
+      "D": "Overhaul only"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 182,
+    "type": "terminology",
+    "question": "Scheduled maintenance neyi ifade eder?",
+    "options": {
+      "A": "Random repair",
+      "B": "Planned maintenance",
+      "C": "Emergency fix",
+      "D": "Damage control"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 183,
+    "type": "definition",
+    "question": "Actuator ne yapar?",
+    "options": {
+      "A": "Generates fuel",
+      "B": "Produces motion",
+      "C": "Measures pressure",
+      "D": "Stores air"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 184,
+    "type": "terminology",
+    "question": "Hydraulic accumulator ne işe yarar?",
+    "options": {
+      "A": "Stores hydraulic energy",
+      "B": "Filters air",
+      "C": "Generates electricity",
+      "D": "Controls fuel"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 185,
+    "type": "definition",
+    "question": "Reservoir neyi ifade eder?",
+    "options": {
+      "A": "Pump",
+      "B": "Fluid storage tank",
+      "C": "Valve",
+      "D": "Sensor"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 186,
+    "type": "terminology",
+    "question": "Sealant ne için kullanılır?",
+    "options": {
+      "A": "Increase friction",
+      "B": "Prevent leakage",
+      "C": "Increase weight",
+      "D": "Heat transfer"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 187,
+    "type": "definition",
+    "question": "Lubrication amacı nedir?",
+    "options": {
+      "A": "Increase wear",
+      "B": "Reduce friction",
+      "C": "Increase heat",
+      "D": "Block movement"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 188,
+    "type": "terminology",
+    "question": "Calibration neyi ifade eder?",
+    "options": {
+      "A": "Adjustment to standard",
+      "B": "Replacement",
+      "C": "Painting",
+      "D": "Cleaning"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 189,
+    "type": "definition",
+    "question": "Adjustment ne demektir?",
+    "options": {
+      "A": "Fine tuning",
+      "B": "Scrapping",
+      "C": "Painting",
+      "D": "Inspection only"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 190,
+    "type": "terminology",
+    "question": "Pitot system neyi ölçer?",
+    "options": {
+      "A": "Temperature",
+      "B": "Airspeed",
+      "C": "Fuel flow",
+      "D": "Hydraulic pressure"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 191,
+    "type": "definition",
+    "question": "Static port ne işe yarar?",
+    "options": {
+      "A": "Measures static pressure",
+      "B": "Fuel transfer",
+      "C": "Brake control",
+      "D": "Engine start"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 192,
+    "type": "terminology",
+    "question": "Angle of attack neyi ifade eder?",
+    "options": {
+      "A": "Engine speed",
+      "B": "Wing angle to airflow",
+      "C": "Fuel rate",
+      "D": "Cabin pressure"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 193,
+    "type": "definition",
+    "question": "Lift neyi ifade eder?",
+    "options": {
+      "A": "Downward force",
+      "B": "Upward aerodynamic force",
+      "C": "Engine thrust",
+      "D": "Drag force"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 194,
+    "type": "terminology",
+    "question": "Drag neyi ifade eder?",
+    "options": {
+      "A": "Forward force",
+      "B": "Resistance force",
+      "C": "Lift force",
+      "D": "Engine power"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 195,
+    "type": "definition",
+    "question": "Thrust neyi ifade eder?",
+    "options": {
+      "A": "Stopping force",
+      "B": "Propulsive force",
+      "C": "Cooling force",
+      "D": "Electrical force"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 196,
+    "type": "terminology",
+    "question": "Reverse thrust ne zaman kullanılır?",
+    "options": {
+      "A": "Takeoff",
+      "B": "Landing",
+      "C": "Cruise",
+      "D": "Climb only"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 197,
+    "type": "definition",
+    "question": "Brake system amacı nedir?",
+    "options": {
+      "A": "Speed increase",
+      "B": "Aircraft stopping",
+      "C": "Fuel control",
+      "D": "Lift increase"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 198,
+    "type": "terminology",
+    "question": "Landing gear neyi ifade eder?",
+    "options": {
+      "A": "Wing system",
+      "B": "Under-carriage system",
+      "C": "Fuel system",
+      "D": "Electrical system"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 199,
+    "type": "definition",
+    "question": "Wheel well ne demektir?",
+    "options": {
+      "A": "Engine compartment",
+      "B": "Landing gear housing area",
+      "C": "Fuel tank",
+      "D": "Cabin area"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 200,
+    "type": "terminology",
+    "question": "Maintenance release neyi ifade eder?",
+    "options": {
+      "A": "Aircraft grounded",
+      "B": "Aircraft released after maintenance",
+      "C": "Fuel refill",
+      "D": "Inspection pending"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 201,
+    "type": "terminology",
+    "question": "Uçağın yerde sabitlenmesi için tekerleklere yerleştirilen takozlara ne denir?",
+    "options": {
+      "A": "Chocks",
+      "B": "Blocks",
+      "C": "Stops",
+      "D": "Pins"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 202,
+    "type": "definition",
+    "question": "Bir parçanın AMM prosedürüne göre yerine takılması işlemine ne denir?",
+    "options": {
+      "A": "Installation",
+      "B": "Replacement",
+      "C": "Adjustment",
+      "D": "Rigging"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 203,
+    "type": "terminology",
+    "question": "Uçakta arıza sonrası yapılan doğrulama testine ne denir?",
+    "options": {
+      "A": "Functional Check",
+      "B": "Leak Check",
+      "C": "Visual Check",
+      "D": "Ground Test"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 204,
+    "type": "definition",
+    "question": "Bir parçanın servis limitleri içinde olup olmadığının kontrol edilmesi nedir?",
+    "options": {
+      "A": "Inspection",
+      "B": "Calibration",
+      "C": "Adjustment",
+      "D": "Modification"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 205,
+    "type": "terminology",
+    "question": "Uçak bakımında kullanılan ana yapısal hasar dokümanı hangisidir?",
+    "options": {
+      "A": "SRM",
+      "B": "AMM",
+      "C": "IPC",
+      "D": "MEL"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 206,
+    "type": "definition",
+    "question": "Hidrolik sistemde basıncı üreten ana komponent nedir?",
+    "options": {
+      "A": "Pump",
+      "B": "Reservoir",
+      "C": "Accumulator",
+      "D": "Valve"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 207,
+    "type": "terminology",
+    "question": "Elektrik sisteminde devreyi koruyan otomatik kesici nedir?",
+    "options": {
+      "A": "Circuit Breaker",
+      "B": "Relay",
+      "C": "Busbar",
+      "D": "Fuse Panel"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 208,
+    "type": "definition",
+    "question": "Bir parçanın yüzeyinin standartlara uygun hale getirilmesi işlemine ne denir?",
+    "options": {
+      "A": "Finishing",
+      "B": "Cleaning",
+      "C": "Painting",
+      "D": "Sealing"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 209,
+    "type": "terminology",
+    "question": "Uçakta kullanılan minimum ekipman listesi hangi dokümandır?",
+    "options": {
+      "A": "MEL",
+      "B": "CDL",
+      "C": "SRM",
+      "D": "AMM"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 210,
+    "type": "definition",
+    "question": "Bir sistemin geçici olarak devre dışı bırakılması ne demektir?",
+    "options": {
+      "A": "Deactivation",
+      "B": "Activation",
+      "C": "Pressurization",
+      "D": "Bleeding"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 211,
+    "type": "terminology",
+    "question": "Uçak kabin basıncını kontrol eden ana sistem nedir?",
+    "options": {
+      "A": "Pressurization System",
+      "B": "Hydraulic System",
+      "C": "Fuel System",
+      "D": "Electrical System"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 212,
+    "type": "definition",
+    "question": "Motor çalışırken egzoz gazı sıcaklığını ölçen parametre nedir?",
+    "options": {
+      "A": "EGT",
+      "B": "N1",
+      "C": "EPR",
+      "D": "ITT"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 213,
+    "type": "terminology",
+    "question": "Uçakta yapısal onarımlarda kullanılan limit referans dokümanı nedir?",
+    "options": {
+      "A": "SRM",
+      "B": "AMM",
+      "C": "IPC",
+      "D": "WDM"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 214,
+    "type": "definition",
+    "question": "Bir parçanın yeniden kullanılabilir hale getirilmesi işlemine ne denir?",
+    "options": {
+      "A": "Overhaul",
+      "B": "Discard",
+      "C": "Removal",
+      "D": "Installation"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 215,
+    "type": "terminology",
+    "question": "Uçakta yakıt sisteminden havanın atılması işlemine ne denir?",
+    "options": {
+      "A": "Fuel Venting",
+      "B": "Fuel Bleeding",
+      "C": "Fuel Draining",
+      "D": "Fuel Purging"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 216,
+    "type": "definition",
+    "question": "Uçak sistemlerinin yerde çalıştırılarak kontrol edilmesine ne denir?",
+    "options": {
+      "A": "Ground Test",
+      "B": "Flight Test",
+      "C": "Bench Test",
+      "D": "Static Test"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 217,
+    "type": "terminology",
+    "question": "Uçakta yapısal bağlantı elemanlarının genel adı nedir?",
+    "options": {
+      "A": "Fasteners",
+      "B": "Bearings",
+      "C": "Bushings",
+      "D": "Clamps"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 218,
+    "type": "definition",
+    "question": "Bir parçanın servis ömrünü tamamlamadan çıkarılması nedir?",
+    "options": {
+      "A": "Premature Removal",
+      "B": "Scheduled Removal",
+      "C": "Overhaul",
+      "D": "Adjustment"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 219,
+    "type": "terminology",
+    "question": "Uçakta elektrik gücünü dağıtan ana hat nedir?",
+    "options": {
+      "A": "Bus Bar",
+      "B": "Feeder Line",
+      "C": "Connector",
+      "D": "Relay"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 220,
+    "type": "definition",
+    "question": "Bir sistemde kaçak olup olmadığının kontrol edilmesine ne denir?",
+    "options": {
+      "A": "Leak Check",
+      "B": "Flow Check",
+      "C": "Pressure Drop",
+      "D": "Calibration"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 221,
+    "type": "terminology",
+    "question": "Uçakta hareketli yüzeylerin ayar prosedürü ne olarak adlandırılır?",
+    "options": {
+      "A": "Rigging",
+      "B": "Trimming",
+      "C": "Balancing",
+      "D": "Aligning"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 222,
+    "type": "definition",
+    "question": "Bir parçanın yüzeyinde oluşan küçük metal kopmalarına ne denir?",
+    "options": {
+      "A": "Nick",
+      "B": "Dent",
+      "C": "Crack",
+      "D": "Scratch"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 223,
+    "type": "terminology",
+    "question": "Uçakta hidrolik basınç depolayan ünite nedir?",
+    "options": {
+      "A": "Accumulator",
+      "B": "Pump",
+      "C": "Valve",
+      "D": "Reservoir"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 224,
+    "type": "definition",
+    "question": "Bir parçanın teknik standartlara uygun hale getirilmesi nedir?",
+    "options": {
+      "A": "Adjustment",
+      "B": "Installation",
+      "C": "Removal",
+      "D": "Cleaning"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 225,
+    "type": "terminology",
+    "question": "Uçakta kabin hava kalitesini sağlayan sistem nedir?",
+    "options": {
+      "A": "ECS",
+      "B": "FCS",
+      "C": "PCS",
+      "D": "ICS"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 226,
+    "type": "definition",
+    "question": "Uçak bakımında 'uygun durumda' anlamına gelen terim nedir?",
+    "options": {
+      "A": "Serviceable",
+      "B": "Inoperative",
+      "C": "Defective",
+      "D": "Uninstalled"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 227,
+    "type": "terminology",
+    "question": "Uçakta kabin basıncını dışarı atan kontrol valfi nedir?",
+    "options": {
+      "A": "Outflow Valve",
+      "B": "Safety Valve",
+      "C": "Relief Valve",
+      "D": "Check Valve"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 228,
+    "type": "definition",
+    "question": "Bir sistemin tamamen durdurulması ne demektir?",
+    "options": {
+      "A": "Shutdown",
+      "B": "Startup",
+      "C": "Activation",
+      "D": "Pressurization"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 229,
+    "type": "terminology",
+    "question": "Uçakta statik elektrik boşaltıcı parçalar nedir?",
+    "options": {
+      "A": "Static Dischargers",
+      "B": "Ground Straps",
+      "C": "Bonding Leads",
+      "D": "Lightning Rods"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 230,
+    "type": "definition",
+    "question": "Bir parçanın limit dışına çıkması durumu nedir?",
+    "options": {
+      "A": "Out of Limits",
+      "B": "In Limits",
+      "C": "Nominal",
+      "D": "Serviceable"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 231,
+    "type": "terminology",
+    "question": "Uçakta yapısal yüzey onarım dokümanı hangisidir?",
+    "options": {
+      "A": "SRM",
+      "B": "AMM",
+      "C": "IPC",
+      "D": "WDM"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 232,
+    "type": "definition",
+    "question": "Bir parçanın yüzeyinin temizlenip hazırlanması işlemine ne denir?",
+    "options": {
+      "A": "Surface Preparation",
+      "B": "Painting",
+      "C": "Installation",
+      "D": "Removal"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 233,
+    "type": "terminology",
+    "question": "Uçakta motor kontrol parametresi N1 neyi ifade eder?",
+    "options": {
+      "A": "Fan speed",
+      "B": "Fuel flow",
+      "C": "Oil pressure",
+      "D": "Hydraulic pressure"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 234,
+    "type": "definition",
+    "question": "Bir parçanın yeniden montajı işlemi nedir?",
+    "options": {
+      "A": "Reinstallation",
+      "B": "Removal",
+      "C": "Discard",
+      "D": "Inspection"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 235,
+    "type": "terminology",
+    "question": "Uçakta kablo yollarını koruyan parça nedir?",
+    "options": {
+      "A": "Clamp",
+      "B": "Grommet",
+      "C": "Bracket",
+      "D": "Splice"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 236,
+    "type": "definition",
+    "question": "Bir sistemin yerde çalıştırılarak test edilmesi nedir?",
+    "options": {
+      "A": "Ground Run",
+      "B": "Flight Test",
+      "C": "Bench Test",
+      "D": "Static Inspection"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 237,
+    "type": "terminology",
+    "question": "Uçakta motorun ters itki sistemi nedir?",
+    "options": {
+      "A": "Thrust Reverser",
+      "B": "Bypass System",
+      "C": "Afterburner",
+      "D": "Diffuser"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 238,
+    "type": "definition",
+    "question": "Bir parçanın teknik ömrünün uzatılması işlemine ne denir?",
+    "options": {
+      "A": "Life Extension",
+      "B": "Discard",
+      "C": "Removal",
+      "D": "Scrap"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 239,
+    "type": "terminology",
+    "question": "Uçakta kabin basınç sisteminin ana kontrol ünitesi nedir?",
+    "options": {
+      "A": "Pressurization Controller",
+      "B": "Air Valve",
+      "C": "Compressor",
+      "D": "Pump Unit"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 240,
+    "type": "definition",
+    "question": "Bir sistemde hata bulunması durumuna ne denir?",
+    "options": {
+      "A": "Fault",
+      "B": "Feature",
+      "C": "Upgrade",
+      "D": "Service"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 241,
+    "type": "terminology",
+    "question": "Uçakta bakım sonrası serbest bırakma dokümanı nedir?",
+    "options": {
+      "A": "CRS (Certificate of Release to Service)",
+      "B": "MEL",
+      "C": "AMM",
+      "D": "SRM"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  }
+]

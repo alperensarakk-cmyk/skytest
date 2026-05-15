@@ -166,12 +166,7 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
             icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
             onPressed: () => Navigator.pop(context),
           ),
-          title: Text(
-            widget.kategoriAdi,
-            style: const TextStyle(
-                color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
-            overflow: TextOverflow.ellipsis,
-          ),
+          title: buildAeroTestAppBarTitle(widget.kategoriAdi, subtitleFontSize: 14),
         ),
         body: const Center(
           child: Padding(
@@ -195,12 +190,7 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
           icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
           onPressed: () => Navigator.pop(context),
         ),
-        title: Text(
-          widget.kategoriAdi,
-          style: const TextStyle(
-              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
-          overflow: TextOverflow.ellipsis,
-        ),
+        title: buildAeroTestAppBarTitle(widget.kategoriAdi, subtitleFontSize: 14),
       ),
       body: Column(
         children: [

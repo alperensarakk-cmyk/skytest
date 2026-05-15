@@ -5,29 +5,43 @@ import '../theme/app_theme.dart';
 import '../widgets/menu_card.dart';
 import '../widgets/radar_background.dart';
 
-// ── Kart gradientleri ─────────────────────────────────────────────────────────
+// ── Menü kartı & "Nasıl çalışır?" mod kartları ortak gradientler
+// Çapraz köşe akışı: sol üst → sağ alt (bilgi sayfasıyla birebir aynı)
+const _dashGradBegin = Alignment.topLeft;
+const _dashGradEnd = Alignment.bottomRight;
+
+const List<Color> _pairSinav = [Color(0xFF0077B6), Color(0xFF023E8A)];
+const List<Color> _pairKonular = [Color(0xFF1C2541), Color(0xFF0D3B6E)];
+const List<Color> _pairKaliplar = [Color(0xFF1C2541), Color(0xFF2D1B69)];
+const List<Color> _pairKelime = [Color(0xFF2D1B69), Color(0xFF1A3A5C)];
+/// Bilgi sayfasında 5. mod yok — Kelimenin dibinden daha koyu mor-lacivert devamı
+const List<Color> _pairHaftalik = [Color(0xFF1A3A5C), Color(0xFF121827)];
+
+
 const _gradientSinav = LinearGradient(
-  colors: [Color(0xFF0077B6), Color(0xFF023E8A)],
-  begin: Alignment.centerLeft,
-  end: Alignment.centerRight,
+  colors: _pairSinav,
+  begin: _dashGradBegin,
+  end: _dashGradEnd,
 );
-
 const _gradientKonular = LinearGradient(
-  colors: [Color(0xFF1C2541), Color(0xFF0D3B6E)],
-  begin: Alignment.centerLeft,
-  end: Alignment.centerRight,
+  colors: _pairKonular,
+  begin: _dashGradBegin,
+  end: _dashGradEnd,
 );
-
 const _gradientKaliplar = LinearGradient(
-  colors: [Color(0xFF1C2541), Color(0xFF2D1B69)],
-  begin: Alignment.centerLeft,
-  end: Alignment.centerRight,
+  colors: _pairKaliplar,
+  begin: _dashGradBegin,
+  end: _dashGradEnd,
 );
-
 const _gradientKelime = LinearGradient(
-  colors: [Color(0xFF2D1B69), Color(0xFF1A3A5C)],
-  begin: Alignment.centerLeft,
-  end: Alignment.centerRight,
+  colors: _pairKelime,
+  begin: _dashGradBegin,
+  end: _dashGradEnd,
+);
+const _gradientChallenge = LinearGradient(
+  colors: _pairHaftalik,
+  begin: _dashGradBegin,
+  end: _dashGradEnd,
 );
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -191,6 +205,19 @@ class DashboardScreen extends StatelessWidget {
                     onTap: () => Navigator.pushNamed(context, '/kelime'),
                     gradient: _gradientKelime,
                     accentColor: const Color(0xFF6C63FF),
+                  ),
+                ),
+                const SizedBox(height: 6),
+                Expanded(
+                  child: MenuCard(
+                    compact: true,
+                    icon: Icons.emoji_events_rounded,
+                    title: 'Haftalık Test',
+                    description:
+                        'Bakım bilgilerini diğer kullanıcılar karşısında test et.',
+                    onTap: () => Navigator.pushNamed(context, '/challenge'),
+                    gradient: _gradientChallenge,
+                    accentColor: kAccent,
                   ),
                 ),
               ],
@@ -515,7 +542,7 @@ class _InfoSheet extends StatelessWidget {
                   _ModeCard(
                     icon: Icons.timer_rounded,
                     iconColor: Color(0xFF48CAE4),
-                    gradient: [Color(0xFF0077B6), Color(0xFF023E8A)],
+                    gradient: _pairSinav,
                     title: 'Sınav Modu',
                     badge: 'Sınav Deneyimi',
                     body:
@@ -528,7 +555,7 @@ class _InfoSheet extends StatelessWidget {
                   _ModeCard(
                     icon: Icons.menu_book_rounded,
                     iconColor: Color(0xFF48CAE4),
-                    gradient: [Color(0xFF1C2541), Color(0xFF0D3B6E)],
+                    gradient: _pairKonular,
                     title: 'Konulara Yönelik Çalışma',
                     badge: 'Anlayarak Öğren',
                     body:
@@ -542,7 +569,7 @@ class _InfoSheet extends StatelessWidget {
                   _ModeCard(
                     icon: Icons.auto_awesome_rounded,
                     iconColor: Color(0xFFFFD60A),
-                    gradient: [Color(0xFF1C2541), Color(0xFF2D1B69)],
+                    gradient: _pairKaliplar,
                     title: 'Altın Kalıplar',
                     badge: 'Sınav Refleksi Kazan',
                     body:
@@ -557,7 +584,7 @@ class _InfoSheet extends StatelessWidget {
                   _ModeCard(
                     icon: Icons.spellcheck_rounded,
                     iconColor: Color(0xFF6C63FF),
-                    gradient: [Color(0xFF2D1B69), Color(0xFF1A3A5C)],
+                    gradient: _pairKelime,
                     title: 'Kelime Çalışması',
                     badge: 'Sınava Özel Kelime Havuzu',
                     body:

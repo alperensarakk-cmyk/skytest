@@ -83,6 +83,17 @@ class _KonularScreenState extends State<KonularScreen> {
         .toList();
   }
 
+  /// Pratik ekranı AppBar: karışık / tek tip / çoklu tip etiketi.
+  String _pratikAppBarBasligi() {
+    if (_karisikMod) return 'Karışık';
+    final keys = _seciliTipler.toList()..sort();
+    if (keys.isEmpty) return 'Konular';
+    if (keys.length == 1) {
+      return _konuSoruTipleri[keys.first] ?? keys.first;
+    }
+    return keys.map((k) => _konuSoruTipleri[k] ?? k).join(', ');
+  }
+
   Future<void> _baslat() async {
     final pool = _havuzKonuPratik();
     if (pool.isEmpty) {
@@ -129,7 +140,7 @@ class _KonularScreenState extends State<KonularScreen> {
       context,
       MaterialPageRoute(
         builder: (_) => KonuPratikScreen(
-          kategoriAdi: 'Tüm Konular',
+          kategoriAdi: _pratikAppBarBasligi(),
           sorular:     sorular,
         ),
       ),
@@ -147,14 +158,7 @@ class _KonularScreenState extends State<KonularScreen> {
           icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'Konulara Yönelik Çalışma',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 17,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: buildAeroTestAppBarTitle('Konulara Yönelik Çalışma'),
       ),
 
       // ── Sabit Alt Buton ────────────────────────────────────────────────────

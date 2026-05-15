@@ -443,8 +443,7 @@ class _SinavScreenState extends State<SinavScreen> {
           backgroundColor: _cAppBar,
           elevation: 0,
           automaticallyImplyLeading: false,
-          title: const Text('Sınav Modu',
-              style: TextStyle(color: Colors.white, fontSize: 18)),
+          title: buildAeroTestAppBarTitle('Sınav Modu'),
         ),
         body: const Center(
           child: Column(
@@ -467,10 +466,7 @@ class _SinavScreenState extends State<SinavScreen> {
           backgroundColor: _cAppBar,
           elevation: 0,
           automaticallyImplyLeading: false,
-          title: const Text(
-            'Sınav Modu',
-            style: TextStyle(color: Colors.white, fontSize: 18),
-          ),
+          title: buildAeroTestAppBarTitle('Sınav Modu'),
         ),
         body: Center(
           child: Padding(
@@ -562,10 +558,13 @@ class _SinavScreenState extends State<SinavScreen> {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             children: [
-              // Sınavı Bitir butonu
               _FinishButton(onTap: _confirmFinish),
-              const Spacer(),
-              // Kronometre
+              const SizedBox(width: 10),
+              Expanded(
+                child: buildAeroTestAppBarTitle('Sınav Modu',
+                    subtitleFontSize: 13),
+              ),
+              const SizedBox(width: 8),
               _TimerWidget(label: _timerLabel, isLow: _remainingSec < 300),
             ],
           ),

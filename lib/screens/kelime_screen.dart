@@ -92,14 +92,7 @@ class _KelimeScreenState extends State<KelimeScreen> {
           icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'Kelime Çalışması',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 17,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: buildAeroTestAppBarTitle('Kelime Çalışması'),
       ),
 
       // ── Sabit Alt Buton ───────────────────────────────────────────────────

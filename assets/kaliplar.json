@@ -709,5 +709,194 @@
     "turkce_anlami": "ile birlikte / kombine olarak",
     "ornek_cumle": "The ailerons operate in combination _______ the flight spoilers.",
     "taktik": "İki sistemin (örn: aileron ve spoiler) birbiriyle uyumlu/birlikte çalıştığını anlatan 'in combination' kalıbı her zaman 'WITH' ile tamamlanır."
+  },
+  {
+    "id": 89,
+    "kategori": "Hata_ve_Onlem",
+    "ipucu_kalip": "clear _______",
+    "tamamlayici": "OF",
+    "turkce_anlami": "... alanından uzak tutmak (keep clear of)",
+    "ornek_cumle": "Keep all personnel clear _______ the intake area during engine start.",
+    "taktik": "Özellikle motor çalıştırma veya hareketli parça testlerinde, bir bölgenin 'temiz/boş' tutulması gerektiğini belirten 'clear' kelimesi her zaman 'OF' edatı ile kullanılır."
+  },
+  {
+    "id": 90,
+    "kategori": "Bakim_Proseduru",
+    "ipucu_kalip": "dispose _______",
+    "tamamlayici": "OF",
+    "turkce_anlami": "...-i elden çıkarmak / atmak",
+    "ornek_cumle": "Dispose _______ the used chemical cleaning agents according to the local regulations.",
+    "taktik": "Tehlikeli atıkların, eski yağların veya kimyasalların çevre kurallarına göre 'atılması' anlamındaki 'dispose' fiili daima 'OF' ile kullanılır."
+  },
+  {
+    "id": 91,
+    "kategori": "Edat_Kaliplari",
+    "ipucu_kalip": "capable _______",
+    "tamamlayici": "OF",
+    "turkce_anlami": "...-e yeteneği olmak / ... yapabilmek",
+    "ornek_cumle": "The hydraulic pump is capable _______ providing 3000 psi of pressure.",
+    "taktik": "Bir sistemin kapasitesini veya yeteneğini anlatan 'capable' sıfatı her zaman 'OF' edatını alır. 'Able' sıfatı ile karıştırma; 'able' edat olarak 'to' alır."
+  },
+  {
+    "id": 92,
+    "kategori": "Sistem_Kontrol",
+    "ipucu_kalip": "deviate _______",
+    "tamamlayici": "FROM",
+    "turkce_anlami": "...-den sapmak / dışına çıkmak",
+    "ornek_cumle": "Do not deviate _______ the approved maintenance procedures.",
+    "taktik": "Onaylı prosedürlerin, rotanın veya limitlerin 'dışına çıkmak' anlamındaki 'deviate' fiili 'FROM' edatı ile birleşir."
+  },
+  {
+    "id": 93,
+    "kategori": "Edat_Kaliplari",
+    "ipucu_kalip": "familiar _______",
+    "tamamlayici": "WITH",
+    "turkce_anlami": "...-e aşina olmak / ...-i biliyor olmak",
+    "ornek_cumle": "Technicians must be familiar _______ the layout of the fuel system.",
+    "taktik": "İnsan Faktörleri modülünde personelin bir sistem veya doküman hakkındaki 'bilgi düzeyini' sorgularken 'familiar WITH' kalıbı kullanılır."
+  },
+  {
+    "id": 94,
+    "kategori": "Sistem_Durumu",
+    "ipucu_kalip": "at _______",
+    "tamamlayici": "REST",
+    "turkce_anlami": "durur halde / hareketsiz",
+    "ornek_cumle": "Wait until the engine is at _______ before opening the cowling.",
+    "taktik": "Bir parçanın veya uçağın 'hiç hareket etmediği, durduğu' anı anlatmak için 'at REST' kalıbı kullanılır."
+  },
+  {
+    "id": 95,
+    "kategori": "Bakim_Islemi",
+    "ipucu_kalip": "subjected _______",
+    "tamamlayici": "TO",
+    "turkce_anlami": "...-e maruz kalmış",
+    "ornek_cumle": "The turbine blades are subjected _______ extreme temperatures.",
+    "taktik": "Bir parçanın yüksek ısı, basınç veya stres gibi etkilere 'maruz kalması' durumunda 'TO' edatı kullanılır."
+  },
+  {
+    "id": 96,
+    "kategori": "Zaman_ve_Sira",
+    "ipucu_kalip": "on _______",
+    "tamamlayici": "COMPLETION",
+    "turkce_anlami": "tamamlandığında / biter bitmez",
+    "ornek_cumle": "On _______ of the task, record the data in the logbook.",
+    "taktik": "Bir işin bitişini ve hemen ardından yapılması gerekeni (kayıt tutma vb.) bağlamak için 'on completion' (tamamlandığında) kalıbı kullanılır."
+  },
+  {
+    "id": 97,
+    "kategori": "Edat_Kaliplari",
+    "ipucu_kalip": "prohibit _______",
+    "tamamlayici": "FROM",
+    "turkce_anlami": "... yapmasını yasaklamak",
+    "ornek_cumle": "Personnel are prohibited _______ smoking near the oxygen cylinders.",
+    "taktik": "Bir eylemin yapılmasının 'yasak olduğunu' belirtirken 'prohibit [nesne] FROM [eylem]' yapısı kullanılır."
+  },
+  {
+    "id": 98,
+    "kategori": "Sistem_Guvenligi",
+    "ipucu_kalip": "independent _______",
+    "tamamlayici": "OF",
+    "turkce_anlami": "...-den bağımsız",
+    "ornek_cumle": "The standby instrument system is independent _______ the main electrical bus.",
+    "taktik": "Yedekli (redundant) sistemlerin birbirinden 'bağımsız' çalıştığını anlatırken 'independent' her zaman 'OF' ile kullanılır."
+  },
+  {
+    "id": 108,
+    "kategori": "Is_Akisi",
+    "ipucu_kalip": "result _______",
+    "tamamlayici": "IN",
+    "turkce_anlami": "... ile sonuçlanmak",
+    "ornek_cumle": "Failure to follow instructions may result _______ personal injury.",
+    "taktik": "Warning (uyarı) metinlerinin vazgeçilmezidir. Bir hatanın neye 'neden olacağını/sonuçlanacağını' anlatırken 'IN' edatı kullanılır."
+  },
+  {
+    "id": 109,
+    "kategori": "Hata_ve_Onlem",
+    "ipucu_kalip": "guard _______",
+    "tamamlayici": "AGAINST",
+    "turkce_anlami": "...-e karşı korumak / önlem almak",
+    "ornek_cumle": "Protective covers are used to guard _______ accidental damage during maintenance.",
+    "taktik": "Bir tehlikeye veya olumsuz bir duruma karşı 'önlem alarak korumak' anlamındaki 'guard' fiili her zaman 'AGAINST' edatı ile kullanılır."
+  },
+  {
+    "id": 110,
+    "kategori": "Edat_Kaliplari",
+    "ipucu_kalip": "approve _______",
+    "tamamlayici": "FOR",
+    "turkce_anlami": "... için onaylı olmak",
+    "ornek_cumle": "This type of solvent is not approved _______ use on composite surfaces.",
+    "taktik": "Bir malzemenin veya yöntemin belirli bir iş 'için' onaylı olduğunu belirtirken 'approved FOR' kalıbı kullanılır."
+  },
+  {
+    "id": 111,
+    "kategori": "Bakim_Islemi",
+    "ipucu_kalip": "subjected _______",
+    "tamamlayici": "TO",
+    "turkce_anlami": "...-e maruz kalmış",
+    "ornek_cumle": "If the aircraft is subjected _______ a lightning strike, perform a special inspection.",
+    "taktik": "Bir parçanın veya uçağın dış bir etkiye (yıldırım, sert iniş vb.) 'maruz kalması' durumunda 'subjected TO' yapısı kullanılır."
+  },
+  {
+    "id": 112,
+    "kategori": "Edat_Kaliplari",
+    "ipucu_kalip": "associated _______",
+    "tamamlayici": "WITH",
+    "turkce_anlami": "... ile ilişkili / ... ile bağlantılı",
+    "ornek_cumle": "Be aware of the hazards associated _______ high-pressure pneumatic systems.",
+    "taktik": "Bir sistem veya işlemle 'bağlantılı/ilişkili' risklerden bahsederken 'associated' her zaman 'WITH' edatı ile birleşir."
+  },
+  {
+    "id": 113,
+    "kategori": "Sistem_Kontrol",
+    "ipucu_kalip": "compensate _______",
+    "tamamlayici": "FOR",
+    "turkce_anlami": "...-i telafi etmek / dengelemek",
+    "ornek_cumle": "The system automatically compensates _______ changes in outside air temperature.",
+    "taktik": "Bir hatayı, eksikliği veya dış etkiyi 'dengelemek' anlamındaki 'compensate' fiili daima 'FOR' edatını alır."
+  },
+  {
+    "id": 114,
+    "kategori": "Is_Akisi",
+    "ipucu_kalip": "which _______ turn",
+    "tamamlayici": "IN",
+    "turkce_anlami": "bu da (sırasıyla) ...-e neden olur",
+    "ornek_cumle": "The pressure drops, which _______ turn activates the warning light.",
+    "taktik": "Sebep-sonuç zinciri anlatan teknik metinlerde, bir olayın ardından diğerini tetiklediğini belirtmek için 'which IN turn' (which in turn) kalıbı kullanılır."
+  },
+  {
+    "id": 115,
+    "kategori": "Edat_Kaliplari",
+    "ipucu_kalip": "prohibit _______",
+    "tamamlayici": "FROM",
+    "turkce_anlami": "... yapmasını yasaklamak",
+    "ornek_cumle": "Maintenance personnel are prohibited _______ using unapproved tools.",
+    "taktik": "Bir eylemin yapılmasının yasak olduğunu belirtirken 'prohibit [someone] FROM [doing something]' yapısı kullanılır; boşlukta 'FROM' aranmalıdır."
+  },
+  {
+    "id": 116,
+    "kategori": "Zaman_ve_Sira",
+    "ipucu_kalip": "prior _______",
+    "tamamlayici": "TO",
+    "turkce_anlami": "...-den önce",
+    "ornek_cumle": "The area must be cleaned prior _______ the application of the sealant.",
+    "taktik": "'Before' kelimesinin teknik manüellerdeki en yaygın karşılığıdır. 'Prior' kelimesini gördüğünüz her yerde yanına 'TO' edatını ekleyin."
+  },
+  {
+    "id": 117,
+    "kategori": "Bakim_Proseduru",
+    "ipucu_kalip": "rely _______",
+    "tamamlayici": "ON",
+    "turkce_anlami": "...-e güvenmek / ...-e bel bağlamak",
+    "ornek_cumle": "Do not rely _______ visual checks for detecting internal structural cracks.",
+    "taktik": "Özellikle İnsan Faktörleri modülünde, bir yönteme veya duyulara 'güvenilmemesi' gerektiğini anlatırken 'rely ON' veya 'rely UPON' kullanılır."
+  },
+  {
+    "id": 118,
+    "kategori": "Sistem_Guvenligi",
+    "ipucu_kalip": "independent _______",
+    "tamamlayici": "OF",
+    "turkce_anlami": "...-den bağımsız",
+    "ornek_cumle": "The emergency lighting system is independent _______ the main aircraft power.",
+    "taktik": "Yedekli (redundant) sistemlerin ana sistemden 'ayrı/bağımsız' olduğunu vurgularken 'independent OF' kalıbı kullanılır."
   }
 ]

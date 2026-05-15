@@ -48,14 +48,7 @@ class _KaliplarScreenState extends State<KaliplarScreen> {
               color: Color(0xFF48CAE4), size: 20),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'Altın Kalıplar',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
+        title: buildAeroTestAppBarTitle('Altın Kalıplar', subtitleFontSize: 18),
         actions: [
           const Padding(
             padding: EdgeInsets.only(right: 18),

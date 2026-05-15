@@ -97,14 +97,7 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
           icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'Sınav Modu',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 17,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
+        title: buildAeroTestAppBarTitle('Sınav Modu'),
       ),
 
       // ── Sabit Alt Buton ─────────────────────────────────────────────────

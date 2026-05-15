@@ -12411,5 +12411,805 @@
     "neden_dogru": "'Make sure there are no fluids around the exhaust areas that can start ignition before you start the engines.' Egzoz çevresinde ateşleme başlatabilecek sıvı olmamalı.",
     "yanlislar": "A = 'if' clause yüklem gerektiriyor. B = isim, yüklem yok. D = imperative, 'that can start ignition' ile bağdaşmıyor.",
     "tip": "'Fluids that can start ignition' = ateşleme başlatabilecek sıvılar (fuel, hydraulic, oil). Engine start öncesi exhaust area temizliği."
+  },
+  {
+    "id": 1001,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Do not enter the fuel tanks unless the atmosphere inside has been tested and found safe.",
+    "secenekler": {
+      "a": "İçerideki atmosfer test edilip güvenli bulunana kadar yakıt tanklarına girmeyin.",
+      "b": "İçerideki atmosfer test edilip güvenli bulunmadıkça yakıt tanklarına girmeyin.",
+      "c": "Yakıt tanklarına girmeden önce içerideki atmosferin güvenli olduğunu test edin.",
+      "d": "İçerideki atmosfer güvenli bulunursa yakıt tanklarına giriş yapabilirsiniz."
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "unless = -medikçe / -mezse. Cümle, atmosferin güvenli bulunmaması durumunda girişi yasaklayan olumsuz bir koşul bildirmektedir.",
+    "yanlislar": "A = 'until' (kadar) bağlacını kullanmış. C = emir kipi (test edin) olarak çevrilmiş. D = olumlu bir izin cümlesine dönüştürülmüş.",
+    "tip": "Emniyet kurallarında 'unless' bağlacı, belirli bir şart sağlanmadığı sürece işlemin yapılmaması gerektiğini vurgular."
+  },
+  {
+    "id": 1002,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The engine oil level must be checked ________ 30 minutes after engine shutdown.",
+    "secenekler": {
+      "a": "during",
+      "b": "within",
+      "c": "until",
+      "d": "since"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'within' = içerisinde. Motor durduktan sonraki 30 dakikalık zaman dilimi içinde kontrolün yapılması gerektiğini belirtir.",
+    "yanlislar": "A = süreç bildirir. C = süre sınırı koyar ama 'içinde' anlamını vermez. D = zaman başlangıcı bildirir.",
+    "tip": "Bakım zamanlamalarında belirli bir süreyi aşmamak veya o süre dolmadan işlem yapmak için 'within' edatı kullanılır."
+  },
+  {
+    "id": 1003,
+    "kategori": "Emniyet_ve_Uyarilar",
+    "soru_tipi": "Yapi",
+    "soru_metni": "CAUTION: Use only the specified cleaning agents to prevent ________ to the acrylic windows.",
+    "secenekler": {
+      "a": "injury",
+      "b": "maintenance",
+      "c": "damage",
+      "d": "repair"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'damage to equipment' = ekipmana hasar. 'CAUTION' uyarıları ekipman hasarını önlemek içindir.",
+    "yanlislar": "A = 'injury' personel için kullanılır. B ve D teknik bir hasarı değil süreci ifade eder.",
+    "tip": "Havacılıkta WARNING personeli (injury), CAUTION ise ekipmanı (damage) korumak için yazılır."
+  },
+  {
+    "id": 1004,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Ensure that the safety pins are removed before the aircraft is pushed back.",
+    "secenekler": {
+      "a": "Uçak geri itilmeden önce emniyet pinlerinin çıkarıldığından emin olun.",
+      "b": "Uçağı geri itmeden önce emniyet pinlerini mutlaka çıkarın.",
+      "c": "Emniyet pinleri çıkarılmazsa uçak geri itilemez.",
+      "d": "Uçak geri itildikten sonra emniyet pinlerinin çıkarıldığını kontrol edin."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Ensure = emin olun. before = -den önce. are removed = çıkarıldığından (edilgen yapı).",
+    "yanlislar": "B = 'ensure' yüklemini içermez. C = şart cümlesidir. D = 'after' (sonra) olarak zamanı değiştirmiştir.",
+    "tip": "Prosedür adımları 'Ensure that' veya 'Make sure that' ile başlıyorsa cevapta mutlaka 'emin olun' ifadesi aranmalıdır."
+  },
+  {
+    "id": 1005,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "All tools used during the task must be ________ against the tool inventory list after completion.",
+    "secenekler": {
+      "a": "discarded",
+      "b": "verified",
+      "c": "ignored",
+      "d": "installed"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'verified' = doğrulanmış/kontrol edilmiş. Aletlerin listeden kontrol edilip doğrulanması FOD (Yabancı Madde Hasarı) önleme kuralıdır.",
+    "yanlislar": "A = atmak. C = görmezden gelmek. D = monte etmek.",
+    "tip": "İş bitiminde yapılan kontrollerde 'verify' (doğrulamak) veya 'check' fiilleri anahtar kelimelerdir."
+  },
+  {
+    "id": 1006,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Wear ear protection when you work near the engines ________ they are running.",
+    "secenekler": {
+      "a": "during",
+      "b": "while",
+      "c": "unless",
+      "d": "since"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'while' = -iken. Arkasından tam cümle (they are running) geldiği için zaman bağlacı olarak 'while' kullanılır.",
+    "yanlislar": "A = arkasından sadece isim alır (during the run). C = -medikçe (anlamsız). D = -den beri (anlamsız).",
+    "tip": "Boşluktan sonra tam cümle geliyorsa ve eylem o sırada yapılıyorsa 'while' doğru cevaptır."
+  },
+  {
+    "id": 1007,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Discard any O-rings that show signs of permanent set or hardening.",
+    "secenekler": {
+      "a": "Kalıcı deformasyon veya sertleşme belirtisi gösteren tüm O-ringleri değiştirin.",
+      "b": "Kalıcı deformasyon veya sertleşme belirtisi gösteren O-ringleri atın (ıskartaya çıkarın).",
+      "c": "O-ringlerde sertleşme olup olmadığını kontrol edin ve gerekirse temizleyin.",
+      "d": "Sertleşmiş O-ringleri tekrar kullanmadan önce test edin."
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "Discard = atmak / elden çıkarmak. permanent set = kalıcı deformasyon. hardening = sertleşme.",
+    "yanlislar": "A = 'replace' (değiştirin) eylemini kullanmış. C = 'clean' (temizleyin) kelimesi metinde yok. D = 'test' fiili metinde yok.",
+    "tip": "Parçanın artık kullanılamayacağı durumlarda AMM'de 'Discard' (ıskartaya çıkar) fiili kullanılır."
+  },
+  {
+    "id": 1008,
+    "kategori": "Ariza_ve_Hasar_Tespiti",
+    "soru_tipi": "Yapi",
+    "soru_metni": "A failure in the hydraulic system can ________ severe damage to the flight control surfaces.",
+    "secenekler": {
+      "a": "cause",
+      "b": "repair",
+      "c": "prevent",
+      "d": "improve"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'cause' = neden olmak. Bir arıza (failure), sisteme zarar verebilir.",
+    "yanlislar": "B = tamir etmek. C = önlemek. D = iyileştirmek. Arıza olumlu sonuç veremez.",
+    "tip": "Olumsuz bir durumun (leak, failure, heat) sonucunu anlatırken 'cause' fiili kullanılır."
+  },
+  {
+    "id": 1009,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The auxiliary power unit (APU) provides electrical power ________ the aircraft is on the ground.",
+    "secenekler": {
+      "a": "as long as",
+      "b": "due to",
+      "c": "instead of",
+      "d": "regardless of"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'as long as' = -dığı sürece. Uçak yerde olduğu sürece güç sağlandığını belirten bir durumdur.",
+    "yanlislar": "B = -den dolayı. C = -in yerine. D = -e bakılmaksızın.",
+    "tip": "Bir durumun devamlılığına bağlı olan eylemlerde 'as long as' (sürece) bağlacı kullanılır."
+  },
+  {
+    "id": 1010,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The fuel must be ________ from the tank if contamination is suspected.",
+    "secenekler": {
+      "a": "filled",
+      "b": "drained",
+      "c": "stored",
+      "d": "heated"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'drained' = tahliye edilmiş / boşaltılmış. Kontaminasyon (kirlilik) durumunda yakıt boşaltılır.",
+    "yanlislar": "A = doldurmak. C = depolamak. D = ısıtmak.",
+    "tip": "Sıvıların (yakıt, su, hidrolik) sistemden boşaltılması için daima 'drain' fiili kullanılır."
+  },
+  {
+    "id": 1011,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The battery must be ________ immediately if the electrolyte level is below the minimum limit.",
+    "secenekler": {
+      "a": "serviced",
+      "b": "ignored",
+      "c": "postponed",
+      "d": "decreased"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'service' fiili havacılıkta bir sıvıyı tamamlama, yağlama veya rutin bakım yapma anlamında kullanılır. Elektrolit seviyesi düşükse servis yapılması gerekir.",
+    "yanlislar": "B = görmezden gelmek. C = ertelemek. D = azaltmak. Bunlar emniyetsiz veya mantıksız eylemlerdir.",
+    "tip": "Sıvı seviyesi (oil, fuel, electrolyte) tamamlanması gerektiğinde 'service' fiili yaygın kullanılır."
+  },
+  {
+    "id": 1012,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "The fire warning light stays on as long as the fire condition exists.",
+    "secenekler": {
+      "a": "Yangın durumu oluştuğunda yangın uyarı ışığı yanar.",
+      "b": "Yangın uyarısı gelince ışık yanık kalır.",
+      "c": "Yangın durumu mevcut olduğu sürece yangın uyarı ışığı yanık kalır.",
+      "d": "Yangın sönene kadar uyarı ışığı yanıp sönmeye devam eder."
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'as long as' = -dığı sürece / boyunca. 'exists' = mevcut olmak. 'stays on' = yanık kalmak.",
+    "yanlislar": "A = 'when' (olduğunda) bağlacına göredir. B = anlam eksiktir. D = 'yanıp sönmek' (flashing) metinde yoktur.",
+    "tip": "Durumun devamlılığı ile eylemin süresini bağlayan 'as long as' yapısı sınavların favorisidir."
+  },
+  {
+    "id": 1013,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The landing gear ________ be retracted while the aircraft is on the ground.",
+    "secenekler": {
+      "a": "must not",
+      "b": "can",
+      "c": "is able to",
+      "d": "should"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'must not' (yasaklama). Uçak yerdeyken iniş takımlarının toplanması kesin bir yasaktır ve yapısal hasara yol açar.",
+    "yanlislar": "B, C ve D şıkları bu tehlikeli işlemi mümkün veya tavsiye edilen bir eylem gibi gösterir.",
+    "tip": "Emniyet kurallarında (Safety Precautions) kesin yasaklar için 'must not' kullanılır."
+  },
+  {
+    "id": 1014,
+    "kategori": "Teknik_Terminoloji",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If the seal is damaged, it may lead to fluid ________ from the hydraulic reservoir.",
+    "secenekler": {
+      "a": "storage",
+      "b": "leakage",
+      "c": "supply",
+      "d": "pressure"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'leakage' = sızıntı. Eğer keçe (seal) hasarlıysa, hidrolik deposundan sızıntı olması beklenir.",
+    "yanlislar": "A = depolama. C = besleme. D = basınç. Hasarlı bir keçe sızıntıya neden olur, basınç sağlamaz.",
+    "tip": "Seal, O-ring veya gasket gibi parçaların hasar görmesi durumunda sonuç daima 'leakage' olur."
+  },
+  {
+    "id": 1015,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Cumle_Tamamlama",
+    "soru_metni": "The cockpit voice recorder is designed to record ________ the crew says during the flight.",
+    "secenekler": {
+      "a": "whenever",
+      "b": "whatever",
+      "c": "wherever",
+      "d": "however"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'whatever' = her ne / ne varsa. CVR, mürettebatın uçuş sırasında söylediği 'her şeyi' kaydetmek üzere tasarlanmıştır.",
+    "yanlislar": "A = ne zaman olursa. C = nerede olursa. D = her nasılsa.",
+    "tip": "Kapsayıcı nesne bildiren 'whatever', kaydedilen verileri veya talimatları nitelemek için kullanılır."
+  },
+  {
+    "id": 1016,
+    "kategori": "Ariza_ve_Hasar_Tespiti",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Check the fuselage skin for scratches, dents or corrosion.",
+    "secenekler": {
+      "a": "Gövde kaplamasını çizikler, göçükler veya korozyon yönünden kontrol edin.",
+      "b": "Gövde üzerindeki korozyonları ve çizikleri temizleyin.",
+      "c": "Gövdede hasar olup olmadığını tespit edin ve onarın.",
+      "d": "Gövde kaplamasındaki göçükleri rapor edin."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "scratches = çizikler. dents = göçükler. corrosion = korozyon. check = kontrol edin.",
+    "yanlislar": "B = 'clean' (temizleyin). C = 'repair' (onarın). D = 'report' (rapor edin). Orijinal metin sadece 'check' demektedir.",
+    "tip": "Görsel kontrollerde (visual inspection) kullanılan hasar türleri (scratch, dent, nick, crack) iyi bilinmelidir."
+  },
+  {
+    "id": 1017,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The engine was shut down ________ high exhaust gas temperature (EGT).",
+    "secenekler": {
+      "a": "instead of",
+      "b": "because of",
+      "c": "in spite of",
+      "d": "unless"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'because of' = -den dolayı. Yüksek EGT (neden), motorun kapatılmasına (sonuç) sebep olmuştur.",
+    "yanlislar": "A = yerine. C = -e rağmen. D = -medikçe.",
+    "tip": "İsim tamlamasından (high EGT) önce sebep bildirmek için 'because of' veya 'due to' kullanılır."
+  },
+  {
+    "id": 1018,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Refer to the MEL to determine if the aircraft ________ with the current fault.",
+    "secenekler": {
+      "a": "can be dispatched",
+      "b": "must be grounded",
+      "c": "has been repaired",
+      "d": "should be cleaned"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'dispatch' = sefere verilmek/gönderilmek. MEL (Minimum Equipment List), bir arıza ile uçağın uçup uçamayacağını belirler.",
+    "yanlislar": "B = uçağın yere indirilmesi (zaten karar aşamasında). C ve D MEL'in birincil amacı değildir.",
+    "tip": "MEL dokümanı ile 'dispatch' kelimesi havacılıkta ayrılmaz bir ikilidir."
+  },
+  {
+    "id": 1019,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Wait for the pressure to drop before you disconnect the coupling.",
+    "secenekler": {
+      "a": "Kaplini söktükten sonra basıncın düşmesini bekleyin.",
+      "b": "Basıncı düşürmek için kaplini yerinden çıkarın.",
+      "c": "Kaplini ayırmadan önce basıncın düşmesini bekleyin.",
+      "d": "Basınç düşmediği sürece kaplini sökmeyin."
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "Wait for... to drop = düşmesini bekleyin. before = -den önce. disconnect = ayırmak/sökmek.",
+    "yanlislar": "A = 'after' (sonra) anlamı verir. B = basıncı düşürmek için sökmeyi önerir (tehlikeli). D = 'unless' yapısına yakındır ama çeviri tam değildir.",
+    "tip": "Basınçlı sistemlerde 'Wait... before...' kalıbı standart bir emniyet uyarısıdır."
+  },
+  {
+    "id": 1020,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The anti-ice system prevents ice from ________ on the leading edges of the wings.",
+    "secenekler": {
+      "a": "forming",
+      "b": "to form",
+      "c": "formed",
+      "d": "form"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'prevent something from doing something' kalıbı gereği 'from' edatından sonra fiil '-ing' takısı alır.",
+    "yanlislar": "B, C ve D şıkları gramer kuralına (Gerund/Infinitive) aykırıdır.",
+    "tip": "Havacılıkta 'prevent/stop... from... -ing' kalıbı (buz oluşumunu engellemek vb.) çok sık kullanılır."
+  },
+  {
+    "id": 1021,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The landing gear doors must be ________ and tagged before any maintenance work starts in the wheel well.",
+    "secenekler": {
+      "a": "opened",
+      "b": "deactivated",
+      "c": "lubricated",
+      "d": "cleaned"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'deactivated' = devre dışı bırakılmış. Bakım sırasında kapakların istemsiz hareketini önlemek için sistemin deaktive edilmesi ve etiketlenmesi (tagout) standart bir emniyet prosedürüdür.",
+    "yanlislar": "A = açmak tek başına emniyet sağlamaz. C = yağlamak. D = temizlemek.",
+    "tip": "Hareketli parçaların (flaps, doors, spoilers) bakımından önce daima 'deactivate' veya 'isolate' fiilleri kullanılır."
+  },
+  {
+    "id": 1022,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "In case of a sudden loss of cabin pressure, oxygen masks will drop automatically.",
+    "secenekler": {
+      "a": "Kabin basıncı düştüğünde oksijen maskelerini otomatik olarak indirin.",
+      "b": "Kabin basıncının aniden düşmesi durumunda, oksijen maskeleri otomatik olarak düşecektir.",
+      "c": "Oksijen maskeleri düşerse kabin basıncının aniden düştüğünden emin olun.",
+      "d": "Kabin basıncı azaldığı sürece oksijen maskeleri düşmeye devam eder."
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'In case of' = durumunda / ihtimaline karşı. 'sudden loss' = ani kayıp. 'will drop' = düşecek (gelecek zaman/otomatik sonuç).",
+    "yanlislar": "A = emir kipi kullanılmış. C = anlam tersine çevrilmiş. D = 'as long as' (sürece) anlamı katılmış.",
+    "tip": "Acil durum senaryolarını anlatan 'In case of' yapısı SHGM sınavlarında sıkça karşınıza çıkar."
+  },
+  {
+    "id": 1023,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The primary purpose of the fire wall is to ________ the spread of fire to other engine zones.",
+    "secenekler": {
+      "a": "accelerate",
+      "b": "ignore",
+      "c": "prevent",
+      "d": "encourage"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'prevent' = önlemek / engel olmak. Yangın duvarının (fire wall) amacı yangının diğer bölgelere yayılmasını durdurmaktır.",
+    "yanlislar": "A = hızlandırmak. B = görmezden gelmek. D = teşvik etmek/artırmak.",
+    "tip": "Koruyucu ekipmanların (seal, wall, shield) işlevi sorulduğunda cevap genellikle 'prevent', 'protect' veya 'isolate' olur."
+  },
+  {
+    "id": 1024,
+    "kategori": "Teknik_Terminoloji",
+    "soru_tipi": "Yapi",
+    "soru_metni": "A specialized tool is required to ________ the torque values of the engine mount bolts.",
+    "secenekler": {
+      "a": "measure",
+      "b": "replace",
+      "c": "discard",
+      "d": "install"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'measure' = ölçmek. Tork değerleri (torque values) bir aletle (torkmetrenin işlevi) ölçülür.",
+    "yanlislar": "B = tork değeri değiştirilmez, parça değiştirilir. C = atılmak. D = tork değeri monte edilmez.",
+    "tip": "Değerler (values, parameters, levels) söz konusu olduğunda 'measure', 'monitor' veya 'check' fiilleri kullanılır."
+  },
+  {
+    "id": 1025,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Cumle_Tamamlama",
+    "soru_metni": "The aircraft cannot be dispatched ________ the minimum equipment list (MEL) requirements are met.",
+    "secenekler": {
+      "a": "if",
+      "b": "unless",
+      "c": "because",
+      "d": "while"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'unless' = -medikçe / -mezse. MEL gereklilikleri karşılanmadıkça uçak sefere verilemez.",
+    "yanlislar": "A = 'if' kullanılırsa anlam olumlu olur (karşılanırsa verilemez gibi). C = çünkü. D = -iken.",
+    "tip": "Kısıtlamaları ifade ederken 'cannot... unless...' (yapılamaz... -medikçe) kalıbı standarttır."
+  },
+  {
+    "id": 1026,
+    "kategori": "Ariza_ve_Hasar_Tespiti",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Replace the filter element if it is contaminated with metal particles.",
+    "secenekler": {
+      "a": "Filtre elemanında metal parçacıkları varsa temizleyip tekrar takın.",
+      "b": "Metal parçacıklarıyla kirlenmişse filtre elemanını değiştirin.",
+      "c": "Filtre elemanını metal parçacıklarından korumak için kontrol edin.",
+      "d": "Kirlenmiş filtreleri temizlemek için metal parçacıklarını kullanın."
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "Replace = değiştirin. contaminated = kirlenmiş. metal particles = metal parçacıkları.",
+    "yanlislar": "A = 'clean' (temizleyin) metinde yoktur. C = korumaktan (protect) bahsetmez. D = tamamen anlamsız bir çeviri.",
+    "tip": "Havacılıkta 'contamination' (kirlilik) ciddi bir sorundur ve genellikle 'replace' (değiştirme) ile sonuçlanır."
+  },
+  {
+    "id": 1027,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The pilot noticed a ________ in the hydraulic pressure during the final approach.",
+    "secenekler": {
+      "a": "decrease",
+      "b": "decreased",
+      "c": "decreasing",
+      "d": "decreaseful"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Boşluktan önce 'a' (artikel) geldiği için bir isim (noun) kullanılmalıdır. 'Decrease' hem fiil hem de isim halidir.",
+    "yanlislar": "B = fiilin geçmiş zaman hali. C = sıfat veya fiilin -ing hali. D = uydurma bir kelime.",
+    "tip": "Teknik raporlamalarda 'a drop', 'a rise', 'a decrease' gibi isim yapıları kullanılır."
+  },
+  {
+    "id": 1028,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Make sure that the work area is properly ________ before you apply the flammable solvent.",
+    "secenekler": {
+      "a": "heated",
+      "b": "pressurized",
+      "c": "ventilated",
+      "d": "sealed"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'ventilated' = havalandırılmış. Yanıcı solventler (flammable solvent) kullanılmadan önce ortamın havalandırılması emniyet kuralıdır.",
+    "yanlislar": "A = ısıtmak (yanıcı madde varken tehlikeli). B = basınçlandırmak. D = mühürlemek/kapatmak (havasız bırakmak tehlikelidir).",
+    "tip": "Kimyasal kullanım uyarılarında 'ventilation' (havalandırma) anahtar kelimedir."
+  },
+  {
+    "id": 1029,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Wait for the engine to cool down to avoid thermal shock.",
+    "secenekler": {
+      "a": "Termal şoku önlemek için motorun soğumasını bekleyin.",
+      "b": "Motor soğuduğunda termal şokun geçmesini bekleyin.",
+      "c": "Termal şok oluşursa motoru hemen soğutun.",
+      "d": "Motoru soğutmadan önce termal şok riskini kontrol edin."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Wait for... to cool down = soğumasını bekleyin. avoid = önlemek/kaçınmak. thermal shock = termal şok.",
+    "yanlislar": "B = anlam kayması var. C = motoru soğutma emri veriyor, metin beklemeyi söylüyor. D = kontrol (check) ifadesi yok.",
+    "tip": "Sınavlarda 'to avoid' (-den kaçınmak için) yapısı sebep-sonuç ilişkisi kurmak için sık kullanılır."
+  },
+  {
+    "id": 1030,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "After the lightning strike, the technician checked ________ there was any damage to the radome.",
+    "secenekler": {
+      "a": "whether",
+      "b": "that",
+      "c": "what",
+      "d": "which"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'whether' = olup olmadığını. 'Checked whether...' yapısı bir durumun varlığını veya yokluğunu kontrol etmek için kullanılır.",
+    "yanlislar": "B = -dığını (emin olunan durumlar). C = ne. D = hangisi.",
+    "tip": "Belirsizlik içeren kontrol işlemlerinde (hasar var mı yok mu?) 'whether' veya 'if' kullanılır."
+  },
+  {
+    "id": 1031,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The fire extinguisher bottle must be ________ if its weight is not within the specified limits.",
+    "secenekler": {
+      "a": "recharged",
+      "b": "discarded",
+      "c": "ignored",
+      "d": "measured"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'recharged' = yeniden doldurulmuş. Yangın söndürme tüpünün ağırlığı limitlerin dışındaysa (boşalmışsa) yeniden doldurulması gerekir.",
+    "yanlislar": "B = hemen atmak (discard) gerekmez. C = görmezden gelmek emniyetsizdir. D = ölçülmüş (zaten ölçüldüğü için limit dışı olduğu anlaşılmıştır).",
+    "tip": "Havacılıkta limit dışı basınç veya ağırlık değerlerinde tüpler 'recharge' edilir."
+  },
+  {
+    "id": 1032,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Apply a thin layer of lubricant to the seal before installation.",
+    "secenekler": {
+      "a": "Montajdan önce keçeye ince bir tabaka yağlayıcı sürün.",
+      "b": "Montajdan sonra keçeyi ince bir tabaka ile yağlayın.",
+      "c": "Keçeyi yerleştirmeden önce kalın bir tabaka yağlayıcı kullanın.",
+      "d": "Keçeyi temizlemek için yağlayıcı tabakası uygulayın."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Apply = sürün/uygulayın. thin layer = ince tabaka. lubricant = yağlayıcı. before installation = montajdan önce.",
+    "yanlislar": "B = 'after' (sonra) demiş. C = 'thick' (kalın) demiş. D = 'clean' (temizlemek) fiilini uydurmuş.",
+    "tip": "Sıvı veya macun kıvamındaki maddelerin sürülmesi işleminde 'apply' fiili kullanılır."
+  },
+  {
+    "id": 1033,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Personnel ________ use fall protection equipment when working at heights above 3 meters.",
+    "secenekler": {
+      "a": "may",
+      "b": "shall",
+      "c": "might",
+      "d": "could"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'shall' = -malı / zorunluluk. Havacılık manuellerinde yasal zorunluluk ve kesin kurallar 'shall' veya 'must' ile ifade edilir.",
+    "yanlislar": "A, C ve D şıkları 'olasılık' veya 'izin' bildirir; emniyet kuralları opsiyonel olamaz.",
+    "tip": "Resmi havacılık dokümanlarında 'shall' ifadesi 'zorunluluk' (imperative) anlamındadır."
+  },
+  {
+    "id": 1034,
+    "kategori": "Ariza_ve_Hasar_Tespiti",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The radar dome must be inspected for any ________ caused by bird strikes.",
+    "secenekler": {
+      "a": "perfections",
+      "b": "improvements",
+      "c": "deformations",
+      "d": "alignments"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'deformations' = deformasyonlar/bozulmalar. Kuş çarpması (bird strike) radom üzerinde fiziksel deformasyona neden olur.",
+    "yanlislar": "A = mükemmellikler. B = iyileştirmeler. D = hizalamalar. Çarpma sonucu olumlu bir durum oluşmaz.",
+    "tip": "Dış etkiler (strike, impact) sonucu oluşan hasarları tanımlarken 'deformation' veya 'damage' kullanılır."
+  },
+  {
+    "id": 1035,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Cumle_Tamamlama",
+    "soru_metni": "The engine test run was cancelled ________ the weather conditions were deteriorating.",
+    "secenekler": {
+      "a": "because",
+      "b": "due to",
+      "c": "despite",
+      "d": "although"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'because' = çünkü. Boşluktan sonra tam bir cümle (the weather... were deteriorating) geldiği için 'because' kullanılır.",
+    "yanlislar": "B = 'due to' arkasından isim ister. C ve D zıtlık bildirir, oysa burada sebep-sonuç ilişkisi vardır.",
+    "tip": "Cümle yapısına göre 'because' (cümle alır) ve 'because of / due to' (isim alır) ayrımına dikkat edilmelidir."
+  },
+  {
+    "id": 1036,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Failure to follow these instructions may result in personal injury.",
+    "secenekler": {
+      "a": "Talimatların takibi personel yaralanmalarını önleyebilir.",
+      "b": "Bu talimatlara uyulmaması, personelin yaralanmasına neden olabilir.",
+      "c": "Personel yaralanırsa bu talimatların takip edilmesi gerekir.",
+      "d": "Bu talimatlar personel yaralanmalarını rapor etmek içindir."
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "Failure to follow = uymama/başarısızlık. may result in = ile sonuçlanabilir / neden olabilir. personal injury = personel yaralanması.",
+    "yanlislar": "A = 'prevent' (önlemek) anlamı katmış. C = şartı tersine çevirmiş. D = 'report' (rapor etmek) fiili metinde yok.",
+    "tip": "WARNING (Uyarı) bölümlerinin en standart kapanış cümlesidir."
+  },
+  {
+    "id": 1037,
+    "kategori": "Teknik_Terminoloji",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Ensure the circuit breakers are ________ before beginning the electrical inspection.",
+    "secenekler": {
+      "a": "closed",
+      "b": "pulled",
+      "c": "heated",
+      "d": "pushed"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'pulled' = çekilmiş. Devre kesicilerin (circuit breaker) çekilmesi devreyi açar (off konumu) ve güvenli çalışma sağlar.",
+    "yanlislar": "A ve D devreyi kapatır (enerji verir), bu tehlikelidir. C = ısıtmak anlamsızdır.",
+    "tip": "Circuit breaker (CB) için 'pull' (açmak/enerji kesmek) ve 'push/reset' (kapatmak/enerji vermek) terimleri kullanılır."
+  },
+  {
+    "id": 1038,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The flight was diverted to the nearest airport ________ a medical emergency on board.",
+    "secenekler": {
+      "a": "owing to",
+      "b": "instead of",
+      "c": "unless",
+      "d": "as well as"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'owing to' = -den dolayı. Tıbbi bir acil durum (isim tamlaması) nedeniyle uçuşun yönlendirildiğini belirtir.",
+    "yanlislar": "B = yerine. C = -medikçe. D = yanı sıra.",
+    "tip": "'Owing to', 'Due to' ve 'Because of' eş anlamlıdır ve isimlerle kullanılır."
+  },
+  {
+    "id": 1039,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Tighten the bolts in a cross-pattern to ensure even pressure.",
+    "secenekler": {
+      "a": "Eşit basınç sağlamak için cıvataları çapraz sırayla sıkın.",
+      "b": "Cıvataları eşit basınçla çaprazlama sökün.",
+      "c": "Basıncı kontrol etmek için cıvataları sırayla sıkın.",
+      "d": "Cıvataları çapraz desenle işaretleyip basıncı artırın."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Tighten = sıkın. cross-pattern = çapraz düzen/sıra. ensure = sağlamak/emin olmak. even pressure = eşit basınç.",
+    "yanlislar": "B = 'sökün' (loosen) demiş. C = 'çapraz' ifadesini atlamış. D = 'işaretlemek' (mark) metinde yok.",
+    "tip": "Flanş veya kapak montajlarında 'cross-pattern' (çapraz sıkma) teknik bir zorunluluktur."
+  },
+  {
+    "id": 1040,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The oxygen cylinders must be ________ every five years for structural integrity.",
+    "secenekler": {
+      "a": "hydrostatically tested",
+      "b": "visually ignored",
+      "c": "manually opened",
+      "d": "chemically cleaned"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'hydrostatically tested' = hidrostatik testten geçirilmiş. Basınçlı tüplerin periyodik olarak bu testten geçmesi yasal bir gerekliliktir.",
+    "yanlislar": "B = görmezden gelmek. C = açmak (yapısal bütünlüğü test etmez). D = kimyasal temizlik.",
+    "tip": "Tüpler (cylinders/bottles) ve beş yıl gibi süreler verildiğinde cevap genellikle 'hydrostatic test' olur."
+  },
+  {
+    "id": 1041,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The aircraft is permitted to fly ________ the weather conditions remain above the minimum safety requirements.",
+    "secenekler": {
+      "a": "as long as",
+      "b": "unless",
+      "c": "despite",
+      "d": "instead of"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'as long as' = -dığı sürece. Hava koşulları minimum emniyet gerekliliklerinin üzerinde kaldığı sürece uçuşa izin verildiğini ifade eder.",
+    "yanlislar": "B = -medikçe (anlamı bozar). C = -e rağmen. D = -in yerine.",
+    "tip": "Süregelen bir koşula bağlı izinlerde 'as long as' veya 'provided that' yapıları kullanılır."
+  },
+  {
+    "id": 1042,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Lubricate the hinge pins until the grease comes out from the joints.",
+    "secenekler": {
+      "a": "Gres eklemlerden çıkana kadar menteşe pimlerini yağlayın.",
+      "b": "Gresi eklemlere sürmeden önce menteşe pimlerini temizleyin.",
+      "c": "Menteşe pimlerini yağlamak için gresin dışarı çıkmasını bekleyin.",
+      "d": "Eklemlerden gres gelmiyorsa menteşe pimlerini değiştirin."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Lubricate = yağlayın. hinge pins = menteşe pimleri. until = -e kadar. comes out = dışarı çıkmak.",
+    "yanlislar": "B = 'before' (önce) ve 'clean' (temizlemek) kullanılmış. C = anlam kayması var. D = 'replace' (değiştirin) metinde yoktur.",
+    "tip": "Yağlama talimatlarında eylemin sınırını belirlemek için 'until' (kadar) bağlacı sıkça kullanılır."
+  },
+  {
+    "id": 1043,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The fuel tank must be ________ before any welding operation is performed.",
+    "secenekler": {
+      "a": "ignited",
+      "b": "purged",
+      "c": "filled",
+      "d": "pressurized"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'purged' = (gazdan/yakıttan) arındırılmış. Kaynak (welding) öncesi patlama riskini önlemek için tankın içindeki yanıcı gazların tahliye edilmesi gerekir.",
+    "yanlislar": "A = ateşlemek (tehlikeli). C = doldurmak. D = basınçlandırmak.",
+    "tip": "Sıcak çalışma (hot work) öncesi tanklar için 'purge' veya 'vent' fiilleri anahtar kelimelerdir."
+  },
+  {
+    "id": 1044,
+    "kategori": "Ariza_ve_Hasar_Tespiti",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The technician found a ________ in the composite panel during the ultrasonic test.",
+    "secenekler": {
+      "a": "delamination",
+      "b": "lubrication",
+      "c": "calibration",
+      "d": "acceleration"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'delamination' = katman ayrılması. Kompozit malzemelerde en yaygın görülen ve ultrasonik testle tespit edilen hasar türüdür.",
+    "yanlislar": "B = yağlama. C = kalibrasyon. D = hızlanma. Bunlar bir 'hasar' türü değildir.",
+    "tip": "Kompozit yapılar (composite structures) söz konusu olduğunda 'delamination' terimine dikkat edilmelidir."
+  },
+  {
+    "id": 1045,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Cumle_Tamamlama",
+    "soru_metni": "Heavy rain and strong winds ________ the landing attempt of the aircraft yesterday.",
+    "secenekler": {
+      "a": "interfered with",
+      "b": "agreed with",
+      "c": "relied on",
+      "d": "consisted of"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'interfered with' = müdahale etmek / engel olmak. Kötü hava koşullarının iniş denemesini olumsuz etkilediğini/engellediğini belirtir.",
+    "yanlislar": "B = aynı fikirde olmak. C = güvenmek. D = -den oluşmak.",
+    "tip": "Dış etkenlerin operasyonu engellemesini anlatırken 'interfere with' phrasal verb'ü kullanılır."
+  },
+  {
+    "id": 1046,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "The flight was cancelled although the technical fault had been fixed.",
+    "secenekler": {
+      "a": "Teknik arıza giderildiği için uçuş iptal edildi.",
+      "b": "Uçuş iptal edildi çünkü teknik arıza giderilemedi.",
+      "c": "Teknik arıza giderilmiş olmasına rağmen uçuş iptal edildi.",
+      "d": "Teknik arıza giderilirse uçuşun iptal edilmeyeceği bildirildi."
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "although = -e rağmen (zıtlık bağlacı). fixed = giderilmiş/tamir edilmiş. was cancelled = iptal edildi.",
+    "yanlislar": "A = 'because' (için) anlamı verir. B = 'çünkü' anlamı verir. D = 'if' (eğer) şart cümlesidir.",
+    "tip": "Zıtlık bildiren 'although', 'even though' ve 'though' yapıları sınavlarda çeviri sorularının temelidir."
+  },
+  {
+    "id": 1047,
+    "kategori": "Teknik_Terminoloji",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Use a ________ to ensure the tire pressure is exactly 150 psi.",
+    "secenekler": {
+      "a": "thermometer",
+      "b": "pressure gauge",
+      "c": "voltmeter",
+      "d": "micrometer"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'pressure gauge' = basınç göstergesi/saati. Lastik basıncını ölçmek için kullanılan alettir.",
+    "yanlislar": "A = sıcaklık ölçer. C = gerilim ölçer. D = hassas uzunluk ölçer.",
+    "tip": "Basınç (pressure) ölçümü daima 'gauge' ile yapılır."
+  },
+  {
+    "id": 1048,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The emergency lights are powered by independent batteries ________ the main power fails.",
+    "secenekler": {
+      "a": "in case",
+      "b": "instead of",
+      "c": "regardless of",
+      "d": "due to"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'in case' = -ması durumunda / -ma ihtimaline karşı. Ana gücün kesilmesi ihtimaline karşı acil durum ışıklarının pillerle beslendiğini belirtir.",
+    "yanlislar": "B = yerine. C = -e bakılmaksızın. D = -den dolayı.",
+    "tip": "Yedekleme (redundancy) sistemleri genellikle 'in case' veya 'in the event of' ile anlatılır."
+  },
+  {
+    "id": 1049,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Make sure that the surface is free of oil and grease before painting.",
+    "secenekler": {
+      "a": "Boyamadan önce yüzeyin yağ ve gresten arındırılmış olduğundan emin olun.",
+      "b": "Yüzeyi boyadıktan sonra üzerindeki yağ ve gresi temizleyin.",
+      "c": "Yağlı ve gresli yüzeylerin boyanması kesinlikle yasaktır.",
+      "d": "Boyama işlemi sırasında yüzeye yağ veya gres bulaşmamasına dikkat edin."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Make sure = emin olun. free of = -den arınmış / içermeyen. before painting = boyamadan önce.",
+    "yanlislar": "B = 'after' (sonra) demiş. C = yasaklama (prohibited) ifadesi yok. D = 'during' (sırasında) demiş.",
+    "tip": "'Free of' yapısı bir yüzeyin veya sıvının bir maddeden temizlenmiş olması durumunda kullanılır."
+  },
+  {
+    "id": 1050,
+    "kategori": "Bakim_Islemleri_ve_Fiiller",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Always ________ the static discharge wick if it is broken or missing.",
+    "secenekler": {
+      "a": "repair",
+      "b": "replace",
+      "c": "ignore",
+      "d": "inspect"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'replace' = değiştirin. Statik deşarj püskülü (wick) kırılmış veya eksikse, tamir edilemeyeceği için yenisiyle değiştirilmelidir.",
+    "yanlislar": "A = tamir etmek (genelde bu parçalar için uygun değildir). C = görmezden gelmek. D = incelemek (zaten incelenmiş ve eksik olduğu görülmüş).",
+    "tip": "Kırık (broken), eksik (missing) veya limit dışı (out of limits) parçalar için standart eylem 'replace'dir."
   }
 ]

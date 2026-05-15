@@ -38,3 +38,37 @@ ThemeData buildAppTheme() {
     ),
   );
 }
+
+/// AppBar: AeroTest (`kAccent`) + altında ekran başlığı (beyaz).
+Widget buildAeroTestAppBarTitle(
+  String subtitle, {
+  double subtitleFontSize = 17,
+  FontWeight subtitleWeight = FontWeight.bold,
+  int subtitleMaxLines = 1,
+}) {
+  return Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    mainAxisSize: MainAxisSize.min,
+    children: [
+      const Text(
+        'AeroTest',
+        style: TextStyle(
+          color: kAccent,
+          fontSize: 13,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 1.2,
+        ),
+      ),
+      Text(
+        subtitle,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: subtitleFontSize,
+          fontWeight: subtitleWeight,
+        ),
+        maxLines: subtitleMaxLines,
+        overflow: subtitleMaxLines == 1 ? TextOverflow.ellipsis : null,
+      ),
+    ],
+  );
+}

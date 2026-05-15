@@ -182,11 +182,7 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
           icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
           onPressed: () => Navigator.pop(context),
         ),
-        title: const Text(
-          'Kelime Çalışması',
-          style: TextStyle(
-              color: Colors.white, fontSize: 15, fontWeight: FontWeight.bold),
-        ),
+        title: buildAeroTestAppBarTitle('Kelime Çalışması', subtitleFontSize: 14),
       ),
       body: Column(
         children: [
