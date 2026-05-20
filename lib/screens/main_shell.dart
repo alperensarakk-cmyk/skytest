@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_theme.dart';
+import '../services/app_update_service.dart';
+import '../services/daily_notification_service.dart';
 import '../services/premium_service.dart';
 import 'dashboard_screen.dart';
 import 'istatistik_screen.dart';
@@ -24,6 +26,8 @@ class _MainShellState extends State<MainShell> {
     super.initState();
     WidgetsBinding.instance.addPostFrameCallback((_) {
       PremiumService.syncFromRevenueCat();
+      AppUpdateService.checkAndPrompt(context);
+      DailyNotificationService.ensurePermissionAndSchedule();
     });
   }
 

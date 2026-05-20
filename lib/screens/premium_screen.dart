@@ -39,22 +39,25 @@ class _PremiumScreenState extends State<PremiumScreen> {
 
   Future<void> _loadStoreData() async {
     setState(() => _loadingOfferings = true);
-    final results = await Future.wait<dynamic>([
-      PremiumService.fetchOfferings(),
-      PremiumService.fetchLocalizedPriceStrings(),
-    ]);
+    final offerings = await PremiumService.fetchOfferings();
+    final prices = await PremiumService.fetchLocalizedPriceStrings(
+      offerings: offerings,
+    );
     if (!mounted) return;
-    final o = results[0] as Offerings?;
-    final prices = results[1] as Map<String, String>;
     setState(() {
-      _offerings = o;
+      _offerings = offerings;
       _priceByProductId = prices;
       _loadingOfferings = false;
     });
   }
 
-  String _priceLine(String productId, String fallback) =>
-      _priceByProductId[productId] ?? fallback;
+  String _priceLine(String productId, String fallback) {
+    final fromStore =
+        PremiumService.resolvePriceString(_priceByProductId, productId);
+    if (fromStore != null) return fromStore;
+    if (_loadingOfferings) return '…';
+    return fallback;
+  }
 
   /// Offering yokken mağaza adı (web / masaüstü için genel ifade).
   String _fallbackPricingHint() {
@@ -221,7 +224,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
             title: 'Aylık',
             priceLine: _priceLine(
               RevenueCatConfig.productMonthly,
-              '79,99 ₺ / ay',
+              '179,99 ₺ / ay',
             ),
             productId: RevenueCatConfig.productMonthly,
             popular: false,
@@ -231,7 +234,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
             title: '3 Aylık',
             priceLine: _priceLine(
               RevenueCatConfig.productQuarterly,
-              '179,99 ₺ / 3 ay',
+              '419,99 ₺ / 3 ay',
             ),
             productId: RevenueCatConfig.productQuarterly,
             popular: true,
@@ -241,7 +244,7 @@ class _PremiumScreenState extends State<PremiumScreen> {
             title: 'Yıllık',
             priceLine: _priceLine(
               RevenueCatConfig.productYearly,
-              '489,99 ₺ / yıl',
+              '719,99 ₺ / yıl',
             ),
             productId: RevenueCatConfig.productYearly,
             popular: false,

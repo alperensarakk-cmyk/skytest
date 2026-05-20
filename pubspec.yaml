@@ -1,7 +1,7 @@
 name: aerotest
 description: AeroTest – Havacılık İngilizce Sınav Hazırlık Uygulaması
 publish_to: 'none'
-version: 1.0.7+15
+version: 1.0.8+18
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -15,9 +15,13 @@ dependencies:
   shared_preferences: ^2.5.4
   purchases_flutter: ^8.10.6
   url_launcher: ^6.3.1
+  package_info_plus: ^8.3.0
   firebase_core: ^3.13.0
   cloud_firestore: ^5.6.9
   firebase_auth: ^5.5.2
+  flutter_local_notifications: ^18.0.1
+  flutter_timezone: ^4.1.0
+  timezone: ^0.10.0
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class SkyFightQuestion {
   final String id;
   final String type;
@@ -25,5 +27,43 @@ class SkyFightQuestion {
       correct: data['correct'] as String? ?? 'A',
       difficulty: data['difficulty'] as String? ?? 'easy',
     );
+  }
+
+  /// Şık metinlerini A–D arasında karıştırır; doğru cevap harfi güncellenir.
+  /// [seed] verilirse sıra deterministik (online maç / aynı soru id).
+  SkyFightQuestion withShuffledOptions({int? seed}) {
+    if (options.length < 2) return this;
+
+    final rng = Random(seed ?? id.hashCode);
+    final keys = options.keys.toList()..sort();
+    final values = options.values.toList()..shuffle(rng);
+
+    final shuffled = <String, String>{};
+    for (var i = 0; i < keys.length; i++) {
+      shuffled[keys[i]] = values[i];
+    }
+
+    final answerText = options[correct] ?? '';
+    var newCorrect = correct;
+    for (final e in shuffled.entries) {
+      if (e.value == answerText) {
+        newCorrect = e.key;
+        break;
+      }
+    }
+
+    return SkyFightQuestion(
+      id: id,
+      type: type,
+      question: question,
+      options: shuffled,
+      correct: newCorrect,
+      difficulty: difficulty,
+    );
+  }
+
+  static int shuffleSeedForId(String questionId) {
+    final m = RegExp(r'(\d+)').firstMatch(questionId);
+    return m != null ? int.parse(m.group(1)!) : questionId.hashCode;
   }
 }

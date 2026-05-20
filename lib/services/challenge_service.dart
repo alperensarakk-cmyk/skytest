@@ -1,5 +1,6 @@
 import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import '../models/challenge.dart';
 import '../models/sky_fight_question.dart';
 
@@ -19,37 +20,66 @@ class ChallengeService {
     return 'daily_${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
   }
 
+  /// Haftalık sınav Pazartesi 00:00’da başlar; id o Pazartesi’nin tarihidir.
+  /// Örn. `weekly_2026-05-19` (eski `weekly_2026-W21` formatından farklıdır).
   static String weeklyChallengeId([DateTime? date]) {
-    final d = date ?? DateTime.now();
-    final weekNum = _isoWeekNumber(d);
-    return 'weekly_${d.year}-W${weekNum.toString().padLeft(2, '0')}';
+    final monday = _mondayOfWeek(date ?? DateTime.now());
+    return 'weekly_${monday.year}-${monday.month.toString().padLeft(2, '0')}-${monday.day.toString().padLeft(2, '0')}';
   }
 
-  static int _isoWeekNumber(DateTime date) {
-    final startOfYear = DateTime(date.year, 1, 1);
-    final dayOfYear   = date.difference(startOfYear).inDays + 1;
-    return ((dayOfYear - date.weekday + 10) / 7).floor();
+  /// Dart: weekday 1 = Pazartesi, 7 = Pazar.
+  static DateTime _mondayOfWeek(DateTime date) {
+    final day = DateTime(date.year, date.month, date.day);
+    return day.subtract(Duration(days: day.weekday - DateTime.monday));
   }
+
+  static int _weeklySeed(DateTime monday) =>
+      monday.year * 10000 + monday.month * 100 + monday.day;
 
   // ── Soru ID'leri (seed'e göre deterministik) ──────────────────────────────
 
-  static List<String> _questionIdsForSeed(int seed, int count) {
-    final rng  = Random(seed);
-    final all  = List.generate(_kTotalQ, (i) => 'q${i + 1}');
-    all.shuffle(rng);
-    return all.take(count).toList();
+  static List<String> _pickQuestionIds({
+    required int seed,
+    required int count,
+    Set<String> exclude = const {},
+  }) {
+    final rng = Random(seed);
+    var pool = List.generate(_kTotalQ, (i) => 'q${i + 1}')
+        .where((id) => !exclude.contains(id))
+        .toList();
+
+    if (pool.length < count) {
+      debugPrint(
+        'ChallengeService: exclude sonrası yeterli soru yok '
+        '(${pool.length}/$count); tam havuz kullanılıyor.',
+      );
+      pool = List.generate(_kTotalQ, (i) => 'q${i + 1}');
+    }
+
+    pool.shuffle(rng);
+    return pool.take(count).toList();
   }
 
   static List<String> dailyQuestionIds([DateTime? date]) {
     final d    = date ?? DateTime.now();
     final seed = d.year * 10000 + d.month * 100 + d.day;
-    return _questionIdsForSeed(seed, _kDailyCount);
+    return _pickQuestionIds(seed: seed, count: _kDailyCount);
   }
 
+  /// Bu haftanın 20 sorusu; geçen Pazartesi haftasının 20 sorusu havuzdan çıkarılır.
   static List<String> weeklyQuestionIds([DateTime? date]) {
-    final d    = date ?? DateTime.now();
-    final seed = d.year * 1000 + _isoWeekNumber(d);
-    return _questionIdsForSeed(seed, _kWeeklyCount);
+    final monday = _mondayOfWeek(date ?? DateTime.now());
+    final prevMonday = monday.subtract(const Duration(days: 7));
+    final prevWeekIds = _pickQuestionIds(
+      seed: _weeklySeed(prevMonday),
+      count: _kWeeklyCount,
+    ).toSet();
+
+    return _pickQuestionIds(
+      seed: _weeklySeed(monday),
+      count: _kWeeklyCount,
+      exclude: prevWeekIds,
+    );
   }
 
   // ── Güncel challenge nesnesini oluştur ────────────────────────────────────
@@ -71,15 +101,15 @@ class ChallengeService {
 
   static Challenge thisWeekly() {
     final now       = DateTime.now();
-    final weekStart = now.subtract(Duration(days: now.weekday - 1));
+    final weekStart = _mondayOfWeek(now);
     final weekEnd   = weekStart.add(const Duration(days: 7));
     return Challenge(
       id: weeklyChallengeId(now),
       type: 'weekly',
       label: 'Haftalık Test',
       questionIds: weeklyQuestionIds(now),
-      activeFrom: DateTime(weekStart.year, weekStart.month, weekStart.day),
-      activeTo: DateTime(weekEnd.year, weekEnd.month, weekEnd.day),
+      activeFrom: weekStart,
+      activeTo: weekEnd,
     );
   }
 
@@ -90,10 +120,20 @@ class ChallengeService {
     final futures =
         ids.map((id) => _db.collection(_questionsCol).doc(id).get()).toList();
     final snaps = await Future.wait(futures);
-    return snaps
-        .where((s) => s.exists)
-        .map((s) => SkyFightQuestion.fromFirestore(s.id, s.data()!))
-        .toList();
+    final byId = <String, SkyFightQuestion>{};
+    for (final s in snaps) {
+      if (s.exists) {
+        byId[s.id] = SkyFightQuestion.fromFirestore(s.id, s.data()!)
+            .withShuffledOptions(
+              seed: SkyFightQuestion.shuffleSeedForId(s.id),
+            );
+      }
+    }
+    // Firestore yanıt sırası karışabilir; seçim sırasını koru.
+    return [
+      for (final id in ids)
+        if (byId.containsKey(id)) byId[id]!,
+    ];
   }
 
   // ── Doc ID: challengeId_userId  (composite index gerekmez) ──────────────
@@ -146,8 +186,9 @@ class ChallengeService {
       final yesterday = DateTime.now().subtract(const Duration(days: 1));
       prevId = dailyChallengeId(yesterday);
     } else {
-      final lastWeek = DateTime.now().subtract(const Duration(days: 7));
-      prevId = weeklyChallengeId(lastWeek);
+      final prevMonday = _mondayOfWeek(DateTime.now())
+          .subtract(const Duration(days: 7));
+      prevId = weeklyChallengeId(prevMonday);
     }
 
     final results = await leaderboard(prevId);

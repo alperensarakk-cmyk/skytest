@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 /// Günlük veya haftalık challenge bilgisi.
 class Challenge {
-  final String id;       // "daily_2026-05-01" veya "weekly_2026-W18"
+  final String id;       // "daily_2026-05-01" veya "weekly_2026-05-19" (Pazartesi)
   final String type;     // "daily" | "weekly"
   final String label;    // "1 Mayıs Günlük Sınavı"
   final List<String> questionIds;

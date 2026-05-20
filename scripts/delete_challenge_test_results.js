@@ -13,7 +13,7 @@
  *   node delete_challenge_test_results.js delete weekly_2026-W20 --contains Admin --confirm
  *   node delete_challenge_test_results.js delete-doc "weekly_2026-W20__USER_UID_HERE" --confirm
  *
- * Haftalık challenge ID formatı uygulamayla aynı: weekly_<yıl>-W<hafta> (ör. weekly_2026-W19).
+ * Haftalık challenge ID: weekly_YYYY-MM-DD (o haftanın Pazartesi tarihi, örn. weekly_2026-05-19).
  */
 
 const admin = require('firebase-admin');

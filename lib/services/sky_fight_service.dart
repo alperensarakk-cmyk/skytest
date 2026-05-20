@@ -30,7 +30,10 @@ class SkyFightService {
     final snaps = await Future.wait(futures);
     return snaps
         .where((s) => s.exists)
-        .map((s) => SkyFightQuestion.fromFirestore(s.id, s.data()!))
+        .map((s) => SkyFightQuestion.fromFirestore(s.id, s.data()!)
+            .withShuffledOptions(
+              seed: SkyFightQuestion.shuffleSeedForId(s.id),
+            ))
         .toList();
   }
 
@@ -39,7 +42,10 @@ class SkyFightService {
   static Future<List<SkyFightQuestion>> fetchQuestions({int count = 10}) async {
     final snap = await _db.collection(_collection).get();
     final all = snap.docs
-        .map((d) => SkyFightQuestion.fromFirestore(d.id, d.data()))
+        .map((d) => SkyFightQuestion.fromFirestore(d.id, d.data()!)
+            .withShuffledOptions(
+              seed: SkyFightQuestion.shuffleSeedForId(d.id),
+            ))
         .toList();
     all.shuffle(Random());
     return all.take(count).toList();

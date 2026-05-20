@@ -219,28 +219,83 @@ class PremiumService {
     final current = offerings?.current;
     if (current == null) return null;
     for (final p in current.availablePackages) {
-      if (p.storeProduct.identifier == productId) return p;
+      final id = p.storeProduct.identifier;
+      if (id == productId || id.startsWith('$productId:')) return p;
     }
     return null;
   }
 
-  /// Google Play / App Store yerelleştirilmiş fiyat metinleri (`priceString`).
-  /// Ürün bulunamaz veya hata olursa boş harita döner; UI sabit metne düşer.
-  static Future<Map<String, String>> fetchLocalizedPriceStrings() async {
+  /// Play’de abonelik kimliği `productId:basePlan` olabilir; UI [productId] ile arar.
+  static String? resolvePriceString(
+    Map<String, String> prices,
+    String productId,
+  ) {
+    final direct = prices[productId];
+    if (direct != null && direct.isNotEmpty) return direct;
+    for (final e in prices.entries) {
+      if (e.key.startsWith('$productId:')) return e.value;
+    }
+    return null;
+  }
+
+  static void _registerStoreProductPrice(
+    Map<String, String> prices,
+    StoreProduct sp,
+  ) {
+    prices[sp.identifier] = sp.priceString;
+    final opt = sp.defaultOption;
+    if (opt != null) {
+      prices[opt.productId] = opt.fullPricePhase?.price.formatted ??
+          opt.pricingPhases.lastOrNull?.price.formatted ??
+          sp.priceString;
+      prices[opt.storeProductId] = prices[opt.productId]!;
+    }
+  }
+
+  static void _registerPricesFromOfferings(
+    Map<String, String> prices,
+    Offerings? offerings,
+  ) {
+    if (offerings == null) return;
+    for (final off in offerings.all.values) {
+      for (final pkg in off.availablePackages) {
+        _registerStoreProductPrice(prices, pkg.storeProduct);
+      }
+    }
+  }
+
+  /// Mağaza fiyatları: önce RevenueCat offerings, sonra getProducts (Play/App Store).
+  static Future<Map<String, String>> fetchLocalizedPriceStrings({
+    Offerings? offerings,
+  }) async {
     if (!_configured) return {};
+    final prices = <String, String>{};
+    _registerPricesFromOfferings(prices, offerings);
+
     try {
       final ids = [
         RevenueCatConfig.productMonthly,
         RevenueCatConfig.productQuarterly,
         RevenueCatConfig.productYearly,
       ];
-      final products = await Purchases.getProducts(ids);
-      return {for (final p in products) p.identifier: p.priceString};
+      final products = await Purchases.getProducts(
+        ids,
+        productCategory: ProductCategory.subscription,
+      );
+      for (final p in products) {
+        _registerStoreProductPrice(prices, p);
+      }
+      if (products.isEmpty && prices.isEmpty) {
+        debugPrint(
+          'PremiumService.fetchLocalizedPriceStrings: mağazadan ürün dönmedi '
+          '(ids=$ids). Play/RevenueCat ürün kimliklerini kontrol edin.',
+        );
+      }
     } catch (e, st) {
       debugPrint('PremiumService.fetchLocalizedPriceStrings: $e');
       debugPrintStack(stackTrace: st);
-      return {};
     }
+    return prices;
   }
 
   /// RevenueCat: önce mevcut offering içindeki paket, yoksa mağaza ürünü doğrudan

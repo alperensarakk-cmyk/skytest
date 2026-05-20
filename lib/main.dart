@@ -17,7 +17,10 @@ import 'screens/premium_screen.dart';
 import 'screens/sky_fight_lobby_screen.dart';
 import 'screens/challenge_screen.dart';
 import 'services/daily_limit_service.dart';
+import 'services/daily_notification_service.dart';
 import 'services/premium_service.dart';
+
+final rootNavigatorKey = GlobalKey<NavigatorState>();
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +33,8 @@ Future<void> main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   await PremiumService.initialize();
   await DailyLimitService.ensureDay();
+  DailyNotificationService.navigatorKey = rootNavigatorKey;
+  await DailyNotificationService.initialize();
   runApp(const AeroTestApp());
 }
 
@@ -39,6 +44,7 @@ class AeroTestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      navigatorKey: rootNavigatorKey,
       title: 'AeroTest',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),

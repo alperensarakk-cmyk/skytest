@@ -41,8 +41,6 @@ class _ChallengeHomeScreenState extends State<ChallengeHomeScreen> {
   String  _pilotName = '';
   bool    _needsName = false;
 
-  final _weekly = ChallengeService.thisWeekly();
-
   @override
   void initState() {
     super.initState();
@@ -194,7 +192,7 @@ class _ChallengeHomeScreenState extends State<ChallengeHomeScreen> {
                 // ── İçerik ──────────────────────────────────────────────
                 Expanded(
                   child: _ChallengeTab(
-                    challenge: _weekly,
+                    challenge: ChallengeService.thisWeekly(),
                     userId: _userId!,
                     pilotName: _pilotName,
                     onRequestName: () => _showNamePicker(canDismiss: false),
