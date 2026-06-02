@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../models/sky_fight_question.dart';
 import '../models/ghost_record.dart';
 import '../services/ai_pilot_service.dart';
+import '../services/app_review_service.dart';
 import '../services/sky_fight_service.dart';
 import '../services/ghost_service.dart';
 import '../theme/app_theme.dart';
@@ -366,17 +367,22 @@ class _SkyFightScreenState extends State<SkyFightScreen>
         ),
         actions: [
           TextButton(
-            onPressed: () {
+            onPressed: () async {
               Navigator.pop(context);
-              Navigator.pop(context);
+              await AppReviewService.tryShowAfterCompletion(context);
+              if (context.mounted) {
+                Navigator.pop(context);
+              }
             },
             child: const Text('Lobiye Dön',
                 style: TextStyle(color: _cMuted, fontSize: 14)),
           ),
           FilledButton(
             style: FilledButton.styleFrom(backgroundColor: _cPurple),
-            onPressed: () {
+            onPressed: () async {
               Navigator.pop(context);
+              await AppReviewService.tryShowAfterCompletion(context);
+              if (!context.mounted) return;
               Navigator.pop(context);
               Navigator.pushNamed(context, '/sky_fight');
             },

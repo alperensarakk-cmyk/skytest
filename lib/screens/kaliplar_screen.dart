@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../models/kalip_model.dart';
+import '../services/app_review_service.dart';
 import '../services/daily_limit_service.dart';
 import '../services/premium_service.dart';
 import '../theme/app_theme.dart';
@@ -92,6 +93,7 @@ class _KaliplarDeck extends StatefulWidget {
 class _KaliplarDeckState extends State<_KaliplarDeck> {
   late final PageController _pageCtrl;
   int _currentIndex = 0;
+  bool _completionReviewQueued = false;
 
   @override
   void initState() {
@@ -117,23 +119,34 @@ class _KaliplarDeckState extends State<_KaliplarDeck> {
     if (!mounted) return;
     setState(() => _currentIndex = i);
     await DailyLimitService.ensureDay();
-    if (await PremiumService.isPremiumUser()) return;
-
-    final maxIx = await DailyLimitService.kaliplarMaxAllowedIndex();
-    if (i > maxIx) {
-      if (_pageCtrl.hasClients) {
-        await _pageCtrl.animateToPage(
-          maxIx,
-          duration: const Duration(milliseconds: 260),
-          curve: Curves.easeOut,
-        );
+    if (!await PremiumService.isPremiumUser()) {
+      final maxIx = await DailyLimitService.kaliplarMaxAllowedIndex();
+      if (i > maxIx) {
+        if (_pageCtrl.hasClients) {
+          await _pageCtrl.animateToPage(
+            maxIx,
+            duration: const Duration(milliseconds: 260),
+            curve: Curves.easeOut,
+          );
+        }
+        if (!mounted) return;
+        setState(() => _currentIndex = maxIx);
+        await showDailyLimitExceededDialog(context);
+        return;
       }
-      if (!mounted) return;
-      setState(() => _currentIndex = maxIx);
-      await showDailyLimitExceededDialog(context);
-      return;
+      await DailyLimitService.recordKaliplarPageIndex(i);
     }
-    await DailyLimitService.recordKaliplarPageIndex(i);
+
+    final total = widget.list.length;
+    // 5. kalıba gelince (daha az kalıp varsa son kalıp)
+    final triggerIndex = AppReviewService.milestoneTriggerAt(total) - 1;
+    if (total > 0 && i >= triggerIndex && !_completionReviewQueued) {
+      _completionReviewQueued = true;
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        if (!mounted) return;
+        await AppReviewService.tryShowAfterCompletion(context);
+      });
+    }
   }
 
   Future<void> _tryNext() async {

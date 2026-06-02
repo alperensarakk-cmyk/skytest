@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/challenge.dart';
 import '../models/sky_fight_question.dart';
+import '../services/app_review_service.dart';
 import '../services/challenge_service.dart';
 import '../services/sky_fight_service.dart';
 import '../theme/app_theme.dart';
@@ -240,8 +241,12 @@ class _ChallengeTabState extends State<_ChallengeTab> {
     setState(() => _loading = true);
     try {
       final results = await Future.wait([
-        ChallengeService.myResult(widget.challenge.id, widget.userId),
-        ChallengeService.leaderboard(widget.challenge.id),
+        ChallengeService.myResult(
+          widget.challenge.id,
+          widget.userId,
+          challengeType: widget.challenge.type,
+        ),
+        ChallengeService.leaderboardForChallenge(widget.challenge),
         ChallengeService.previousWinner(widget.challenge.type),
       ]);
       if (mounted) {
@@ -269,14 +274,21 @@ class _ChallengeTabState extends State<_ChallengeTab> {
 
     // Firestore'dan bir kez daha kontrol et (race condition önlemi)
     final existing = await ChallengeService.myResult(
-        widget.challenge.id, widget.userId);
+      widget.challenge.id,
+      widget.userId,
+      challengeType: widget.challenge.type,
+    );
     if (existing != null) {
       if (mounted) setState(() => _myResult = existing);
       return;
     }
 
     final questions = await ChallengeService.fetchQuestions(
-        widget.challenge.questionIds);
+      widget.challenge.questionIds,
+      refillSeed:
+          ChallengeService.refillSeedForChallengeId(widget.challenge.id),
+      minCount: widget.challenge.questionIds.length,
+    );
     if (!mounted) return;
     if (questions.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -840,8 +852,8 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12)),
             ),
-            onPressed: () {
-              Navigator.pop(context); // dialog
+            onPressed: () async {
+              Navigator.pop(context);
               final result = ChallengeResult(
                 id: '',
                 challengeId: widget.challenge.id,
@@ -852,7 +864,8 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
                 accuracy: accuracy,
                 submittedAt: DateTime.now(),
               );
-              Navigator.pop(context, result); // exam screen
+              await AppReviewService.tryShowAfterCompletion(context);
+              if (context.mounted) Navigator.pop(context, result);
             },
             child: const Text(
               'Sıralamaya Dön',

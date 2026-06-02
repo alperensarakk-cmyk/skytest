@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import '../models/kelime_model.dart';
+import '../services/app_review_service.dart';
 import '../services/daily_limit_service.dart';
 import '../services/kelime_mcq_options.dart';
 import '../services/kelime_istatistik_service.dart';
@@ -38,6 +39,7 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
   int     _index    = 0;
   String? _secilen;
   List<String> _secenekler = [];
+  bool    _reviewMilestoneQueued = false;
 
   bool          get _answered  => _secilen != null;
   KelimeModel   get _kelime    => widget.kelimeler[_index];
@@ -92,7 +94,14 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
   }
 
   // ── Sonraki / Bitir ───────────────────────────────────────────────────────
-  void _next() {
+  Future<void> _next() async {
+    final answered = _index + 1;
+    final triggerAt = AppReviewService.milestoneTriggerAt(_total);
+    if (answered >= triggerAt && !_reviewMilestoneQueued) {
+      _reviewMilestoneQueued = true;
+      await AppReviewService.tryShowAfterCompletion(context);
+    }
+
     if (_index >= _total - 1) {
       _showDoneDialog();
       return;

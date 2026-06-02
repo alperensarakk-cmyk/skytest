@@ -9,7 +9,7 @@ import 'package:timezone/data/latest_all.dart' as tz_data;
 import 'package:timezone/timezone.dart' as tz;
 
 /// Yerel bildirimler: günlük 12:00 + haftalık Pazartesi 00:00.
-/// İlk açılışta sistem izni istenir; Ayarlar adımı gerekmez.
+/// Android 12+: bildirim + (mümkünse) tam alarm izni; yoksa inexact yedek.
 class DailyNotificationService {
   DailyNotificationService._();
 
@@ -29,6 +29,10 @@ class DailyNotificationService {
   static bool _tzReady = false;
 
   static GlobalKey<NavigatorState>? navigatorKey;
+
+  static AndroidFlutterLocalNotificationsPlugin? get _android =>
+      _plugin.resolvePlatformSpecificImplementation<
+          AndroidFlutterLocalNotificationsPlugin>();
 
   static Future<void> initialize() async {
     if (kIsWeb) return;
@@ -51,9 +55,7 @@ class DailyNotificationService {
       );
 
       if (Platform.isAndroid) {
-        final android = _plugin.resolvePlatformSpecificImplementation<
-            AndroidFlutterLocalNotificationsPlugin>();
-        await android?.createNotificationChannel(
+        await _android?.createNotificationChannel(
           const AndroidNotificationChannel(
             _channelDaily,
             'Günlük hatırlatma',
@@ -61,7 +63,7 @@ class DailyNotificationService {
             importance: Importance.high,
           ),
         );
-        await android?.createNotificationChannel(
+        await _android?.createNotificationChannel(
           const AndroidNotificationChannel(
             _channelWeekly,
             'Haftalık sınav',
@@ -81,7 +83,7 @@ class DailyNotificationService {
     }
   }
 
-  /// Ana ekran ilk açılışında bir kez sistem izni; verilirse planları kur.
+  /// Ana ekran açılışında ve ayarlardan dönünce: izin + planlama.
   static Future<void> ensurePermissionAndSchedule() async {
     if (kIsWeb) return;
     if (!Platform.isAndroid && !Platform.isIOS) return;
@@ -91,12 +93,14 @@ class DailyNotificationService {
 
     if (!alreadyAsked) {
       await prefs.setBool(_prefsPromptAsked, true);
-      await _requestPermission();
     }
+
+    await _requestPlatformPermissions();
+    await Future<void>.delayed(const Duration(milliseconds: 350));
 
     final allowed = await _notificationsAllowed();
     if (!allowed) {
-      debugPrint('DailyNotificationService: bildirimler kapalı (sistem)');
+      debugPrint('DailyNotificationService: bildirim izni kapalı');
       await prefs.setBool(_prefsEnabled, false);
       return;
     }
@@ -105,7 +109,8 @@ class DailyNotificationService {
     await _scheduleAll();
 
     if (kDebugMode) {
-      await showImmediateTest();
+      final mode = await _resolveAndroidScheduleMode();
+      debugPrint('DailyNotificationService: planlama tamam (Android mod: $mode)');
     }
   }
 
@@ -132,37 +137,40 @@ class DailyNotificationService {
     try {
       final name = await FlutterTimezone.getLocalTimezone();
       tz.setLocalLocation(tz.getLocation(name));
+      if (kDebugMode) {
+        debugPrint('DailyNotificationService: saat dilimi $name');
+      }
     } catch (_) {
       tz.setLocalLocation(tz.UTC);
+      debugPrint('DailyNotificationService: saat dilimi UTC (yedek)');
     }
     _tzReady = true;
   }
 
-  static Future<bool> _requestPermission() async {
+  static Future<void> _requestPlatformPermissions() async {
     if (Platform.isAndroid) {
-      final android = _plugin.resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>();
-      return await android?.requestNotificationsPermission() == true;
+      await _android?.requestNotificationsPermission();
+      await Future<void>.delayed(const Duration(milliseconds: 200));
+      if (await _android?.canScheduleExactNotifications() != true) {
+        await _android?.requestExactAlarmsPermission();
+        await Future<void>.delayed(const Duration(milliseconds: 200));
+      }
+      return;
     }
     if (Platform.isIOS) {
       final ios = _plugin.resolvePlatformSpecificImplementation<
           IOSFlutterLocalNotificationsPlugin>();
-      return await ios?.requestPermissions(
-            alert: true,
-            badge: true,
-            sound: true,
-          ) ==
-          true;
+      await ios?.requestPermissions(
+        alert: true,
+        badge: true,
+        sound: true,
+      );
     }
-    return false;
   }
 
-  /// Sistem ayarında açık mı (izin verildikten sonra prefs güncellemek için).
   static Future<bool> _notificationsAllowed() async {
     if (Platform.isAndroid) {
-      final android = _plugin.resolvePlatformSpecificImplementation<
-          AndroidFlutterLocalNotificationsPlugin>();
-      return await android?.areNotificationsEnabled() ?? false;
+      return await _android?.areNotificationsEnabled() ?? false;
     }
     if (Platform.isIOS) {
       final ios = _plugin.resolvePlatformSpecificImplementation<
@@ -173,7 +181,22 @@ class DailyNotificationService {
     return false;
   }
 
-  /// Debug: zamanlayıcı beklemeden hemen bir bildirim gösterir.
+  /// Android 14 + Samsung: inexact çoğu cihazda gecikir veya gelmez.
+  static Future<AndroidScheduleMode> _resolveAndroidScheduleMode() async {
+    if (!Platform.isAndroid) {
+      return AndroidScheduleMode.inexactAllowWhileIdle;
+    }
+    try {
+      if (await _android?.canScheduleExactNotifications() == true) {
+        return AndroidScheduleMode.exactAllowWhileIdle;
+      }
+    } catch (e) {
+      debugPrint('DailyNotificationService.canScheduleExact: $e');
+    }
+    return AndroidScheduleMode.inexactAllowWhileIdle;
+  }
+
+  /// Debug: anında test bildirimi.
   static Future<void> showImmediateTest() async {
     if (!kDebugMode) return;
     if (kIsWeb || (!Platform.isAndroid && !Platform.isIOS)) return;
@@ -200,19 +223,45 @@ class DailyNotificationService {
 
     await _plugin.cancel(_idDaily);
 
-    // Debug: 2 dk sonra gelir (test). Release: her gün 12:00.
     final tz.TZDateTime scheduled = kDebugMode
         ? tz.TZDateTime.now(tz.local).add(const Duration(minutes: 2))
         : _nextTimeTodayOrTomorrow(_dailyHour, _dailyMinute);
 
+    final androidMode = await _resolveAndroidScheduleMode();
+
     if (kDebugMode) {
       debugPrint(
-        'DailyNotificationService: TEST günlük bildirim '
-        '${scheduled.hour}:${scheduled.minute.toString().padLeft(2, '0')} '
-        '(~2 dk sonra)',
+        'DailyNotificationService: günlük → '
+        '${scheduled.toIso8601String()} mod=$androidMode',
       );
     }
 
+    try {
+      await _plugin.zonedSchedule(
+        _idDaily,
+        'Bugün ne kadar çalıştın?',
+        'Hedeflediğin puan için çalışmaya başla.',
+        scheduled,
+        _detailsDaily(),
+        androidScheduleMode: androidMode,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+        matchDateTimeComponents:
+            kDebugMode ? null : DateTimeComponents.time,
+        payload: 'home',
+      );
+      debugPrint('DailyNotificationService: günlük planlandı OK');
+    } catch (e, st) {
+      debugPrint('DailyNotificationService.scheduleDaily: $e');
+      debugPrintStack(stackTrace: st);
+      if (Platform.isAndroid) {
+        await _scheduleDailyInexactFallback(scheduled);
+      }
+    }
+  }
+
+  static Future<void> _scheduleDailyInexactFallback(
+      tz.TZDateTime scheduled) async {
     try {
       await _plugin.zonedSchedule(
         _idDaily,
@@ -227,11 +276,9 @@ class DailyNotificationService {
             kDebugMode ? null : DateTimeComponents.time,
         payload: 'home',
       );
-      debugPrint('DailyNotificationService: günlük bildirim planlandı OK');
-    } catch (e, st) {
-      debugPrint('DailyNotificationService.scheduleDaily: $e');
-      debugPrintStack(stackTrace: st);
-      if (kDebugMode) await showImmediateTest();
+      debugPrint('DailyNotificationService: günlük inexact yedek OK');
+    } catch (e) {
+      debugPrint('DailyNotificationService.scheduleDaily fallback: $e');
     }
   }
 
@@ -241,19 +288,57 @@ class DailyNotificationService {
     await _plugin.cancel(_idWeekly);
 
     final scheduled = _nextMondayMidnight();
+    final androidMode = await _resolveAndroidScheduleMode();
 
-    await _plugin.zonedSchedule(
-      _idWeekly,
-      'Haftalık test başladı',
-      'Diğer kullanıcılara karşı kendini test et.',
-      scheduled,
-      _detailsWeekly(),
-      androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
-      matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
-      payload: 'challenge',
-    );
+    if (kDebugMode) {
+      debugPrint(
+        'DailyNotificationService: haftalık → '
+        '${scheduled.toIso8601String()} mod=$androidMode',
+      );
+    }
+
+    try {
+      await _plugin.zonedSchedule(
+        _idWeekly,
+        'Haftalık test başladı',
+        'Diğer kullanıcılara karşı kendini test et.',
+        scheduled,
+        _detailsWeekly(),
+        androidScheduleMode: androidMode,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+        matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
+        payload: 'challenge',
+      );
+      debugPrint('DailyNotificationService: haftalık planlandı OK');
+    } catch (e, st) {
+      debugPrint('DailyNotificationService.scheduleWeekly: $e');
+      debugPrintStack(stackTrace: st);
+      if (Platform.isAndroid) {
+        await _scheduleWeeklyInexactFallback(scheduled);
+      }
+    }
+  }
+
+  static Future<void> _scheduleWeeklyInexactFallback(
+      tz.TZDateTime scheduled) async {
+    try {
+      await _plugin.zonedSchedule(
+        _idWeekly,
+        'Haftalık test başladı',
+        'Diğer kullanıcılara karşı kendini test et.',
+        scheduled,
+        _detailsWeekly(),
+        androidScheduleMode: AndroidScheduleMode.inexactAllowWhileIdle,
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+        matchDateTimeComponents: DateTimeComponents.dayOfWeekAndTime,
+        payload: 'challenge',
+      );
+      debugPrint('DailyNotificationService: haftalık inexact yedek OK');
+    } catch (e) {
+      debugPrint('DailyNotificationService.scheduleWeekly fallback: $e');
+    }
   }
 
   static tz.TZDateTime _nextTimeTodayOrTomorrow(int hour, int minute) {
@@ -285,7 +370,6 @@ class DailyNotificationService {
           channelDescription: 'Her gün öğlen çalışma hatırlatması',
           importance: Importance.high,
           priority: Priority.high,
-          icon: '@mipmap/ic_launcher',
         ),
         iOS: const DarwinNotificationDetails(
           presentAlert: true,
@@ -301,7 +385,6 @@ class DailyNotificationService {
           channelDescription: 'Yeni haftalık test',
           importance: Importance.high,
           priority: Priority.high,
-          icon: '@mipmap/ic_launcher',
         ),
         iOS: const DarwinNotificationDetails(
           presentAlert: true,

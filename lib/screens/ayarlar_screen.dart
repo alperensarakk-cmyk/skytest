@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../services/app_review_service.dart';
 import '../services/exam_countdown_service.dart';
 import '../services/istatistik_service.dart';
 import '../services/settings_service.dart';
@@ -326,6 +327,14 @@ class _AyarlarScreenState extends State<AyarlarScreen> {
               subtitle: 'Tarayıcıda aç',
               color:   kAccent,
               onTap:   () => _launchUri(_kPrivacyPolicyUri, 'Bağlantı açılamadı.'),
+            ),
+            _Divider(),
+            _ActionTile(
+              icon:    Icons.star_rounded,
+              title:   'Uygulamayı Değerlendir',
+              subtitle: 'Play Store / App Store',
+              color:   const Color(0xFFFFD60A),
+              onTap:   () => AppReviewService.openFromSettings(context),
             ),
             _Divider(),
             _ActionTile(

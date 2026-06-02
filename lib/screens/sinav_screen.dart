@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/soru_model.dart';
 import '../services/daily_limit_service.dart';
 import '../services/istatistik_service.dart';
+import '../services/app_review_service.dart';
 import '../services/soru_secim_service.dart';
 import '../services/soru_son_gorulen_service.dart';
 import '../services/soru_yukleme_service.dart';
@@ -397,9 +398,10 @@ class _SinavScreenState extends State<SinavScreen> {
           FilledButton(
             style: FilledButton.styleFrom(
                 backgroundColor: _cBtnPrimary, foregroundColor: Colors.black87),
-            onPressed: () {
+            onPressed: () async {
               Navigator.pop(ctx);
-              Navigator.pop(ctx);
+              await AppReviewService.tryShowAfterCompletion(ctx);
+              if (ctx.mounted) Navigator.pop(ctx);
             },
             child: const Text('Ana Sayfaya Dön'),
           ),

@@ -15,7 +15,7 @@ class MainShell extends StatefulWidget {
   State<MainShell> createState() => _MainShellState();
 }
 
-class _MainShellState extends State<MainShell> {
+class _MainShellState extends State<MainShell> with WidgetsBindingObserver {
   int  _selectedIndex = 0;
   DateTime? _lastBackPress;
   /// Ayarlardan dönünce sınav tarihi kartını yenilemek için
@@ -24,11 +24,25 @@ class _MainShellState extends State<MainShell> {
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       PremiumService.syncFromRevenueCat();
       AppUpdateService.checkAndPrompt(context);
       DailyNotificationService.ensurePermissionAndSchedule();
     });
+  }
+
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      DailyNotificationService.ensurePermissionAndSchedule();
+    }
   }
 
   // İstatistik sekmesine her geçişte yeni key → initState yeniden çalışır

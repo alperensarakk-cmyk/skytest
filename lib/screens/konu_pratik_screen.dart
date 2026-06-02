@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/soru_model.dart';
+import '../services/app_review_service.dart';
 import '../services/daily_limit_service.dart';
 import '../services/soru_son_gorulen_service.dart';
 import '../services/premium_service.dart';
@@ -35,6 +36,7 @@ class KonuPratikScreen extends StatefulWidget {
 class _KonuPratikScreenState extends State<KonuPratikScreen> {
   int     _index   = 0;
   String? _secilen;
+  bool    _reviewMilestoneQueued = false;
 
   bool get _answered => _secilen != null;
   SoruModel get _soru  => widget.sorular[_index];
@@ -66,7 +68,14 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
   }
 
   // ── Sonraki soru / bitir ──────────────────────────────────────────────────
-  void _next() {
+  Future<void> _next() async {
+    final answered = _index + 1;
+    final triggerAt = AppReviewService.milestoneTriggerAt(_total);
+    if (answered >= triggerAt && !_reviewMilestoneQueued) {
+      _reviewMilestoneQueued = true;
+      await AppReviewService.tryShowAfterCompletion(context);
+    }
+
     if (_index >= _total - 1) {
       _showDoneDialog();
       return;
@@ -85,6 +94,7 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
     });
   }
 
+  /// Konu oturumu: 5. sorudan sonra (veya daha az soru varsa son soruda) değerlendirme kartı.
   void _showDoneDialog() {
     showDialog(
       context: context,
@@ -107,8 +117,8 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
         actions: [
           TextButton(
             onPressed: () {
-              Navigator.pop(context); // dialog kapat
-              Navigator.pop(context); // konu listesine dön
+              Navigator.pop(context);
+              Navigator.pop(context);
             },
             child: const Text('Konulara Dön',
                 style: TextStyle(color: kAccent, fontWeight: FontWeight.w600)),
