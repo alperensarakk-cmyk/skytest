@@ -53,15 +53,45 @@ class FlashCard extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Kategori
-                        Text(
-                          kalip.kategoriLabel.toUpperCase(),
-                          style: const TextStyle(
-                            color: Color(0xFF4A6080),
-                            fontSize: 10,
-                            fontWeight: FontWeight.w700,
-                            letterSpacing: 1.6,
-                          ),
+                        // Kategori + sınav frekansı
+                        Row(
+                          children: [
+                            Expanded(
+                              child: Text(
+                                kalip.kategoriLabel.toUpperCase(),
+                                style: const TextStyle(
+                                  color: Color(0xFF4A6080),
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w700,
+                                  letterSpacing: 1.6,
+                                ),
+                              ),
+                            ),
+                            if (kalip.soruSayisi != null)
+                              Container(
+                                padding: const EdgeInsets.symmetric(
+                                  horizontal: 8,
+                                  vertical: 4,
+                                ),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFFFD60A)
+                                      .withValues(alpha: 0.14),
+                                  borderRadius: BorderRadius.circular(8),
+                                  border: Border.all(
+                                    color: const Color(0xFFFFD60A)
+                                        .withValues(alpha: 0.35),
+                                  ),
+                                ),
+                                child: Text(
+                                  '${kalip.soruSayisi} soru',
+                                  style: const TextStyle(
+                                    color: Color(0xFFFFD60A),
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ),
+                          ],
                         ),
                         const SizedBox(height: 16),
 

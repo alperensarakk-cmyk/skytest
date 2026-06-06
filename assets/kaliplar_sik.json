@@ -1,0 +1,1347 @@
+{
+  "generated_at": "2026-06-06T13:48:34.357Z",
+  "ozet": {
+    "benzersiz_kalip": 97,
+    "eslesen_kalip": 67,
+    "sifir_kalip": 30,
+    "json_disi_sik": 0
+  },
+  "sik_kaliplar": [
+    {
+      "id": 66,
+      "kategori": "Emniyet_ve_Uyari",
+      "ipucu_kalip": "make _______",
+      "tamamlayici": "SURE",
+      "turkce_anlami": "emin olmak",
+      "ornek_cumle": "Make _______ the safety pins are removed.",
+      "taktik": "Güvenlik prosedürlerinin başında 'Ensure' kelimesi yoksa, onun ikiz kardeşi olan 'Make SURE' (emin ol) kalıbı vardır.",
+      "soru_sayisi": 40,
+      "tam_ifade": "make sure",
+      "soru_idleri": [
+        4,
+        9,
+        15,
+        34,
+        36,
+        134,
+        146,
+        215,
+        256,
+        352,
+        357,
+        396,
+        398,
+        436,
+        479,
+        514,
+        515,
+        516,
+        629,
+        666,
+        669,
+        686,
+        710,
+        711,
+        712,
+        713,
+        714,
+        719,
+        737,
+        741,
+        742,
+        743,
+        756,
+        762,
+        785,
+        795,
+        796,
+        1004,
+        1028,
+        1049
+      ]
+    },
+    {
+      "id": 53,
+      "kategori": "Kural_ve_Dokuman",
+      "ipucu_kalip": "according _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e göre",
+      "ornek_cumle": "Perform the test according _______ the maintenance manual.",
+      "taktik": "Tıpkı 'in accordance with' gibi bir referans kalıbı olan 'according', dokümanlara atıf yaparken daima 'TO' alır.",
+      "soru_sayisi": 27,
+      "tam_ifade": "according to",
+      "soru_idleri": [
+        282,
+        362,
+        365,
+        369,
+        375,
+        609,
+        611,
+        613,
+        615,
+        617,
+        618,
+        619,
+        622,
+        624,
+        625,
+        627,
+        689,
+        690,
+        691,
+        693,
+        695,
+        696,
+        768,
+        770,
+        772,
+        775,
+        779
+      ]
+    },
+    {
+      "id": 6,
+      "kategori": "Sebep_Sonuc",
+      "ipucu_kalip": "due _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-den dolayı / yüzünden",
+      "ornek_cumle": "The flight was delayed due _______ heavy snow.",
+      "taktik": "Hava durumu iptalleri, gecikmeler (delay) veya arıza sebeplerini açıklarken 'due' kelimesi tek başına kalamaz, daima 'TO' ile tamamlanır.",
+      "soru_sayisi": 25,
+      "tam_ifade": "due to",
+      "soru_idleri": [
+        2,
+        3,
+        35,
+        57,
+        73,
+        91,
+        131,
+        137,
+        153,
+        187,
+        207,
+        234,
+        255,
+        285,
+        287,
+        289,
+        591,
+        598,
+        615,
+        616,
+        1009,
+        1017,
+        1035,
+        1038,
+        1048
+      ]
+    },
+    {
+      "id": 18,
+      "kategori": "Gramer_Kaliplari",
+      "ipucu_kalip": "instead _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-in yerine",
+      "ornek_cumle": "Use safety wire instead _______ cotter pins for this assembly.",
+      "taktik": "Bir parçanın veya yöntemin 'yerine' başkasının kullanılacağını belirten 'instead' kelimesi, İngilizcede ayrılmaz bir şekilde 'OF' alır.",
+      "soru_sayisi": 22,
+      "tam_ifade": "instead of",
+      "soru_idleri": [
+        2,
+        33,
+        57,
+        61,
+        69,
+        113,
+        187,
+        198,
+        207,
+        215,
+        231,
+        235,
+        253,
+        263,
+        476,
+        494,
+        584,
+        1009,
+        1017,
+        1038,
+        1041,
+        1048
+      ]
+    },
+    {
+      "id": 3,
+      "kategori": "Kural_ve_Dokuman",
+      "ipucu_kalip": "in accordance _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "...-e uygun olarak / ...-e göre",
+      "ornek_cumle": "The repair must be done in accordance _______ the AMM.",
+      "taktik": "AMM, SRM, IPC gibi doküman isimlerinin geçtiği yerlerde 'in accordance' kalıbı her zaman 'WITH' ile tamamlanır. Başka edat kabul etmez.",
+      "soru_sayisi": 21,
+      "tam_ifade": "in accordance with",
+      "soru_idleri": [
+        2,
+        61,
+        79,
+        137,
+        198,
+        231,
+        238,
+        270,
+        419,
+        502,
+        503,
+        504,
+        554,
+        584,
+        617,
+        618,
+        689,
+        690,
+        691,
+        692,
+        721
+      ]
+    },
+    {
+      "id": 14,
+      "kategori": "Gramer_Kaliplari",
+      "ipucu_kalip": "regardless _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-e bakılmaksızın",
+      "ornek_cumle": "The test must be completed regardless _______ the time it takes.",
+      "taktik": "Bir kuralın kesinliğini ve istisnasız olduğunu belirten bu zarf, İngilizcede sadece ve sadece 'OF' ile tamamlanır.",
+      "soru_sayisi": 17,
+      "tam_ifade": "regardless of",
+      "soru_idleri": [
+        2,
+        35,
+        59,
+        61,
+        73,
+        113,
+        123,
+        137,
+        267,
+        554,
+        578,
+        584,
+        598,
+        623,
+        624,
+        1009,
+        1048
+      ]
+    },
+    {
+      "id": 13,
+      "kategori": "Kural_ve_Dokuman",
+      "ipucu_kalip": "refer _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e başvurmak / referans almak",
+      "ornek_cumle": "Always refer _______ the manual for correct torque values.",
+      "taktik": "Teknisyeni bir dokümana, el kitabına veya tabloya yönlendiren en meşhur emir cümlesidir. Refer her zaman 'TO' alır.",
+      "soru_sayisi": 15,
+      "tam_ifade": "refer to",
+      "soru_idleri": [
+        42,
+        62,
+        189,
+        238,
+        476,
+        627,
+        628,
+        671,
+        674,
+        724,
+        775,
+        776,
+        777,
+        778,
+        1018
+      ]
+    },
+    {
+      "id": 123,
+      "kategori": "Referans_ve_Dokuman",
+      "ipucu_kalip": "referred _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e atıfta bulunulmak / ... den bahsedilmek",
+      "ornek_cumle": "The item referred _______ in paragraph 3 must be inspected before flight.",
+      "taktik": "Paragraf veya el kitabında bir maddeye atıf yapılırken 'referred to' kalıbı kullanılır. 'Refer to' emir cümlesinin pasif karşılığıdır.",
+      "soru_sayisi": 15,
+      "tam_ifade": "referred to",
+      "soru_idleri": [
+        42,
+        62,
+        189,
+        238,
+        476,
+        627,
+        628,
+        671,
+        674,
+        724,
+        775,
+        776,
+        777,
+        778,
+        1018
+      ]
+    },
+    {
+      "id": 61,
+      "kategori": "Zaman_Baglaclari_ve_Sartlar",
+      "ipucu_kalip": "as long _______",
+      "tamamlayici": "AS",
+      "turkce_anlami": "...-dığı sürece",
+      "ornek_cumle": "The system is safe as long _______ the green light is on.",
+      "taktik": "Bir sistemin güvenli veya normal çalışma şartını anlatan 'as long' (sürece) kalıbı, İngilizcede istisnasız 'AS' ile tamamlanır.",
+      "soru_sayisi": 14,
+      "tam_ifade": "as long as",
+      "soru_idleri": [
+        34,
+        58,
+        84,
+        154,
+        187,
+        198,
+        250,
+        264,
+        537,
+        596,
+        1009,
+        1012,
+        1022,
+        1041
+      ]
+    },
+    {
+      "id": 2,
+      "kategori": "Edat_Kaliplari",
+      "ipucu_kalip": "prior _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "-den önce",
+      "ornek_cumle": "Make sure the pins are installed prior _______ towing the aircraft.",
+      "taktik": "Güvenlik veya bakım cümlelerinde 'prior' kelimesi tek başına kullanılmaz. Her zaman 'to' edatıyla birleşerek 'before' (önce) anlamı yaratır.",
+      "soru_sayisi": 13,
+      "tam_ifade": "prior to",
+      "soru_idleri": [
+        4,
+        69,
+        93,
+        116,
+        119,
+        123,
+        231,
+        253,
+        283,
+        566,
+        570,
+        604,
+        606
+      ]
+    },
+    {
+      "id": 16,
+      "kategori": "Sebep_Sonuc",
+      "ipucu_kalip": "results _______",
+      "tamamlayici": "IN",
+      "turkce_anlami": "... ile sonuçlanır / ...-e yol açar",
+      "ornek_cumle": "A leak in the duct results _______ a drop in cabin pressure.",
+      "taktik": "Dikkat! Arıza bir şeye 'yol açıyorsa' cevap 'IN'dir (results in). Ama arıza bir şeyden 'kaynaklanıyorsa' cevap 'FROM'dur (results from).",
+      "soru_sayisi": 13,
+      "tam_ifade": "results in",
+      "soru_idleri": [
+        55,
+        83,
+        290,
+        452,
+        559,
+        617,
+        618,
+        621,
+        622,
+        625,
+        626,
+        788,
+        1036
+      ]
+    },
+    {
+      "id": 108,
+      "kategori": "Is_Akisi",
+      "ipucu_kalip": "result _______",
+      "tamamlayici": "IN",
+      "turkce_anlami": "... ile sonuçlanmak",
+      "ornek_cumle": "Failure to follow instructions may result _______ personal injury.",
+      "taktik": "Warning (uyarı) metinlerinin vazgeçilmezidir. Bir hatanın neye 'neden olacağını/sonuçlanacağını' anlatırken 'IN' edatı kullanılır.",
+      "soru_sayisi": 13,
+      "tam_ifade": "result in",
+      "soru_idleri": [
+        55,
+        83,
+        290,
+        452,
+        559,
+        617,
+        618,
+        621,
+        622,
+        625,
+        626,
+        788,
+        1036
+      ]
+    },
+    {
+      "id": 124,
+      "kategori": "Sebep_Sonuc",
+      "ipucu_kalip": "resulting _______",
+      "tamamlayici": "IN",
+      "turkce_anlami": "... ile sonuçlanmak / ...-e yol açmak",
+      "ornek_cumle": "Corrosion on the frame, resulting _______ a loss of strength, must be repaired.",
+      "taktik": "'Result in' kalıbının -ing hali 'resulting in' dir. Bir hasar kötü bir sonuca yol açıyorsa edat 'IN' dir ('result from' ise kaynak için 'FROM').",
+      "soru_sayisi": 13,
+      "tam_ifade": "resulting in",
+      "soru_idleri": [
+        55,
+        83,
+        290,
+        452,
+        559,
+        617,
+        618,
+        621,
+        622,
+        625,
+        626,
+        788,
+        1036
+      ]
+    },
+    {
+      "id": 60,
+      "kategori": "Zaman_Baglaclari_ve_Sartlar",
+      "ipucu_kalip": "provided _______",
+      "tamamlayici": "THAT",
+      "turkce_anlami": "... şartıyla / koşuluyla",
+      "ornek_cumle": "You can dispatch the aircraft provided _______ the MEL requirements are met.",
+      "taktik": "Teknik dokümanlarda 'If' (eğer) kelimesinin en havalı ve yasal versiyonu olan 'provided' her zaman 'THAT' ile bağlanır.",
+      "soru_sayisi": 12,
+      "tam_ifade": "provided that",
+      "soru_idleri": [
+        33,
+        57,
+        174,
+        264,
+        507,
+        537,
+        547,
+        560,
+        596,
+        695,
+        696,
+        1041
+      ]
+    },
+    {
+      "id": 25,
+      "kategori": "Gramer_Kaliplari",
+      "ipucu_kalip": "ensure _______",
+      "tamamlayici": "THAT",
+      "turkce_anlami": "... olduğundan emin olmak",
+      "ornek_cumle": "Ensure _______ the area is clear of personnel.",
+      "taktik": "Güvenlik kurallarının başındaki 'Ensure' (emin ol) veya 'Make sure' emirlerinden sonra tam bir cümle geliyorsa, aradaki bağlaç 'THAT' olur.",
+      "soru_sayisi": 11,
+      "tam_ifade": "ensure that",
+      "soru_idleri": [
+        9,
+        88,
+        116,
+        128,
+        188,
+        215,
+        514,
+        587,
+        635,
+        683,
+        1004
+      ]
+    },
+    {
+      "id": 62,
+      "kategori": "Amac_ve_Neden",
+      "ipucu_kalip": "in order _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "... amacıyla / ...-mek için",
+      "ornek_cumle": "Bleed the system in order _______ remove trapped air.",
+      "taktik": "Cümlenin ortasında bir işlemin 'neden' yapıldığını (amacını) açıklamak için kullanılan 'in order' kalıbı her zaman 'TO' edatını çeker.",
+      "soru_sayisi": 11,
+      "tam_ifade": "in order to",
+      "soru_idleri": [
+        91,
+        118,
+        138,
+        151,
+        246,
+        363,
+        502,
+        763,
+        783,
+        786,
+        787
+      ]
+    },
+    {
+      "id": 10,
+      "kategori": "Fiziksel_Durum",
+      "ipucu_kalip": "depends _______",
+      "tamamlayici": "ON",
+      "turkce_anlami": "...-e bağlıdır",
+      "ornek_cumle": "The fuel consumption depends _______ the weight of the aircraft.",
+      "taktik": "Bir şeyin başka bir faktöre bağlı olduğunu gösteren 'depends' kelimesi İngilizcede istisnasız 'ON' (veya upon) edatıyla kullanılır.",
+      "soru_sayisi": 9,
+      "tam_ifade": "depends on",
+      "soru_idleri": [
+        37,
+        83,
+        174,
+        182,
+        244,
+        376,
+        477,
+        484,
+        510
+      ]
+    },
+    {
+      "id": 121,
+      "kategori": "Sebep_Sonuc",
+      "ipucu_kalip": "depending _______",
+      "tamamlayici": "ON",
+      "turkce_anlami": "...-e bağlı olarak",
+      "ornek_cumle": "The inspection interval varies depending _______ the aircraft type and usage.",
+      "taktik": "Bir süre, miktar veya prosedürün başka bir faktöre bağlı olduğunu anlatırken 'depending on' kullanılır; 'depends on' ile aynı edat kuralı geçerlidir.",
+      "soru_sayisi": 9,
+      "tam_ifade": "depending on",
+      "soru_idleri": [
+        37,
+        83,
+        174,
+        182,
+        244,
+        376,
+        477,
+        484,
+        510
+      ]
+    },
+    {
+      "id": 64,
+      "kategori": "Bakim_Fiilleri",
+      "ipucu_kalip": "shut _______",
+      "tamamlayici": "DOWN",
+      "turkce_anlami": "kapatmak (motor/sistem)",
+      "ornek_cumle": "Shut _______ the engine if a fire is detected.",
+      "taktik": "Büyük sistemlerin, APU'nun veya jet motorlarının kapatılmasını anlatan acil durum fiili 'turn off' değil, her zaman 'shut DOWN' kalıbıdır.",
+      "soru_sayisi": 8,
+      "tam_ifade": "shut down",
+      "soru_idleri": [
+        59,
+        92,
+        156,
+        242,
+        630,
+        669,
+        747,
+        1017
+      ]
+    },
+    {
+      "id": 114,
+      "kategori": "Is_Akisi",
+      "ipucu_kalip": "which _______ turn",
+      "tamamlayici": "IN",
+      "turkce_anlami": "bu da (sırasıyla) ...-e neden olur",
+      "ornek_cumle": "The pressure drops, which _______ turn activates the warning light.",
+      "taktik": "Sebep-sonuç zinciri anlatan teknik metinlerde, bir olayın ardından diğerini tetiklediğini belirtmek için 'which IN turn' (which in turn) kalıbı kullanılır.",
+      "soru_sayisi": 8,
+      "tam_ifade": "which in",
+      "soru_idleri": [
+        401,
+        402,
+        403,
+        404,
+        405,
+        465,
+        691,
+        692
+      ]
+    },
+    {
+      "id": 119,
+      "kategori": "Referans_ve_Dokuman",
+      "ipucu_kalip": "based _______",
+      "tamamlayici": "ON",
+      "turkce_anlami": "...-e dayanarak / ...-e göre",
+      "ornek_cumle": "Based _______ the passage, the aircraft must comply with the applicable AD.",
+      "taktik": "Paragraf sorularında metinden sonuç çıkarırken 'Based on' kalıbı sık geçer. 'According to' prosedüre göre, 'Based on' veriye veya metne dayanmayı ifade eder.",
+      "soru_sayisi": 8,
+      "tam_ifade": "based on",
+      "soru_idleri": [
+        612,
+        626,
+        695,
+        696,
+        767,
+        768,
+        769,
+        770
+      ]
+    },
+    {
+      "id": 1,
+      "kategori": "Edat_Kaliplari",
+      "ipucu_kalip": "equipped _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "... ile donatılmıştır",
+      "ornek_cumle": "Modern airplanes are equipped _______ advanced radar systems.",
+      "taktik": "Boşluğun hemen solunda 'equipped' (donatılmış) kelimesini görürsen, cümlenin anlamına bile bakmadan şıklardan 'WITH' edatını işaretle.",
+      "soru_sayisi": 7,
+      "tam_ifade": "equipped with",
+      "soru_idleri": [
+        18,
+        97,
+        105,
+        243,
+        779,
+        780,
+        781
+      ]
+    },
+    {
+      "id": 22,
+      "kategori": "Hasar_Tespiti",
+      "ipucu_kalip": "inspect _______",
+      "tamamlayici": "FOR",
+      "turkce_anlami": "...-e karşı incelemek / ... aramak",
+      "ornek_cumle": "Inspect the fuselage _______ cracks and corrosion.",
+      "taktik": "Bir parçada hasar, çatlak veya sızıntı olup olmadığını kontrol etme işleminde 'inspect' ve 'check' fiillerinin yanına mutlaka 'FOR' gelir.",
+      "soru_sayisi": 7,
+      "tam_ifade": "inspect for",
+      "soru_idleri": [
+        26,
+        108,
+        117,
+        263,
+        529,
+        719,
+        1034
+      ]
+    },
+    {
+      "id": 32,
+      "kategori": "Gramer_Kaliplari",
+      "ipucu_kalip": "independent _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-den bağımsız",
+      "ornek_cumle": "The standby battery is independent _______ the main electrical system.",
+      "taktik": "Yedek (standby) sistemlerin ana sistemden ayrı çalıştığını anlatan 'independent' (bağımsız) kelimesi, Türkçenin aksine 'from' değil 'OF' alır.",
+      "soru_sayisi": 7,
+      "tam_ifade": "independent of",
+      "soru_idleri": [
+        376,
+        377,
+        378,
+        379,
+        380,
+        381,
+        382
+      ]
+    },
+    {
+      "id": 120,
+      "kategori": "Hasar_Tespiti",
+      "ipucu_kalip": "inspected _______",
+      "tamamlayici": "FOR",
+      "turkce_anlami": "...-e karşı incelenmek / ... aranmak",
+      "ornek_cumle": "The fuel tanks must be inspected _______ contamination every 500 flight hours.",
+      "taktik": "'Inspect for' kalıbının edilgen hali 'inspected for' dır. Tank, gövde veya motor parçalarında kir, çatlak veya kirlilik aranırken edat daima 'FOR' olur.",
+      "soru_sayisi": 7,
+      "tam_ifade": "inspected for",
+      "soru_idleri": [
+        26,
+        108,
+        117,
+        263,
+        529,
+        719,
+        1034
+      ]
+    },
+    {
+      "id": 15,
+      "kategori": "Yetenek_ve_Kapasite",
+      "ipucu_kalip": "capable _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "... yapabilme kapasitesine sahip",
+      "ornek_cumle": "The battery is capable _______ providing emergency power.",
+      "taktik": "Bir donanımın veya sistemin limitini, yeteneğini (kapasitesini) anlatırken kullanılan 'capable' sıfatı daima 'OF' ile bağlanır.",
+      "soru_sayisi": 6,
+      "tam_ifade": "capable of",
+      "soru_idleri": [
+        216,
+        437,
+        600,
+        619,
+        620,
+        642
+      ]
+    },
+    {
+      "id": 69,
+      "kategori": "Acil_Durum",
+      "ipucu_kalip": "in the event _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "... durumunda / halinde",
+      "ornek_cumle": "In the event _______ an engine failure, pull the fire handle.",
+      "taktik": "Acil durum manuallerinin o meşhur 'In case OF' kalıbının daha resmi versiyonudur. İkisi de istisnasız 'OF' alır.",
+      "soru_sayisi": 6,
+      "tam_ifade": "in the event of",
+      "soru_idleri": [
+        73,
+        113,
+        203,
+        292,
+        577,
+        1048
+      ]
+    },
+    {
+      "id": 7,
+      "kategori": "Eylem_ve_Engelleme",
+      "ipucu_kalip": "prevent _______",
+      "tamamlayici": "FROM",
+      "turkce_anlami": "...-den engellemek / korumak",
+      "ornek_cumle": "Apply a coating to prevent the metal _______ rusting.",
+      "taktik": "Bir şeyin olmasını engellemek veya korumak anlamındaki 'prevent' ve 'protect' fiillerinin arkasından her zaman 'FROM' edatı gelir.",
+      "soru_sayisi": 5,
+      "tam_ifade": "prevent from",
+      "soru_idleri": [
+        25,
+        37,
+        133,
+        623,
+        624
+      ]
+    },
+    {
+      "id": 8,
+      "kategori": "Yapi_ve_Bilesen",
+      "ipucu_kalip": "consists _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-den oluşur",
+      "ornek_cumle": "The hydraulic system consists _______ a pump, reservoir, and valves.",
+      "taktik": "Sistemlerin parçalarını sayarken kullanılan 'consists' (oluşur) ve 'composed' fiilleri, İngilizcede şaşmaz bir şekilde 'OF' edatını alır.",
+      "soru_sayisi": 5,
+      "tam_ifade": "consists of",
+      "soru_idleri": [
+        37,
+        83,
+        213,
+        334,
+        526
+      ]
+    },
+    {
+      "id": 20,
+      "kategori": "Zaman_Kaliplari",
+      "ipucu_kalip": "as soon _______",
+      "tamamlayici": "AS",
+      "turkce_anlami": "...-ar ...-maz / hemen",
+      "ornek_cumle": "Shut down the engine as soon _______ the fire warning illuminates.",
+      "taktik": "Acil durum prosedürlerinde eylemin anında (yapar yapmaz) yapılması gerektiğini bildiren bu kalıp her zaman 'AS' ile tamamlanır.",
+      "soru_sayisi": 5,
+      "tam_ifade": "as soon as",
+      "soru_idleri": [
+        31,
+        32,
+        644,
+        691,
+        765
+      ]
+    },
+    {
+      "id": 26,
+      "kategori": "Emniyet_ve_Temizlik",
+      "ipucu_kalip": "clear _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-den arındırılmış / temizlenmiş",
+      "ornek_cumle": "Make sure the runway is clear _______ debris.",
+      "taktik": "Bir alanın personelden, aletlerden veya döküntüden (FOD) temizlenmiş olduğunu belirten 'clear' sıfatı istisnasız 'OF' alır.",
+      "soru_sayisi": 5,
+      "tam_ifade": "clear of",
+      "soru_idleri": [
+        1,
+        345,
+        542,
+        571,
+        588
+      ]
+    },
+    {
+      "id": 36,
+      "kategori": "Onay_ve_Otorite",
+      "ipucu_kalip": "approved _______",
+      "tamamlayici": "BY",
+      "turkce_anlami": "... tarafından onaylı",
+      "ornek_cumle": "Use only solvents that are approved _______ the manufacturer.",
+      "taktik": "Pasif (Edilgen) yapı kuralıdır. Bir parçanın, sıvının veya prosedürün bir kurum/üretici tarafından onaylandığını belirtmek için daima 'BY' gelir.",
+      "soru_sayisi": 5,
+      "tam_ifade": "approved by",
+      "soru_idleri": [
+        283,
+        288,
+        606,
+        695,
+        696
+      ]
+    },
+    {
+      "id": 39,
+      "kategori": "Acil_Durum",
+      "ipucu_kalip": "in case _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "... durumunda",
+      "ornek_cumle": "In case _______ a fire, pull the fire handle immediately.",
+      "taktik": "EASA acil durum (Emergency) prosedürlerinde cümlenin başındaki 'if' (eğer) kelimesinin en yaygın alternatifi 'in case OF' kalıbıdır.",
+      "soru_sayisi": 5,
+      "tam_ifade": "in case of",
+      "soru_idleri": [
+        56,
+        113,
+        292,
+        593,
+        1022
+      ]
+    },
+    {
+      "id": 9,
+      "kategori": "Kural_ve_Dokuman",
+      "ipucu_kalip": "comply _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "... ile uyumlu olmak / kurallara uymak",
+      "ornek_cumle": "All operators must comply _______ the EASA regulations.",
+      "taktik": "Regülasyon, yasa veya kurallara uymak anlamındaki 'comply' fiilini gördüğün an, boşluğu 'WITH' ile doldur.",
+      "soru_sayisi": 4,
+      "tam_ifade": "comply with",
+      "soru_idleri": [
+        293,
+        419,
+        474,
+        559
+      ]
+    },
+    {
+      "id": 11,
+      "kategori": "Fiziksel_Durum",
+      "ipucu_kalip": "subject _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e maruz kalmak / tabi olmak",
+      "ornek_cumle": "The landing gear is subject _______ heavy impact loads.",
+      "taktik": "Uçak parçalarının basınca, yüke, ısıya veya teste 'maruz kaldığını' anlatan cümlelerde 'subject' kelimesinden sonra %100 'TO' gelir.",
+      "soru_sayisi": 4,
+      "tam_ifade": "subject to",
+      "soru_idleri": [
+        171,
+        415,
+        583,
+        602
+      ]
+    },
+    {
+      "id": 95,
+      "kategori": "Bakim_Islemi",
+      "ipucu_kalip": "subjected _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e maruz kalmış",
+      "ornek_cumle": "The turbine blades are subjected _______ extreme temperatures.",
+      "taktik": "Bir parçanın yüksek ısı, basınç veya stres gibi etkilere 'maruz kalması' durumunda 'TO' edatı kullanılır.",
+      "soru_sayisi": 4,
+      "tam_ifade": "subjected to",
+      "soru_idleri": [
+        276,
+        281,
+        414,
+        415
+      ]
+    },
+    {
+      "id": 5,
+      "kategori": "Fiziksel_Durum",
+      "ipucu_kalip": "susceptible _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e karşı hassas / yatkın",
+      "ornek_cumle": "Composite materials are highly susceptible _______ impact damage.",
+      "taktik": "Bir malzemenin hasara, korozyona veya darbeye hassas olduğunu belirten 'susceptible' veya 'sensitive' kelimelerinden sonra kesinlikle 'TO' gelir.",
+      "soru_sayisi": 3,
+      "tam_ifade": "susceptible to",
+      "soru_idleri": [
+        77,
+        219,
+        676
+      ]
+    },
+    {
+      "id": 27,
+      "kategori": "Insan_Faktorleri",
+      "ipucu_kalip": "rely _______",
+      "tamamlayici": "ON",
+      "turkce_anlami": "...-e güvenmek / bel bağlamak",
+      "ornek_cumle": "Do not rely _______ your memory during maintenance.",
+      "taktik": "İnsan faktörlerinde hafızaya veya hatalı bir sisteme güvenmeyi yasaklayan 'rely' fiili İngilizcede sadece 'ON' veya 'upon' edatıyla kullanılır.",
+      "soru_sayisi": 3,
+      "tam_ifade": "rely on",
+      "soru_idleri": [
+        104,
+        189,
+        718
+      ]
+    },
+    {
+      "id": 68,
+      "kategori": "Zitlik_Baglaclari",
+      "ipucu_kalip": "even _______",
+      "tamamlayici": "THOUGH",
+      "turkce_anlami": "...-mesine rağmen / -se bile",
+      "ornek_cumle": "Replace the filter even _______ it looks clean.",
+      "taktik": "Bakım kurallarında istisnaları reddetmek (temiz görünse bile değiştir) için kullanılan 'even' kelimesinin yanına %100 'THOUGH' (veya IF) gelir.",
+      "soru_sayisi": 3,
+      "tam_ifade": "even though",
+      "soru_idleri": [
+        33,
+        136,
+        1046
+      ]
+    },
+    {
+      "id": 71,
+      "kategori": "Kural_ve_Dokuman",
+      "ipucu_kalip": "applicable _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e uygulanabilir / geçerli",
+      "ornek_cumle": "This manual is only applicable _______ Boeing 737 aircraft.",
+      "taktik": "Bir el kitabının, kuralın veya bültenin hangi uçağa/sisteme 'geçerli' olduğunu belirten 'applicable' kelimesi her zaman 'TO' ile bağlanır.",
+      "soru_sayisi": 3,
+      "tam_ifade": "applicable to",
+      "soru_idleri": [
+        555,
+        724,
+        736
+      ]
+    },
+    {
+      "id": 72,
+      "kategori": "Dokumantasyon_ve_Raporlama",
+      "ipucu_kalip": "sign _______",
+      "tamamlayici": "OFF",
+      "turkce_anlami": "imzalayıp kapatmak / onaylamak",
+      "ornek_cumle": "Do not sign _______ the task card unless the test is successful.",
+      "taktik": "Hangar dilinde bir bakım görevini (task) bitirip kaşelemek/onaylamak işlemine sadece 'sign' denmez, 'sign OFF' kalıbı kullanılır.",
+      "soru_sayisi": 3,
+      "tam_ifade": "sign off",
+      "soru_idleri": [
+        41,
+        44,
+        296
+      ]
+    },
+    {
+      "id": 76,
+      "kategori": "Sebep_Sonuc",
+      "ipucu_kalip": "owing _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-den dolayı / sayesinde",
+      "ornek_cumle": "The flight was cancelled owing _______ bad weather.",
+      "taktik": "Tıpkı 'due to' ve 'because of' gibi sebep bildiren 'owing' kelimesi, boşluk doldurma sorularında %100 'TO' edatını çeker.",
+      "soru_sayisi": 3,
+      "tam_ifade": "owing to",
+      "soru_idleri": [
+        593,
+        598,
+        1038
+      ]
+    },
+    {
+      "id": 125,
+      "kategori": "Eylem_ve_Engelleme",
+      "ipucu_kalip": "protect _______",
+      "tamamlayici": "FROM",
+      "turkce_anlami": "...-den korumak",
+      "ornek_cumle": "The relief valve protects the fuselage _______ overpressure damage.",
+      "taktik": "Tıpkı 'prevent from' gibi, bir parçayı veya sistemi bir tehlikeden korumak için 'protect' fiili her zaman 'FROM' edatını alır.",
+      "soru_sayisi": 3,
+      "tam_ifade": "protect from",
+      "soru_idleri": [
+        25,
+        623,
+        624
+      ]
+    },
+    {
+      "id": 4,
+      "kategori": "Sorumluluk_ve_Kanun",
+      "ipucu_kalip": "responsible _______",
+      "tamamlayici": "FOR",
+      "turkce_anlami": "...-den sorumlu",
+      "ornek_cumle": "The technician is responsible _______ the quality of the maintenance.",
+      "taktik": "Türkçeye çevirirken '-den sorumlu' dediğimiz için akla 'from' gelir ama İngilizcede sorumluluk daima 'responsible FOR' kalıbıyla ifade edilir.",
+      "soru_sayisi": 2,
+      "tam_ifade": "responsible for",
+      "soru_idleri": [
+        159,
+        642
+      ]
+    },
+    {
+      "id": 17,
+      "kategori": "Fiziksel_Durum",
+      "ipucu_kalip": "exposed _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e maruz bırakılmış",
+      "ornek_cumle": "Do not leave the bare metal exposed _______ moisture.",
+      "taktik": "Bir malzemenin neme, yağmura veya kimyasala açık (maruz) kaldığını anlatan 'exposed' kelimesi boşluğa her zaman 'TO' edatını çeker.",
+      "soru_sayisi": 2,
+      "tam_ifade": "exposed to",
+      "soru_idleri": [
+        691,
+        692
+      ]
+    },
+    {
+      "id": 19,
+      "kategori": "Gramer_Kaliplari",
+      "ipucu_kalip": "as well _______",
+      "tamamlayici": "AS",
+      "turkce_anlami": "...-in yanı sıra / ile birlikte",
+      "ornek_cumle": "Check the main gear as well _______ the nose gear.",
+      "taktik": "Eğer cümlede 'as well' (yanı sıra) kalıbı kullanılıyorsa, boşluğa kesinlikle 'AS' gelir. Havacılıkta 'and' (ve) kelimesinin en havalı alternatifidir.",
+      "soru_sayisi": 2,
+      "tam_ifade": "as well as",
+      "soru_idleri": [
+        5,
+        1038
+      ]
+    },
+    {
+      "id": 21,
+      "kategori": "Bakim_Fiilleri",
+      "ipucu_kalip": "replace _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "... ile değiştirmek",
+      "ornek_cumle": "Replace the defective O-ring _______ a new one.",
+      "taktik": "Arızalı bir parçayı yenisiyle değiştirmek eyleminde 'replace' fiili her zaman 'WITH' alır. 'From' veya 'by' kullanılmaz.",
+      "soru_sayisi": 2,
+      "tam_ifade": "replace with",
+      "soru_idleri": [
+        17,
+        613
+      ]
+    },
+    {
+      "id": 23,
+      "kategori": "Sokum_ve_Mekanik",
+      "ipucu_kalip": "remove _______",
+      "tamamlayici": "FROM",
+      "turkce_anlami": "...-den sökmek / çıkarmak",
+      "ornek_cumle": "Carefully remove the hydraulic pump _______ the engine.",
+      "taktik": "Bir parçanın bulunduğu yerden ayrılması/sökülmesi eylemi olan 'remove', nereden söküldüğünü belirtmek için daima 'FROM' edatını çeker.",
+      "soru_sayisi": 2,
+      "tam_ifade": "remove from",
+      "soru_idleri": [
+        94,
+        465
+      ]
+    },
+    {
+      "id": 28,
+      "kategori": "Insan_Faktorleri",
+      "ipucu_kalip": "aware _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-in farkında olmak",
+      "ornek_cumle": "Technicians must be aware _______ the safety hazards.",
+      "taktik": "Durumsal farkındalığı (situational awareness) anlatan 'aware' kelimesini gördüğünde hiç düşünmeden boşluğa 'OF' koy.",
+      "soru_sayisi": 2,
+      "tam_ifade": "aware of",
+      "soru_idleri": [
+        610,
+        641
+      ]
+    },
+    {
+      "id": 35,
+      "kategori": "Sebep_Sonuc",
+      "ipucu_kalip": "lead _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e yol açmak / neden olmak",
+      "ornek_cumle": "Corrosion can lead _______ structural failure.",
+      "taktik": "Tıpkı 'cause' ve 'result in' gibi, bir arızanın kötü bir sonuca doğru gittiğini anlatan 'lead' (yol açmak) fiili her zaman 'TO' yönelme edatını alır.",
+      "soru_sayisi": 2,
+      "tam_ifade": "lead to",
+      "soru_idleri": [
+        692,
+        1014
+      ]
+    },
+    {
+      "id": 42,
+      "kategori": "Fiziksel_Durum",
+      "ipucu_kalip": "sensitive _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e karşı duyarlı / hassas",
+      "ornek_cumle": "The fire detection loops are highly sensitive _______ heat.",
+      "taktik": "Dedektörlerin ve sensörlerin bir şeye (ısı, duman) duyarlı olduğunu anlatan 'sensitive' kelimesi her zaman yönelme edatı olan 'TO' ile kullanılır.",
+      "soru_sayisi": 2,
+      "tam_ifade": "sensitive to",
+      "soru_idleri": [
+        77,
+        127
+      ]
+    },
+    {
+      "id": 43,
+      "kategori": "Yapi_ve_Bilesen",
+      "ipucu_kalip": "composed _______",
+      "tamamlayici": "OF",
+      "turkce_anlami": "...-den oluşmak",
+      "ornek_cumle": "The composite material is composed _______ carbon fibers.",
+      "taktik": "Tıpkı 'consists of' kalıbı gibi, bir parçanın nelerden meydana geldiğini anlatan 'composed' (oluşmuş) kelimesi istisnasız 'OF' alır.",
+      "soru_sayisi": 2,
+      "tam_ifade": "composed of",
+      "soru_idleri": [
+        213,
+        526
+      ]
+    },
+    {
+      "id": 55,
+      "kategori": "Fiziksel_Durum",
+      "ipucu_kalip": "derived _______",
+      "tamamlayici": "FROM",
+      "turkce_anlami": "...-den elde edilen / türetilen",
+      "ornek_cumle": "Pneumatic pressure is derived _______ the engine compressor.",
+      "taktik": "Havanın, gücün veya verinin bir kaynaktan alındığını (elde edildiğini) belirten 'derived' fiili ayrılma edatı olan 'FROM' ile kullanılır.",
+      "soru_sayisi": 2,
+      "tam_ifade": "derived from",
+      "soru_idleri": [
+        695,
+        696
+      ]
+    },
+    {
+      "id": 73,
+      "kategori": "Hasar_Tespiti",
+      "ipucu_kalip": "free _______",
+      "tamamlayici": "FROM",
+      "turkce_anlami": "...-den arınmış / kusursuz",
+      "ornek_cumle": "Ensure the mating surfaces are free _______ corrosion.",
+      "taktik": "Bir yüzeyin veya sistemin korozyon, kir veya hasardan 'arınmış/temiz' olduğunu anlatan 'free' kelimesi her zaman 'FROM' edatını alır.",
+      "soru_sayisi": 2,
+      "tam_ifade": "free from",
+      "soru_idleri": [
+        506,
+        563
+      ]
+    },
+    {
+      "id": 96,
+      "kategori": "Zaman_ve_Sira",
+      "ipucu_kalip": "on _______",
+      "tamamlayici": "COMPLETION",
+      "turkce_anlami": "tamamlandığında / biter bitmez",
+      "ornek_cumle": "On _______ of the task, record the data in the logbook.",
+      "taktik": "Bir işin bitişini ve hemen ardından yapılması gerekeni (kayıt tutma vb.) bağlamak için 'on completion' (tamamlandığında) kalıbı kullanılır.",
+      "soru_sayisi": 2,
+      "tam_ifade": "on completion",
+      "soru_idleri": [
+        296,
+        604
+      ]
+    },
+    {
+      "id": 122,
+      "kategori": "Bakim_Fiilleri",
+      "ipucu_kalip": "replaced _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "... ile değiştirilmiş olmak",
+      "ornek_cumle": "The defective parts must be replaced _______ new ones immediately.",
+      "taktik": "'Replace with' kalıbının edilgen hali 'replaced with' tir. Parça değişiminde emir veya pasif fark etmez; edat her zaman 'WITH' dir.",
+      "soru_sayisi": 2,
+      "tam_ifade": "replaced with",
+      "soru_idleri": [
+        17,
+        613
+      ]
+    },
+    {
+      "id": 29,
+      "kategori": "Sorun_ve_Tehlike",
+      "ipucu_kalip": "interfere _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "... ile çakışmak / engel olmak",
+      "ornek_cumle": "Ensure the new cables do not interfere _______ the flight controls.",
+      "taktik": "Bir sistemin veya kablonun başka bir sistemin çalışmasını bozduğunu, ona karıştığını anlatan 'interfere' fiili her zaman 'WITH' alır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "interfere with",
+      "soru_idleri": [
+        1045
+      ]
+    },
+    {
+      "id": 33,
+      "kategori": "Insan_Faktorleri",
+      "ipucu_kalip": "familiar _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "...-e aşina / alışkın olmak",
+      "ornek_cumle": "You must be familiar _______ the AMM before starting the job.",
+      "taktik": "Bir teknisyenin bir uçağa veya el kitabına aşina olduğunu (veya aşırı güvenip rehavete kapıldığını) belirten 'familiar' kelimesi 'WITH' alır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "familiar with",
+      "soru_idleri": [
+        190
+      ]
+    },
+    {
+      "id": 37,
+      "kategori": "Yer_ve_Konum",
+      "ipucu_kalip": "adjacent _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e bitişik / yanındaki",
+      "ornek_cumle": "Check the structure adjacent _______ the APU compartment.",
+      "taktik": "Bir hasar aranırken, o bölgenin hemen yanındaki/bitişiğindeki alanı tarif eden 'adjacent' kelimesi yön bildiren 'TO' edatıyla kullanılır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "adjacent to",
+      "soru_idleri": [
+        654
+      ]
+    },
+    {
+      "id": 41,
+      "kategori": "Fiziksel_Degisim",
+      "ipucu_kalip": "convert _______",
+      "tamamlayici": "INTO",
+      "turkce_anlami": "...-e dönüştürmek",
+      "ornek_cumle": "The inverter converts DC power _______ AC power.",
+      "taktik": "Elektrikte veya fizikte bir şeyin başka bir şeye (AC'den DC'ye vb.) dönüştüğünü belirten 'convert' fiilinin yegane edatı 'INTO'dur.",
+      "soru_sayisi": 1,
+      "tam_ifade": "convert into",
+      "soru_idleri": [
+        227
+      ]
+    },
+    {
+      "id": 44,
+      "kategori": "Montaj_ve_Mekanik",
+      "ipucu_kalip": "attach _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e iliştirmek / takmak",
+      "ornek_cumle": "Attach the warning tag _______ the circuit breaker.",
+      "taktik": "Bir etiketin, kablonun veya parçanın bir yere tutturulduğunu/takıldığını belirten 'attach' fiili her zaman 'TO' yönelmesini çeker.",
+      "soru_sayisi": 1,
+      "tam_ifade": "attach to",
+      "soru_idleri": [
+        397
+      ]
+    },
+    {
+      "id": 48,
+      "kategori": "Montaj_ve_Mekanik",
+      "ipucu_kalip": "connect _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "...-e bağlamak",
+      "ornek_cumle": "Connect the test equipment _______ the hydraulic system.",
+      "taktik": "Tıpkı 'attach' gibi, iki parçayı veya hortumu birbirine bağlama işlemi olan 'connect' fiili daima 'TO' edatını alır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "connect to",
+      "soru_idleri": [
+        738
+      ]
+    },
+    {
+      "id": 50,
+      "kategori": "Montaj_ve_Mekanik",
+      "ipucu_kalip": "secure _______",
+      "tamamlayici": "WITH",
+      "turkce_anlami": "... ile sabitlemek / emniyete almak",
+      "ornek_cumle": "Secure the turnbuckles _______ safety wire.",
+      "taktik": "Bağlantı elemanlarının gevşemesini önlemek için yapılan 'sabitleme' işleminde 'secure' fiili mutlaka kullanılan aletle (WITH) birleşir.",
+      "soru_sayisi": 1,
+      "tam_ifade": "secure with",
+      "soru_idleri": [
+        247
+      ]
+    },
+    {
+      "id": 54,
+      "kategori": "Sorumluluk_ve_Kanun",
+      "ipucu_kalip": "account _______",
+      "tamamlayici": "FOR",
+      "turkce_anlami": "...-in hesabını vermek / eksiksiz olmak",
+      "ornek_cumle": "Ensure all tools are accounted _______ before closing the panel.",
+      "taktik": "Bakım bitiminde hiçbir aletin uçakta unutulmadığını anlatan o meşhur 'accounted' kelimesi her zaman 'FOR' edatıyla tamamlanır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "account for",
+      "soru_idleri": [
+        626
+      ]
+    },
+    {
+      "id": 65,
+      "kategori": "Montaj_ve_Mekanik",
+      "ipucu_kalip": "tighten _______",
+      "tamamlayici": "TO",
+      "turkce_anlami": "belirli bir değere sıkmak",
+      "ornek_cumle": "Tighten the nut _______ 50 inch-pounds.",
+      "taktik": "Tork anahtarı sorularının hilesidir! Bir cıvatayı belirli bir limit değerine kadar sıkmak eyleminde 'tighten' fiili 'TO' yönelme edatını alır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "tighten to",
+      "soru_idleri": [
+        400
+      ]
+    },
+    {
+      "id": 75,
+      "kategori": "Kiyaslama_ve_Fizik",
+      "ipucu_kalip": "rather _______",
+      "tamamlayici": "THAN",
+      "turkce_anlami": "...-den ziyade / yerine",
+      "ornek_cumle": "Use an approved solvent rather _______ water for cleaning.",
+      "taktik": "Bir yöntemin veya malzemenin yerine diğerinin tercih edileceğini gösteren (kıyaslama) 'rather' kelimesi 'THAN' bağlacıyla yapışıktır.",
+      "soru_sayisi": 1,
+      "tam_ifade": "rather than",
+      "soru_idleri": [
+        718
+      ]
+    },
+    {
+      "id": 92,
+      "kategori": "Sistem_Kontrol",
+      "ipucu_kalip": "deviate _______",
+      "tamamlayici": "FROM",
+      "turkce_anlami": "...-den sapmak / dışına çıkmak",
+      "ornek_cumle": "Do not deviate _______ the approved maintenance procedures.",
+      "taktik": "Onaylı prosedürlerin, rotanın veya limitlerin 'dışına çıkmak' anlamındaki 'deviate' fiili 'FROM' edatı ile birleşir.",
+      "soru_sayisi": 1,
+      "tam_ifade": "deviate from",
+      "soru_idleri": [
+        283
+      ]
+    }
+  ],
+  "json_disi_kaliplar": []
+}

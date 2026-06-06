@@ -136,6 +136,17 @@ class PremiumService {
     return d < 0 ? 0 : d;
   }
 
+  /// RevenueCat App User ID (çekiliş / destek).
+  static Future<String?> getAppUserId() async {
+    if (!_configured) return null;
+    try {
+      return await Purchases.appUserID;
+    } catch (e) {
+      debugPrint('PremiumService.getAppUserId: $e');
+      return null;
+    }
+  }
+
   /// Uygulama açılışında / sekme dönüşünde.
   static Future<void> syncFromRevenueCat() async {
     if (!_configured) return;

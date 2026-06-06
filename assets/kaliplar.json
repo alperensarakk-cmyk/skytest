@@ -898,5 +898,68 @@
     "turkce_anlami": "...-den bağımsız",
     "ornek_cumle": "The emergency lighting system is independent _______ the main aircraft power.",
     "taktik": "Yedekli (redundant) sistemlerin ana sistemden 'ayrı/bağımsız' olduğunu vurgularken 'independent OF' kalıbı kullanılır."
+  },
+  {
+    "id": 119,
+    "kategori": "Referans_ve_Dokuman",
+    "ipucu_kalip": "based _______",
+    "tamamlayici": "ON",
+    "turkce_anlami": "...-e dayanarak / ...-e göre",
+    "ornek_cumle": "Based _______ the passage, the aircraft must comply with the applicable AD.",
+    "taktik": "Paragraf sorularında metinden sonuç çıkarırken 'Based on' kalıbı sık geçer. 'According to' prosedüre göre, 'Based on' veriye veya metne dayanmayı ifade eder."
+  },
+  {
+    "id": 120,
+    "kategori": "Hasar_Tespiti",
+    "ipucu_kalip": "inspected _______",
+    "tamamlayici": "FOR",
+    "turkce_anlami": "...-e karşı incelenmek / ... aranmak",
+    "ornek_cumle": "The fuel tanks must be inspected _______ contamination every 500 flight hours.",
+    "taktik": "'Inspect for' kalıbının edilgen hali 'inspected for' dır. Tank, gövde veya motor parçalarında kir, çatlak veya kirlilik aranırken edat daima 'FOR' olur."
+  },
+  {
+    "id": 121,
+    "kategori": "Sebep_Sonuc",
+    "ipucu_kalip": "depending _______",
+    "tamamlayici": "ON",
+    "turkce_anlami": "...-e bağlı olarak",
+    "ornek_cumle": "The inspection interval varies depending _______ the aircraft type and usage.",
+    "taktik": "Bir süre, miktar veya prosedürün başka bir faktöre bağlı olduğunu anlatırken 'depending on' kullanılır; 'depends on' ile aynı edat kuralı geçerlidir."
+  },
+  {
+    "id": 122,
+    "kategori": "Bakim_Fiilleri",
+    "ipucu_kalip": "replaced _______",
+    "tamamlayici": "WITH",
+    "turkce_anlami": "... ile değiştirilmiş olmak",
+    "ornek_cumle": "The defective parts must be replaced _______ new ones immediately.",
+    "taktik": "'Replace with' kalıbının edilgen hali 'replaced with' tir. Parça değişiminde emir veya pasif fark etmez; edat her zaman 'WITH' dir."
+  },
+  {
+    "id": 123,
+    "kategori": "Referans_ve_Dokuman",
+    "ipucu_kalip": "referred _______",
+    "tamamlayici": "TO",
+    "turkce_anlami": "...-e atıfta bulunulmak / ... den bahsedilmek",
+    "ornek_cumle": "The item referred _______ in paragraph 3 must be inspected before flight.",
+    "taktik": "Paragraf veya el kitabında bir maddeye atıf yapılırken 'referred to' kalıbı kullanılır. 'Refer to' emir cümlesinin pasif karşılığıdır."
+  },
+  {
+    "id": 124,
+    "kategori": "Sebep_Sonuc",
+    "ipucu_kalip": "resulting _______",
+    "tamamlayici": "IN",
+    "turkce_anlami": "... ile sonuçlanmak / ...-e yol açmak",
+    "ornek_cumle": "Corrosion on the frame, resulting _______ a loss of strength, must be repaired.",
+    "taktik": "'Result in' kalıbının -ing hali 'resulting in' dir. Bir hasar kötü bir sonuca yol açıyorsa edat 'IN' dir ('result from' ise kaynak için 'FROM')."
+  },
+  {
+    "id": 125,
+    "kategori": "Eylem_ve_Engelleme",
+    "ipucu_kalip": "protect _______",
+    "tamamlayici": "FROM",
+    "turkce_anlami": "...-den korumak",
+    "ornek_cumle": "The relief valve protects the fuselage _______ overpressure damage.",
+    "taktik": "Tıpkı 'prevent from' gibi, bir parçayı veya sistemi bir tehlikeden korumak için 'protect' fiili her zaman 'FROM' edatını alır."
   }
 ]

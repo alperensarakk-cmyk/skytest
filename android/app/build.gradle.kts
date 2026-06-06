@@ -65,6 +65,10 @@ android {
                 // No key.properties: same as template fallback for local release tests.
                 signingConfigs.getByName("debug")
             }
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
         }
     }
 }

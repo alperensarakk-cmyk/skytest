@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../services/app_review_service.dart';
+import '../services/premium_service.dart';
 import '../services/exam_countdown_service.dart';
 import '../services/istatistik_service.dart';
 import '../services/settings_service.dart';
@@ -344,6 +346,14 @@ class _AyarlarScreenState extends State<AyarlarScreen> {
               color:   kAccent,
               onTap:   () => _launchUri(_kFeedbackMailUri, 'E-posta uygulaması açılamadı.'),
             ),
+            _Divider(),
+            _ActionTile(
+              icon:    Icons.copy_rounded,
+              title:   'ID Kopyala',
+              subtitle: '',
+              color:   kAccent,
+              onTap:   _copyAppUserId,
+            ),
           ]),
         ],
       ),
@@ -384,6 +394,17 @@ class _AyarlarScreenState extends State<AyarlarScreen> {
       ),
     );
     if (ok == true) await onConfirm();
+  }
+
+  Future<void> _copyAppUserId() async {
+    final id = await PremiumService.getAppUserId();
+    if (!mounted) return;
+    if (id == null || id.isEmpty) {
+      _snack('ID alınamadı. Uygulamayı kapatıp tekrar açmayı deneyin.');
+      return;
+    }
+    await Clipboard.setData(ClipboardData(text: id));
+    _snack('ID kopyalandı');
   }
 
   void _snack(String msg) {
@@ -749,9 +770,12 @@ class _ActionTile extends StatelessWidget {
                             color: color,
                             fontSize: 14,
                             fontWeight: FontWeight.w500)),
-                    const SizedBox(height: 3),
-                    Text(subtitle,
-                        style: const TextStyle(color: _cMuted, fontSize: 11, height: 1.4)),
+                    if (subtitle.isNotEmpty) ...[
+                      const SizedBox(height: 3),
+                      Text(subtitle,
+                          style: const TextStyle(
+                              color: _cMuted, fontSize: 11, height: 1.4)),
+                    ],
                   ],
                 ),
               ),

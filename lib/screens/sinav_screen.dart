@@ -110,9 +110,13 @@ class _SinavScreenState extends State<SinavScreen> {
   // ── Kronometre ────────────────────────────────────────────────────────────
   void _startTimer() {
     _timer?.cancel();
-    _timer = Timer.periodic(const Duration(seconds: 1), (_) {
+    _timer = Timer.periodic(const Duration(seconds: 1), (t) {
+      if (!mounted) {
+        t.cancel();
+        return;
+      }
       if (_remainingSec <= 0) {
-        _timer?.cancel();
+        t.cancel();
         _showResultDialog(timeUp: true);
         return;
       }
