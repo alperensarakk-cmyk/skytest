@@ -6784,11 +6784,11 @@
       "a": "Motor parçaları uçak gövdesine veya motora takılıysa kaynak yapılmamalıdır, çünkü yangın riski vardır.",
       "b": "Motor parçalarını uçak gövdesine veya motora takılıyken lehimlemeyin, çünkü yangın çıkabilir.",
       "c": "Yangın riskinden ötürü motor parçalarını uçak gövdesine veya motora takılıyken lehimlemeyin.",
-      "d": "Motor parçalarını uçak gövdesine veya motora takılıyken lehimlemeyin, çünkü yangın riski vardır."
+      "d": "Motor parçalarını uçak gövdesine veya motora takılıyken kaynak yapmayın, çünkü yangın riski vardır."
     },
     "dogru_cevap": "d",
-    "neden_dogru": "'Do not weld' = lehimlemeyin (emir kipi doğru çevrilmiş). 'While they are installed' = takılıyken. 'There is a risk of fire' = yangın riski vardır. En tam ve doğru çeviridir.",
-    "yanlislar": "A şıkkı 'if' koşulunu yanlış kullanmış. B şıkkı 'risk of fire' yerine 'yangın çıkabilir' yazarak anlam kaybına yol açmış. C şıkkı neden-sonuç ilişkisini bağlaçsız vermiş.",
+    "neden_dogru": "'Do not weld' = kaynak yapmayın (lehimlemek değil). 'While they are installed' = takılıyken. 'There is a risk of fire' = yangın riski vardır. En tam ve doğru çeviridir.",
+    "yanlislar": "A şıkkı 'while' yerine 'if' (takılıysa) kullanmış. B ve C şıkları 'weld' fiilini yanlışlıkla 'lehimlemek' olarak çevirmiş; solder ≠ weld.",
     "tip": "Çeviri sorularında üç kontrol yapın: (1) emir/yasak fiili doğru mu? (2) zaman ilişkisi (while/when) doğru mu? (3) neden-sonuç bağlacı (because/since) doğru mu?"
   },
   {

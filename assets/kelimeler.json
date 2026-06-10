@@ -4570,10 +4570,10 @@
   {
     "id": 3562,
     "ingilizce": "Solder",
-    "turkce": "Lehim",
+    "turkce": "Lehim / Lehimlemek",
     "modul": "Modül 6 - Malzeme ve Donanım",
     "ornek_cumle": "Record the solder in the maintenance log after completing the task.",
-    "ipucu": "Lehim veya lehimlemek demektir. Havacılıkta yalnızca onaylı lehim malzemesi kullanılır; flux kalıntısı temizlenmelidir."
+    "ipucu": "Lehim veya lehimlemek demektir (soldering). Kaynak (weld/welding) ile karıştırmayın: solder = düşük sıcaklıkta lehim; weld = metal kaynağı."
   },
   {
     "id": 3565,
@@ -5312,6 +5312,14 @@
     "ipucu": "Rüzgar kesimi demektir. Kısa mesafede hız veya yönünün ani değişmesi; iniş ve kalkışta en tehlikeli meteorolojik olaydır."
   },
   {
+    "id": 4344,
+    "ingilizce": "Weld",
+    "turkce": "Kaynak / Kaynak yapmak",
+    "modul": "Modül 6 - Malzeme ve Donanım",
+    "ornek_cumle": "Do not weld engine components while they are installed on the airframe.",
+    "ipucu": "Metal parçaları eriterek birleştirmektir (welding). Lehimlemek (solder/soldering) değildir. SRM onayı olmadan basınçlı yapılarda kaynak yasaktır."
+  },
+  {
     "id": 4345,
     "ingilizce": "Wrench",
     "turkce": "İngiliz anahtarı",
@@ -5734,5 +5742,13 @@
     "modul": "Modül 7 - Bakım Uygulamaları",
     "ornek_cumle": "Check the tightness of the fluid connections for any signs of leakage.",
     "ipucu": "Hem bir bağlantının ne kadar sıkı (torklanmış) olduğunu hem de bir sızdırmazlık durumunu anlatabilir."
+  },
+  {
+    "id": 5061,
+    "ingilizce": "Falsify",
+    "turkce": "Sahtecilik Yapmak / Tahrif Etmek",
+    "modul": "Modül 10",
+    "ornek_cumle": "Incomplete or falsified maintenance records constitute a serious regulatory violation.",
+    "ipucu": "Bakım kayıtlarının veya belgelerin kasıtlı olarak değiştirilmesi veya sahte düzenlenmesi. 'Falsified records' = sahte/tahrif edilmiş kayıtlar."
   }
 ]

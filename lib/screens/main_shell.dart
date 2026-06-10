@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../theme/app_theme.dart';
 import '../services/app_update_service.dart';
-import '../services/daily_notification_service.dart';
 import '../services/premium_service.dart';
 import 'dashboard_screen.dart';
 import 'istatistik_screen.dart';
@@ -15,7 +14,7 @@ class MainShell extends StatefulWidget {
   State<MainShell> createState() => _MainShellState();
 }
 
-class _MainShellState extends State<MainShell> with WidgetsBindingObserver {
+class _MainShellState extends State<MainShell> {
   int  _selectedIndex = 0;
   DateTime? _lastBackPress;
   /// Ayarlardan dönünce sınav tarihi kartını yenilemek için
@@ -24,25 +23,10 @@ class _MainShellState extends State<MainShell> with WidgetsBindingObserver {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addObserver(this);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       PremiumService.syncFromRevenueCat();
       AppUpdateService.checkAndPrompt(context);
-      DailyNotificationService.ensurePermissionAndSchedule();
     });
-  }
-
-  @override
-  void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
-    super.dispose();
-  }
-
-  @override
-  void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed) {
-      DailyNotificationService.ensurePermissionAndSchedule();
-    }
   }
 
   // İstatistik sekmesine her geçişte yeni key → initState yeniden çalışır

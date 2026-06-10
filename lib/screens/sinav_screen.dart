@@ -9,9 +9,11 @@ import '../services/soru_son_gorulen_service.dart';
 import '../services/soru_yukleme_service.dart';
 import '../services/settings_service.dart';
 import '../services/yanlis_service.dart';
+import '../services/sinav_kelime_lookup_service.dart';
 import '../theme/app_theme.dart';
 import '../utils/sinav_puan_format.dart';
 import '../widgets/scrollable_paragraf_card.dart';
+import '../widgets/tappable_vocab_text.dart';
 
 // ─── Renk sabitleri ───────────────────────────────────────────────────────────
 const _cAppBar      = Color(0xFF1C2541);
@@ -38,8 +40,11 @@ class _SinavScreenState extends State<SinavScreen> {
   int   _currentIndex = 0;
   int   _remainingSec = 30 * 60;
   bool  _examAutoNext = true;          // ayardan okunur
+  bool  _vocabAssistEnabled = false;   // yarı yardımlı kelime çevirisi
+  bool  _showVocabAssistHint = false;
   Timer? _timer;
   Timer? _autoSonrakiTimer;
+  Timer? _vocabAssistHintTimer;
   final ScrollController _trackCtrl = ScrollController();
   bool _sessionIdsRecorded = false;
 
@@ -53,11 +58,13 @@ class _SinavScreenState extends State<SinavScreen> {
   Future<void> _loadAndShuffle() async {
     // Ayarları paralel oku
     final sorularFuture  = SoruYuklemeService.tumSorulariYukle();
+    final vocabFuture    = SinavKelimeLookupService.ensureLoaded();
     final qCountFuture   = SettingsService.getExamQuestionCount();
     final durationFuture = SettingsService.getExamDurationMin();
     final autoNextFuture = SettingsService.getExamAutoNext();
 
     final list      = await sorularFuture;
+    await vocabFuture;
     final qCount    = await qCountFuture;
     final durMin    = await durationFuture;
     final autoNext  = await autoNextFuture;
@@ -103,8 +110,22 @@ class _SinavScreenState extends State<SinavScreen> {
     }
     _timer?.cancel();
     _autoSonrakiTimer?.cancel();
+    _vocabAssistHintTimer?.cancel();
     _trackCtrl.dispose();
     super.dispose();
+  }
+
+  void _onVocabAssistChanged(bool enabled) {
+    _vocabAssistHintTimer?.cancel();
+    setState(() {
+      _vocabAssistEnabled = enabled;
+      _showVocabAssistHint = enabled;
+    });
+    if (!enabled) return;
+    _vocabAssistHintTimer = Timer(const Duration(seconds: 4), () {
+      if (!mounted) return;
+      setState(() => _showVocabAssistHint = false);
+    });
   }
 
   // ── Kronometre ────────────────────────────────────────────────────────────
@@ -449,7 +470,6 @@ class _SinavScreenState extends State<SinavScreen> {
           backgroundColor: _cAppBar,
           elevation: 0,
           automaticallyImplyLeading: false,
-          title: buildAeroTestAppBarTitle('Sınav Modu'),
         ),
         body: const Center(
           child: Column(
@@ -472,7 +492,6 @@ class _SinavScreenState extends State<SinavScreen> {
           backgroundColor: _cAppBar,
           elevation: 0,
           automaticallyImplyLeading: false,
-          title: buildAeroTestAppBarTitle('Sınav Modu'),
         ),
         body: Center(
           child: Padding(
@@ -524,31 +543,55 @@ class _SinavScreenState extends State<SinavScreen> {
     return Scaffold(
       backgroundColor: kBgDark,
       appBar: _buildAppBar(),
-      body: Column(
+      body: Stack(
         children: [
-          _buildTracker(),
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  _buildQuestionCard(soru),
-                  const SizedBox(height: 16),
-                  ...['a', 'b', 'c', 'd'].map(
-                    (k) => _buildOption(
-                      label: k.toUpperCase(),
-                      text: soru.secenekler[k]!,
-                      isSelected: secili == k,
-                      onTap: () => _selectOption(k),
-                    ),
+          Column(
+            children: [
+              _buildTracker(),
+              Expanded(
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      _buildQuestionCard(soru),
+                      const SizedBox(height: 16),
+                      ...['a', 'b', 'c', 'd'].map(
+                        (k) => _buildOption(
+                          label: k.toUpperCase(),
+                          text: soru.secenekler[k]!,
+                          isSelected: secili == k,
+                          onTap: () => _selectOption(k),
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                    ],
                   ),
-                  const SizedBox(height: 16),
-                ],
+                ),
+              ),
+              _buildBottomBar(),
+            ],
+          ),
+          Positioned(
+            top: 0,
+            left: 12,
+            right: 12,
+            child: IgnorePointer(
+              ignoring: !_showVocabAssistHint,
+              child: AnimatedSlide(
+                offset: _showVocabAssistHint
+                    ? Offset.zero
+                    : const Offset(0, -1),
+                duration: const Duration(milliseconds: 280),
+                curve: Curves.easeOutCubic,
+                child: AnimatedOpacity(
+                  opacity: _showVocabAssistHint ? 1 : 0,
+                  duration: const Duration(milliseconds: 280),
+                  child: const _VocabAssistHintBanner(),
+                ),
               ),
             ),
           ),
-          _buildBottomBar(),
         ],
       ),
     );
@@ -560,17 +603,24 @@ class _SinavScreenState extends State<SinavScreen> {
         elevation: 0,
         automaticallyImplyLeading: false,
         titleSpacing: 0,
+        toolbarHeight: 78,
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             children: [
-              _FinishButton(onTap: _confirmFinish),
-              const SizedBox(width: 10),
-              Expanded(
-                child: buildAeroTestAppBarTitle('Sınav Modu',
-                    subtitleFontSize: 13),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  _FinishButton(onTap: _confirmFinish),
+                  const SizedBox(height: 5),
+                  _VocabAssistToggle(
+                    value: _vocabAssistEnabled,
+                    onChanged: _onVocabAssistChanged,
+                  ),
+                ],
               ),
-              const SizedBox(width: 8),
+              const Spacer(),
               _TimerWidget(label: _timerLabel, isLow: _remainingSec < 300),
             ],
           ),
@@ -670,25 +720,31 @@ class _SinavScreenState extends State<SinavScreen> {
                 key: ValueKey(soru.id),
                 paragraf: soru.paragraf,
                 accentColor: _cSelected,
+                enableVocabTap: _vocabAssistEnabled,
               ),
               const SizedBox(height: 16),
             ],
-            Text(
-              soru.soruMetniParagrafinClozeVeyaBenzeri
-                  ? SoruModel.clozeYonlendirmeMetni
-                  : soru.soruMetni,
-              style: TextStyle(
-                color: soru.soruMetniParagrafinClozeVeyaBenzeri
-                    ? const Color(0xFFA1B5D8)
-                    : Colors.white,
-                fontSize:
-                    soru.soruMetniParagrafinClozeVeyaBenzeri ? 14 : 16,
-                height: 1.65,
-                fontWeight: soru.soruMetniParagrafinClozeVeyaBenzeri
-                    ? FontWeight.w400
-                    : FontWeight.w500,
-              ),
-            ),
+            soru.soruMetniParagrafinClozeVeyaBenzeri
+                ? Text(
+                    SoruModel.clozeYonlendirmeMetni,
+                    style: const TextStyle(
+                      color: Color(0xFFA1B5D8),
+                      fontSize: 14,
+                      height: 1.65,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  )
+                : TappableVocabText(
+                    text: soru.soruMetni,
+                    enabled: _vocabAssistEnabled,
+                    baseStyle: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 16,
+                      height: 1.65,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    accentColor: _cSelected,
+                  ),
           ],
         ),
       );
@@ -813,6 +869,116 @@ class _SinavScreenState extends State<SinavScreen> {
 // ─────────────────────────────────────────────────────────────────────────────
 // Alt bileşenler
 // ─────────────────────────────────────────────────────────────────────────────
+
+class _VocabAssistHintBanner extends StatelessWidget {
+  const _VocabAssistHintBanner();
+
+  @override
+  Widget build(BuildContext context) => Material(
+        elevation: 6,
+        shadowColor: Colors.black.withValues(alpha: 0.35),
+        borderRadius: BorderRadius.circular(12),
+        color: _cSelected,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+          child: Row(
+            children: [
+              Icon(
+                Icons.touch_app_rounded,
+                size: 18,
+                color: Colors.black.withValues(alpha: 0.82),
+              ),
+              const SizedBox(width: 10),
+              const Expanded(
+                child: Text(
+                  'Soru metninde bilmediğiniz kelimenin üzerine tıklayın.',
+                  style: TextStyle(
+                    color: Color(0xFF102030),
+                    fontSize: 13,
+                    height: 1.35,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+}
+
+class _VocabAssistToggle extends StatelessWidget {
+  const _VocabAssistToggle({
+    required this.value,
+    required this.onChanged,
+  });
+
+  final bool value;
+  final ValueChanged<bool> onChanged;
+
+  @override
+  Widget build(BuildContext context) => GestureDetector(
+        onTap: () => onChanged(!value),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+          decoration: BoxDecoration(
+            color: value
+                ? _cSelected.withValues(alpha: 0.16)
+                : const Color(0xFF253354).withValues(alpha: 0.55),
+            borderRadius: BorderRadius.circular(10),
+            border: Border.all(
+              color: value
+                  ? _cSelected.withValues(alpha: 0.75)
+                  : const Color(0xFF4A6080),
+              width: value ? 1.6 : 1.2,
+            ),
+          ),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                Icons.translate_rounded,
+                size: 15,
+                color: value ? _cSelected : const Color(0xFF8DA5C8),
+              ),
+              const SizedBox(width: 5),
+              Text(
+                'Kelime Yardımı',
+                style: TextStyle(
+                  color: value ? Colors.white : const Color(0xFFA1B5D8),
+                  fontSize: 11,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              const SizedBox(width: 6),
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                decoration: BoxDecoration(
+                  color: value ? _cSelected : const Color(0xFF1C2541),
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(
+                    color: value
+                        ? _cSelected
+                        : const Color(0xFF4A6080).withValues(alpha: 0.8),
+                  ),
+                ),
+                child: Text(
+                  value ? 'AÇIK' : 'KAPALI',
+                  style: TextStyle(
+                    color: value ? Colors.black87 : const Color(0xFF8DA5C8),
+                    fontSize: 9,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.4,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+}
 
 class _FinishButton extends StatelessWidget {
   const _FinishButton({required this.onTap});

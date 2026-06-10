@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../theme/app_theme.dart';
+import 'tappable_vocab_text.dart';
 
 const _paragrafMetinStili = TextStyle(
   color: Color(0xFFE8EEF8),
@@ -14,10 +15,12 @@ class ScrollableParagrafCard extends StatelessWidget {
     super.key,
     required this.paragraf,
     this.accentColor,
+    this.enableVocabTap = false,
   });
 
   final String paragraf;
   final Color? accentColor;
+  final bool enableVocabTap;
 
   /// Bu yüksekliği aşan metin kaydırmalı kutuda gösterilir (mantıksal piksel).
   double _maxKompaktYukseklik(double screenH) =>
@@ -85,6 +88,8 @@ class ScrollableParagrafCard extends StatelessWidget {
                         metin: p,
                         yukseklik:
                             (screenH * 0.36).clamp(180.0, 340.0),
+                        enableVocabTap: enableVocabTap,
+                        vocabColor: accent,
                       )
                     : ClipRRect(
                         borderRadius: BorderRadius.circular(10),
@@ -95,11 +100,17 @@ class ScrollableParagrafCard extends StatelessWidget {
                               horizontal: 14,
                               vertical: 12,
                             ),
-                            child: Text(
-                              p,
-                              style: _paragrafMetinStili,
-                              textScaler: scaler,
-                            ),
+                            child: enableVocabTap
+                                ? TappableVocabText(
+                                    text: p,
+                                    baseStyle: _paragrafMetinStili,
+                                    accentColor: accent,
+                                  )
+                                : Text(
+                                    p,
+                                    style: _paragrafMetinStili,
+                                    textScaler: scaler,
+                                  ),
                           ),
                         ),
                       ),
@@ -116,10 +127,14 @@ class _KaydirmaBolgesi extends StatefulWidget {
   const _KaydirmaBolgesi({
     required this.metin,
     required this.yukseklik,
+    this.enableVocabTap = false,
+    this.vocabColor,
   });
 
   final String metin;
   final double yukseklik;
+  final bool enableVocabTap;
+  final Color? vocabColor;
 
   @override
   State<_KaydirmaBolgesi> createState() => _KaydirmaBolgesiState();
@@ -156,11 +171,17 @@ class _KaydirmaBolgesiState extends State<_KaydirmaBolgesi> {
                 horizontal: 14,
                 vertical: 12,
               ),
-              child: Text(
-                widget.metin,
-                style: _paragrafMetinStili,
-                textScaler: MediaQuery.textScalerOf(context),
-              ),
+              child: widget.enableVocabTap
+                  ? TappableVocabText(
+                      text: widget.metin,
+                      baseStyle: _paragrafMetinStili,
+                      accentColor: widget.vocabColor,
+                    )
+                  : Text(
+                      widget.metin,
+                      style: _paragrafMetinStili,
+                      textScaler: MediaQuery.textScalerOf(context),
+                    ),
             ),
           ),
         ),

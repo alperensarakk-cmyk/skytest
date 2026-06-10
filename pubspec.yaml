@@ -1,7 +1,7 @@
 name: aerotest
 description: AeroTest – Havacılık İngilizce Sınav Hazırlık Uygulaması
 publish_to: 'none'
-version: 1.0.11+21
+version: 1.0.12+22
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -20,9 +20,6 @@ dependencies:
   firebase_core: ^3.13.0
   cloud_firestore: ^5.6.9
   firebase_auth: ^5.5.2
-  flutter_local_notifications: ^18.0.1
-  flutter_timezone: ^4.1.0
-  timezone: ^0.10.0
 
 dev_dependencies:
   flutter_test:
@@ -46,5 +43,6 @@ flutter:
     - assets/kaliplar.json
     - assets/kaliplar_sik.json
     - assets/kelimeler.json
+    - assets/user_sozluk_ai.json
     - assets/branding/logo_mark.png
     - assets/branding/logo_full.png
