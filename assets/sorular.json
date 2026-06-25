@@ -13211,5 +13211,3263 @@
     "neden_dogru": "'replace' = değiştirin. Statik deşarj püskülü (wick) kırılmış veya eksikse, tamir edilemeyeceği için yenisiyle değiştirilmelidir.",
     "yanlislar": "A = tamir etmek (genelde bu parçalar için uygun değildir). C = görmezden gelmek. D = incelemek (zaten incelenmiş ve eksik olduğu görülmüş).",
     "tip": "Kırık (broken), eksik (missing) veya limit dışı (out of limits) parçalar için standart eylem 'replace'dir."
+  },
+  {
+    "id": 1051,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The pneumatic system 1) ……… high-pressure bleed air from the engines or the APU; it 2) ……… a series of pressure regulating valves to distribute this air. 3) ……… valve operates independently to monitor the downstream pressure and 4) ……… near the main manifold. Each 5) ……… of the Environmental Control System (ECS) receives this regulated air to maintain cabin climate.",
+    "soru_metni": "The pneumatic system 1) ……… high-pressure bleed air from the engines or the APU;",
+    "secenekler": {
+      "a": "discards",
+      "b": "supplies",
+      "c": "prevents",
+      "d": "neglects"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Supplies' = sağlar/tedarik eder. Pnömatik sistem motordan veya APU'dan yüksek basınçlı hava sağlar.",
+    "yanlislar": "A (discards) atar/ıskartaya çıkarır. C (prevents) engeller. D (neglects) ihmal eder.",
+    "tip": "Sistemlerin akışkan veya hava sağlama işlevleri anlatılırken 'supply' veya 'provide' fiilleri sıkça tercih edilir."
+  },
+  {
+    "id": 1052,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The pneumatic system 1) ……… high-pressure bleed air from the engines or the APU; it 2) ……… a series of pressure regulating valves to distribute this air. 3) ……… valve operates independently to monitor the downstream pressure and 4) ……… near the main manifold. Each 5) ……… of the Environmental Control System (ECS) receives this regulated air to maintain cabin climate.",
+    "soru_metni": "it 2) ……… a series of pressure regulating valves to distribute this air.",
+    "secenekler": {
+      "a": "excludes",
+      "b": "isolates",
+      "c": "comprises",
+      "d": "separates"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'Comprises' = içermek/meydana gelmek. Sistem, havayı dağıtmak için bir dizi basınç düzenleyici valf içerir/valften oluşur.",
+    "yanlislar": "A (excludes) hariç tutar. B (isolates) izole eder. D (separates) ayırır.",
+    "tip": "Bir sistemin parçalardan oluştuğunu ifade etmek için 'comprise', 'include' veya 'consist of' kullanılır."
+  },
+  {
+    "id": 1053,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The pneumatic system 1) ……… high-pressure bleed air from the engines or the APU; it 2) ……… a series of pressure regulating valves to distribute this air. 3) ……… valve operates independently to monitor the downstream pressure and 4) ……… near the main manifold. Each 5) ……… of the Environmental Control System (ECS) receives this regulated air to maintain cabin climate.",
+    "soru_metni": "3) ……… valve operates independently to monitor the downstream pressure",
+    "secenekler": {
+      "a": "Every",
+      "b": "All",
+      "c": "Some",
+      "d": "None"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Every' = her bir (tekil isimle kullanılır). Boşluktan sonra gelen 'valve' tekil bir isim olduğu ve fiil 'operates' şeklinde tekil çekimlendiği için 'Every' uygundur.",
+    "yanlislar": "B (All) ve C (Some) çoğul isim gerektirir. D (None) anlamca olumsuz yapar ve 'none of the valves' şeklinde kullanılır.",
+    "tip": "Tekil sayılabilir isimlerden ve tekil fiillerden önce 'Each' veya 'Every' kullanımı yaygındır."
+  },
+  {
+    "id": 1054,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The pneumatic system 1) ……… high-pressure bleed air from the engines or the APU; it 2) ……… a series of pressure regulating valves to distribute this air. 3) ……… valve operates independently to monitor the downstream pressure and 4) ……… near the main manifold. Each 5) ……… of the Environmental Control System (ECS) receives this regulated air to maintain cabin climate.",
+    "soru_metni": "and 4) ……… near the main manifold.",
+    "secenekler": {
+      "a": "is positioned",
+      "b": "positions",
+      "c": "are positioned",
+      "d": "is positioning"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'is positioned' = konumlandırılmıştır. Valf cansız bir nesne olduğu için edilgen (passive) yapı kullanılmalıdır. Özne tekil olduğu için 'is positioned' doğrudur.",
+    "yanlislar": "B (positions) aktif yapıdır. C (are positioned) çoğuldur. D (is positioning) şimdiki zaman aktif yapıdır.",
+    "tip": "Komponentlerin uçaktaki yerini belirtirken 'is located' veya 'is positioned' gibi passive yapılar aranmalıdır."
+  },
+  {
+    "id": 1055,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The pneumatic system 1) ……… high-pressure bleed air from the engines or the APU; it 2) ……… a series of pressure regulating valves to distribute this air. 3) ……… valve operates independently to monitor the downstream pressure and 4) ……… near the main manifold. Each 5) ……… of the Environmental Control System (ECS) receives this regulated air to maintain cabin climate.",
+    "soru_metni": "Each 5) ……… of the Environmental Control System (ECS) receives this regulated air",
+    "secenekler": {
+      "a": "wire",
+      "b": "subsystem",
+      "c": "leak",
+      "d": "seal"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Subsystem' = alt sistem. İklimlendirme sisteminin (ECS) her bir alt sistemi bu havayı alır.",
+    "yanlislar": "A (wire) kablo. C (leak) kaçak. D (seal) keçe/conta.",
+    "tip": "Havacılık metinlerinde hiyerarşik olarak System -> Subsystem -> Component sıralaması gözetilir."
+  },
+  {
+    "id": 1056,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic return line is 6) ……… pressurized to prevent fluid cavitation; it 7) ……… a reservoir that contains a total volume of ten liters. 8) ……… return line feeds into a central manifold, which 9) ……… behind the aft cargo bulkhead. Each 10) ……… of the main hydraulic pump draws fluid from this manifold continuously.",
+    "soru_metni": "The hydraulic return line is 6) ……… pressurized to prevent fluid cavitation;",
+    "secenekler": {
+      "a": "entirely",
+      "b": "constant",
+      "c": "constantly",
+      "d": "continual"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'Constantly' = sürekli olarak (zarf). Sıfat olan 'pressurized' kelimesini nitelemek için bir zarfa ihtiyaç vardır.",
+    "yanlislar": "A (entirely) tamamen anlamına gelir fakat teknik akış uygun değildir. B (constant) sıfattır. D (continual) sıfattır.",
+    "tip": "Fiilleri ve sıfatları nitelemek için sonu '-ly' ile biten zarflar (adverbs) tercih edilmelidir."
+  },
+  {
+    "id": 1057,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic return line is 6) ……… pressurized to prevent fluid cavitation; it 7) ……… a reservoir that contains a total volume of ten liters. 8) ……… return line feeds into a central manifold, which 9) ……… behind the aft cargo bulkhead. Each 10) ……… of the main hydraulic pump draws fluid from this manifold continuously.",
+    "soru_metni": "it 7) ……… a reservoir that contains a total volume of ten liters.",
+    "secenekler": {
+      "a": "incorporates",
+      "b": "inspects",
+      "c": "installs",
+      "d": "interferes"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Incorporates' = bünyesinde barındırmak / dahil etmek. Sistem, bir rezervuarı bünyesinde barındırır.",
+    "yanlislar": "B (inspects) denetler. C (installs) monte eder. D (interferes) müdahale eder.",
+    "tip": "Bir cihazın veya sistemin mimarisini anlatırken 'incorporates' kelimesi 'has' veya 'includes' anlamında sıkça kullanılır."
+  },
+  {
+    "id": 1058,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic return line is 6) ……… pressurized to prevent fluid cavitation; it 7) ……… a reservoir that contains a total volume of ten liters. 8) ……… return line feeds into a central manifold, which 9) ……… behind the aft cargo bulkhead. Each 10) ……… of the main hydraulic pump draws fluid from this manifold continuously.",
+    "soru_metni": "8) ……… return line feeds into a central manifold,",
+    "secenekler": {
+      "a": "Each",
+      "b": "All",
+      "c": "Both",
+      "d": "Any"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Each' = her bir. Boşluktan sonra gelen 'return line' tekil olduğu için tekil yapılarla uyumlu 'Each' doğru cevaptır.",
+    "yanlislar": "B (All) çoğul isim gerektirir. C (Both) iki şey için çoğul isim gerektirir. D (Any) olumsuz veya soru cümlelerinde ya da 'herhangi bir' anlamında çoğul/tekil olarak farklı bağlamlarda kullanılır.",
+    "tip": "Tekil özne ve tekil fiil takibi, 'Each/Every' ayrımında en güçlü ipucudur."
+  },
+  {
+    "id": 1059,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic return line is 6) ……… pressurized to prevent fluid cavitation; it 7) ……… a reservoir that contains a total volume of ten liters. 8) ……… return line feeds into a central manifold, which 9) ……… behind the aft cargo bulkhead. Each 10) ……… of the main hydraulic pump draws fluid from this manifold continuously.",
+    "soru_metni": "which 9) ……… behind the aft cargo bulkhead.",
+    "secenekler": {
+      "a": "situates",
+      "b": "is situated",
+      "c": "are situated",
+      "d": "is situating"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'is situated' = yer almaktadır / konumlandırılmıştır. Manifold cansız bir varlık olduğundan edilgen (passive) olmalıdır.",
+    "yanlislar": "A (situates) aktiftir. C (are situated) çoğuldur. D (is situating) şimdiki zaman aktiftir.",
+    "tip": "Coğrafi veya fiziksel konum bildiren 'situated' ve 'located' kelimeleri her zaman 'be' fiili ile passive olarak kullanılır."
+  },
+  {
+    "id": 1060,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic return line is 6) ……… pressurized to prevent fluid cavitation; it 7) ……… a reservoir that contains a total volume of ten liters. 8) ……… return line feeds into a central manifold, which 9) ……… behind the aft cargo bulkhead. Each 10) ……… of the main hydraulic pump draws fluid from this manifold continuously.",
+    "soru_metni": "Each 10) ……… of the main hydraulic pump draws fluid",
+    "secenekler": {
+      "a": "stage",
+      "b": "hose",
+      "c": "gasket",
+      "d": "bracket"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Stage' = kademe / aşama. Hidrolik pompanın her bir kademesi (stage) bu manifolddan akışkan çeker.",
+    "yanlislar": "B (hose) hortum. C (gasket) conta. D (bracket) bağlantı desteği.",
+    "tip": "Pompa ve kompresör gibi çok kademeli havacılık bileşenlerinde 'stage' terimi yaygındır."
+  },
+  {
+    "id": 1061,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Personnel who perform non-destructive testing (NDT) ________ certified by the regulatory authority.",
+    "secenekler": {
+      "a": "would",
+      "b": "must be",
+      "c": "could",
+      "d": "are being"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "Havacılık kurallarında kesin zorunluluklar 'must' veya 'must be + V3' (passive) yapısıyla belirtilir. NDT personeli sertifikalandırılmalıdır.",
+    "yanlislar": "A (would) geçmişe yönelik veya koşullu bildirir. C (could) ihtimal/yetenek bildirir. D (are being) sürekli zaman edilgendir, kalıcı zorunluluk vermez.",
+    "tip": "Yasal ve emniyetle ilgili kesin kurallarda 'must' veya 'shall' aranmalıdır."
+  },
+  {
+    "id": 1062,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Lithium batteries can generate hazardous amounts of heat ________ charging or discharging cycles.",
+    "secenekler": {
+      "a": "at",
+      "b": "under",
+      "c": "during",
+      "d": "on"
+    },
+    "dogru_cevap": "c",
+    "neden_dogru": "'During' = esnasında / boyunca. Şarj veya deşarj döngüleri (cycles) bir süreci ifade ettiği için 'during' edatı uygundur.",
+    "yanlislar": "A (at) belirli bir noktada kullanılır. B (under) altında demektir. D (on) üzerinde demektir.",
+    "tip": "Süreç bildiren isimlerden (charging, maintenance, inspection) önce 'during' edatı yaygın olarak kullanılır."
+  },
+  {
+    "id": 1063,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If the landing gear gear-box ________ recently overhauled, verify the torque values on the main attachment links.",
+    "secenekler": {
+      "a": "was",
+      "b": "has been",
+      "c": "is running",
+      "d": "had"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'recently' (yakın zamanda) zarfı Present Perfect Tense ile kullanılır. Dişli kutusu yakın zamanda revize edildiyse anlamı için passive olan 'has been' doğrudur.",
+    "yanlislar": "A (was) Past Simple'dır, 'recently' ile edilgenlik tam oturmaz. C (is running) aktiftir. D (had) tek başına passive kuramaz.",
+    "tip": "Cümlede 'recently' veya 'lately' varsa Present Perfect Tense (has been V3) önceliklidir."
+  },
+  {
+    "id": 1064,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "All visual warnings and indicators which are shown on the display unit must be ________ from the observer's position.",
+    "secenekler": {
+      "a": "visible",
+      "b": "visionary",
+      "c": "visualized",
+      "d": "viscous"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Visible' = görünür (sıfat). 'must be' yapısından sonra nesnenin durumunu niteleyen bir sıfat gelmelidir. Göstergedeki tüm uyarılar görünür olmalıdır.",
+    "yanlislar": "B (visionary) hayalperest. C (visualized) görselleştirilmiş (fiil hali). D (viscous) ağdalı/akışkanlığı az.",
+    "tip": "Must be + sıfat kalıbı, bir şeyin olması gereken niteliğini (visible, audible vb.) belirtmede çok sık kullanılır."
+  },
+  {
+    "id": 1065,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If there ________ an oil leakage around the starter generator drive shaft, replace the oil seal immediately.",
+    "secenekler": {
+      "a": "have",
+      "b": "is",
+      "c": "will be",
+      "d": "are"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "Type 1 Conditional cümlelerinde 'if' kısmında Present Simple kullanılır. 'an oil leakage' tekil bir özne olduğu için 'is' kullanılmalıdır.",
+    "yanlislar": "A (have) çoğul veya iyelik bildirir. C (will be) if clause tarafında 'will' doğrudan kullanılmaz. D (are) çoğuldur.",
+    "tip": "If kalıplarında genel kural ve talimatlar Type 1 (If + Present Simple, Emir kipi / Present Simple) olarak kurgulanır."
+  },
+  {
+    "id": 1066,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "During engine assembly, it ________ standard to use temporary pins 2) ________ alignment of the casings.",
+    "secenekler": {
+      "a": "is / to ensure",
+      "b": "will be / ensuring",
+      "c": "was / for ensure",
+      "d": "has / to be ensured"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'It is standard + to V1' havacılıkta kalıplaşmış bir yapıdır. 'Hizalamayı sağlamak için geçici pimlerin kullanılması standarttır' anlamı taşır.",
+    "yanlislar": "B, C ve D şıkları gramer dizilimi ve mastar (to V1) kuralına uymamaktadır.",
+    "tip": "It is customary / standard / recommended + TO + FİİL (V1) yapısı prosedür kitaplarında çok yaygındır."
+  },
+  {
+    "id": 1067,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Applying anti-seize compound will ________ the risk of thread galling on bolts exposed to high temperatures.",
+    "secenekler": {
+      "a": "maximize",
+      "b": "minimize",
+      "c": "prolong",
+      "d": "generate"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Minimize' = azaltmak/en aza indirmek. Kaynamayı önleyici bileşik (anti-seize) sürtünme ve aşınma riskini azaltır.",
+    "yanlislar": "A (maximize) artırır. C (prolong) uzatır. D (generate) üretir.",
+    "tip": "Emniyet tedbirleri riskleri her zaman azaltmaya ('minimize', 'reduce', 'prevent') yöneliktir."
+  },
+  {
+    "id": 1068,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "This procedure is applicable only to locations ________ fuel vapors can accumulate.",
+    "secenekler": {
+      "a": "when",
+      "b": "where",
+      "c": "which",
+      "d": "who"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Where' = yer belirten relative zarf. 'Locations' (konumlar/yerler) kelimesini nitelemek için mekan bildiren 'where' kullanılmalıdır.",
+    "yanlislar": "A (when) zaman için. C (which) nesneler için (arkasından tam cümle gelmiş, edat olsaydı in which olabilirdi). D (who) insanlar için.",
+    "tip": "Zone, location, compartment, area gibi mekansal kelimelerden sonra relative clause olarak 'where' veya 'in which' gelir."
+  },
+  {
+    "id": 1069,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Components that ________ high vibration levels must be inspected at shorter intervals.",
+    "secenekler": {
+      "a": "is subjected to",
+      "b": "are subjected to",
+      "c": "subjecting to",
+      "d": "subjected to"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Components' çoğul bir özne olduğu için çoğul edilgen yapı olan 'are subjected to' (-e maruz kalmak) kullanılmalıdır.",
+    "yanlislar": "A (is subjected to) tekildir. C (subjecting to) aktif gerund yapıdır. D (subjected to) tek başına yardımcı fiilsiz relative clause kısaltması olabilirdi ancak cümlede ana fiil 'must be' olduğundan yan cümlecik fiili eksik kalır.",
+    "tip": "Subject-verb agreement (Özne-yüklem uyumu) sorularında öznenin tekil/çoğul durumunu mutlaka kontrol edin."
+  },
+  {
+    "id": 1070,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Leave the cleaned component in an oven for sufficient time to let the cleaning solvent ________ completely.",
+    "secenekler": {
+      "a": "evaporate",
+      "b": "evaporated",
+      "c": "evaporating",
+      "d": "is evaporated"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Let + nesne + V1 (yalın fiil)' kalıbı gereği 'let the cleaning solvent evaporate' (çözücünün buharlaşmasına izin vermek) olmalıdır.",
+    "yanlislar": "B (evaporated) V2/V3 halidir. C (evaporating) -ing takılıdır. D (is evaporated) edilgen çekimdir.",
+    "tip": "Let ve Make ettirgen fiillerinden sonra gelen fiil her zaman yalın (V1) olmalıdır."
+  },
+  {
+    "id": 1071,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Any hydraulic fluid that ________ accidentally can cause environmental contamination or skin irritation.",
+    "secenekler": {
+      "a": "is spilled",
+      "b": "is spilling",
+      "c": "spilled",
+      "d": "spills"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Hidrolik sıvı kendi kendine dökülmez, dökülür (passive). Tekil olduğu için 'is spilled' doğrudur.",
+    "yanlislar": "B (is spilling) aktiftir. C ve D şıkları aktif çekimlerdir.",
+    "tip": "Cansız maddelerin etkilendiği eylemler (dökülmek, yutulmak, solunmak) daima passive (be + V3) yapılır."
+  },
+  {
+    "id": 1072,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "During routine turnaround checks, several deep scratches ________ on the lower skin of the wing.",
+    "secenekler": {
+      "a": "has been found",
+      "b": "have been found",
+      "c": "has found",
+      "d": "have found"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'scratches' (çizikler) çoğul bir nesnedir ve bulunmuştur anlamında Present Perfect Passive çoğul çekimi olan 'have been found' gereklidir.",
+    "yanlislar": "A (has been found) tekildir. C ve D şıkları aktiftir.",
+    "tip": "Bulgu bildiren (find, discover, detect) cümlelerde özne çoğul ise 'have been detected/found' kalıbı aranır."
+  },
+  {
+    "id": 1073,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The engineering report contains all data necessary to show compliance ________ EASA regulations.",
+    "secenekler": {
+      "a": "with",
+      "b": "to",
+      "c": "in",
+      "d": "by"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Compliance with' havacılık İngilizcesinde ayrılmaz bir edat (preposition) kalıbıdır. Kurallara uyum anlamına gelir.",
+    "yanlislar": "B, C ve D şıklarındaki edatlar 'compliance' kelimesiyle bu anlamda birleşmez.",
+    "tip": "Compliance kelimesinden sonra daima 'with' edatı gelir. 'In compliance with' şeklinde de sıkça kullanılır."
+  },
+  {
+    "id": 1074,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Do not perform maintenance on the fuel valves until the system electrical power is isolated.",
+    "secenekler": {
+      "a": "Sistem elektrik gücü izole edilene kadar yakıt valfleri üzerinde bakım yapmayın.",
+      "b": "Yakıt valflerinin bakımını yapmak için sistemin elektrik gücünü izole edin.",
+      "c": "Sistem elektrik gücü izole edildiğinde yakıt valflerinin bakımı tamamlanmalıdır.",
+      "d": "Yakıt valflerine bakım yapılmadan önce elektrik gücünün kesilmesi tavsiye edilir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Do not perform...' = bakım yapmayın. 'until...' = ...olana kadar. 'system electrical power is isolated' = sistem elektrik gücü izole edilene kadar.",
+    "yanlislar": "B şıkkı amaç bildiriyor, emir sırası yanlış. C şıkkı zorunluluk/zamanlama hatası içeriyor. D şıkkı 'tavsiye edilir' diyerek anlamı yumuşatmış.",
+    "tip": "'Do not... until...' kalıbı net bir şekilde '-ene kadar ... yapmayın' olarak çevrilir."
+  },
+  {
+    "id": 1075,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "The torque values are clearly identified in the maintenance manual illustrations.",
+    "secenekler": {
+      "a": "Tork değerleri bakım el kitabındaki resimlerde net bir şekilde tanımlanmıştır.",
+      "b": "Bakım el kitabında tork değerlerinin net olarak gösterilmesi gerekir.",
+      "c": "Resimlerdeki tork değerleri bakım el kitabından netçe anlaşılabilir.",
+      "d": "Net olarak tanımlanan tork değerleri bakım el kitabının resimlerindedir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are clearly identified' = net bir şekilde tanımlanmıştır. 'in the maintenance manual illustrations' = bakım el kitabındaki resimlerde/görsellerde.",
+    "yanlislar": "B şıkkında 'gerekir' denerek gereklilik modu eklenmiş. C ve D şıklarında cümlenin ana yapısı ve vurgusu değiştirilmiş.",
+    "tip": "Pasif cümlelerin (are identified) Türkçe karşılığı genellikle edilgen fiil (-ilmiştir / -dir) ile biter."
+  },
+  {
+    "id": 1076,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "These indicators are critical parameters requiring immediate inspection during a pre-flight check.",
+    "secenekler": {
+      "a": "Bu göstergeler, uçuş öncesi kontrol sırasında acil inceleme gerektiren kritik parametrelerdir.",
+      "b": "Uçuş öncesinde kritik parametrelerin göstergeleri acilen kontrol edilmelidir.",
+      "c": "Uçuş öncesi kontrol sırasında göstergelerin kritik parametreleri incelenir.",
+      "d": "Kritik parametre olan bu göstergeler uçuş öncesinde hemen denetlenmelidir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "İngilizce cümle bir isim cümlesidir: 'These indicators are critical parameters...' = Bu göstergeler kritik parametrelerdir. 'requiring...' = gerektiren.",
+    "yanlislar": "B ve D şıkları cümleyi fiil cümlesine (-melidir) çevirmiştir. C şıkkı anlamı eksik ve yanlış vermektedir.",
+    "tip": "'...parameters requiring...' yapısı sıfat fiil niteliğindedir ve '...gerektiren parametreler' olarak çevrilir."
+  },
+  {
+    "id": 1077,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Liquid oxygen systems are hazardous because they can cause severe freeze burns upon skin contact.",
+    "secenekler": {
+      "a": "Sıvı oksijen sistemleri tehlikelidir çünkü ciltle temas halinde ciddi donma yanıklarına neden olabilirler.",
+      "b": "Ciltle temas ettiğinde donma yanığı yapan sıvı oksijen sistemleri çok tehlikelidir.",
+      "c": "Sıvı oksijen sistemleri tehlikeli olabilir çünkü cilde temas ederse yakabilir.",
+      "d": "Cilde temas eden sıvı oksijen sistemleri ciddi donma riski taşır ve tehlikelidir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are hazardous' = tehlikelidir. 'because' = çünkü. 'can cause severe freeze burns' = ciddi donma yanıklarına neden olabilirler. 'upon skin contact' = ciltle temas halinde.",
+    "yanlislar": "B şıkkı 'çünkü' bağlacını elemiştir. C şıkkı 'tehlikeli olabilir' diyerek kesinliği bozmuştur. D şıkkı cümlenin yapısını tamamen değiştirmiştir.",
+    "tip": "'because' bağlacı içeren iki parçalı yapıların tam karşılığı '...çünkü...' şeklinde kurulur."
+  },
+  {
+    "id": 1078,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Remove all ground communication headsets, the interphone cables and all other test equipment.",
+    "secenekler": {
+      "a": "Tüm yer haberleşme kulaklıklarını, interfon kablolarını ve diğer tüm test ekipmanlarını sökün.",
+      "b": "Yer haberleşme kulaklıkları, interfon kabloları ve diğer test ekipmanları sökülmelidir.",
+      "c": "Diğer tüm test ekipmanlarıyla birlikte yer haberleşme kulaklıklarını ve kablolarını çıkarmanız gerekir.",
+      "d": "Yer haberleşme kulaklıklarının, interfon kablolarının ve test ekipmanlarının sökülmesi tavsiye edilir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Remove...' emir kipiyle başladığı için Türkçe karşılığı net bir emir fiili ('sökün' veya 'çıkarın') olmalıdır.",
+    "yanlislar": "B şıkkı pasif/zorunluluk (-melidir) eklemiştir. C şıkkı 'gerekir' eklemiştir. D şıkkı 'tavsiye edilir' diyerek anlamı bozmuştur.",
+    "tip": "Direct imperative (Yalın emir fiili ile başlayan) cümlelerin Türkçe karşılığı doğrudan emir kipiyle biter."
+  },
+  {
+    "id": 1079,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "There are no indications of structural cracking on the landing gear torque links.",
+    "secenekler": {
+      "a": "İniş takımı tork kollarında herhangi bir yapısal çatlama belirtisi yoktur.",
+      "b": "İniş takımı tork kollarında hiçbir yapısal çatlak bulunamamıştır.",
+      "c": "Yapısal çatlama belirtisi olmayan iniş takımı tork kolları kontrol edilmelidir.",
+      "d": "İniş takımı tork kollarında yapısal çatlama belirtisine rastlanmamıştır."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'There are no indications...' = ...belirtisi yoktur. 'of structural cracking' = yapısal çatlama. 'on the landing gear torque links' = iniş takımı tork kollarında.",
+    "yanlislar": "B şıkkı 'bulunamamıştır' diyebilir ancak 'no indications' ifadesinin tam karşılığı 'belirtisi yoktur' şeklindedir. C ve D şıkları ek eylemler/kelimeler türetmiştir.",
+    "tip": "'There are no indications / signs of...' kalıbı Türkçe'ye '...belirtisi yoktur' olarak aktarılır."
+  },
+  {
+    "id": 1080,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Eğer bu emniyet tedbirine uymazsanız, personelin ciddi şekilde yaralanması meydana gelebilir.",
+    "secenekler": {
+      "a": "If you do not obey this safety precaution, serious injury to personnel can occur.",
+      "b": "Unless you obey this safety precaution, serious injury to personnel will occur.",
+      "c": "If this safety precaution is not obeyed, personnel can be injured seriously.",
+      "d": "Should you fail to obey this safety precaution, personnel might injure themselves."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Eğer... uymazsanız' = If you do not obey. 'ciddi şekilde yaralanması meydana gelebilir' = serious injury... can occur.",
+    "yanlislar": "B şıkkı 'will occur' (kesin gerçekleşir) diyerek olasılığı bozmuştur. C şıkkı pasif kurmuştur ('is not obeyed'). D şıkkı dönüşlü fiil ('injure themselves') kullanmıştır.",
+    "tip": "'If you do not do this, X can occur' kalıbı havacılık el kitaplarındaki klasik bir uyarı formülüdür."
+  },
+  {
+    "id": 1081,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Sistemin basıncını düşürmek için, tüm hidrolik tahliye valfleri yavaşça açılmalıdır.",
+    "secenekler": {
+      "a": "To depressurize the system, all hydraulic relief valves must be opened slowly.",
+      "b": "For depressurizing the system, all hydraulic relief valves should open slowly.",
+      "c": "To decrease system pressure, you can open all hydraulic relief valves slowly.",
+      "d": "All hydraulic relief valves are opened slowly to reduce system pressure."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Sistemin basıncını düşürmek için' = To depressurize the system. 'tüm hidrolik tahliye valfleri yavaşça açılmalıdır' = all hydraulic relief valves must be opened slowly.",
+    "yanlislar": "B şıkkı aktiftir ('should open'). C şıkkı 'açabilirsiniz' anlamı verir. D şıkkı geniş zaman edilgendir, zorunluluk (-malıdır) vermez.",
+    "tip": "Mastar amaç bildirdiğinde 'To + V1' cümlenin başına gelebilir; zorunluluk edilgense 'must be + V3' kalıbı aranır."
+  },
+  {
+    "id": 1082,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Hasarlı pimi değiştirmeden önce, yeni parçanın parça numarasını kontrol edin.",
+    "secenekler": {
+      "a": "Before you replace the damaged pin, check the part number of the new part.",
+      "b": "Prior to replacing the damaged pin, you must look at the new part number.",
+      "c": "After replacing the damaged pin, verify the part number of the new part.",
+      "d": "Check the part number of the new part when you are replacing the damaged pin."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Hasarlı pimi değiştirmeden önce' = Before you replace the damaged pin. 'yeni parçanın parça numarasını kontrol edin' = check the part number of the new part.",
+    "yanlislar": "B şıkkı 'must look at' ile anlamı tam karşılamaz. C şıkkı 'After' (sonra) demiştir. D şıkkı 'when' (zaman) kullanmıştır.",
+    "tip": "'Before you do X, do Y' sıralı iş emirlerinde standart zaman yapısıdır."
+  },
+  {
+    "id": 1083,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Ana iniş takımı lastikleri sadece yetkili servis istasyonu tarafından şişirilebilir.",
+    "secenekler": {
+      "a": "The main landing gear tires can be inflated only by an authorized service station.",
+      "b": "An authorized service station must inflate the main landing gear tires only.",
+      "c": "The main landing gear tires could be inflated by any authorized station.",
+      "d": "Only an authorized service station has inflated the main landing gear tires."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'şişirilebilir' ifadesi yetenek/izin bildirir ve edilgendir ('can be inflated'). 'sadece yetkili servis istasyonu tarafından' = only by an authorized service station.",
+    "yanlislar": "B şıkkı aktif bir yapıdır. C şıkkı 'could' ve 'any' kullanarak anlamı belirsizleştirmiştir. D şıkkı yakın geçmiş zaman aktiftir.",
+    "tip": "Modal edilgen yapılarda 'can be + V3' (-ilebilir) kalıbı aranmalıdır."
+  },
+  {
+    "id": 1084,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Yangın söndürme maddesi tanktaki elektrikli komponentlere zarar verebilir.",
+    "secenekler": {
+      "a": "The fire extinguishing agent can cause damage to electrical components in the tank.",
+      "b": "Fire extinguishing agents will damage all electrical components inside the tank.",
+      "c": "Electrical components in the tank can be damaged by using fire extinguisher.",
+      "d": "The fire extinguishing agent might have damaged the tank electrical components."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Yangın söndürme maddesi' = The fire extinguishing agent. 'zarar verebilir' = can cause damage to. 'tanktaki elektrikli komponentlere' = electrical components in the tank.",
+    "yanlislar": "B şıkkı 'will damage' (zarar verecek) demiştir. C şıkkı nesneyi başa alıp pasif yapmıştır, cümlenin orijinal odak noktası değişmiştir. D şıkkı geçmişe yönelik olasılık belirtmiştir.",
+    "tip": "'Can cause damage to...' havacılıkta 'zarar verebilir' ifadesinin standart karşılığıdır."
+  },
+  {
+    "id": 1085,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Motor kapatıldıktan sonra en az otuz dakika boyunca yağ doldurma kapağını açmayın.",
+    "secenekler": {
+      "a": "Do not open the oil filler cap for at least thirty minutes after engine shutdown.",
+      "b": "You must not open the oil filler cap thirty minutes before the engine shutdown.",
+      "c": "Do not open the oil filler cap when the engine is shutdown for thirty minutes.",
+      "d": "The oil filler cap should not be opened until thirty minutes after engine runs."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'açmayın' = Do not open. 'yağ doldurma kapağını' = the oil filler cap. 'motor kapatıldıktan sonra en az otuz dakika boyunca' = for at least thirty minutes after engine shutdown.",
+    "yanlislar": "B şıkkı 'before' (önce) demiştir. C şıkkı 'when' bağlacıyla anlamı bozmuştur. D şıkkı cümlenin fiillerini ve öznelerini karıştırmıştır.",
+    "tip": "'For at least X minutes after engine shutdown' havacılık bakım prosedürlerinde standart zaman kalıbıdır."
+  },
+  {
+    "id": 1086,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The technician managed to solve the intermittent electrical issue after checking the wiring diagrams. Which phrasal verb could be used for the verb \"to solve\"?",
+    "secenekler": {
+      "a": "sort out",
+      "b": "put off",
+      "c": "call off",
+      "d": "carry out"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Sort out' = çözmek/halletmek. Teknik bir problemi çözmek anlamında 'solve' veya 'sort out' kullanılır.",
+    "yanlislar": "B (put off) ertelemek. C (call off) iptal etmek. D (carry out) uygulamak/yerine getirmek.",
+    "tip": "Arıza ve problem giderme durumlarında 'sort out' veya 'clear' phrasal verb'leri tercih edilir."
+  },
+  {
+    "id": 1087,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The maintenance manual contains a dedicated section to show the specific tool requirements. What is a synonym for the word \"contains\"?",
+    "secenekler": {
+      "a": "comprises",
+      "b": "excludes",
+      "c": "violates",
+      "d": "discards"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Comprises' = içermek/kapsamak. 'Contain' kelimesinin doğrudan eş anlamlısıdır.",
+    "yanlislar": "B (excludes) hariç tutar. C (violates) ihlal eder. D (discards) ıskartaya çıkarır.",
+    "tip": "Kılavuzların içeriğinden bahsederken 'contain', 'comprise', 'include' eş anlamlı olarak kullanılır."
+  },
+  {
+    "id": 1088,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The digital fuel indicator is used to demonstrate the exact weight of the remaining fuel in the tanks. What is the synonym for the word \"demonstrate\"?",
+    "secenekler": {
+      "a": "indicate",
+      "b": "demolish",
+      "c": "decrease",
+      "d": "obstruct"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Indicate' = göstermek/işaret etmek. 'Demonstrate' kelimesinin havacılıktaki en yaygın teknik karşılığıdır.",
+    "yanlislar": "B (demolish) yıkmak. C (decrease) azaltmak. D (obstruct) engellemek.",
+    "tip": "Göstergelerin, ekranların veya cihazların bir değeri vermesi 'indicate', 'show' veya 'demonstrate' ile anlatılır."
+  },
+  {
+    "id": 1089,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The integrated avionics bay features two separate cooling fans configured to run in parallel. Which one of the following CANNOT be used for the word \"features\"?",
+    "secenekler": {
+      "a": "invades",
+      "b": "includes",
+      "c": "contains",
+      "d": "incorporates"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Invades' = istila etmek anlamına gelir ve bir sistemin özelliğini/bölümünü anlatmak için KULLANILAMAZ.",
+    "yanlislar": "B (includes), C (contains) ve D (incorporates) kelimelerinin hepsi 'özelliğine sahip olmak, içermek' anlamında 'features' yerine kullanılabilir.",
+    "tip": "\"Which CANNOT be used\" sorularında teknik bağlama tamamen uymayan yabancı kelimeyi bulun."
+  },
+  {
+    "id": 1090,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "You must wear proper eye and face protection when you handle chemical solvents. What is a synonym for the word \"proper\"?",
+    "secenekler": {
+      "a": "appropriate",
+      "b": "defective",
+      "c": "careless",
+      "d": "optional"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Appropriate' = uygun/doğru. 'Proper' kelimesinin eş anlamlısıdır; emniyet ekipmanları için kullanılır.",
+    "yanlislar": "B (defective) kusurlu. C (careless) dikkatsiz. D (optional) isteğe bağlı.",
+    "tip": "Emniyet talimatlarında 'proper / suitable / appropriate protection' (uygun koruma) kalıpları eş anlamlıdır."
+  },
+  {
+    "id": 1091,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Any internal cracking in the turbine blades could potentially result in an uncontained engine failure. What is the synonym for the word \"potentially\"?",
+    "secenekler": {
+      "a": "possibly",
+      "b": "definitely",
+      "c": "rarely",
+      "d": "strictly"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Possibly' = ihtimal dahilinde/olası olarak. 'Potentially' kelimesinin yakın eş anlamlısıdır.",
+    "yanlislar": "B (definitely) kesinlikle. C (rarely) nadiren. D (strictly) kesin bir şekilde/sıkıca.",
+    "tip": "Risk ve arıza ihtimali anlatılırken 'potentially' ve 'possibly' birbirinin yerine sıklıkla tercih edilir."
+  },
+  {
+    "id": 1092,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The technician must consult the illustrated parts catalog (IPC) before ordering the replacement flange. What can be used instead of the word \"consult\"?",
+    "secenekler": {
+      "a": "refer to",
+      "b": "ignore",
+      "c": "discard",
+      "d": "postpone"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Refer to' = başvurmak / bakmak / referans almak. Manuel veya katalog incelemek anlamında 'consult' veya 'refer to' kullanılır.",
+    "yanlislar": "B (ignore) görmezden gelmek. C (discard) atmak. D (postpone) ertelemek.",
+    "tip": "Dökümanlara bakma/başvurma eylemlerinde 'refer to' ve 'consult' en yaygın teknik fiillerdir."
+  },
+  {
+    "id": 1093,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "A certificate of release to service (CRS) is mandatory after any critical repair work on the airframe. What does the word \"mandatory\" mean?",
+    "secenekler": {
+      "a": "compulsory",
+      "b": "optional",
+      "c": "prohibited",
+      "d": "secondary"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Compulsory' = zorunlu. 'Mandatory' kelimesinin doğrudan karşılığıdır ve yasal zorunlulukları belirtir.",
+    "yanlislar": "B (optional) isteğe bağlı. C (prohibited) yasaklanmış. D (secondary) ikincil.",
+    "tip": "'Mandatory', 'required' ve 'compulsory' havacılıkta kaçınılmaz yasal zorunlulukları ifade eder."
+  },
+  {
+    "id": 1094,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "A Borescope Inspection (BI) is a visual check using an optical instrument to examine internal parts of an engine without disassembly. The internal areas are illuminated with a high-intensity fiber-optic light guide source. Special accessories such as video probes or digital cameras can be attached to record the internal findings. Surface cleaning of components is not possible during this task, so the interpretation of defects depends entirely on the operator's experience.",
+    "soru_metni": "What can be inferred about the Borescope Inspection from the passage?",
+    "secenekler": {
+      "a": "It allows the operator to inspect internal sections without taking the engine apart.",
+      "b": "It can be performed efficiently without any specialized light sources.",
+      "c": "It allows the technician to clean internal engine surfaces during the task.",
+      "d": "It requires taking the entire engine apart to check for inner defects."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metinde açıkça 'examine internal parts of an engine without disassembly' (motoru sökmeden iç parçalarını incelemek) ifadesi geçmektedir.",
+    "yanlislar": "B şıkkı özel ışık kaynağı gerekmez diyerek çelişir. C şıkkı temizlik yapılabilir diyerek çelişir. D şıkkı motorun tamamen sökülmesini gerektirdiğini iddia ederek tam tersini söyler.",
+    "tip": "Inference (çıkarım) sorularında metindeki anahtar kelimelerin (ör. without disassembly = without taking apart) eş anlamlılarına odaklanın."
+  },
+  {
+    "id": 1095,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "A Borescope Inspection (BI) is a visual check using an optical instrument to examine internal parts of an engine without disassembly. The internal areas are illuminated with a high-intensity fiber-optic light guide source. Special accessories such as video probes or digital cameras can be attached to record the internal findings. Surface cleaning of components is not possible during this task, so the interpretation of defects depends entirely on the operator's experience.",
+    "soru_metni": "Why is the operator's experience critical during a borescope inspection?",
+    "secenekler": {
+      "a": "Because surface cleaning cannot be done to help identify defects clearly.",
+      "b": "Because the high-intensity light source is difficult to adjust manually.",
+      "c": "Because digital cameras cannot be attached to record the findings.",
+      "d": "Because the inspection cannot be performed on internal sections."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin son cümlesinde parçaların temizlenmesinin mümkün olmadığı, bu yüzden kusurları yorumlamanın tamamen operatörün tecrübesine bağlı olduğu belirtilmiştir.",
+    "yanlislar": "B şıkkında ışık ayarının zorluğundan bahsedilmektedir (metinde yok). C şıkkı kameraların takılamayacağını iddia eder (metne ters). D şıkkı iç kısımlarda yapılamayacağını söyler (metne ters).",
+    "tip": "Neden sonuç ilişkisi (Why) sorulduğunda metindeki 'so', 'because', 'depends on' gibi bağlaçların çevresini iyi okuyun."
+  },
+  {
+    "id": 1096,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "Dry motoring the engine is performed to clear unburned fuel from the combustion chamber. During dry motoring, the ignition systems are switched OFF, and the starter is engaged to rotate the high-pressure rotor. The fuel control lever must remain in the OFF position to prevent any fuel flow into the engine. This procedure is continued until the fuel vapor is eliminated from the exhaust duct.",
+    "soru_metni": "What is the primary purpose of dry motoring the engine?",
+    "secenekler": {
+      "a": "To remove unburned fuel from the combustion chamber area.",
+      "b": "To check the performance of both ignition systems.",
+      "c": "To supply fuel into the engine combustion chamber.",
+      "d": "To test the maximum power of the high-pressure rotor."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin ilk cümlesinde açıkça 'performed to clear unburned fuel from the combustion chamber' (yanmamış yakıtı yanma odasından temizlemek için gerçekleştirilir) denmektedir.",
+    "yanlislar": "B şıkkı ateşleme sistemini kontrol etmek der (ateşleme OFF durumundadır). C şıkkı yakıt sağlamak der (yakıt akışı engellenir). D şıkkı maksimum gücü test etmek der (böyle bir bilgi yok).",
+    "tip": "'Purpose' (Amaç) sorularında genellikle metnin ilk cümlesindeki 'performed to...', 'is used for...' gibi ifadelere bakılır."
+  },
+  {
+    "id": 1097,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "Dry motoring the engine is performed to clear unburned fuel from the combustion chamber. During dry motoring, the ignition systems are switched OFF, and the starter is engaged to rotate the high-pressure rotor. The fuel control lever must remain in the OFF position to prevent any fuel flow into the engine. This procedure is continued until the fuel vapor is eliminated from the exhaust duct.",
+    "soru_metni": "What must be the position of the fuel control lever during this procedure?",
+    "secenekler": {
+      "a": "It must stay in the OFF position.",
+      "b": "It must be switched to the ON position.",
+      "c": "It must alternate between ON and OFF.",
+      "d": "The position of the fuel lever does not matter."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metinde 'The fuel control lever must remain in the OFF position' ifadesi net bir şekilde yer almaktadır.",
+    "yanlislar": "B, C ve D şıkları metindeki açık talimatla doğrudan çelişmektedir.",
+    "tip": "Spesifik durum veya pozisyon sorulduğunda metindeki 'must remain', 'must stay' gibi kelimeleri takip edin."
+  },
+  {
+    "id": 1098,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "A WARNING alerts the technician that injury is possible if the specified steps ________ followed properly.",
+    "secenekler": {
+      "a": "are not",
+      "b": "do not",
+      "c": "will not",
+      "d": "cannot"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Type 1 Conditional yapısıdır. 'the specified steps' çoğul bir nesnedir ve 'follow' eylemi pasif yapılmalıdır (steps are not followed = adımlar takip edilmezse).",
+    "yanlislar": "B (do not) aktif geniş zaman yapar, arkasından V1 gelmelidir fakat cümle 'followed' (V3) içermektedir. C ve D şıkları gramer ve anlam olarak uymaz.",
+    "tip": "If clause içindeki pasif yapılara (be + V3) dikkat edin. Olumsuz pasifler havacılık uyarılarında çok yaygındır."
+  },
+  {
+    "id": 1099,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If a hairline crack ________ during the visual check, the component must be replaced immediately.",
+    "secenekler": {
+      "a": "is detected",
+      "b": "detects",
+      "c": "is detecting",
+      "d": "has detected"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Çatlak kendi kendini tespit edemez, tespit edilir (passive). Tekil bir özne olduğu için Present Simple Passive olan 'is detected' doğrudur.",
+    "yanlislar": "B, C ve D şıkları aktif çekimlerdir ve anlamı bozarlar.",
+    "tip": "Cansız nesnelerin durumlarını anlatan şart cümlelerinde genellikle edilgen (Passive) yapı kullanılır."
+  },
+  {
+    "id": 1100,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If the testing equipment displays an error code, make sure that the main switch ________ cycled once.",
+    "secenekler": {
+      "a": "is",
+      "b": "are",
+      "c": "will",
+      "d": "have"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'make sure that...' kalıbından sonra nesne tekil ('the main switch') olduğu için passive yapıyı tamamlayacak 'is' (is cycled = açılıp kapatılması) getirilmelidir.",
+    "yanlislar": "B (are) çoğuldur. C (will) arkasından yalın fiil ister. D (have) iyelik veya perfect yapı kurar fakat özneyle uyumsuz.",
+    "tip": "'Make sure that + nesne + is/are + V3' yapısı, bir şeyin yapılmasından emin olunması talimatını verir."
+  },
+  {
+    "id": 1101,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel storage system 1) ……… high-grade kerosene inside the wing tanks; it 2) ……… a network of interconnected transfer valves to manage this fuel. 3) ……… valve operates automatically to balance the left and right quantities and 4) ……… inside the dry bay area. Each 5) ……… of the Fuel Control Unit (FCU) processes the pressure data continuously.",
+    "soru_metni": "The fuel storage system 1) ……… high-grade kerosene inside the wing tanks;",
+    "secenekler": {
+      "a": "contains",
+      "b": "discards",
+      "c": "prevents",
+      "d": "neglects"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Contains' = içerir/barındırır. Yakıt depolama sistemi kanat tankları içinde yüksek kaliteli gaz yağı barındırır.",
+    "yanlislar": "B şıkkı ıskartaya çıkarır, C şıkkı engeller, D şıkkı ihmal eder anlamına gelir.",
+    "tip": "Depolama tanklarının işlevleri anlatılırken 'contain', 'store' veya 'hold' fiilleri önceliklidir."
+  },
+  {
+    "id": 1102,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel storage system 1) ……… high-grade kerosene inside the wing tanks; it 2) ……… a network of interconnected transfer valves to manage this fuel. 3) ……… valve operates automatically to balance the left and right quantities and 4) ……… inside the dry bay area. Each 5) ……… of the Fuel Control Unit (FCU) processes the pressure data continuously.",
+    "soru_metni": "it 2) ……… a network of interconnected transfer valves to manage this fuel.",
+    "secenekler": {
+      "a": "excludes",
+      "b": "utilizes",
+      "c": "isolates",
+      "d": "separates"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Utilizes' = kullanır/faydalanır. Sistem bu yakıtı yönetmek için birbirine bağlı transfer valflerinden oluşan bir şebekeyi kullanır.",
+    "yanlislar": "A şıkkı hariç tutar, C şıkkı izole eder, D şıkkı ayırır anlamına gelir.",
+    "tip": "Bir sistemin işlevini yerine getirmek için başka bir komponenti kullanması 'utilize' veya 'employ' ile ifade edilir."
+  },
+  {
+    "id": 1103,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel storage system 1) ……… high-grade kerosene inside the wing tanks; it 2) ……… a network of interconnected transfer valves to manage this fuel. 3) ……… valve operates automatically to balance the left and right quantities and 4) ……… inside the dry bay area. Each 5) ……… of the Fuel Control Unit (FCU) processes the pressure data continuously.",
+    "soru_metni": "3) ……… valve operates automatically to balance the left and right quantities",
+    "secenekler": {
+      "a": "Each",
+      "b": "All",
+      "c": "Some",
+      "d": "None"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Each' = her bir. Boşluktan sonra gelen 'valve' ismi tekil olduğu ve fiil 'operates' şeklinde tekil çekimlendiği için 'Each' kullanımı uygundur.",
+    "yanlislar": "B ve C şıkları çoğul isim gerektirir. D şıkkı yapısal ve anlamca uygun değildir.",
+    "tip": "Tekil sayılabilir isim ve tekil fiil takibinde 'Each/Every' yapıları aranmalıdır."
+  },
+  {
+    "id": 1104,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel storage system 1) ……… high-grade kerosene inside the wing tanks; it 2) ……… a network of interconnected transfer valves to manage this fuel. 3) ……… valve operates automatically to balance the left and right quantities and 4) ……… inside the dry bay area. Each 5) ……… of the Fuel Control Unit (FCU) processes the pressure data continuously.",
+    "soru_metni": "and 4) ……… inside the dry bay area.",
+    "secenekler": {
+      "a": "is located",
+      "b": "locates",
+      "c": "are located",
+      "d": "is locating"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'is located' = yer alır/konumlandırılmıştır. Tekil olan 'valve' öznesinin fiziksel yerini belirtmek için passive (edilgen) yapı kullanılmalıdır.",
+    "yanlislar": "B aktif geniş zamandır, C çoğuldur, D şimdiki zaman aktiftir.",
+    "tip": "Komponentlerin konumlarından bahsedilirken 'be located' veya 'be situated' kalıbı vazgeçilmezdir."
+  },
+  {
+    "id": 1105,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel storage system 1) ……… high-grade kerosene inside the wing tanks; it 2) ……… a network of interconnected transfer valves to manage this fuel. 3) ……… valve operates automatically to balance the left and right quantities and 4) ……… inside the dry bay area. Each 5) ……… of the Fuel Control Unit (FCU) processes the pressure data continuously.",
+    "soru_metni": "Each 5) ……… of the Fuel Control Unit (FCU) processes the pressure data",
+    "secenekler": {
+      "a": "channel",
+      "b": "leak",
+      "c": "gasket",
+      "d": "fastener"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Channel' = kanal/hat. Yakıt Kontrol Ünitesinin (FCU) her bir kanalı basınç verilerini sürekli işler.",
+    "yanlislar": "B şıkkı kaçak, C şıkkı conta, D şıkkı bağlantı elemanı anlamına gelir.",
+    "tip": "Elektronik kontrol ünitelerinin (EEC, FCU) bağımsız alt yolları için 'channel' kelimesi sıklıkla kullanılır."
+  },
+  {
+    "id": 1106,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The auxiliary power unit is 6) ……… monitored to ensure operational readiness; it 7) ……… a small gas turbine engine that generates electrical power. 8) ……… parameter feeds into a flight deck display, which 9) ……… on the overhead panel. Each 10) ……… of the starting cycle requires correct fuel pressure.",
+    "soru_metni": "The auxiliary power unit is 6) ……… monitored to ensure operational readiness;",
+    "secenekler": {
+      "a": "continuous",
+      "b": "continuously",
+      "c": "entire",
+      "d": "continual"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'Continuously' = sürekli olarak (zarf). Pasif bir fiil yapısı olan 'is monitored' kelimesini nitelemek için bir zarf kullanılmalıdır.",
+    "yanlislar": "A şıkkı sıfattır, C şıkkı sıfattır (tüm/bütün), D şıkkı sıfattır.",
+    "tip": "Fiillerin veya sıfatların önüne gelerek durum bildiren yapılarda '-ly' eki alan zarflar aranır."
+  },
+  {
+    "id": 1107,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The auxiliary power unit is 6) ……… monitored to ensure operational readiness; it 7) ……… a small gas turbine engine that generates electrical power. 8) ……… parameter feeds into a flight deck display, which 9) ……… on the overhead panel. Each 10) ……… of the starting cycle requires correct fuel pressure.",
+    "soru_metni": "it 7) ……… a small gas turbine engine that generates electrical power.",
+    "secenekler": {
+      "a": "incorporates",
+      "b": "installs",
+      "c": "inspects",
+      "d": "interferes"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Incorporates' = bünyesinde barındırır/içerir. APU sistemi küçük bir gaz türbin motorunu kendi içinde barındırır.",
+    "yanlislar": "B şıkkı monte eder, C şıkkı denetler, D şıkkı müdahale eder anlamına gelir.",
+    "tip": "Bir ana sistemin bir alt bileşene veya özelliğe sahip olduğunu belirtmek için 'incorporate' çok yaygındır."
+  },
+  {
+    "id": 1108,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The auxiliary power unit is 6) ……… monitored to ensure operational readiness; it 7) ……… a small gas turbine engine that generates electrical power. 8) ……… parameter feeds into a flight deck display, which 9) ……… on the overhead panel. Each 10) ……… of the starting cycle requires correct fuel pressure.",
+    "soru_metni": "8) ……… parameter feeds into a flight deck display,",
+    "secenekler": {
+      "a": "Every",
+      "b": "All",
+      "c": "Both",
+      "d": "Some"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Every' = her bir. Boşluktan sonra gelen 'parameter' tekil bir isimdir ve fiil 'feeds' şeklinde tekil çekimlenmiştir.",
+    "yanlislar": "B, C ve D şıklarının tamamı arkasından çoğul isim getirilmesini gerektirir.",
+    "tip": "İsim ve fiilin tekil/çoğul uyumu, miktar belirleyici (determiner) seçiminde en önemli kriterdir."
+  },
+  {
+    "id": 1109,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The auxiliary power unit is 6) ……… monitored to ensure operational readiness; it 7) ……… a small gas turbine engine that generates electrical power. 8) ……… parameter feeds into a flight deck display, which 9) ……… on the overhead panel. Each 10) ……… of the starting cycle requires correct fuel pressure.",
+    "soru_metni": "which 9) ……… on the overhead panel.",
+    "secenekler": {
+      "a": "situates",
+      "b": "is situated",
+      "c": "are situated",
+      "d": "is situating"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'is situated' = yer almaktadır. Gösterge (display) cansız olduğundan edilgen (passive) olarak konumlandırılmalıdır, tekil olduğu için 'is' kullanılır.",
+    "yanlislar": "A aktiftir, C çoğuldur, D şimdiki zaman aktif çekimdir.",
+    "tip": "Kokpit panellerindeki cihazların yerleri belirtilirken 'is situated' kalıbı sıkça kullanılır."
+  },
+  {
+    "id": 1110,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The auxiliary power unit is 6) ……… monitored to ensure operational readiness; it 7) ……… a small gas turbine engine that generates electrical power. 8) ……… parameter feeds into a flight deck display, which 9) ……… on the overhead panel. Each 10) ……… of the starting cycle requires correct fuel pressure.",
+    "soru_metni": "Each 10) ……… of the starting cycle requires correct fuel pressure.",
+    "secenekler": {
+      "a": "phase",
+      "b": "wire",
+      "c": "hose",
+      "d": "clamp"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Phase' = aşama/evre. Çalıştırma döngüsünün (starting cycle) her bir aşaması doğru yakıt basıncına ihtiyaç duyar.",
+    "yanlislar": "B şıkkı tel/kablo, C şıkkı hortum, D şıkkı kelepçe anlamına gelir.",
+    "tip": "Zamanla veya adımlarla ilerleyen süreçlerde (cycle, test) 'phase' veya 'stage' terimleri kullanılır."
+  },
+  {
+    "id": 1111,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The air conditioning pack 11) ……… temperature regulated air to the cabin; it 12) ……… a mix manifold to combine fresh and recirculated air. 13) ……… sensor operates continuously to monitor the zone ducts. If an overheat occurs, the pack valve 14) ……… automatically to isolate the system. Each 15) ……… of this task must be accomplished carefully.",
+    "soru_metni": "The air conditioning pack 11) ……… temperature regulated air to the cabin;",
+    "secenekler": {
+      "a": "supplies",
+      "b": "discards",
+      "c": "prevents",
+      "d": "blocks"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Supplies' = sağlar/tedarik eder. İklimlendirme paketi kabine sıcaklığı ayarlanmış hava sağlar.",
+    "yanlislar": "B şıkkı atar, C şıkkı engeller, D şıkkı bloke eder anlamına gelir.",
+    "tip": "Akışkan ve hava sistemlerinin temel dağıtım görevleri 'supply' fiiliyle tanımlanır."
+  },
+  {
+    "id": 1112,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The air conditioning pack 11) ……… temperature regulated air to the cabin; it 12) ……… a mix manifold to combine fresh and recirculated air. 13) ……… sensor operates continuously to monitor the zone ducts. If an overheat occurs, the pack valve 14) ……… automatically to isolate the system. Each 15) ……… of this task must be accomplished carefully.",
+    "soru_metni": "it 12) ……… a mix manifold to combine fresh and recirculated air.",
+    "secenekler": {
+      "a": "includes",
+      "b": "excludes",
+      "c": "ignores",
+      "d": "isolates"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Includes' = içerir. Sistem taze ve devridaim havasını birleştirmek için bir karışım manifoldu içerir.",
+    "yanlislar": "B şıkkı hariç tutar, C şıkkı yok sayar, D şıkkı izole eder anlamına gelir.",
+    "tip": "Parça bütün ilişkilerinde 'include' veya 'comprise' yapıları sıklıkla test edilir."
+  },
+  {
+    "id": 1113,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Maintenance operators who perform structural repairs ________ qualified in accordance with the SRM.",
+    "secenekler": {
+      "a": "must be",
+      "b": "would",
+      "c": "could",
+      "d": "are being"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'must be' = olmak zorundadır. Yapısal tamirat yapan teknisyenlerin SRM'e uygun olarak kalifiye/yetkin olması zorunludur.",
+    "yanlislar": "B geçmişe yönelik veya şart bildirir. C yetenek/ihtimal bildirir. D sürekli zaman pasifidir ve kalıcı zorunluluk vermez.",
+    "tip": "Kesin kurallar, standartlar ve yasal zorunluluklar havacılıkta 'must' veya 'shall' ile ifade edilir."
+  },
+  {
+    "id": 1114,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The oxygen masks will deploy automatically ________ a sudden loss of cabin pressurization.",
+    "secenekler": {
+      "a": "during",
+      "b": "in case of",
+      "c": "instead of",
+      "d": "prior to"
+    },
+    "dogru_cevap": "b",
+    "neden_dogru": "'In case of' = ...durumunda/...halinde. Kabin basıncının ani kaybı durumunda oksijen maskeleri otomatik olarak açılacaktır.",
+    "yanlislar": "A şıkkı esnasında, C şıkkı yerine, D şıkkı -den önce anlamına gelir.",
+    "tip": "Acil durum ve arıza senaryoları belirtilirken 'in case of + isim' kalıbı sıkça kullanılır."
+  },
+  {
+    "id": 1115,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If the fire detection loop ________ recently damaged, replace the entire sensing element.",
+    "secenekler": {
+      "a": "has been",
+      "b": "was",
+      "c": "is being",
+      "d": "had"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'recently' zarfı Present Perfect Tense gerektirir. Yangın algılama çevrimi yakın zamanda hasar gördüyse anlamı için pasif olan 'has been' doğrudur.",
+    "yanlislar": "B Past Simple'dır, C şimdiki zaman pasifidir, D tek başına pasif yapı kuramaz.",
+    "tip": "'Recently' ve 'lately' zaman zarfları Present Perfect (has/have been V3) ile doğrudan ilişkilidir."
+  },
+  {
+    "id": 1116,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "All electrical connections inside the ignition unit must be ________ to prevent moisture ingress.",
+    "secenekler": {
+      "a": "sealed",
+      "b": "seal",
+      "c": "sealing",
+      "d": "seals"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'must be + V3' (Passive). Ateşleme ünitesi içindeki tüm elektrik bağlantıları nem girişini önlemek için yalıtılmalıdır (sealed).",
+    "yanlislar": "B yalın fiildir, C -ing takısı almıştır, D tekil geniş zaman fiilidir.",
+    "tip": "Cansız nesnelerin yapılması gereken işlemlerini belirtirken 'must be + V3' pasif yapısı aranır."
+  },
+  {
+    "id": 1117,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If there ________ an unusual noise during engine startup, abort the procedure immediately.",
+    "secenekler": {
+      "a": "is",
+      "b": "are",
+      "c": "will be",
+      "d": "have"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Type 1 Conditional cümlesidir. 'an unusual noise' tekil bir özne olduğu için Present Simple yapıda 'is' kullanılır.",
+    "yanlislar": "B çoğuldur, C 'if' tarafında 'will' doğrudan kullanılmaz, D özne ile uyumsuzdur.",
+    "tip": "Arıza durumlarını ve talimatları bildiren conditional yapılarda 'If there is + tekil isim' yaygındır."
+  },
+  {
+    "id": 1118,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "It is critical ________ that all safety pins are removed prior to flight.",
+    "secenekler": {
+      "a": "to ensure",
+      "b": "ensuring",
+      "c": "ensure",
+      "d": "for ensure"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'It is + sıfat + to V1' kalıbı gereğidir. Uçuştan önce tüm emniyet pimlerinin çıkarıldığından emin olmak (to ensure) kritiktir.",
+    "yanlislar": "B gerund yapısıdır, C yalın fiildir, D uygunsuz edat kullanımıdır.",
+    "tip": "'It is critical / important / necessary + to V1' kalıbı havacılık dökümanlarında standarttır."
+  },
+  {
+    "id": 1119,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The use of incorrect hydraulic fluid will ________ the internal rubber seals of the actuator.",
+    "secenekler": {
+      "a": "damage",
+      "b": "damaging",
+      "c": "damaged",
+      "d": "damages"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'will' modal yapısından sonra fiilin yalın hali (V1) gelmelidir. Yanlış hidrolik sıvısı kullanımı aktüatörün iç contalarına zarar verecektir.",
+    "yanlislar": "B -ing takılıdır, C geçmiş zaman halidir, D geniş zaman üçüncü tekil şahıs takısı almıştır.",
+    "tip": "'will', 'must', 'should', 'can' gibi tüm modal fiillerden sonra gelen fiil mutlaka yalın (V1) olmalıdır."
+  },
+  {
+    "id": 1120,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "This specific regulation applies only to aircraft ________ maximum takeoff weight exceeds fifty tons.",
+    "secenekler": {
+      "a": "whose",
+      "b": "which",
+      "c": "where",
+      "d": "who"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Whose' = -nin sahip olduğu (iyelik bildiren relative pronoun). Maksimum kalkış ağırlığı 50 tonu aşan uçaklar anlamını verir.",
+    "yanlislar": "B nesneleri niteler (iyelik vermez), C mekan niteler, D insanları niteler.",
+    "tip": "Bir nesnenin veya uçağın bir özelliğinden bahsedilirken aidiyet için 'whose + isim' yapısı kullanılır."
+  },
+  {
+    "id": 1121,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Components that ________ extreme temperatures must be manufactured from titanium alloys.",
+    "secenekler": {
+      "a": "are exposed to",
+      "b": "is exposed to",
+      "c": "exposing to",
+      "d": "exposed to"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Components' çoğul bir öznedir. Maruz kalmak anlamındaki pasif yapı çoğul olarak 'are exposed to' şeklinde kurulur.",
+    "yanlislar": "B tekildir, C aktiftir, D ana fiil 'must be' olduğundan yan cümlecik eksik kalır.",
+    "tip": "Relative clause içeren özne-yüklem uyumu sorularında ana öznenin tekil/çoğul durumu kontrol edilmelidir."
+  },
+  {
+    "id": 1122,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Apply a thin layer of grease to make the O-ring ________ into the groove smoothly.",
+    "secenekler": {
+      "a": "slide",
+      "b": "to slide",
+      "c": "sliding",
+      "d": "is sliding"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Make + nesne + V1 (yalın fiil)' ettirgen kalıbı geçerlidir. O-ring'in yuvaya pürüzsüzce kaymasını sağlamak anlamını taşır.",
+    "yanlislar": "B 'to' mastarı almıştır, C -ing takısı almıştır, D şimdiki zaman pasif/aktif karmasıdır.",
+    "tip": "'Make' ve 'Let' fiilleri arkalarından nesne geldiğinde ikinci fiili yalın (bare infinitive) ister."
+  },
+  {
+    "id": 1123,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Any hazardous material that ________ incorrectly can cause a severe chemical burn.",
+    "secenekler": {
+      "a": "is handled",
+      "b": "handles",
+      "c": "is handling",
+      "d": "handled"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Tehlikeli malzeme kendi kendine elleçlenemez, bir kişi tarafından işleme tabi tutulur (pasif). Tekil olduğu için 'is handled' doğrudur.",
+    "yanlislar": "B aktiftir, C şimdiki zaman aktiftir, D geçmiş zaman aktiftir.",
+    "tip": "Malzemelerin kullanımı, taşınması ve depolanması gibi eylemler nesne başta olduğunda daima pasiftir."
+  },
+  {
+    "id": 1124,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "During the structural inspection, two tiny cracks ________ on the rear spar assembly.",
+    "secenekler": {
+      "a": "have been detected",
+      "b": "has been detected",
+      "c": "have detected",
+      "d": "has detected"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'cracks' (çatlaklar) çoğul bir nesnedir ve tespit edilmiştir anlamında Present Perfect Passive çoğul çekimi olan 'have been detected' gereklidir.",
+    "yanlislar": "B tekil pasiftir, C çoğul aktiftir, D tekil aktiftir.",
+    "tip": "Bakım bulguları rapor edilirken çoğul nesneler için 'have been detected / found' kalıpları tercih edilir."
+  },
+  {
+    "id": 1125,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Always perform the operational test in accordance ________ the latest revision of the AMM.",
+    "secenekler": {
+      "a": "with",
+      "b": "to",
+      "c": "by",
+      "d": "for"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'In accordance with' = -e uygun olarak/uyarınca. Ayrılmaz bir edat (prepositional phrase) kalıbıdır.",
+    "yanlislar": "B, C ve D şıklarındaki edatlar bu kalıbı oluşturamazlar.",
+    "tip": "Havacılığın en sık kullanılan edat kalıplarından biri 'in accordance with' yapısıdır."
+  },
+  {
+    "id": 1126,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Do not re-engage the circuit breaker until the electrical short circuit has been cleared.",
+    "secenekler": {
+      "a": "Elektrik kısa devresi giderilene kadar devre kesiciyi tekrar kapatmayın.",
+      "b": "Devre kesiciyi tekrar kapatmadan önce kısa devreyi kontrol edin.",
+      "c": "Elektrik kısa devresi meydana geldiğinde devre kesici otomatik olarak açılır.",
+      "d": "Kısa devre temizlenene kadar devre kesicinin açık bırakılması tavsiye edilir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Do not re-engage...' = tekrar kapatmayın/devreye sokmayın. 'until...' = ...olana kadar. 'electrical short circuit has been cleared' = elektrik kısa devresi giderilene kadar.",
+    "yanlislar": "B şıkkında emir sırası ve fiil yanlıştır. C şıkkı farklı bir geniş zaman cümlesidir. D şıkkı 'tavsiye edilir' ifadesini eklemiştir.",
+    "tip": "'Do not re-engage / reset... until...' yapısı '-ene kadar tekrar devreye sokmayın' şeklinde çevrilir."
+  },
+  {
+    "id": 1127,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "The pressure limits are explicitly defined in the hydraulic system schematics.",
+    "secenekler": {
+      "a": "Basınç limitleri, hidrolik sistem şemalarında açıkça tanımlanmıştır.",
+      "b": "Hidrolik sistem şemalarındaki basınç limitlerinin kontrol edilmesi gerekir.",
+      "c": "Şemalarda gösterilen basınç limitleri hidrolik sistem için geçerlidir.",
+      "d": "Açıkça tanımlanan basınç limitleri hidrolik sistemin içindedir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are explicitly defined' = açıkça tanımlanmıştır. 'in the hydraulic system schematics' = hidrolik sistem şemalarında.",
+    "yanlislar": "B şıkkı 'kontrol edilmesi gerekir' eklemiştir. C ve D şıkları cümlenin edilgen ana yüklemini ve yapısını bozmuştur.",
+    "tip": "'are explicitly defined' ifadesinin tam karşılığı edilgen bir sonla biten 'açıkça tanımlanmıştır' ifadesidir."
+  },
+  {
+    "id": 1128,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "These procedures are mandatory steps requiring strict compliance during emergency operations.",
+    "secenekler": {
+      "a": "Bu prosedürler, acil durum operasyonları sırasında sıkı uyum gerektiren zorunlu adımlardır.",
+      "b": "Acil durumlarda bu prosedürlerin adımlarına sıkı bir şekilde uyulmalıdır.",
+      "c": "Acil durum operasyonları sırasında zorunlu adımların prosedürleri uygulanır.",
+      "d": "Sıkı uyum gerektiren bu prosedürler acil durumlarda hemen yerine getirilmelidir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Cümle bir isim cümlesidir: 'These procedures are mandatory steps...' = Bu prosedürler zorunlu adımlardır. 'requiring strict compliance...' = sıkı uyum gerektiren.",
+    "yanlislar": "B ve D şıkları cümleyi fiil cümlesine (-melidir) çevirmiştir. C şıkkı anlam kayması içermektedir.",
+    "tip": "'...steps requiring...' yapısı sıfat-fiil olarak '...gerektiren adımlar' şeklinde Türkçe'ye çevrilir."
+  },
+  {
+    "id": 1129,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Composite materials are dangerous because they can release toxic airborne fibers when fractured.",
+    "secenekler": {
+      "a": "Kompozit malzemeler tehlikelidir çünkü kırıldıklarında havada yayılan toksik lifler salabilirler.",
+      "b": "Kırıldığında toksik lifler salan kompozit malzemeler oldukça tehlikelidir.",
+      "c": "Kompozit malzemeler tehlikeli olabilir çünkü hasar gördüğünde lifler yayılır.",
+      "d": "Havada yayılan toksik lifler salan kompozit malzemelerin kırılması tehlike yaratır."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are dangerous' = tehlikelidir. 'because' = çünkü. 'they can release toxic airborne fibers' = havada yayılan toksik lifler salabilirler. 'when fractured' = kırıldıklarında.",
+    "yanlislar": "B şıkkı bağlacı elemiştir. C şıkkı 'tehlikeli olabilir' demiştir. D şıkkı cümlenin yapısını tamamen değiştirmiştir.",
+    "tip": "'because' bağlacı düzgün bir '...tehlikelidir çünkü...' yapısı kurulmasını gerektirir."
+  },
+  {
+    "id": 1130,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Discard all contaminated sealants, the used gaskets and all tracking tags.",
+    "secenekler": {
+      "a": "Tüm kontamine olmuş sızdırmazlık malzemelerini, kullanılmış contaları ve tüm takip etiketlerini ıskartaya çıkarın.",
+      "b": "Kontamine sızdırmazlık malzemeleri, kullanılmış contalar ve takip etiketleri atılmalıdır.",
+      "c": "Kullanılmış contalarla birlikte kontamine olmuş tüm malzemelerin ve etiketlerin atılması gerekir.",
+      "d": "Sızdırmazlık malzemelerinin, kullanılmış contaların ve takip etiketlerinin atılması tavsiye edilir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Discard...' emir kipiyle başladığı için karşılığı doğrudan bir emir fiili ('ıskartaya çıkarın' veya 'atın') olmalıdır.",
+    "yanlislar": "B şıkkı pasif gereklilik (-melidir) eklemiştir. C şıkkı 'gerekir' eklemiştir. D şıkkı 'tavsiye edilir' demiştir.",
+    "tip": "Yalın emir fiiliyle başlayan talimatlar Türkçe'ye yine doğrudan emir kipiyle aktarılır."
+  },
+  {
+    "id": 1131,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "There are no signs of thermal discoloration on the turbine casing exterior surface.",
+    "secenekler": {
+      "a": "Türbin gövdesi dış yüzeyinde herhangi bir termal renk değişimi belirtisi yoktur.",
+      "b": "Türbin gövdesinin dış yüzeyinde hiçbir termal renk bozulması bulunamamıştır.",
+      "c": "Termal renk değişimi belirtisi göstermeyen türbin gövdesi dış yüzeyi incelenmelidir.",
+      "d": "Türbin gövdesi dış yüzeyinde termal renk bozulmasına rastlanmamıştır."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'There are no signs...' = ...belirtisi yoktur. 'of thermal discoloration' = termal renk değişimi. 'on the turbine casing exterior surface' = türbin gövdesi dış yüzeyinde.",
+    "yanlislar": "B, C ve D şıkları 'yoktur' ifadesini değiştiren veya ek eylemler katan çeldiricilerdir.",
+    "tip": "'There are no signs / indications of...' kalıbının doğrudan karşılığı '...belirtisi yoktur' şeklindedir."
+  },
+  {
+    "id": 1132,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Eğer bu uyarı işaretine dikkat etmezseniz, ekipmanın ciddi şekilde hasar görmesi meydana gelebilir.",
+    "secenekler": {
+      "a": "If you do not pay attention to this warning sign, serious damage to the equipment can occur.",
+      "b": "Unless you pay attention to this warning sign, serious damage to the equipment will occur.",
+      "c": "If this warning sign is not noticed, equipment can be damaged seriously.",
+      "d": "Should you fail to look at this warning sign, the equipment might damage itself."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Eğer... dikkat etmezseniz' = If you do not pay attention to. 'ekipmanın ciddi şekilde hasar görmesi meydana gelebilir' = serious damage to the equipment can occur.",
+    "yanlislar": "B şıkkı 'will occur' (kesin gerçekleşir) demiştir. C şıkkı pasif kurmuştur. D şıkkı 'damage itself' dönüşlü fiilini kullanmıştır.",
+    "tip": "Havacılık uyarılarında 'If you do not do X, serious damage can occur' standart bir kalıptır."
+  },
+  {
+    "id": 1133,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Statik elektriği boşaltmak için, uçağın gövdesi topraklanmalıdır.",
+    "secenekler": {
+      "a": "To discharge static electricity, the airframe of the aircraft must be grounded.",
+      "b": "For discharging static electricity, the aircraft fuselage should ground.",
+      "c": "To decrease static electricity, you can ground the aircraft fuselage.",
+      "d": "The airframe of the aircraft is grounded to reduce all static electricity."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Statik elektriği boşaltmak için' = To discharge static electricity. 'uçağın gövdesi topraklanmalıdır' = the airframe of the aircraft must be grounded.",
+    "yanlislar": "B şıkkı aktif kurmuştur ('should ground'). C şıkkı 'topraklayabilirsiniz' anlamı taşır. D şıkkı geniş zaman pasifidir, zorunluluk vermez.",
+    "tip": "Amaç bildiren 'To + V1' yapısı ve arkasından gelen zorunlu pasif 'must be + V3' yapısı uyumludur."
+  },
+  {
+    "id": 1134,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Eski keçeyi sökmeden önce, sızdırmazlık yüzeyini tamamen temizleyin.",
+    "secenekler": {
+      "a": "Before you remove the old seal, clean the sealing surface completely.",
+      "b": "Prior to removing the old seal, you must look at the clean sealing surface.",
+      "c": "After removing the old seal, clean the sealing surface completely.",
+      "d": "Clean the sealing surface completely when you are removing the old seal."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Eski keçeyi sökmeden önce' = Before you remove the old seal. 'sızdırmazlık yüzeyini tamamen temizleyin' = clean the sealing surface completely.",
+    "yanlislar": "B şıkkında fiil yanlıştır. C şıkkı 'After' (sonra) demiştir. D şıkkı 'when' (esnasında) zarfını kullanmıştır.",
+    "tip": "Sıralı bakım talimatlarında 'Before you do X, do Y' yapısı en yalın ve doğru anlatımdır."
+  },
+  {
+    "id": 1135,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Kabin kapısı contaları sadece yetkili personel tarafından değiştirilebilir.",
+    "secenekler": {
+      "a": "The cabin door seals can be replaced only by authorized personnel.",
+      "b": "Authorized personnel must replace the cabin door seals only.",
+      "c": "The cabin door seals could be replaced by any personnel.",
+      "d": "Only authorized personnel has replaced the cabin door seals."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'değiştirilebilir' ifadesi pasif bir olasılık/izin belirtir ('can be replaced'). 'sadece yetkili personel tarafından' = only by authorized personnel.",
+    "yanlislar": "B şıkkı aktif bir zorunluluktur. C şıkkı 'herhangi bir personel' diyerek anlamı bozar. D şıkkı yakın geçmiş zaman aktiftir.",
+    "tip": "Yetki ve kabiliyet bildiren edilgen cümlelerde 'can be + V3' aranmalıdır."
+  },
+  {
+    "id": 1136,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Yüksek sıcaklık koruyucu kaplamaya ciddi zarar verebilir.",
+    "secenekler": {
+      "a": "High temperature can cause serious damage to the protective coating.",
+      "b": "High temperatures will damage all protective coating completely.",
+      "c": "The protective coating can be damaged by using high temperature.",
+      "d": "High temperature might have damaged the protective coating."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Yüksek sıcaklık' = High temperature. 'ciddi zarar verebilir' = can cause serious damage to. 'koruyucu kaplamaya' = the protective coating.",
+    "yanlislar": "B şıkkı 'will damage' (kesin zarar verecek) demiştir. C şıkkı pasif kurarak cümlenin odağını kaydırmıştır. D şıkkı geçmişe yönelik ihtimal bildirir.",
+    "tip": "'Can cause serious damage to...' kalıbı 'ciddi zarar verebilir' ifadesinin doğrudan teknik karşılığıdır."
+  },
+  {
+    "id": 1137,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Basınç testi tamamlandıktan sonra en az on dakika boyunca valfi hareket ettirmeyin.",
+    "secenekler": {
+      "a": "Do not operate the valve for at least ten minutes after the pressure test is completed.",
+      "b": "You must not operate the valve ten minutes before the pressure test completes.",
+      "c": "Do not operate the valve when the pressure test is completed for ten minutes.",
+      "d": "The valve should not be operated until ten minutes before the pressure test."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'hareket ettirmeyin/çalıştırmayın' = Do not operate. 'valfi' = the valve. 'basınç testi tamamlandıktan sonra en az on dakika boyunca' = for at least ten minutes after the pressure test is completed.",
+    "yanlislar": "B şıkkı 'before' (önce) demiştir. C şıkkı 'when' kullanmıştır. D şıkkı zamanlama hatası içermektedir.",
+    "tip": "'Do not operate... for at least X minutes after...' bakım prosedürlerinde standart bir zaman/eylem kısıtlaması kalıbıdır."
+  },
+  {
+    "id": 1138,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The mechanic managed to isolate the defective component after consulting the system schematics. Which phrasal verb could be used for the verb \"to isolate\"?",
+    "secenekler": {
+      "a": "separate out",
+      "b": "put off",
+      "c": "call off",
+      "d": "carry out"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Separate out' veya 'isolate' bir şeyi diğerlerinden ayırmak veya izole etmek anlamına gelir.",
+    "yanlislar": "B ertelemek, C iptal etmek, D uygulamak/yerine getirmek anlamına gelir.",
+    "tip": "Arızalı parçayı sistemden soyutlama ve ayırma işlemlerinde 'isolate' veya 'separate out' kullanılır."
+  },
+  {
+    "id": 1139,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The wiring diagram includes a dedicated legend to explain the complex electrical symbols. What is a synonym for the word \"includes\"?",
+    "secenekler": {
+      "a": "comprises",
+      "b": "excludes",
+      "c": "violates",
+      "d": "discards"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Comprises' = içermek/kapsamak anlamına gelir ve 'includes' kelimesinin doğrudan eş anlamlısıdır.",
+    "yanlislar": "B hariç tutar, C ihlal eder, D ıskartaya çıkarır demektir.",
+    "tip": "Döküman ve şemaların içeriği belirtilirken 'include' ve 'comprise' kelimeleri birbirinin yerine geçebilir."
+  },
+  {
+    "id": 1140,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The master warning light is used to demonstrate an immediate hazard in the engine nacelle. What is the synonym for the word \"demonstrate\"?",
+    "secenekler": {
+      "a": "indicate",
+      "b": "demolish",
+      "c": "decrease",
+      "d": "obstruct"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Indicate' = göstermek/işaret etmek anlamına gelir ve teknik olarak 'demonstrate' ile eş anlamlıdır.",
+    "yanlislar": "B yıkmak, C azaltmak, D engellemek anlamına gelir.",
+    "tip": "İkaz ışıklarının ve ekranların durum göstermesi 'indicate' fiili ile ifade edilir."
+  },
+  {
+    "id": 1141,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The advanced emergency system features two independent power networks configured to run together. Which one of the following CANNOT be used for the word \"features\"?",
+    "secenekler": {
+      "a": "invades",
+      "b": "includes",
+      "c": "contains",
+      "d": "incorporates"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Invades' = istila etmek anlamına gelir ve bir sistem özelliğini anlatırken kesinlikle KULLANILAMAZ.",
+    "yanlislar": "B, C ve D şıklarındaki kelimeler 'içermek/barındırmak' anlamında 'features' yerine kullanılabilir.",
+    "tip": "\"Which CANNOT be used\" sorularında teknik ve mantıksal olarak bağlama tamamen ters olan kelime seçilir."
+  },
+  {
+    "id": 1142,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "You must wear appropriate respiratory protection when you spray aircraft primer paints. What is a synonym for the word \"appropriate\"?",
+    "secenekler": {
+      "a": "proper",
+      "b": "defective",
+      "c": "careless",
+      "d": "optional"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Proper' = uygun/doğru anlamına gelir ve 'appropriate' kelimesinin doğrudan eş anlamlısıdır.",
+    "yanlislar": "B kusurlu, C dikkatsiz, D isteğe bağlı anlamına gelir.",
+    "tip": "İş sağlığı ve emniyeti kurallarında 'appropriate' ve 'proper' kelimeleri sıkça eşleşir."
+  },
+  {
+    "id": 1143,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Any contamination in the hydraulic lines could potentially cause a total loss of brake control. What is the synonym for the word \"potentially\"?",
+    "secenekler": {
+      "a": "possibly",
+      "b": "definitely",
+      "c": "rarely",
+      "d": "strictly"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Possibly' = olasılıkla/ihtimal dahilinde anlamına gelir ve 'potentially' kelimesinin teknik eş anlamlısıdır.",
+    "yanlislar": "B kesinlikle, C nadiren, D sıkı bir şekilde demektir.",
+    "tip": "Risk analizlerinde ve arıza olasılıklarında 'potentially' ve 'possibly' çok sık kullanılır."
+  },
+  {
+    "id": 1144,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The line mechanic must check the minimum equipment list (MEL) before releasing the aircraft. What can be used instead of the word \"check\"?",
+    "secenekler": {
+      "a": "consult",
+      "b": "ignore",
+      "c": "discard",
+      "d": "postpone"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Consult' = başvurmak/bakmak anlamına gelir. Manuel veya döküman kontrol etmek anlamında 'check' yerine kullanılabilir.",
+    "yanlislar": "B görmezden gelmek, C atmak, D ertelemek anlamına gelir.",
+    "tip": "MEL, AMM gibi dökümanları inceleme eylemleri için 'consult' veya 'refer to' fiilleri kullanılır."
+  },
+  {
+    "id": 1145,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Replacing the corroded fuselage fasteners is compulsory before the next scheduled flight. What does the word \"compulsory\" mean?",
+    "secenekler": {
+      "a": "mandatory",
+      "b": "optional",
+      "c": "prohibited",
+      "d": "secondary"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Mandatory' = zorunlu anlamına gelir ve 'compulsory' kelimesinin doğrudan teknik karşılığıdır.",
+    "yanlislar": "B isteğe bağlı, C yasaklanmış, D ikincil anlamına gelir.",
+    "tip": "Havacılık kurallarında kaçınılmaz işleri belirtmek için 'compulsory' ve 'mandatory' kelimeleri eş anlamlıdır."
+  },
+  {
+    "id": 1146,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "A Non-Destructive Testing (NDT) inspection is a highly specialized task performed to detect subsurface cracks or defects without altering the structural integrity of the component. Common methods include Eddy Current, Ultrasonic, and Magnetic Particle inspections. Specialized equipment calibrated to strict standards is mandatory for all NDT tasks. Because minor deviations can lead to incorrect data, the operator must hold a valid certification to interpret results.",
+    "soru_metni": "What is the primary benefit of performing an NDT inspection according to the text?",
+    "secenekler": {
+      "a": "It detects hidden defects without changing the component's structural integrity.",
+      "b": "It can be performed without any calibrated testing equipment.",
+      "c": "It modifies the internal structure of the material to make it stronger.",
+      "d": "It allows uncertified operators to analyze and interpret internal data."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin ilk cümlesinde 'detect subsurface cracks or defects without altering the structural integrity' (yapısal bütünlüğü değiştirmeden yüzey altı çatlakları tespit etmek) ifadesi geçmektedir.",
+    "yanlislar": "B şıkkı ekipman gerekmez der (metne ters). C şıkkı yapıyı değiştirdiğini iddia eder. D şıkkı sertifikasız kişilerin yapabileceğini söyler (metne ters).",
+    "tip": "Okuma parçalarında 'primary benefit' veya 'purpose' genellikle ilk cümlede net bir şekilde sunulur."
+  },
+  {
+    "id": 1147,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "A Non-Destructive Testing (NDT) inspection is a highly specialized task performed to detect subsurface cracks or defects without altering the structural integrity of the component. Common methods include Eddy Current, Ultrasonic, and Magnetic Particle inspections. Specialized equipment calibrated to strict standards is mandatory for all NDT tasks. Because minor deviations can lead to incorrect data, the operator must hold a valid certification to interpret results.",
+    "soru_metni": "Why must NDT operators hold a valid certification?",
+    "secenekler": {
+      "a": "Because small deviations can lead to incorrect data interpretation.",
+      "b": "Because the testing equipment cannot be calibrated by regular technicians.",
+      "c": "Because Eddy Current method is the only applicable option for testing.",
+      "d": "Because structural modifications must be done before the inspection."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin son cümlesinde 'Because minor deviations can lead to incorrect data...' (Küçük sapmalar yanlış verilere yol açabileceğinden...) gerekçesi açıkça verilmiştir.",
+    "yanlislar": "B, C ve D şıklarında metinde geçmeyen veya metinle çelişen gerekçeler sunulmuştur.",
+    "tip": "'Why' sorularında metindeki 'Because', 'Since' veya 'As' gibi neden bildiren bağlaç cümleleri doğrudan cevaptır."
+  },
+  {
+    "id": 1148,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "The pitot-static system provides critical airspeed, altitude, and vertical speed data to the flight instruments. It consists of pitot probes that measure ram air pressure and static ports that measure ambient atmospheric pressure. Blockages caused by ice or insects can result in completely erroneous cockpit displays. Therefore, protective covers must be installed over the probes whenever the aircraft is parked on the ground for an extended period.",
+    "soru_metni": "What happens if the pitot probes or static ports become blocked?",
+    "secenekler": {
+      "a": "The cockpit displays can give completely incorrect information.",
+      "b": "The vertical speed data becomes more accurate for the crew.",
+      "c": "The protective covers will deploy automatically on the ground.",
+      "d": "The aircraft instruments switch to a secondary internal vacuum system."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metinde 'Blockages... can result in completely erroneous cockpit displays' (Tıkanmalar tamamen hatalı kokpit göstergelerine yol açabilir) denmektedir.",
+    "yanlislar": "B şıkkı verilerin daha doğru olacağını söyler. C şıkkı kapakların otomatik açılacağını iddia eder. D şıkkı metinde olmayan bir vakum sisteminden bahseder.",
+    "tip": "Metindeki 'erroneous' kelimesinin şıkta 'incorrect' olarak eş anlamlısıyla verilmesi klasik bir sınav stratejisidir."
+  },
+  {
+    "id": 1149,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "The pitot-static system provides critical airspeed, altitude, and vertical speed data to the flight instruments. It consists of pitot probes that measure ram air pressure and static ports that measure ambient atmospheric pressure. Blockages caused by ice or insects can result in completely erroneous cockpit displays. Therefore, protective covers must be installed over the probes whenever the aircraft is parked on the ground for an extended period.",
+    "soru_metni": "According to the passage, when must protective covers be installed?",
+    "secenekler": {
+      "a": "When the aircraft is parked on the ground for a long time.",
+      "b": "Immediately before the flight crew begins the taxi phase.",
+      "c": "Only when severe ice accumulation is detected during flight.",
+      "d": "Whenever the flight instruments show erroneous data parameters."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin son bölümünde 'whenever the aircraft is parked on the ground for an extended period' (uçak uzun bir süre yerde park halinde olduğunda) şartı belirtilmiştir.",
+    "yanlislar": "B taksi öncesini söyler, C uçuş sırasını söyler, D hatalı veri alındığında kapak takılacağını iddia eder; tümü metne aykırıdır.",
+    "tip": "Zaman ve koşul belirten 'whenever', 'as long as' gibi yapılar okuma sorularında kritik ipuçlarıdır."
+  },
+  {
+    "id": 1150,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "A CAUTION note alerts the user that damage to the equipment is possible if the instructions ________ executed carefully.",
+    "secenekler": {
+      "a": "are not",
+      "b": "do not",
+      "c": "will not",
+      "d": "cannot"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Şart cümlesinde 'instructions' (talimatlar) çoğul nesnedir ve 'execute' (yerine getirmek) fiili pasif kurulmalıdır (are not executed = yerine getirilmezse).",
+    "yanlislar": "B şıkkı aktif geniş zaman yardımcı fiilidir (arkasından V1 ister, cümle V3'tür). C ve D şıkları gramere ve anlam akışına uymaz.",
+    "tip": "If clause içindeki edilgen olumsuz yapılar (are not + V3) havacılık ikazlarında en çok test edilen gramer kalıplarındandır."
+  },
+  {
+    "id": 1151,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic power system 1) ……… high-pressure fluid to the flight control actuators; it 2) ……… three independent main lines to prevent total power loss. 3) ……… line operates under a nominal pressure of 3000 psi and 4) ……… in separate zones of the fuselage. Each 5) ……… of the Ram Air Turbine (RAT) provides backup pressure during emergency conditions.",
+    "soru_metni": "The hydraulic power system 1) ……… high-pressure fluid to the flight control actuators;",
+    "secenekler": {
+      "a": "delivers",
+      "b": "exhausts",
+      "c": "obstructs",
+      "d": "neglects"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Delivers' = iletir/dağıtır. Hidrolik güç sistemi, uçuş kumanda aktüatörlerine yüksek basınçlı akışkan iletir.",
+    "yanlislar": "B şıkkı dışarı atar, C şıkkı engeller, D şıkkı ihmal eder anlamına gelir.",
+    "tip": "Sistemlerin akışkan veya güç iletim görevleri tanımlanırken 'deliver', 'supply' veya 'provide' tercih edilir."
+  },
+  {
+    "id": 1152,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic power system 1) ……… high-pressure fluid to the flight control actuators; it 2) ……… three independent main lines to prevent total power loss. 3) ……… line operates under a nominal pressure of 3000 psi and 4) ……… in separate zones of the fuselage. Each 5) ……… of the Ram Air Turbine (RAT) provides backup pressure during emergency conditions.",
+    "soru_metni": "it 2) ……… three independent main lines to prevent total power loss.",
+    "secenekler": {
+      "a": "utilizes",
+      "b": "omits",
+      "c": "isolates",
+      "d": "secludes"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Utilizes' = kullanır/faydalanır. Sistem, toplam güç kaybını önlemek için üç bağımsız ana hat kullanır.",
+    "yanlislar": "B şıkkı dahil etmez/atlamaktadır, C şıkkı izole eder, D şıkkı soyutlar anlamına gelir.",
+    "tip": "Bir sistemin işlevini gerçekleştirmek için sahip olduğu alt bileşenleri kullanması 'utilize' ile ifade edilir."
+  },
+  {
+    "id": 1153,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic power system 1) ……… high-pressure fluid to the flight control actuators; it 2) ……… three independent main lines to prevent total power loss. 3) ……… line operates under a nominal pressure of 3000 psi and 4) ……… in separate zones of the fuselage. Each 5) ……… of the Ram Air Turbine (RAT) provides backup pressure during emergency conditions.",
+    "soru_metni": "3) ……… line operates under a nominal pressure of 3000 psi",
+    "secenekler": {
+      "a": "Each",
+      "b": "All",
+      "c": "Some",
+      "d": "Many"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Each' = her bir. Boşluktan sonra gelen 'line' ismi tekil olduğu ve fiil 'operates' şeklinde tekil çekimlendiği için 'Each' kullanımı doğrudur.",
+    "yanlislar": "B, C ve D şıkları arkalarından mutlaka çoğul isim gerektirir.",
+    "tip": "Tekil sayılabilir isimlerin ve tekil fiillerin öncesinde miktar belirleyici olarak 'Each/Every' kalıbı aranır."
+  },
+  {
+    "id": 1154,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic power system 1) ……… high-pressure fluid to the flight control actuators; it 2) ……… three independent main lines to prevent total power loss. 3) ……… line operates under a nominal pressure of 3000 psi and 4) ……… in separate zones of the fuselage. Each 5) ……… of the Ram Air Turbine (RAT) provides backup pressure during emergency conditions.",
+    "soru_metni": "and 4) ……… in separate zones of the fuselage.",
+    "secenekler": {
+      "a": "is routed",
+      "b": "routes",
+      "c": "are routed",
+      "d": "is routing"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'is routed' = yönlendirilmiştir/hat döşenmiştir. Tekil olan 'line' öznesinin fiziksel olarak gövdede izlediği yolu belirtmek için edilgen (passive) yapı kullanılmalıdır.",
+    "yanlislar": "B aktiftir, C çoğuldur, D şimdiki zaman aktif çekimidir.",
+    "tip": "Boru hatları, kablolar ve tesisatların geçtiği yollar belirtilirken 'be routed' pasif kalıbı kullanılır."
+  },
+  {
+    "id": 1155,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The hydraulic power system 1) ……… high-pressure fluid to the flight control actuators; it 2) ……… three independent main lines to prevent total power loss. 3) ……… line operates under a nominal pressure of 3000 psi and 4) ……… in separate zones of the fuselage. Each 5) ……… of the Ram Air Turbine (RAT) provides backup pressure during emergency conditions.",
+    "soru_metni": "Each 5) ……… of the Ram Air Turbine (RAT) provides backup pressure",
+    "secenekler": {
+      "a": "blade",
+      "b": "leak",
+      "c": "fastener",
+      "d": "clamp"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Blade' = pal/kanat. Ram Air Turbine (RAT) ünitesinin her bir kanadı, acil durumlarda yedek basınç sağlamak için rüzgarla döner.",
+    "yanlislar": "B şıkkı kaçak, C şıkkı bağlantı elemanı, D şıkkı kelepçe anlamına gelir.",
+    "tip": "Türbin, fan ve kompresör gibi dönen komponentlerin parçalarından bahsederken 'blade' terimi yaygındır."
+  },
+  {
+    "id": 1156,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The landing gear system is 6) ……… inspected to guarantee safe touchdown operations; it 7) ……… a heavy-duty shock strut that absorbs mechanical impacts. 8) ……… cylinder housing is sealed tightly to prevent oil leakage, which 9) ……… near the lower brake lines. Each 10) ……… of the retraction test confirms correct locking signals.",
+    "soru_metni": "The landing gear system is 6) ……… inspected to guarantee safe touchdown operations;",
+    "secenekler": {
+      "a": "regularly",
+      "b": "regular",
+      "c": "entire",
+      "d": "absolute"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Regularly' = düzenli olarak (zarf). Pasif bir yüklem olan 'is inspected' yapısını nitelemek için bir durum/zaman zarfı kullanılmalıdır.",
+    "yanlislar": "B şıkkı sıfattır, C şıkkı sıfattır (tüm/bütün), D şıkkı sıfattır (kesin).",
+    "tip": "Bakım ve kontrol işlemlerinin periyodik sıklığını belirtmek için fiilden önce zarflar (-ly) tercih edilir."
+  },
+  {
+    "id": 1157,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The landing gear system is 6) ……… inspected to guarantee safe touchdown operations; it 7) ……… a heavy-duty shock strut that absorbs mechanical impacts. 8) ……… cylinder housing is sealed tightly to prevent oil leakage, which 9) ……… near the lower brake lines. Each 10) ……… of the retraction test confirms correct locking signals.",
+    "soru_metni": "it 7) ……… a heavy-duty shock strut that absorbs mechanical impacts.",
+    "secenekler": {
+      "a": "incorporates",
+      "b": "installs",
+      "c": "ignores",
+      "d": "isolates"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Incorporates' = bünyesinde barındırır/içerir. İniş takımı sistemi mekanik darbeleri sönümleyen ağır hizmet tipi bir amortisör dikmesini içinde barındırır.",
+    "yanlislar": "B şıkkı monte eder, C şıkkı yok sayar, D şıkkı izole eder anlamına gelir.",
+    "tip": "Bir mekanik grubun ana parçayı içermesi veya ona sahip olması 'incorporate' fiiliyle sıkça anlatılır."
+  },
+  {
+    "id": 1158,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The landing gear system is 6) ……… inspected to guarantee safe touchdown operations; it 7) ……… a heavy-duty shock strut that absorbs mechanical impacts. 8) ……… cylinder housing is sealed tightly to prevent oil leakage, which 9) ……… near the lower brake lines. Each 10) ……… of the retraction test confirms correct locking signals.",
+    "soru_metni": "8) ……… cylinder housing is sealed tightly to prevent oil leakage,",
+    "secenekler": {
+      "a": "Every",
+      "b": "All",
+      "c": "Some",
+      "d": "Both"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Every' = her bir. Boşluktan sonra gelen 'cylinder housing' tekil bir isim tamlamasıdır ve fiil 'is' şeklinde tekil çekimlenmiştir.",
+    "yanlislar": "B, C ve D şıklarındaki miktar belirleyiciler arkalarından çoğul yapı getirilmesini şart koşar.",
+    "tip": "Özne ile yüklem arasındaki tekillik-çoğulluk uyumu, doğru belirleyicinin seçilmesini sağlar."
+  },
+  {
+    "id": 1159,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The landing gear system is 6) ……… inspected to guarantee safe touchdown operations; it 7) ……… a heavy-duty shock strut that absorbs mechanical impacts. 8) ……… cylinder housing is sealed tightly to prevent oil leakage, which 9) ……… near the lower brake lines. Each 10) ……… of the retraction test confirms correct locking signals.",
+    "soru_metni": "which 9) ……… near the lower brake lines.",
+    "secenekler": {
+      "a": "is located",
+      "b": "locates",
+      "c": "are located",
+      "d": "is locating"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'is located' = yer almaktadır. Sızıntı (leakage) veya ilgili bölge cansız olduğundan edilgen (passive) olarak konumlandırılmalıdır ve tekil yapıya uygundur.",
+    "yanlislar": "B aktiftir, C çoğuldur, D şimdiki zaman aktif çekimdir.",
+    "tip": "Uçak üzerindeki parça veya bölgelerin yer tayini 'be located' veya 'be situated' kalıbı ile gerçekleştirilir."
+  },
+  {
+    "id": 1160,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The landing gear system is 6) ……… inspected to guarantee safe touchdown operations; it 7) ……… a heavy-duty shock strut that absorbs mechanical impacts. 8) ……… cylinder housing is sealed tightly to prevent oil leakage, which 9) ……… near the lower brake lines. Each 10) ……… of the retraction test confirms correct locking signals.",
+    "soru_metni": "Each 10) ……… of the retraction test confirms correct locking signals.",
+    "secenekler": {
+      "a": "phase",
+      "b": "gasket",
+      "c": "wire",
+      "d": "hose"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Phase' = aşama/evre. Toplama/katlanma testinin (retraction test) her bir aşaması doğru kilitlenme sinyallerini doğrular.",
+    "yanlislar": "B şıkkı conta, C şıkkı kablo, D şıkkı hortum anlamına gelir.",
+    "tip": "Test ve fonksiyonel kontrollerin adımları ifade edilirken 'phase', 'step' veya 'stage' sözcükleri seçilir."
+  },
+  {
+    "id": 1161,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Technicians performing avionic checks ________ wear ESD wrist straps to avoid damaging sensitive microcircuits.",
+    "secenekler": {
+      "a": "must",
+      "b": "would",
+      "c": "could",
+      "d": "are to being"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'must' = -meli/-malı (kesin zorunluluk). Hassas mikro devrelere zarar vermemek için aviyonik kontrolleri yapan teknisyenlerin ESD bilekliği takması zorunludur.",
+    "yanlislar": "B geçmiş zaman veya koşul bildirir, C ihtimal bildirir, D hatalı bir pasif yapıdır.",
+    "tip": "Elektrostatik deşarj (ESD) koruması gibi kritik emniyet kuralları 'must' ya da 'shall' ile verilir."
+  },
+  {
+    "id": 1162,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The emergency slide will deploy automatically ________ the door is opened while the system is armed.",
+    "secenekler": {
+      "a": "if",
+      "b": "unless",
+      "c": "instead of",
+      "d": "prior to"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'If' = eğer (koşul bağlacı). Sistem armed (kurulu) konumdayken kapı açılırsa acil durum kaydırağı otomatik olarak patlayacaktır.",
+    "yanlislar": "B -medikçe anlamına gelir (anlamı bozar), C yerine anlamına gelir, D -den önce anlamına gelen bir edattır.",
+    "tip": "Otomatik devreye giren emniyet sistemlerinin tetiklenme şartları 'If' bağlacıyla belirtilir."
+  },
+  {
+    "id": 1163,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If the anti-ice valve ________ recently replaced, verify its operation using the flight deck overhead switches.",
+    "secenekler": {
+      "a": "has been",
+      "b": "was",
+      "c": "is being",
+      "d": "had"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Recently' zarfı Present Perfect Tense gerektirir. Anti-ice (buz önleme) valfi yakın zamanda değiştirildiyse anlamı için pasif olan 'has been' doğrudur.",
+    "yanlislar": "B Past Simple pasifidir, C şimdiki zaman pasifidir, D tek başına edilgen yapı kuramaz.",
+    "tip": "Yakın zamanda tamamlanmış bakım işlerini belirtirken 'recently + Present Perfect Passive' kombinasyonu aranmalıdır."
+  },
+  {
+    "id": 1164,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The main battery toggle switch must be ________ before connecting any external ground power unit.",
+    "secenekler": {
+      "a": "opened",
+      "b": "open",
+      "c": "opening",
+      "d": "opens"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'must be + V3' (Passive). Harici yer güç ünitesi bağlanmadan önce ana batarya şalteri açılmalıdır (açık konuma getirilmelidir).",
+    "yanlislar": "B sıfat veya yalın fiildir, C -ing takısı almıştır, D üçüncü tekil şahıs takısıdır.",
+    "tip": "Şalter ve valflerin getirilmesi gereken konumlar pasif yüklemlerle ('must be opened/closed') ifade edilir."
+  },
+  {
+    "id": 1165,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If there ________ an indicator discrepancy during the pre-flight check, notify the maintenance supervisor.",
+    "secenekler": {
+      "a": "is",
+      "b": "are",
+      "c": "will be",
+      "d": "have"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Type 1 Conditional yapısıdır. 'an indicator discrepancy' (bir gösterge uyumsuzluğu) tekil bir özne olduğu için geniş zamanda 'is' kullanılır.",
+    "yanlislar": "B çoğuldur, C 'if' kısmında 'will' kullanılmaz, D özne ile uyumsuzdur.",
+    "tip": "Uçuş öncesi kontrollerdeki arıza tespit şartları 'If there is + tekil isim' kalıbıyla oluşturulur."
+  },
+  {
+    "id": 1166,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "It is important ________ the torque limits specified in the maintenance manual to prevent bolt failure.",
+    "secenekler": {
+      "a": "to observe",
+      "b": "observing",
+      "c": "observe",
+      "d": "for observe"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'It is + sıfat + to V1' kalıbı geçerlidir. Cıvata hasarını önlemek için bakım el kitabında belirtilen tork limitlerine uymak (to observe) önemlidir.",
+    "yanlislar": "B gerund halidir, C yalın fiildir, D dilbilgisi kurallarına aykırıdır.",
+    "tip": "'It is mandatory / vital / important + to V1' kalıbı el kitaplarındaki standart uyarı şablonudur."
+  },
+  {
+    "id": 1167,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Severe vibration within the engine core will ________ the structural life of the bearing assemblies.",
+    "secenekler": {
+      "a": "reduce",
+      "b": "reducing",
+      "c": "reduced",
+      "d": "reduces"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'will' modal yapısının arkasından fiilin yalın hali (V1) gelmelidir. Motor çekirdeğindeki şiddetli titreşim rulman gruplarının yapısal ömrünü azaltacaktır.",
+    "yanlislar": "B -ing takılıdır, C geçmiş zaman halidir, D geniş zaman takısı almıştır.",
+    "tip": "Geleceğe yönelik teknik etkileri bildiren 'will + V1' yapısında araya hiçbir ek giremez."
+  },
+  {
+    "id": 1168,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "This quality directive applies to facilities ________ primary function involves calibrated tool maintenance.",
+    "secenekler": {
+      "a": "whose",
+      "b": "which",
+      "c": "where",
+      "d": "who"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Whose' = -nin sahip olduğu (iyelik bildiren ilgi zamiri). Temel işlevi kalibreli takım bakımı olan tesislere anlamını karşılar.",
+    "yanlislar": "B iyelik bildirmeyen nesne niteleyicisidir, C mekan bildirir, D insanları niteler.",
+    "tip": "Bir kurumun, nesnenin veya uçağın bir özelliğine aidiyet atfederken 'whose + isim' kalıbı kullanılır."
+  },
+  {
+    "id": 1169,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Avionics components that ________ moisture must be dried completely before installation.",
+    "secenekler": {
+      "a": "are exposed to",
+      "b": "is exposed to",
+      "c": "exposing to",
+      "d": "exposed to"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'components' çoğul bir öznedir. Neme maruz kalan bileşenler anlamı için çoğul pasif yapı olan 'are exposed to' getirilmelidir.",
+    "yanlislar": "B tekildir, C aktiftir, D ana fiil 'must be dried' olduğundan yan cümle yarım kalır.",
+    "tip": "Relative clause içeren yapılarda niteleme yapılan kelimenin tekil veya çoğul durumu yüklemi belirler."
+  },
+  {
+    "id": 1170,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Adjust the tension regulator to make the steel cable ________ through the pulleys freely.",
+    "secenekler": {
+      "a": "move",
+      "b": "to move",
+      "c": "moving",
+      "d": "is moving"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Make + nesne + V1' ettirgen (causative) kalıbı geçerlidir. Çelik kablonon makaralar arasından serbestçe hareket etmesini sağlamak anlamını taşır.",
+    "yanlislar": "B 'to' almıştır, C -ing almıştır, D şimdiki zaman çekimidir.",
+    "tip": "'Make' ettirgen fiili kendisinden sonra gelen eylemi ek almamış yalın halde (bare infinitive) ister."
+  },
+  {
+    "id": 1171,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Any fuel pump that ________ without proper lubrication will overheat within a few minutes.",
+    "secenekler": {
+      "a": "is operated",
+      "b": "operates",
+      "c": "operating",
+      "d": "operated"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Yakıt pompası kendi kendine çalıştırılamaz, sistem veya operatör tarafından çalıştırılır (pasif). Tekil özne olduğu için 'is operated' uygundur.",
+    "yanlislar": "B aktiftir, C fiilimsidir, D geçmiş zaman aktiftir.",
+    "tip": "Mekanik parçaların işletilmesi ve çalıştırılması süreçleri nesne odaklı olduğundan pasiftir."
+  },
+  {
+    "id": 1172,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "During the pre-flight walkaround, three loose rivets ________ on the lower wing panel surface.",
+    "secenekler": {
+      "a": "were discovered",
+      "b": "was discovered",
+      "c": "have discovered",
+      "d": "has discovered"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'rivets' (perçinler) çoğul bir öznedir ve geçmişte yapılan kontrol esnasında keşfedildikleri için 'were discovered' çoğul pasif yapısı doğrudur.",
+    "yanlislar": "B tekil pasiftir, C çoğul aktiftir, D tekil aktiftir.",
+    "tip": "Bakım bulguları ve hasar tespitleri rapor edilirken çoğul nesneler için geçmiş zaman pasif ('were found/discovered') seçilir."
+  },
+  {
+    "id": 1173,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Clean the area around the filter cap in accordance ________ the standard cleaning procedures.",
+    "secenekler": {
+      "a": "with",
+      "b": "to",
+      "c": "by",
+      "d": "for"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'In accordance with' = -e uygun olarak/uyarınca. Kalıplaşmış ve bölünemez bir edat öbeğidir.",
+    "yanlislar": "B, C ve D şıklarındaki edatlar bu teknik kalıbı tamamlayamazlar.",
+    "tip": "Prosedür ve standartlara uygunluk belirtilirken daima 'with' edatı ile 'in accordance with' kurulur."
+  },
+  {
+    "id": 1174,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Do not apply electrical power until the safety grounding cable has been attached to the airframe.",
+    "secenekler": {
+      "a": "Emniyet topraklama kablosu uçak gövdesine bağlanana kadar elektrik gücü uygulamayın.",
+      "b": "Elektrik gücü uygulamadan önce topraklama kablosunun sağlamlığını kontrol edin.",
+      "c": "Emniyet topraklama kablosu gövdeden ayrıldığında elektrik gücü otomatik olarak kesilir.",
+      "d": "Kablo gövdeye bağlanır bağlanmaz elektrik gücünün verilmesi tavsiye edilmektedir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Do not apply...' = uygulamayın. 'until...' = ...olana kadar. 'safety grounding cable has been attached' = emniyet topraklama kablosu bağlanana kadar.",
+    "yanlislar": "B şıkkında kontrol emri verilmiştir. C şıkkı geniş zaman otomatik bir eylemden bahseder. D şıkkı tavsiye ifadesi eklemiştir.",
+    "tip": "'Do not... until... has been V3' kalıbı teknik çevirilerde '-ene kadar ... yapmayın' olarak aktarılır."
+  },
+  {
+    "id": 1175,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "The temperature limits are strictly monitored by the electronic engine control unit.",
+    "secenekler": {
+      "a": "Sıcaklık limitleri, elektronik motor kontrol ünitesi tarafından sıkı bir şekilde izlenir.",
+      "b": "Elektronik motor kontrol ünitesindeki sıcaklık limitlerinin sık sık ayarlanması gerekir.",
+      "c": "Motor kontrol ünitesi sıcaklık limitlerini sadece acil durumlarda kontrol etmektedir.",
+      "d": "Sıkı bir şekilde izlenen sıcaklık limitleri motor kontrol ünitesinin hafızasındadır."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are strictly monitored' = sıkı bir şekilde izlenir. 'by the electronic engine control unit' = elektronik motor kontrol ünitesi tarafından.",
+    "yanlislar": "B şıkkı 'ayarlanması gerekir' demiştir. C şıkkı 'sadece acil durumlarda' ifadesini uydurmuştur. D şıkkı cümlenin pasif yüklemini bozmuştur.",
+    "tip": "Tarafından anlamına gelen 'by' kelimesi Türkçe'ye edilgen çatılı bir yüklemle (-izlenir) yansıtılır."
+  },
+  {
+    "id": 1176,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "These steps are critical procedures requiring immediate action during a thermal runaway condition.",
+    "secenekler": {
+      "a": "Bu adımlar, bir termal kaçak durumu sırasında acil eylem gerektiren kritik prosedürlerdir.",
+      "b": "Termal kaçak durumunda bu adımların acil bir şekilde tamamlanması zorunludur.",
+      "c": "Termal kaçak meydana geldiğinde kritik prosedürlerin adımları hemen uygulanır.",
+      "d": "Acil eylem gerektiren bu prosedürler termal kaçak durumunda hemen iptal edilmelidir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Bu bir tanım/isim cümlesidir: 'These steps are critical procedures...' = Bu adımlar kritik prosedürlerdir. 'requiring immediate action...' = acil eylem gerektiren.",
+    "yanlislar": "B ve C şıkları fiil cümlesine dönüştürmüştür. D şıkkı 'iptal edilmelidir' diyerek anlamı tamamen tersine çevirmiştir.",
+    "tip": "'...procedures requiring...' yapısı sıfat-fiil öbeği olarak '...gerektiren prosedürler' şeklinde çevrilir."
+  },
+  {
+    "id": 1177,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Titanium components are preferred because they can withstand extreme vibration without cracking.",
+    "secenekler": {
+      "a": "Titanyum bileşenler tercih edilir çünkü çatlamadan aşırı titreşime dayanabilirler.",
+      "b": "Çatlamaya karşı dayanıklı olan titanyum bileşenlerin kullanımı oldukça yaygındır.",
+      "c": "Titanyum bileşenler aşırı titreşime maruz kaldıklarında çatlamayı önlemek için seçilir.",
+      "d": "Aşırı titreşime çatlamadan dayanan titanyum bileşenlerin kontrol edilmesi gerekir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are preferred' = tercih edilir. 'because' = çünkü. 'they can withstand extreme vibration' = aşırı titreşime dayanabilirler. 'without cracking' = çatlamadan.",
+    "yanlislar": "B şıkkı 'çünkü' bağlacını atmıştır. C şıkkı 'önlemek için seçilir' demiştir. D şıkkı 'kontrol edilmesi gerekir' ifadesini eklemiştir.",
+    "tip": "'because' ile bağlanan neden sonuç cümleleri Türkçe'de '...tercih edilir çünkü...' yapısıyla birebir eşleşir."
+  },
+  {
+    "id": 1178,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Replace all worn fasteners, the damaged clamps and all defective washers.",
+    "secenekler": {
+      "a": "Tüm aşınmış bağlantı elemanlarını, hasarlı kelepçeleri ve tüm kusurlu pulları değiştirin.",
+      "b": "Aşınmış bağlantı elemanları, hasarlı kelepçeler ve kusurlu pullar değiştirilmelidir.",
+      "c": "Hasarlı kelepçelerle birlikte aşınmış tüm pulların ve bağlantıların yenilenmesi gerekir.",
+      "d": "Bağlantı elemanlarının, kelepçelerin ve pulların hasar durumuna göre değiştirilmesi tavsiye edilir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Replace...' emir fiiliyle başladığı için Türkçe karşılığı da doğrudan net bir emir yüklemi ('değiştirin') olmalıdır.",
+    "yanlislar": "B şıkkı gereklilik kipi kullanmıştır. C şıkkı 'yenilenmesi gerekir' demiştir. D şıkkı 'tavsiye edilir' ifadesini eklemiştir.",
+    "tip": "AMM el kitaplarındaki yalın emir yapıları Türkçe'ye doğrudan emir kipiyle aktarılmalıdır."
+  },
+  {
+    "id": 1179,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "There are no signs of fluid leakage on the actuator piston rod assembly.",
+    "secenekler": {
+      "a": "Aktüatör piston mili grubunda herhangi bir akışkan sızıntısı belirtisi yoktur.",
+      "b": "Aktüatör piston milinin üzerinde hiçbir hidrolik kaçağı tespit edilememiştir.",
+      "c": "Akışkan sızıntısı belirtisi göstermeyen aktüatör piston mili grubu sökülmelidir.",
+      "d": "Aktüatör piston mili grubunda hidrolik sızıntısına rastlanmadığı rapor edilmiştir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'There are no signs...' = ...belirtisi yoktur. 'of fluid leakage' = akışkan sızıntısı. 'on the actuator piston rod assembly' = aktüatör piston mili grubunda.",
+    "yanlislar": "B, C ve D şıkları 'yoktur' ifadesini 'tespit edilememiştir', 'sökülmelidir' gibi farklı fiillerle değiştiren çeldiricilerdir.",
+    "tip": "'There are no signs of...' kalıbının teknik dildeki tam ve yalın karşılığı '...belirtisi yoktur' şeklindedir."
+  },
+  {
+    "id": 1180,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Eğer bu pimi sökmezseniz, iniş takımı yukarı katlanamaz.",
+    "secenekler": {
+      "a": "If you do not remove this pin, the landing gear cannot retract.",
+      "b": "Unless you remove this pin, the landing gear will retract easily.",
+      "c": "If this pin is not noticed, the landing gear cannot extend.",
+      "d": "Should you fail to look at this pin, the landing gear might lock."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Eğer... sökmezseniz' = If you do not remove. 'bu pimi' = this pin. 'iniş takımı yukarı katlanamaz' = the landing gear cannot retract.",
+    "yanlislar": "B şıkkında 'will retract easily' (kolayca katlanır) denmiştir. C şıkkı 'extend' (aşağı açılmak) demiştir. D şıkkı anlamı tamamen değiştiren kelimeler içerir.",
+    "tip": "İniş takımının yukarı katlanma eylemi 'retract', aşağı açılma eylemi ise 'extend' kelimesiyle verilir."
+  },
+  {
+    "id": 1181,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Basıncı tahliye etmek için, tahliye valfi yavaşça açılmalıdır.",
+    "secenekler": {
+      "a": "To relieve the pressure, the relief valve must be opened slowly.",
+      "b": "For relieving the pressure, the relief valve should open fast.",
+      "c": "To decrease the pressure, you can open the relief valve immediately.",
+      "d": "The relief valve is opened slowly to reduce all internal pressure."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Basıncı tahliye etmek için' = To relieve the pressure. 'tahliye valfi yavaşça açılmalıdır' = the relief valve must be opened slowly.",
+    "yanlislar": "B şıkkı 'fast' (hızlı) demiştir ve aktiftir. C şıkkı 'açabilirsiniz' anlamı taşır. D şıkkı geniş zaman pasifidir zorunluluk vermez.",
+    "tip": "Amaç bildiren 'To + V1' zarf yapısı ile gereklilik pasif yapısı olan 'must be + V3' uyumu esastır."
+  },
+  {
+    "id": 1182,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Yeni filtreyi takmadan önce, yuvayı uygun bir solventle temizleyin.",
+    "secenekler": {
+      "a": "Before you install the new filter, clean the housing with an approved solvent.",
+      "b": "Prior to installing the new filter, you must look at the approved solvent.",
+      "c": "After installing the new filter, clean the housing with any solvent.",
+      "d": "Clean the housing with an approved solvent when you are removing the filter."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Yeni filtreyi takmadan önce' = Before you install the new filter. 'yuvayı uygun bir solventle temizleyin' = clean the housing with an approved solvent.",
+    "yanlislar": "B şıkkında 'solventi görmelisiniz' gibi hatalı bir anlam vardır. C şıkkı 'After' (sonra) demiştir. D şıkkı sökme esnasından bahseder.",
+    "tip": "Sıralı operasyonel talimatlarda 'Before you do X, do Y' şablonu kullanılır."
+  },
+  {
+    "id": 1183,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Bu test prosedürü sadece kalifiye teknisyenler tarafından yürütülebilir.",
+    "secenekler": {
+      "a": "This test procedure can be conducted only by qualified technicians.",
+      "b": "Qualified technicians must conduct this test procedure only.",
+      "c": "This test procedure could be conducted by any available personnel.",
+      "d": "Only qualified technicians has conducted this test procedure today."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'yürütülebilir' ifadesi pasif bir yetki/olasılık bildirir ('can be conducted'). 'sadece kalifiye teknisyenler tarafından' = only by qualified technicians.",
+    "yanlislar": "B şıkkı aktif bir zorunluluk cümlesidir. C şıkkı 'herhangi bir personel' diyerek kuralı bozar. D şıkkı Present Perfect aktif bir yapıdır.",
+    "tip": "Yeterlilik ve izin bildiren edilgen teknik ifadelerde 'can be + V3' yapısı önceliklidir."
+  },
+  {
+    "id": 1184,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Aşırı torklama vidanın dişlerine kalıcı zarar verebilir.",
+    "secenekler": {
+      "a": "Overtorqueing can cause permanent damage to the threads of the screw.",
+      "b": "Overtorqueing will damage all threads of the screw completely.",
+      "c": "The screw threads can be damaged by using a small torque value.",
+      "d": "Overtorqueing might have damaged the threads of the screw yesterday."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Aşırı torklama' = Overtorqueing. 'kalıcı zarar verebilir' = can cause permanent damage to. 'vidanın dişlerine' = the threads of the screw.",
+    "yanlislar": "B şıkkı kesinlik ('will') bildirir. C şıkkı düşük torktan bahseder. D şıkkı geçmişe yönelik bir tahmin yürütür.",
+    "tip": "'Can cause permanent damage to...' ifadesi 'kalıcı zarar verebilir' uyarısının standart karşılığıdır."
+  },
+  {
+    "id": 1185,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Sızdırmazlık macunu tamamen kuruduktan sonra paneli yerine monte edin.",
+    "secenekler": {
+      "a": "Install the panel after the sealant is completely cured.",
+      "b": "You must remove the panel before the sealant cures completely.",
+      "c": "Install the panel when you are curing the sealant completely.",
+      "d": "The panel should not be installed until the sealant starts to wet."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'monte edin' = Install the panel. 'sızdırmazlık macunu tamamen kuruduktan (kürlendikten) sonra' = after the sealant is completely cured.",
+    "yanlislar": "B şıkkı 'paneli sökün' der ve 'before' kullanır. C şıkkı kurutma esnasından bahseder. D şıkkı ıslanana kadar kurulmamalıdır diyerek anlamı bozar.",
+    "tip": "Kimyasalların kuruma/katılaşma işlemi havacılık İngilizcesinde 'cure' fiili ile karşılanır."
+  },
+  {
+    "id": 1186,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The mechanic had to adjust the tension values after completing the inspection. Which phrasal verb could be used for the verb \"to adjust\"?",
+    "secenekler": {
+      "a": "set up",
+      "b": "put off",
+      "c": "call off",
+      "d": "carry out"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Set up' veya 'adjust' bir sistemi veya değeri belirli bir standarda göre ayarlamak, kurmak anlamına gelir.",
+    "yanlislar": "B ertelemek, C iptal etmek, D uygulamak/yürütmek anlamına gelen phrasal verb yapılardır.",
+    "tip": "Sistem değerlerinin ayarlanması ve kalibrasyon işlemlerinde 'adjust' veya 'set up' tercih edilir."
+  },
+  {
+    "id": 1187,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The technician must inspect the fuel manifold for any evidence of corrosion. What is a synonym for the word \"inspect\"?",
+    "secenekler": {
+      "a": "examine",
+      "b": "ignore",
+      "c": "discard",
+      "d": "contaminate"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Examine' = incelemek/tetkik etmek anlamına gelir ve 'inspect' kelimesinin doğrudan teknik eş anlamlısıdır.",
+    "yanlislar": "B görmezden gelmek, C ıskartaya çıkarmak, D kirletmek anlamına gelir.",
+    "tip": "Gözle veya cihazla yapılan kontrol eylemlerinde 'inspect' ve 'examine' eş anlamlı olarak sıkça sorgulanır."
+  },
+  {
+    "id": 1188,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The backup generator is designed to supply electricity if the primary network fails. What is the synonym for the word \"supply\"?",
+    "secenekler": {
+      "a": "provide",
+      "b": "consume",
+      "c": "decrease",
+      "d": "obstruct"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Provide' = sağlamak/tedarik etmek anlamına gelir ve 'supply' kelimesinin tam karşılığıdır.",
+    "yanlislar": "B tüketmek, C azaltmak, D engellemek anlamına gelen kelimelerdir.",
+    "tip": "Akışkan, hava veya elektrik enerjisi verme durumlarında 'supply' ve 'provide' kelimeleri birbiri yerine kullanılır."
+  },
+  {
+    "id": 1189,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The latest maintenance manual contains a list of approved chemical cleaning agents. Which one of the following CANNOT be used for the word \"contains\"?",
+    "secenekler": {
+      "a": "excludes",
+      "b": "includes",
+      "c": "comprises",
+      "d": "incorporates"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Excludes' = hariç tutmak anlamına gelir ve içermek/barındırmak anlamına gelen 'contains' kelimesinin zıttıdır (KULLANILAMAZ).",
+    "yanlislar": "B, C ve D şıkları 'içermek' anlamında 'contains' ile eş anlamlı olarak kullanılabilir.",
+    "tip": "\"CANNOT be used\" olumsuz soru köklerinde bağlama tamamen zıt anlamı veren şık tespit edilmelidir."
+  },
+  {
+    "id": 1190,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "It is essential to use proper tools when removing the turbine blade assemblies. What is a synonym for the word \"proper\"?",
+    "secenekler": {
+      "a": "appropriate",
+      "b": "defective",
+      "c": "optional",
+      "d": "hazardous"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Appropriate' = uygun/doğru anlamına gelir ve 'proper' kelimesinin havacılıktaki en yaygın teknik karşılığıdır.",
+    "yanlislar": "B kusurlu, C isteğe bağlı, D tehlikeli demektir.",
+    "tip": "Takım ve malzeme seçim standartlarında 'proper' ve 'appropriate' ikilisi sürekli eşleşir."
+  },
+  {
+    "id": 1191,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Operating the radar unit on the ground could potentially injure nearby ground staff. What is the synonym for the word \"potentially\"?",
+    "secenekler": {
+      "a": "possibly",
+      "b": "strictly",
+      "c": "rarely",
+      "d": "definitely"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Possibly' = ihtimal dahilinde/olası olarak anlamına gelir ve 'potentially' kelimesinin yerini tutabilir.",
+    "yanlislar": "B sıkı bir şekilde, C nadiren, D kesinlikle anlamına gelen zarflardır.",
+    "tip": "Risk ve emniyet uyarılarında olası tehlikeleri belirtmek için 'potentially' veya 'possibly' kullanılır."
+  },
+  {
+    "id": 1192,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The line crew should refer to the fault isolation manual (FIM) to solve the electrical issue. What can be used instead of \"refer to\"?",
+    "secenekler": {
+      "a": "consult",
+      "b": "ignore",
+      "c": "discard",
+      "d": "postpone"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Consult' = başvurmak/danışmak anlamına gelir. Bir kılavuza bakmayı ifade ederken 'refer to' yerine kullanılabilir.",
+    "yanlislar": "B görmezden gelmek, C atmak, D ertelemek demektir.",
+    "tip": "Teknik dokümanların, kılavuzların incelenmesi eyleminde 'refer to' ve 'consult' eş anlamlıdır."
+  },
+  {
+    "id": 1193,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Adherence to the daily inspection schedule is mandatory for all fleet operations. What does the word \"mandatory\" mean?",
+    "secenekler": {
+      "a": "compulsory",
+      "b": "optional",
+      "c": "forbidden",
+      "d": "secondary"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Compulsory' = zorunlu anlamına gelir ve 'mandatory' kelimesinin doğrudan teknik karşılığıdır.",
+    "yanlislar": "B isteğe bağlı, C yasaklanmış, D ikincil anlamına gelmektedir.",
+    "tip": "Uluaslararası havacılık otoritelerinin kaçınılmaz kuralları 'mandatory' veya 'compulsory' ile nitelenir."
+  },
+  {
+    "id": 1194,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "Borescope inspection is a visual technique used to inspect the internal components of a gas turbine engine without disassembly. Technicians guide a flexible tube equipped with a high-definition camera through specific engine ports. This allows the inspection of compressor blades and combustion chambers for erosion, thermal cracks, or foreign object damage (FOD). Accurate borescope documentation is vital because it determines whether an engine must be removed for a workshop overhaul.",
+    "soru_metni": "According to the text, what is the main advantage of a borescope inspection?",
+    "secenekler": {
+      "a": "It inspects internal engine parts without requiring disassembly.",
+      "b": "It automatically repairs internal compressor blade cracks.",
+      "c": "It eliminates the need for any high-definition camera equipment.",
+      "d": "It allows technicians to clean the combustion chambers immediately."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin ilk cümlesinde borescope işleminin motoru sökmeden (without disassembly) iç parçaları incelemeye yaradığı açıkça belirtilmiştir.",
+    "yanlislar": "B şıkkı otomatik tamir ettiğini söyler. C şıkkı kamerayı gereksiz kılar der. D şıkkı anında temizlik yapabildiğini iddia eder; hepsi metne terstir.",
+    "tip": "Teknik paragraflarda yöntemin 'main advantage' veya 'primary feature' bilgisi genellikle ilk cümlede tanımlanır."
+  },
+  {
+    "id": 1195,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "Borescope inspection is a visual technique used to inspect the internal components of a gas turbine engine without disassembly. Technicians guide a flexible tube equipped with a high-definition camera through specific engine ports. This allows the inspection of compressor blades and combustion chambers for erosion, thermal cracks, or foreign object damage (FOD). Accurate borescope documentation is vital because it determines whether an engine must be removed for a workshop overhaul.",
+    "soru_metni": "Why is accurate borescope documentation considered vital?",
+    "secenekler": {
+      "a": "Because it decides if an engine needs to be removed for a workshop overhaul.",
+      "b": "Because it prevents any foreign object from entering the engine ports.",
+      "c": "Because it modifies the flexible tube's camera definition during inspection.",
+      "d": "Because it eliminates the workshop overhaul phase completely for fleets."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin son cümlesinde 'because it determines whether an engine must be removed for a workshop overhaul' gerekçesi net bir şekilde sunulmuştur.",
+    "yanlislar": "B, C ve D şıkları metinle uyuşmayan mantıksız gerekçeler içerir.",
+    "tip": "'Why' soru tiplerinde metin içerisindeki 'because' bağlacından sonra gelen veri doğrudan doğru şıkkı oluşturur."
+  },
+  {
+    "id": 1196,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "The fire detection system utilizes continuous loop sensors installed in high-risk zones like the engine nacelles and the APU compartment. When ambient temperature exceeds a predetermined threshold, the electrical resistance of the loop drops sharply. This change triggers the fire warning light and an audible alarm in the cockpit. If a false alarm is suspected, technicians must test the integrity of the loop wires using a specialized digital multimeter.",
+    "soru_metni": "What triggers the cockpit fire warning light and audible alarm according to the passage?",
+    "secenekler": {
+      "a": "A sharp drop in the electrical resistance when temperature limits are exceeded.",
+      "b": "The immediate manual activation of the digital multimeter by the crew.",
+      "c": "A sudden increase in the wire thickness inside the APU compartment.",
+      "d": "The automatic connection of the secondary backup continuous loop sensor."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metinde sıcaklık sınırı aşıldığında direncin keskin bir şekilde düştüğü ('electrical resistance... drops sharply') ve bunun alarmı tetiklediği ('This change triggers...') belirtilmiştir.",
+    "yanlislar": "B şıkkı multimetrenin tetiklediğini söyler. C şıkkı kablo kalınlaşmasından bahseder. D şıkkı yedek sensörün otomatik bağlandığını iddia eder.",
+    "tip": "Fiziksel reaksiyonların anlatıldığı paragraflarda sebep-sonuç ilişkileri dikkatle takip edilmelidir."
+  },
+  {
+    "id": 1197,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "The fire detection system utilizes continuous loop sensors installed in high-risk zones like the engine nacelles and the APU compartment. When ambient temperature exceeds a predetermined threshold, the electrical resistance of the loop drops sharply. This change triggers the fire warning light and an audible alarm in the cockpit. If a false alarm is suspected, technicians must test the integrity of the loop wires using a specialized digital multimeter.",
+    "soru_metni": "What tool must be used to check the system if a false alarm is suspected?",
+    "secenekler": {
+      "a": "A specialized digital multimeter.",
+      "b": "An external high-risk zone continuous loop sensor.",
+      "c": "A cockpit fire warning light control switch.",
+      "d": "An automatic ambient temperature threshold regulator."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin en son kelimelerinde 'using a specialized digital multimeter' (özel bir dijital multimetre kullanarak) ifadesi net bir şekilde aracı belirtmektedir.",
+    "yanlislar": "B, C ve D şıkları metinde geçse de test amacıyla kullanılan spesifik alet veya aygıtı temsil etmezler.",
+    "tip": "'What tool / equipment' soruları teknik metinlerin son adımlarında yer alan araç isimleriyle doğrudan çözülür."
+  },
+  {
+    "id": 1198,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "A WARNING note indicates that personal injury is possible if the safety precautions ________ followed precisely.",
+    "secenekler": {
+      "a": "are not",
+      "b": "do not",
+      "c": "will not",
+      "d": "cannot"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "If clause koşul yapısı içinde 'safety precautions' (emniyet kuralları) çoğul bir nesnedir ve 'follow' (uymak) fiili edilgen olumsuz olmalıdır (are not followed = uyulmazsa).",
+    "yanlislar": "B şıkkı aktif geniş zaman yardımcı fiilidir (V3 ile kullanılmaz). C ve D şıkları dilbilgisine ve teknik anlam akışına uymaz.",
+    "tip": "Kılavuzlardaki 'olumsuz pasif koşul' kalıpları ('if instructions are not followed') sınavlarda sıklıkla test edilir."
+  },
+  {
+    "id": 1199,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Always disconnect the electrical connectors prior ________ attempting to remove the actuator assembly.",
+    "secenekler": {
+      "a": "to",
+      "b": "with",
+      "c": "for",
+      "d": "by"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Prior to' = -den önce anlamına gelen kalıplaşmış bir edat öbeğidir ve arkasından isim ya da V-ing yapısı alır.",
+    "yanlislar": "B, C ve D şıklarındaki edatlar 'prior' kelimesiyle bu zaman anlamını oluşturamazlar.",
+    "tip": "'Prior to' kalıbı, bakım adımlarındaki öncelik sıralamalarında 'before' yerine kullanılan teknik bir yapıdır."
+  },
+  {
+    "id": 1200,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The flight data recorder is protected by a crash-survivable housing ________ can withstand extreme impact forces.",
+    "secenekler": {
+      "a": "which",
+      "b": "who",
+      "c": "whose",
+      "d": "where"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Which' = cansız nesneleri niteleyen relative pronoun. Aşırı darbe kuvvetlerine dayanabilen bir koruyucu muhafaza anlamını tamamlar.",
+    "yanlislar": "B insanları niteler, C iyelik (aitlik) bildirir, D mekan bildirimlerinde tercih edilir.",
+    "tip": "Cansız nesnelerin ve komponent özelliklerinin relative clause ile nitelenmesinde 'which' veya 'that' kullanılır."
+  },
+  {
+    "id": 1201,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The bleed air system 1) ……… thermal energy from the engine compressor stages; it 2) ……… dual pressure regulating valves to protect down-stream ducts. 3) ……… manifold is monitored by individual temperature sensors and 4) ……… within the wing leading edge cavities. Each 5) ……… of the overpressure valve ensures immediate isolation during a duct rupture.",
+    "soru_metni": "The bleed air system 1) ……… thermal energy from the engine compressor stages;",
+    "secenekler": {
+      "a": "extracts",
+      "b": "injects",
+      "c": "neglects",
+      "d": "extinguishes"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Extracts' = çeker/alır. Bleed air (havalandırma/motor havası) sistemi, motor kompresör kademelerinden termal enerji (hava) çeker.",
+    "yanlislar": "B şıkkı enjekte eder, C şıkkı ihmal eder, D şıkkı söndürür anlamına gelir.",
+    "tip": "Gaz veya havanın bir kaynaktan çekilerek alınması durumlarında 'extract' fiili tercih edilir."
+  },
+  {
+    "id": 1202,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The bleed air system 1) ……… thermal energy from the engine compressor stages; it 2) ……… dual pressure regulating valves to protect down-stream ducts. 3) ……… manifold is monitored by individual temperature sensors and 4) ……… within the wing leading edge cavities. Each 5) ……… of the overpressure valve ensures immediate isolation during a duct rupture.",
+    "soru_metni": "it 2) ……… dual pressure regulating valves to protect down-stream ducts.",
+    "secenekler": {
+      "a": "employs",
+      "b": "discards",
+      "c": "bypasses",
+      "d": "suspends"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Employs' = görevlendirir/kullanır/bünyesinde bulundurur. Sistem, alt hatları korumak için ikili basınç regülatör valfleri kullanır.",
+    "yanlislar": "B şıkkı ıskartaya çıkarır, C şıkkı devre dışı bırakır/etrafından geçer, D şıkkı askıya alır.",
+    "tip": "Bir sistemin işlevini yerine getirmek adına komponentlerden yararlanması 'employ' veya 'utilize' ile aktarılır."
+  },
+  {
+    "id": 1203,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The bleed air system 1) ……… thermal energy from the engine compressor stages; it 2) ……… dual pressure regulating valves to protect down-stream ducts. 3) ……… manifold is monitored by individual temperature sensors and 4) ……… within the wing leading edge cavities. Each 5) ……… of the overpressure valve ensures immediate isolation during a duct rupture.",
+    "soru_metni": "3) ……… manifold is monitored by individual temperature sensors",
+    "secenekler": {
+      "a": "Every",
+      "b": "All",
+      "c": "Several",
+      "d": "Both"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Every' = her bir. Boşluktan sonra gelen 'manifold' ismi tekil olduğundan ve yüklem 'is monitored' şeklinde tekil çekimlendiğinden 'Every' kullanımı doğrudur.",
+    "yanlislar": "B, C ve D şıkları arkalarından çoğul isim ve çoğul yüklem gerektirir.",
+    "tip": "Tekil sayılabilir teknik isimlerin başında miktar belirleyici olarak 'Every' veya 'Each' aranmalıdır."
+  },
+  {
+    "id": 1204,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The bleed air system 1) ……… thermal energy from the engine compressor stages; it 2) ……… dual pressure regulating valves to protect down-stream ducts. 3) ……… manifold is monitored by individual temperature sensors and 4) ……… within the wing leading edge cavities. Each 5) ……… of the overpressure valve ensures immediate isolation during a duct rupture.",
+    "soru_metni": "and 4) ……… within the wing leading edge cavities.",
+    "secenekler": {
+      "a": "is positioned",
+      "b": "positions",
+      "c": "are positioned",
+      "d": "positioning"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'is positioned' = konumlandırılmıştır. Tekil olan 'manifold' öznesinin kanat hücum kenarı boşluklarındaki yerini belirtmek için edilgen (passive) yapı kullanılmalıdır.",
+    "yanlislar": "B aktiftir, C çoğul pasiftir, D fiilimsidir (gerund/participle).",
+    "tip": "Bileşenlerin uçak üzerindeki yerleşim düzenleri ve montaj konumları 'be positioned/situated' ile ifade edilir."
+  },
+  {
+    "id": 1205,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The bleed air system 1) ……… thermal energy from the engine compressor stages; it 2) ……… dual pressure regulating valves to protect down-stream ducts. 3) ……… manifold is monitored by individual temperature sensors and 4) ……… within the wing leading edge cavities. Each 5) ……… of the overpressure valve ensures immediate isolation during a duct rupture.",
+    "soru_metni": "Each 5) ……… of the overpressure valve ensures immediate isolation",
+    "secenekler": {
+      "a": "activation",
+      "b": "leakage",
+      "c": "abrasion",
+      "d": "contamination"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Activation' = aktivasyon/devreye girme. Aşırı basınç valfinin her bir devreye girişi, bir kanal yırtılması sırasında acil izolasyon sağlar.",
+    "yanlislar": "B şıkkı sızıntı, C şıkkı aşınma, D şıkkı kirlilik anlamına gelir.",
+    "tip": "Valf ve şalter gibi koruyucu elemanların çalışma durumları 'activation' veya 'operation' kelimeleriyle tanımlanır."
+  },
+  {
+    "id": 1206,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel tank assembly is 6) ……… vented to prevent structural deformation during rapid climbs; it 7) ……… float valves that control fluid levels automatically. 8) ……… internal baffle plate is inspected closely to detect stress fractures, which 9) ……… near the high-stress fasteners. Each 10) ……… of the pressure test verifies fuel system tightness.",
+    "soru_metni": "The fuel tank assembly is 6) ……… vented to prevent structural deformation",
+    "secenekler": {
+      "a": "continuously",
+      "b": "continuous",
+      "c": "heavy",
+      "d": "abrupt"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Continuously' = sürekli olarak (zarf). Pasif bir yüklem olan 'is vented' yapısını nitelemek adına bir durum zarfı kullanılmalıdır.",
+    "yanlislar": "B şıkkı sıfattır, C şıkkı sıfattır (ağır), D şıkkı sıfattır (ani).",
+    "tip": "Sistemlerin kesintisiz gerçekleştirdiği havalandırma veya izleme süreçleri '-ly' zarfları ile nitelenir."
+  },
+  {
+    "id": 1207,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel tank assembly is 6) ……… vented to prevent structural deformation during rapid climbs; it 7) ……… float valves that control fluid levels automatically. 8) ……… internal baffle plate is inspected closely to detect stress fractures, which 9) ……… near the high-stress fasteners. Each 10) ……… of the pressure test verifies fuel system tightness.",
+    "soru_metni": "it 7) ……… float valves that control fluid levels automatically.",
+    "secenekler": {
+      "a": "features",
+      "b": "installs",
+      "c": "neglects",
+      "d": "detaches"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Features' = barındırır/sahiptir. Yakıt tankı tertibatı, sıvı seviyelerini otomatik kontrol eden şamandıra valflerine sahiptir.",
+    "yanlislar": "B şıkkı monte eder, C şıkkı ihmal eder, D şıkkı ayırır/söker anlamına gelir.",
+    "tip": "Bir ana gövdenin karakteristik bir parçayı üzerinde bulundurması 'feature' veya 'contain' ile ifade edilir."
+  },
+  {
+    "id": 1208,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel tank assembly is 6) ……… vented to prevent structural deformation during rapid climbs; it 7) ……… float valves that control fluid levels automatically. 8) ……… internal baffle plate is inspected closely to detect stress fractures, which 9) ……… near the high-stress fasteners. Each 10) ……… of the pressure test verifies fuel system tightness.",
+    "soru_metni": "8) ……… internal baffle plate is inspected closely",
+    "secenekler": {
+      "a": "Each",
+      "b": "All",
+      "c": "Many",
+      "d": "Several"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Each' = her bir. Boşluktan sonra gelen 'internal baffle plate' tekil bir isim öbeğidir ve yüklem 'is inspected' şeklinde tekildir.",
+    "yanlislar": "B, C ve D şıklarındaki belirleyiciler çoğul isim ve çoğul yüklem çekimi gerektirir.",
+    "tip": "Sıralı veya parça parça yapılan muayene adımlarında tekil nesnelerin önüne 'Each' getirilir."
+  },
+  {
+    "id": 1209,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel tank assembly is 6) ……… vented to prevent structural deformation during rapid climbs; it 7) ……… float valves that control fluid levels automatically. 8) ……… internal baffle plate is inspected closely to detect stress fractures, which 9) ……… near the high-stress fasteners. Each 10) ……… of the pressure test verifies fuel system tightness.",
+    "soru_metni": "which 9) ……… near the high-stress fasteners.",
+    "secenekler": {
+      "a": "develop",
+      "b": "develops",
+      "c": "is developed",
+      "d": "developing"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Develop' = ortaya çıkmak/oluşmak (aktif). 'Which' ilgi zamiri çoğul olan 'stress fractures' (gerilme çatlakları) kelimesini nitelemektedir, bu yüzden çoğul aktif fiil 'develop' olmalıdır.",
+    "yanlislar": "B tekildir, C edilgen (pasif) yapıdır, D tek başına yüklem olamaz.",
+    "tip": "Çatlak, korozyon veya hasarların kendi kendine meydana gelmesi veya büyümesi 'develop' aktif fiiliyle anlatılır."
+  },
+  {
+    "id": 1210,
+    "kategori": "Bosluk_Doldurma",
+    "soru_tipi": "Yapi",
+    "paragraf": "The fuel tank assembly is 6) ……… vented to prevent structural deformation during rapid climbs; it 7) ……… float valves that control fluid levels automatically. 8) ……… internal baffle plate is inspected closely to detect stress fractures, which 9) ……… near the high-stress fasteners. Each 10) ……… of the pressure test verifies fuel system tightness.",
+    "soru_metni": "Each 10) ……… of the pressure test verifies fuel system tightness.",
+    "secenekler": {
+      "a": "stage",
+      "b": "seal",
+      "c": "bolt",
+      "d": "nozzle"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Stage' = aşama/kademe. Basınç testinin her bir aşaması yakıt sisteminin sızdırmazlığını doğrular.",
+    "yanlislar": "B şıkkı keçe/mühür, C şıkkı cıvata, D şıkkı nozul/püskürtücü anlamına gelir.",
+    "tip": "Test prosedürleri, kalibrasyon süreçleri veya muayenelerden bahsedilirken 'stage' veya 'phase' kelimeleri uygundur."
+  },
+  {
+    "id": 1211,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Maintenance personnel ________ apply a thin layer of corrosion-inhibiting compound to the exposed aluminum skin.",
+    "secenekler": {
+      "a": "should",
+      "b": "ought",
+      "c": "are to being",
+      "d": "would have"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Should' = -meli/-malı (tavsiye/talimat). Bakım personelinin açıkta kalan alüminyum kaplamaya ince bir korozyon önleyici bileşik tabakası uygulaması gerekir.",
+    "yanlislar": "B şıkkı 'to' edatı olmadan kullanılamaz, C hatalı bir pasif yapıdır, D geçmiş zaman koşul yapısı kurar.",
+    "tip": "AMM (Uçak Bakım El Kitabı) standart talimatlarında ve tavsiyelerinde 'should' modal yapısı yaygındır."
+  },
+  {
+    "id": 1212,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The auxiliary power unit will shut down automatically ________ an oil overtemperature condition is detected.",
+    "secenekler": {
+      "a": "in case",
+      "b": "unless",
+      "c": "instead of",
+      "d": "regardless of"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'In case' = ...durumunda / ...olursa diye. Yağ aşırı sıcaklık durumu tespit edilmesi halinde yardımcı güç ünitesi otomatik olarak kapanacaktır.",
+    "yanlislar": "B -medikçe anlamına gelir, C yerine anlamına gelir, D -e bakılmaksızın anlamına gelen bir edat öbeğidir.",
+    "tip": "Emniyet sistemlerinin otomatik koruma devrelerini tetikleyen acil durum şartları 'in case' veya 'if' ile bağlanır."
+  },
+  {
+    "id": 1213,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If the primary avionic display ________ recently calibrated, do not dispatch the aircraft for ETOPS flights.",
+    "secenekler": {
+      "a": "has not been",
+      "b": "was not",
+      "c": "is not being",
+      "d": "had not"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Recently' zaman zarfı Present Perfect Tense gerektirir. Birinci aviyonik gösterge yakın zamanda kalibre edilmediyse anlamını pasif olarak 'has not been' sağlar.",
+    "yanlislar": "B Past Simple yapısıdır, C şimdiki zaman pasifidir, D tek başına edilgen yapı kuramaz.",
+    "tip": "'Recently' zarfının geçtiği olumsuz veya olumlu bakım geçmişi ifadelerinde 'has/have been V3' aranır."
+  },
+  {
+    "id": 1214,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The oxygen cylinder pressure must be ________ verified prior to opening the passenger cabin doors.",
+    "secenekler": {
+      "a": "visually",
+      "b": "visual",
+      "c": "visualize",
+      "d": "visualizing"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'must be + zarf + V3'. Pasif bir fiil yapısını ('verified') nitelemek için 'visually' (gözle/görsel olarak) zarfı getirilmelidir.",
+    "yanlislar": "B sıfattır, C fiildir (gözünde canlandırmak), D fiilin -ing takısı almış halidir.",
+    "tip": "Yardımcı fiil ile esas fiil (V3) arasına girerek eylemin yapılış şeklini belirten kelimeler zarf (-ly) olmalıdır."
+  },
+  {
+    "id": 1215,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "If there ________ any evidence of fuel streaks near the pylon, perform an immediate dye-penetrant test.",
+    "secenekler": {
+      "a": "is",
+      "b": "are",
+      "c": "will be",
+      "d": "have"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Type 1 Conditional yapısıdır. 'any evidence' (herhangi bir kanıt/iz) sayılamayan tekil bir özne kabul edildiği için geniş zamanda 'is' kullanılmalıdır.",
+    "yanlislar": "B çoğuldur, C 'if' şart yan cümleciğinde 'will' kullanılmaz, D özne ile uyumsuzdur.",
+    "tip": "'Evidence', 'leakage', 'damage' gibi sayılamayan teknik terimler 'there is' yapısıyla eşleşir."
+  },
+  {
+    "id": 1216,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "It is vital ________ the maximum landing weight limitations during emergency diversion planning.",
+    "secenekler": {
+      "a": "to observe",
+      "b": "observing",
+      "c": "observe",
+      "d": "for observe"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'It is + sıfat + to V1' kalıbı geçerlidir. Acil durum meydanına yönelme planlamasında maksimum iniş ağırlığı limitlerine uymak hayatidir.",
+    "yanlislar": "B gerund halidir, C yalın fiildir, D gramer olarak yanlıştır.",
+    "tip": "'It is vital / critical / mandatory + to infinitive' yapısı havacılık prosedürlerinde değişmez bir kalıptır."
+  },
+  {
+    "id": 1217,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Continuous operation under high thermal loads will ________ the insulation layer of the wiring harness.",
+    "secenekler": {
+      "a": "degrade",
+      "b": "degrading",
+      "c": "degraded",
+      "d": "degrades"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'will' modal yapısının arkasından eylemin yalın hali (V1) gelmelidir. Yüksek termal yükler altında sürekli çalışma kablo demetinin yalıtım katmanını bozacaktır.",
+    "yanlislar": "B -ing takılıdır, C geçmiş zaman halidir, D geniş zaman üçüncü tekil şahıs takısıdır.",
+    "tip": "Geleceğe dönük sistem hasarlarını veya sonuçlarını bildiren 'will + V1' yapısında fiil ek almaz."
+  },
+  {
+    "id": 1218,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "This technical order applies to aircraft ________ cabin pressurization system has experienced a dual failure.",
+    "secenekler": {
+      "a": "whose",
+      "b": "which",
+      "c": "where",
+      "d": "who"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Whose' = -nin sahip olduğu (iyelik bildiren ilgi zamiri). Kabin basınçlandırma sistemi ikili arıza yaşamış olan uçaklara anlamını tamamlar.",
+    "yanlislar": "B nesne niteleyicisidir, C mekan bildirir, D insanları nitelemek içindir.",
+    "tip": "Bir uçağın veya komponentin sistemine atıfta bulunarak niteleme yaparken 'aircraft whose + sistem ismi' dizilimi kullanılır."
+  },
+  {
+    "id": 1219,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Any structural fasteners that ________ during the heavy landing inspection must be replaced immediately.",
+    "secenekler": {
+      "a": "are deformed",
+      "b": "is deformed",
+      "c": "deforming",
+      "d": "deformed"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'fasteners' (bağlantı elemanları) çoğul bir öznedir. Sert iniş muayenesi sırasında deforme olan perçinler/vidalar anlamı için çoğul pasif yapı olan 'are deformed' getirilmelidir.",
+    "yanlislar": "B tekildir, C aktiftir, D ana fiil 'must be replaced' olduğundan yan cümleyi havada bırakır.",
+    "tip": "Relative clause yapılarında niteleme yapılan kelimenin (fasteners) çoğul olması fiilin çoğul çekimlenmesini gerektirir."
+  },
+  {
+    "id": 1220,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Use the specialized alignment jig to make the control surface ________ with the trailing edge.",
+    "secenekler": {
+      "a": "align",
+      "b": "to align",
+      "c": "aligning",
+      "d": "is aligned"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Make + nesne + V1' ettirgen (causative) yapısı geçerlidir. Kumanda yüzeyinin firar kenarı ile hizalanmasını sağlamak anlamı taşır.",
+    "yanlislar": "B 'to' almıştır, C -ing takılıdır, D geniş zaman pasif çekimidir.",
+    "tip": "'Make' ettirgen fiili nesneden sonra gelen eylemi ek almamış yalın halde (bare infinitive) ister."
+  },
+  {
+    "id": 1221,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The backup hydraulic circuit ________ only when the main system pressure drops below 1500 psi.",
+    "secenekler": {
+      "a": "is activated",
+      "b": "activates",
+      "c": "activating",
+      "d": "activated"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Yedek hidrolik devre kendi kendine çalışmaz, otomatik olarak veya pilot tarafından devreye sokulur (pasif). Tekil özne için 'is activated' doğrudur.",
+    "yanlislar": "B aktiftir, C fiilimsidir, D geçmiş zaman aktiftir.",
+    "tip": "Sistem hatlarının ve devrelerin otomatik veya manuel olarak devreye girmesi edilgen (passive) anlatılır."
+  },
+  {
+    "id": 1222,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "During the laboratory analysis, several microscopic cracks ________ inside the turbine rotor disc.",
+    "secenekler": {
+      "a": "were discovered",
+      "b": "was discovered",
+      "c": "have discovered",
+      "d": "has discovered"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'cracks' (çatlaklar) çoğul bir öznedir ve laboratuvar analizi esnasında keşfedildikleri için 'were discovered' çoğul geçmiş zaman pasif yapısı doğrudur.",
+    "yanlislar": "B tekil pasif, C çoğul aktif, D tekil aktif çekimdir.",
+    "tip": "Geçmişte yapılmış test veya tahlil bulguları 'were discovered/found/identified' şeklinde raporlanır."
+  },
+  {
+    "id": 1223,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "Dispose of all contaminated hydraulic fluid in accordance ________ local environmental regulations.",
+    "secenekler": {
+      "a": "with",
+      "b": "to",
+      "c": "by",
+      "d": "for"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'In accordance with' = -e uygun olarak/uyarınca anlamına gelen bölünemez ve kalıplaşmış bir edat grubudur.",
+    "yanlislar": "B, C ve D şıklarındaki edatlar bu teknik kalıbı tamamlayamaz.",
+    "tip": "Atık yönetimi veya bakım kurallarının yasalara uygunluğu 'in accordance with' ile ifade edilir."
+  },
+  {
+    "id": 1224,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Do not operate the radar system until all ground personnel have moved away from the nose radome area.",
+    "secenekler": {
+      "a": "Tüm yer personeli burun radom bölgesinden uzaklaşana kadar radar sistemini çalıştırmayın.",
+      "b": "Radar sistemini çalıştırmadan önce yer personelinin telsizle uyarılması gerekmektedir.",
+      "c": "Yer personeli burun radomundan uzaklaştığı esnada radar sistemi otomatik olarak açılır.",
+      "d": "Burun radomu bölgesindeki personel uzaklaşmadıkça radarın test edilmesi tehlikelidir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Do not operate...' = çalıştırmayın. 'until...' = ...olana kadar. 'all ground personnel have moved away' = tüm yer personeli uzaklaşana kadar.",
+    "yanlislar": "B şıkkı telsiz uyarısından bahseder. C şıkkı otomatik açılma ifadesi eklemiştir. D şıkkı 'tehlikelidir' diyerek sıfat yüklemi kurmuştur.",
+    "tip": "'Do not V1... until... have V3' kalıbı teknik çevirilerde '-ene kadar eylemi yapmayın' şeklinde aktarılır."
+  },
+  {
+    "id": 1225,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "The fuel flow rates are precisely regulated by the digital engine control management software.",
+    "secenekler": {
+      "a": "Yakıt akış hızları, dijital motor kontrol yönetim yazılımı tarafından hassas bir şekilde düzenlenir.",
+      "b": "Dijital motor kontrol yazılımı, yakıt akış limitlerini sadece kalkış esnasında izler.",
+      "c": "Yakıt akış hızlarının hassas düzenlenmesi için motor kontrol yazılımının güncellenmesi şarttır.",
+      "d": "Dijital motor kontrol yönetim yazılımı yakıt akış hızını kademeli olarak düşürür."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are precisely regulated' = hassas bir şekilde düzenlenir. 'by the digital engine control...' = dijital motor kontrol yönetim yazılımı tarafından.",
+    "yanlislar": "B şıkkı 'sadece kalkış esnasında izler' demiştir. C şıkkı 'yazılımın güncellenmesi şarttır' uydurmasını içerir. D şıkkı aktif bir geniş zaman cümlesidir.",
+    "tip": "'by' edatı içeren edilgen (passive) teknik cümleler Türkçe karşılıklarında 'tarafından ... -dır/-nir' şeklinde sonlanır."
+  },
+  {
+    "id": 1226,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "These wires are shielded assemblies designed to minimize electromagnetic interference in the cockpit.",
+    "secenekler": {
+      "a": "Bu kablolar, kokpitteki elektromanyetik paraziti en aza indirmek için tasarlanmış ekranlı düzeneklerdir.",
+      "b": "Kokpit içerisindeki elektromanyetik paraziti önleyen bu kabloların montajı kolaydır.",
+      "c": "Ekranlı kablo düzenekleri kokpitte parazit meydana geldiğinde hemen devreye girerler.",
+      "d": "Bu kablolar kokpit sistemlerinin elektromanyetik parazit üretmesini engellemek amacıyla sökülmüştür."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Bu bir isim/tanım cümlesidir: 'These wires are shielded assemblies...' = Bu kablolar ekranlı düzeneklerdir. 'designed to minimize...' = en aza indirmek için tasarlanmış.",
+    "yanlislar": "B şıkkı 'montajı kolaydır' demiştir. C şıkkı 'hemen devreye girerler' fiil yüklemi eklemiştir. D şıkkı 'sökülmüştür' diyerek anlamı bozmuştur.",
+    "tip": "'...assemblies designed to V1...' yapısı sıfat-fiil öbeği olarak '...için tasarlanmış düzenekler' şeklinde aktarılır."
+  },
+  {
+    "id": 1227,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Composite materials are selected because they can endure high stress without changing shape.",
+    "secenekler": {
+      "a": "Kompozit malzemeler tercih edilir çünkü şekil değiştirmeden yüksek gerilmeye dayanabilirler.",
+      "b": "Şekil değişimine karşı dirençli olan kompozit malzemeler uçak gövdesinde çok sık kullanılır.",
+      "c": "Kompozit malzemeler yüksek gerilme altında şekillerini korumak üzere özel olarak üretilirler.",
+      "d": "Yüksek gerilmeye şekil değiştirmeden dayanan kompozit malzemelerin ağırlığı düşüktür."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'are selected' = seçilir/tercih edilir. 'because' = çünkü. 'they can endure high stress' = yüksek gerilmeye dayanabilirler. 'without changing shape' = şekil değiştirmeden.",
+    "yanlislar": "B şıkkı 'çünkü' bağlacını yansıtmamıştır. C şıkkı 'özel olarak üretilirler' ifadesini uydurmuştur. D şıkkı 'ağırlığı düşüktür' bilgisini eklemiştir.",
+    "tip": "'without + V-ing' yapısı teknik metinlerde zarf-fiil olarak '-meden / -maksızın' şeklinde çevrilir."
+  },
+  {
+    "id": 1228,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Discard all damaged seals, the distorted washers and all contaminated locking cotter pins.",
+    "secenekler": {
+      "a": "Tüm hasarlı keçeleri, şekli bozulmuş pulları ve tüm kirlenmiş emniyet kopilyalarını ıskartaya çıkarın.",
+      "b": "Hasarlı keçelerin, şekli bozulmuş pulların ve kirlenmiş kopilyaların yenilenmesi tavsiye edilir.",
+      "c": "Kirlenmiş emniyet kopilyaları ile birlikte hasar görmüş tüm pulların temizlenmesi gerekir.",
+      "d": "Şekli bozulan pullar ve hasarlı keçeler kopilyalarla birlikte çöpe atılmalıdır."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Discard...' emir fiiliyle kurulduğu için Türkçe karşılığı da doğrudan net bir emir yüklemi ('ıskartaya çıkarın / atın') içermelidir.",
+    "yanlislar": "B şıkkı 'tavsiye edilir' demiştir. C şıkkı 'temizlenmesi gerekir' diyerek anlamı bozmuştur. D şıkkı gereklilik kipiyle edilgen yapılmıştır.",
+    "tip": "Bakım el kitaplarındaki doğrudan verilen talimat emirleri Türkçe metne emir kipiyle yansıtılır."
+  },
+  {
+    "id": 1229,
+    "kategori": "Ceviri_EN_TR",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "There are no signs of overheat damage on the starter generator wiring insulation.",
+    "secenekler": {
+      "a": "Marş jeneratörü kablo yalıtımında herhangi bir aşırı ısınma hasarı belirtisi yoktur.",
+      "b": "Marş jeneratörünün kablo izolasyonunda hiçbir yanık kokusuna rastlanmamıştır.",
+      "c": "Aşırı ısınma hasarı göstermeyen marş jeneratörü kablo yalıtımı acilen sökülmelidir.",
+      "d": "Kablo yalıtımında aşırı ısınma tespit edilmeyen marş jeneratörü servise verilebilir."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'There are no signs...' = ...belirtisi yoktur. 'of overheat damage' = aşırı ısınma hasarı. 'on the starter generator wiring insulation' = marş jeneratörü kablo yalıtımında.",
+    "yanlislar": "B şıkkı yanık kokusundan bahseder. C şıkkı 'sökülmelidir' yüklemini uydurmuştur. D şıkkı 'servise verilebilir' ifadesini eklemiştir.",
+    "tip": "'There are no signs of X' kalıbının teknik dildeki net karşılığı 'X belirtisi yoktur' şeklindedir."
+  },
+  {
+    "id": 1230,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Eğer bu kelepçeyi sıkmazsanız, yakıt borusu şiddetli titreşebilir.",
+    "secenekler": {
+      "a": "If you do not tighten this clamp, the fuel pipe may vibrate severely.",
+      "b": "Unless you loosen this clamp, the fuel pipe will vibrate slightly.",
+      "c": "If this clamp is not disconnected, the fuel pipe cannot vibrate at all.",
+      "d": "Should you fail to check this clamp, the fuel line might burst tonight."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Eğer... sıkmazsanız' = If you do not tighten. 'bu kelepçeyi' = this clamp. 'yakıt borusu şiddetli titreşebilir' = the fuel pipe may vibrate severely.",
+    "yanlislar": "B şıkkında 'loosen' (gevşetmek) ve 'slightly' (hafifçe) denmiştir. C şıkkı titreşemez diyerek ters anlam kurmuştur. D şıkkı hattın patlamasından bahseder.",
+    "tip": "Şiddetli titreşim ifadesi teknik olarak 'vibrate severely' zarf öbeğiyle karşılanır."
+  },
+  {
+    "id": 1231,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Havayı tahliye etmek için, bleed valfi kademeli olarak açılmalıdır.",
+    "secenekler": {
+      "a": "To vent the air, the bleed valve must be opened gradually.",
+      "b": "For venting the air, the bleed valve should open immediately.",
+      "c": "To decrease the air, you can open the bleed valve rapidly now.",
+      "d": "The bleed valve is opened gradually to block all internal air flow."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Havayı tahliye etmek için' = To vent the air. 'bleed valfi kademeli olarak açılmalıdır' = the bleed valve must be opened gradually.",
+    "yanlislar": "B şıkkı 'immediately' (hemen/anında) demiştir. C şıkkı 'rapidly' (hızla) ve 'açabilirsiniz' anlamı taşır. D şıkkı hava akışını engellemek amacıyla der.",
+    "tip": "Kademeli olarak gerçekleştirilen teknik adımlar 'gradually' zarfı ile ifade edilir."
+  },
+  {
+    "id": 1232,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Yeni contayı yerleştirmeden önce, yüzeyi onaylı bir temizleyici ile silin.",
+    "secenekler": {
+      "a": "Before you position the new gasket, wipe the surface with an approved cleaner.",
+      "b": "Prior to positioning the new gasket, you must inspect the dirty cleaner.",
+      "c": "After seating the new gasket, clean the surface with any industrial cleaner.",
+      "d": "Wipe the surface with an approved cleaner when you are removing the gasket."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Yeni contayı yerleştirmeden önce' = Before you position the new gasket. 'yüzeyi onaylı bir temizleyici ile silin' = wipe the surface with an approved cleaner.",
+    "yanlislar": "B şıkkı kirli temizleyiciyi muayene etmelisiniz der. C şıkkı 'After' (sonra) bağlacını kullanmıştır. D şıkkı sökme aşamasından bahseder.",
+    "tip": "'Onaylı/uygun malzeme' ifadeleri sivil havacılık dokümanlarında 'approved' sıfatı ile verilir."
+  },
+  {
+    "id": 1233,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Bu kalibrasyon işlemi sadece özel eğitimli personel tarafından gerçekleştirilebilir.",
+    "secenekler": {
+      "a": "This calibration process can be performed only by specially trained personnel.",
+      "b": "Specially trained personnel must perform this calibration process only.",
+      "c": "This calibration process could be performed by any certified crew.",
+      "d": "Only specially trained personnel has performed this calibration process."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'gerçekleştirilebilir' ifadesi pasif bir yetkinlik/olasılık bildirir ('can be performed'). 'sadece özel eğitimli personel tarafından' = only by specially trained personnel.",
+    "yanlislar": "B şıkkı aktif zorunluluk yapısıdır. C şıkkı 'herhangi bir sertifikalı ekip' demiştir. D şıkkı Present Perfect aktif bir cümledir.",
+    "tip": "Yetki ve kısıtlama içeren edilgen ifadelerde 'can be + V3' kalıbı öncelikli olarak aranmalıdır."
+  },
+  {
+    "id": 1234,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Hatalı kablolama aviyonik ünitede kısa devreye neden olabilir.",
+    "secenekler": {
+      "a": "Incorrect wiring can cause a short circuit in the avionics unit.",
+      "b": "Incorrect wiring will cause a short circuit in the avionics unit completely.",
+      "c": "The avionics unit can be damaged by using a long wiring circuit.",
+      "d": "Incorrect wiring might have caused a short circuit in the unit yesterday."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Hatalı kablolama' = Incorrect wiring. 'kısa devreye neden olabilir' = can cause a short circuit. 'aviyonik ünitede' = in the avionics unit.",
+    "yanlislar": "B şıkkı 'will' kullanarak kesinlik bildirmiştir. C şıkkı uzun kablo kullanımından bahseder. D şıkkı geçmişe dönük olasılık ('might have V3') kurmuştur.",
+    "tip": "Risk ve olasılık içeren durumlarda 'can cause' veya 'may lead to' yapıları tercih edilir."
+  },
+  {
+    "id": 1235,
+    "kategori": "Ceviri_TR_EN",
+    "soru_tipi": "Ceviri",
+    "soru_metni": "Korozyon önleyici sıvı tamamen uçtuktan sonra koruyucu kapağı kapatın.",
+    "secenekler": {
+      "a": "Close the protective cover after the anti-corrosion fluid is completely evaporated.",
+      "b": "You must remove the protective cover before the fluid evaporates completely.",
+      "c": "Close the protective cover when you are evaporating the fluid completely.",
+      "d": "The protective cover should not be closed until the fluid starts to freeze."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'koruyucu kapağı kapatın' = Close the protective cover. 'korozyon önleyici sıvı tamamen uçtuktan (buharlaştıktan) sonra' = after the anti-corrosion fluid is completely evaporated.",
+    "yanlislar": "B şıkkı 'kapağı sökün' der. C şıkkı buharlaştırma esnasından bahseder. D şıkkı sıvı donmaya başlayana kadar kapatılmamalıdır der.",
+    "tip": "Sıvıların uçması/buharlaşması havacılık teknik dilinde 'evaporate' fiili ile karşılanır."
+  },
+  {
+    "id": 1236,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The engineering team decided to postpone the structural modification until the next C-check. Which phrasal verb can replace the verb \"to postpone\"?",
+    "secenekler": {
+      "a": "put off",
+      "b": "set up",
+      "c": "carry out",
+      "d": "bring about"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Put off' = ertelemek anlamına gelir ve 'to postpone' fiilinin doğrudan phrasal verb karşılığıdır.",
+    "yanlislar": "B kurmak/ayarlamak, C yürütmek/uygulamak, D neden olmak anlamına gelen phrasal verb yapılardır.",
+    "tip": "Planlı bakımların veya modifikasyonların ötelenmesi durumlarında 'postpone' ya da 'put off' kullanılır."
+  },
+  {
+    "id": 1237,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The inspector must verify that the fire extinguisher pressure gauge is within limits. What is a synonym for the word \"verify\"?",
+    "secenekler": {
+      "a": "confirm",
+      "b": "neglect",
+      "c": "jeopardize",
+      "d": "disregard"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Confirm' = onaylamak/doğrulamak anlamına gelir ve 'verify' kelimesinin teknik eş anlamlısıdır.",
+    "yanlislar": "B ihmal etmek, C tehlikeye atmak, D göz ardı etmek anlamına gelen kelimelerdir.",
+    "tip": "Gösterge, basınç veya evrak doğruluğunu kontrol etme işlemlerinde 'verify' ve 'confirm' öne çıkar."
+  },
+  {
+    "id": 1238,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The primary objective of the engine cowling is to reduce aerodynamic drag. What is the synonym for the word \"primary\"?",
+    "secenekler": {
+      "a": "main",
+      "b": "minor",
+      "c": "optional",
+      "d": "redundant"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Main' = ana/temel/başlıca anlamına gelir ve 'primary' kelimesinin en yaygın karşılığıdır.",
+    "yanlislar": "B ikincil/önemsiz, C isteğe bağlı, D yedek/ihtiyaç fazlası anlamına gelir.",
+    "tip": "Sistem görevlerinin veya tasarım amaçlarının başat nedenleri 'primary' veya 'main' ile nitelenir."
+  },
+  {
+    "id": 1239,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "The maintenance logbook entry must exclude any personal opinions of the ground crew. Which one of the following is an ANTONYM for the word \"exclude\"?",
+    "secenekler": {
+      "a": "include",
+      "b": "omit",
+      "c": "eliminate",
+      "d": "reject"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Include' = dahil etmek anlamına gelir ve hariç tutmak/dışarıda bırakmak anlamına gelen 'exclude' kelimesinin tam zıt anlamlısıdır (ANTONYM).",
+    "yanlislar": "B dahil etmemek, C elemek, D reddetmek kelimeleri 'exclude' ile benzer doğrultudadır.",
+    "tip": "Soru kökündeki 'ANTONYM' (zıt anlamlı) ibaresine dikkat edilerek kelimenin karşıtı bulunmalıdır."
+  },
+  {
+    "id": 1240,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Ensure you wear safety goggles because this chemical agent is highly hazardous to eyes. What is a synonym for the word \"hazardous\"?",
+    "secenekler": {
+      "a": "dangerous",
+      "b": "harmless",
+      "c": "beneficial",
+      "d": "mandatory"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Dangerous' = tehlikeli anlamına gelir ve teknik metinlerde 'hazardous' kelimesinin birebir karşılığıdır.",
+    "yanlislar": "B zararsız, C faydalı, D zorunlu anlamına gelmektedir.",
+    "tip": "AMM 'WARNING' başlıklarında geçen kimyasal veya fiziksel riskler 'hazardous' veya 'dangerous' olarak verilir."
+  },
+  {
+    "id": 1241,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Sudden temperature drops can cause the hydraulic line seals to shrink slightly. What is the synonym for the word \"abrupt\" that can replace \"sudden\"?",
+    "secenekler": {
+      "a": "abrupt",
+      "b": "gradual",
+      "c": "monitored",
+      "d": "continuous"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Abrupt' = ani/beklenmedik anlamına gelir ve 'sudden' kelimesinin havacılıktaki teknik eşidir.",
+    "yanlislar": "B kademeli, C izlenen, D sürekli anlamına gelen sıfatlardır.",
+    "tip": "Hava veya basınç değişimlerindeki ani oynamalar 'sudden' ya da 'abrupt' ile nitelenir."
+  },
+  {
+    "id": 1242,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Technicians must consult the wiring diagram manual (WDM) to identify the correct pin numbers. What can be used instead of \"consult\"?",
+    "secenekler": {
+      "a": "refer to",
+      "b": "ignore",
+      "c": "discard",
+      "d": "cancel"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Refer to' = başvurmak/bakmak anlamına gelir. Bir el kitabına veya şemaya müracaat etmeyi 'consult' ile aynı şekilde karşılar.",
+    "yanlislar": "B görmezden gelmek, C atmak, D iptal etmek anlamına gelir.",
+    "tip": "Referans dokümanlara bakma zorunluluğu 'consult' veya 'refer to' fiilleriyle aktarılır."
+  },
+  {
+    "id": 1243,
+    "kategori": "Kelime_Bilgisi",
+    "soru_tipi": "Kelime",
+    "soru_metni": "Flushing the oxygen lines with oil-free nitrogen is compulsory before final installation. What does the word \"compulsory\" mean?",
+    "secenekler": {
+      "a": "mandatory",
+      "b": "optional",
+      "c": "forbidden",
+      "d": "unnecessary"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Mandatory' = zorunlu anlamına gelir ve 'compulsory' kelimesinin havacılık mevzuatındaki eş anlamlısıdır.",
+    "yanlislar": "B isteğe bağlı, C yasaklanmış, D gereksiz anlamına gelen kelimelerdir.",
+    "tip": "Emniyet gereği yapılması şart olan işlemler 'compulsory' ya da 'mandatory' sıfatlarıyla vurgulanır."
+  },
+  {
+    "id": 1244,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "Eddy current testing is a non-destructive inspection (NDI) method used primarily to detect surface and near-surface flaws in conductive materials such as aluminum skin panels. Technicians use an electromagnetic probe that induces alternating currents inside the metal structure. Any sub-surface crack or corrosion disrupts the flow of these currents, causing a visible change on the oscilloscope screen. This technique is highly valued because it does not require the removal of protective paint coatings.",
+    "soru_metni": "According to the passage, why is eddy current testing highly valued in aviation maintenance?",
+    "secenekler": {
+      "a": "Because it does not require the removal of protective paint coatings.",
+      "b": "Because it automatically repairs sub-surface crack defects.",
+      "c": "Because it can only be performed on non-conductive materials.",
+      "d": "Because it eliminates the need for any oscilloscope equipment."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin son cümlesinde bu tekniğin boyayı sökmeyi gerektirmediği için çok değerli olduğu ('valued because it does not require the removal of protective paint coatings') açıkça yazmaktadır.",
+    "yanlislar": "B otomatik tamir ettiğini iddia eder. C iletken olmayan yapılarda uygulanır der (metne zıt). D osiloskopu gereksiz kılar der.",
+    "tip": "Neden belirtme sorularında ('why') paragrafın 'because / since' ile biten son kısımları doğru yanıtı barındırır."
+  },
+  {
+    "id": 1245,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "Eddy current testing is a non-destructive inspection (NDI) method used primarily to detect surface and near-surface flaws in conductive materials such as aluminum skin panels. Technicians use an electromagnetic probe that induces alternating currents inside the metal structure. Any sub-surface crack or corrosion disrupts the flow of these currents, causing a visible change on the oscilloscope screen. This technique is highly valued because it does not require the removal of protective paint coatings.",
+    "soru_metni": "What indicates the presence of a crack or defect during an eddy current test?",
+    "secenekler": {
+      "a": "A visible change on the oscilloscope screen caused by disrupted currents.",
+      "b": "An immediate automatic sound alarm inside the aircraft cockpit.",
+      "c": "The melting of the conductive aluminum skin panel assembly.",
+      "d": "The total failure of the electromagnetic probe's primary battery."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metinde çatlak veya korozyonun akım akışını bozduğu ve bunun osiloskop ekranında gözle görülür bir değişime neden olduğu ('causing a visible change on the oscilloscope screen') ifade edilmiştir.",
+    "yanlislar": "B kokpitte sesli alarm verir der. C alüminyum panelin eridiğini söyler. D prob bataryasının bittiğini iddia eder.",
+    "tip": "Belirti veya endikasyon sorularında sistem tepkisini anlatan teknik kelimeler ('visible change / fluctuation') şıklarda aranır."
+  },
+  {
+    "id": 1246,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "The pitot-static system provides critical airspeed, altitude, and vertical speed data to the flight deck instruments. It consists of pitot probes that capture ram air pressure and static ports that measure ambient atmospheric pressure. Blockages caused by ice accumulation or volcanic ash can lead to highly erroneous cockpit indications. To prevent ice buildup, internal electrical heating elements are embedded within the probes and must be tested prior to winter operations.",
+    "soru_metni": "According to the text, what can cause erroneous cockpit indications in the pitot-static system?",
+    "secenekler": {
+      "a": "Blockages caused by ice accumulation or volcanic ash.",
+      "b": "The continuous activation of internal electrical heating elements.",
+      "c": "An immediate sudden drop in the maximum vertical speed limits.",
+      "d": "The proper calibration of the flight deck instruments today."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin üçüncü cümlesinde buz birikmesi veya volkanik kül kaynaklı tıkanmaların hatalı göstergelere yol açabileceği ('Blockages caused by ice accumulation or volcanic ash can lead to highly erroneous cockpit indications') açıkça verilmiştir.",
+    "yanlislar": "B ısıtıcıların sürekli çalışması der. C dikey hız limitlerinin düşmesini sebep gösterir. D doğru kalibrasyon yapılması arızaya yol açar der.",
+    "tip": "Hatalı gösterge sebeplerini soran sorularda 'blockage', 'obstruction', 'contamination' gibi kelimeler ipucudur."
+  },
+  {
+    "id": 1247,
+    "kategori": "Okuma_Anlama",
+    "soru_tipi": "Okuma",
+    "paragraf": "The pitot-static system provides critical airspeed, altitude, and vertical speed data to the flight deck instruments. It consists of pitot probes that capture ram air pressure and static ports that measure ambient atmospheric pressure. Blockages caused by ice accumulation or volcanic ash can lead to highly erroneous cockpit indications. To prevent ice buildup, internal electrical heating elements are embedded within the probes and must be tested prior to winter operations.",
+    "soru_metni": "What design feature is used to prevent ice buildup within the pitot probes?",
+    "secenekler": {
+      "a": "Embedded internal electrical heating elements.",
+      "b": "External static ports measuring ambient pressure.",
+      "c": "Automatic volcanic ash filtration mesh covers.",
+      "d": "Manual cockpit drain valves opened by the flight crew."
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "Metnin son cümlesinde buz oluşumunu önlemek amacıyla probların içine gömülü dahili elektrikli ısıtma elemanları kullanıldığı ('internal electrical heating elements are embedded within the probes') net bir şekilde açıklanmıştır.",
+    "yanlislar": "B statik portlardan bahseder. C kül filtresi kafesi der. D el ile açılan drenaj valflerini öne sürer.",
+    "tip": "'Design feature / prevention method' soruları sistemin koruyucu komponent ismini bulmaya yöneliktir."
+  },
+  {
+    "id": 1248,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "A CAUTION note is issued because serious equipment damage is possible if technicians ________ the precise sequence.",
+    "secenekler": {
+      "a": "do not follow",
+      "b": "are not followed",
+      "c": "will not follow",
+      "d": "cannot follow by"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "If clause yapısında 'technicians' çoğul aktif bir öznedir. Teknisyenler sırayı takip etmezlerse anlamı için geniş zaman olumsuz aktif yapı 'do not follow' olmalıdır.",
+    "yanlislar": "B şıkkı edilgendir (insanlar takip edilemez). C şıkkı 'if' kısmında 'will' kural hatasıdır. D yapısı gramere aykırıdır.",
+    "tip": "'If technicians do not follow instructions' kalıbı AMM uyarılarında aktif şart koşulunun standart halidir."
+  },
+  {
+    "id": 1249,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The crew must clean the landing gear oleo strut prior ________ applying the new hydraulic grease.",
+    "secenekler": {
+      "a": "to",
+      "b": "with",
+      "c": "for",
+      "d": "by"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Prior to' = -den önce anlamına gelen ayrılmaz teknik bir edat grubudur ve arkasından gelen fiili V-ing şeklinde alır.",
+    "yanlislar": "B, C ve D şıklarındaki edatlar 'prior' sıfatıyla bu zaman bağını kuramaz.",
+    "tip": "Bakım aşamalarının sıralanmasında kullanılan 'prior to' kalıbı havacılık sınavlarında sıkça sorulur."
+  },
+  {
+    "id": 1250,
+    "kategori": "Gramer_ve_Yapi",
+    "soru_tipi": "Yapi",
+    "soru_metni": "The main landing gear utilizes a proximity switch ________ sends electrical signals to the cockpit indicator.",
+    "secenekler": {
+      "a": "which",
+      "b": "who",
+      "c": "whose",
+      "d": "where"
+    },
+    "dogru_cevap": "a",
+    "neden_dogru": "'Which' = cansız nesneleri/komponentleri niteleyen ilgi zamiri. Kokpit göstergesine elektrik sinyalleri gönderen bir yaklaşım sensörü anlamını bağlar.",
+    "yanlislar": "B insanları niteler, C aitlik bildirir, D mekan tasvirlerinde kullanılır.",
+    "tip": "Sensör, valf veya şalterlerin görevlerini açıklayan relative clause yapılarında 'which' veya 'that' başı çeker."
   }
 ]

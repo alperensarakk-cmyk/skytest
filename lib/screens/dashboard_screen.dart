@@ -548,8 +548,10 @@ class _InfoSheet extends StatelessWidget {
                     body:
                         'Gerçek sınav koşullarını simüle eden bu modda süre baskısı altında soru çözersin. '
                         'Ayarlar veya sınav hazırlık ekranından soru sayısını 10\'dan 80\'e, süreyi 10\'dan 120 dakikaya kadar seçebilirsin.\n\n'
-                        'Sınav bitince kaç doğru kaç yanlış yaptığını, hangi konularda zayıf olduğunu görürsün. '
-                        'Yanlış yaptığın sorular otomatik olarak "Yanlışlarım" listene eklenir.',
+                        'Sınav bitince kaç doğru kaç yanlış yaptığını görürsün. '
+                        'Yanlış yaptığın sorular "Yanlışlarım" listene eklenir; en az 30 soru '
+                        'çözdükten sonra "Zayıf Konularım" kartında istatistiksel olarak zayıf '
+                        'kaldığın alanlar listelenir ve o konulardan pratik yapabilirsin.',
                   ),
                   SizedBox(height: 14),
                   _ModeCard(

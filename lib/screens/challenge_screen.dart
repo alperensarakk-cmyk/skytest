@@ -1085,7 +1085,7 @@ class _PreviousWinnerCard extends StatelessWidget {
   final bool isMe;
 
   String get _periodLabel =>
-      type == 'daily' ? 'Dünkü Günlük Sınav' : 'Geçen Hafta';
+      type == 'daily' ? 'Dünkü Günlük Sınav' : 'Geçen Hafta Şampiyonu';
 
   String _formatMs(int ms) {
     final s = ms ~/ 1000;

@@ -2,7 +2,10 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import '../models/soru_model.dart';
 import '../services/daily_limit_service.dart';
+import '../models/konu_performans.dart';
+import '../models/sinav_sonucu.dart';
 import '../services/istatistik_service.dart';
+import '../services/zayif_konu_service.dart';
 import '../services/app_review_service.dart';
 import '../services/soru_secim_service.dart';
 import '../services/soru_son_gorulen_service.dart';
@@ -279,21 +282,28 @@ class _SinavScreenState extends State<SinavScreen> {
   Future<void> _showResultDialog({required bool timeUp}) async {
     _timer?.cancel();
 
-    // ── Doğru / yanlış hesapla, kategorileri topla ───────────────────────
+    // ── Doğru / yanlış hesapla, konu performansını topla ─────────────────
     int correct = 0;
-    final yanlisIds        = <int>[];
-    final yanlisKategoriler = <String, int>{}; // kategori → yanlış sayısı
+    final yanlisIds         = <int>[];
+    final yanlisKategoriler = <String, int>{};
+    final konuPerformans    = <String, KonuPerformans>{};
 
     for (int i = 0; i < _sorular.length; i++) {
       final secilen = _cevaplar[i];
       final soru    = _sorular[i];
+      final tip     = ZayifKonuService.tipKeyFromSoru(soru);
+      final mevcut  = konuPerformans[tip] ?? const KonuPerformans();
+
       if (secilen == soru.dogruCevap) {
         correct++;
+        konuPerformans[tip] =
+            KonuPerformans(dogru: mevcut.dogru + 1, yanlis: mevcut.yanlis);
         await YanlisService.removeYanlis(soru.id);
       } else if (secilen != null) {
         yanlisIds.add(soru.id);
-        final kat = soru.kategori.replaceAll('_', ' ');
-        yanlisKategoriler[kat] = (yanlisKategoriler[kat] ?? 0) + 1;
+        yanlisKategoriler[tip] = (yanlisKategoriler[tip] ?? 0) + 1;
+        konuPerformans[tip] =
+            KonuPerformans(dogru: mevcut.dogru, yanlis: mevcut.yanlis + 1);
       }
     }
     await YanlisService.addMultiple(yanlisIds);
@@ -317,6 +327,8 @@ class _SinavScreenState extends State<SinavScreen> {
         toplam:            total,
         yuzde:             not100,
         yanlisKategoriler: yanlisKategoriler,
+        konuPerformans:    konuPerformans,
+        analizVersiyonu:   2,
       ),
     );
 
@@ -372,9 +384,11 @@ class _SinavScreenState extends State<SinavScreen> {
                 clipBehavior: Clip.antiAlias,
                 child: InkWell(
                   onTap: () {
+                    final navigator = Navigator.of(context);
                     Navigator.pop(ctx);
-                    Navigator.pop(ctx);
-                    Navigator.pushNamed(ctx, '/yanlislarim');
+                    navigator.pop();
+                    navigator.pop();
+                    navigator.pushNamed('/yanlislarim');
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(12),
@@ -424,9 +438,11 @@ class _SinavScreenState extends State<SinavScreen> {
             style: FilledButton.styleFrom(
                 backgroundColor: _cBtnPrimary, foregroundColor: Colors.black87),
             onPressed: () async {
+              final navigator = Navigator.of(context);
               Navigator.pop(ctx);
-              await AppReviewService.tryShowAfterCompletion(ctx);
-              if (ctx.mounted) Navigator.pop(ctx);
+              await AppReviewService.tryShowAfterCompletion(context);
+              if (!mounted) return;
+              navigator.popUntil((route) => route.isFirst);
             },
             child: const Text('Ana Sayfaya Dön'),
           ),

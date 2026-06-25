@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import '../services/daily_limit_service.dart';
+import '../services/istatistik_service.dart';
 import '../services/premium_service.dart';
 import '../services/settings_service.dart';
 import '../services/yanlis_service.dart';
 import '../theme/app_theme.dart';
 import '../widgets/limit_exceeded_dialog.dart';
+import '../services/zayif_konu_service.dart';
+import '../widgets/zayif_konular_panel.dart';
 import 'yanlislarim_screen.dart';
 
 // ─── Renk sabitleri ───────────────────────────────────────────────────────────
@@ -24,8 +27,13 @@ class SinavHazirlikScreen extends StatefulWidget {
 class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
   int  _soruSayisi    = 30;
   int  _sureDak       = 30;
-  int  _yanlisCount   = 0;
-  bool _loading       = true;
+  int              _yanlisCount = 0;
+  ZayifKonuOzet    _zayifOzet   = const ZayifKonuOzet(
+    konular: [],
+    toplamCevaplanan: 0,
+    minGerekli: ZayifKonuService.minToplamCevaplanan,
+  );
+  bool             _loading     = true;
 
   static const _soruSecenekleri = [10, 20, 30, 40, 50, 60, 80];
   static const _sureSecenekleri = [10, 20, 30, 45, 60, 90, 120];
@@ -40,12 +48,14 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
     final q = await SettingsService.getExamQuestionCount();
     final d = await SettingsService.getExamDurationMin();
     final y = await YanlisService.getCountAsync();
+    final z = await IstatistikService.getZayifKonuOzet();
     if (!mounted) return;
     setState(() {
-      _soruSayisi  = q;
-      _sureDak     = d;
-      _yanlisCount = y;
-      _loading     = false;
+      _soruSayisi     = q;
+      _sureDak        = d;
+      _yanlisCount    = y;
+      _zayifOzet      = z;
+      _loading        = false;
     });
   }
 
@@ -129,6 +139,11 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
                   _YanlisCard(
                     count: _yanlisCount,
                     onTap: _openYanlislar,
+                  ),
+                  const SizedBox(height: 12),
+                  ZayifKonularPanel(
+                    ozet: _zayifOzet,
+                    onAnalizCleared: _loadData,
                   ),
                   const SizedBox(height: 24),
 

@@ -1,67 +1,76 @@
 import 'dart:convert';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
-/// Tamamlanan sınavların özetini SharedPreferences'a kaydeder.
-/// [yuzde] alanı 0–100 arası nottur (100 üzerinden; soru başına 100/toplam).
+import '../models/sinav_sonucu.dart';
+import 'zayif_konu_service.dart';
 
-class SinavSonucu {
-  const SinavSonucu({
-    required this.tarih,
-    required this.dogru,
-    required this.yanlis,
-    required this.bos,
-    required this.toplam,
-    required this.yuzde,
-    required this.yanlisKategoriler, // {'Bağlaçlar ve Edatlar': 3, ...}
-  });
-
-  final DateTime        tarih;
-  final int             dogru;
-  final int             yanlis;
-  final int             bos;
-  final int             toplam;
-  final double          yuzde;
-  final Map<String,int> yanlisKategoriler;
-
-  Map<String, dynamic> toJson() => {
-        'tarih':             tarih.toIso8601String(),
-        'dogru':             dogru,
-        'yanlis':            yanlis,
-        'bos':               bos,
-        'toplam':            toplam,
-        'yuzde':             yuzde,
-        'yanlisKategoriler': yanlisKategoriler,
-      };
-
-  factory SinavSonucu.fromJson(Map<String, dynamic> j) => SinavSonucu(
-        tarih:    DateTime.parse(j['tarih'] as String),
-        dogru:    j['dogru']  as int,
-        yanlis:   j['yanlis'] as int,
-        bos:      j['bos']    as int,
-        toplam:   j['toplam'] as int,
-        yuzde:    (j['yuzde'] as num).toDouble(),
-        yanlisKategoriler: Map<String, int>.from(
-          (j['yanlisKategoriler'] as Map).map(
-            (k, v) => MapEntry(k as String, v as int),
-          ),
-        ),
-      );
-}
-
+/// Tamamlanan sınav özetlerini SharedPreferences'a kaydeder.
 class IstatistikService {
   static const _sinavKey = 'sinav_sonuclari';
-  static const _maxSinav = 50; // maksimum saklanan sınav
-
-  // ── Sınav Sonuçları ───────────────────────────────────────────────────────
+  static const _maxSinav = 50;
+  static const _analizMigrationKey = 'zayif_konu_analiz_migration_v';
+  static const _analizMigrationVersion = 4;
 
   static Future<List<SinavSonucu>> getSinavSonuclari() async {
+    await _migrateAnalizVerisi();
     final prefs = await SharedPreferences.getInstance();
     final raw   = prefs.getStringList(_sinavKey) ?? [];
     return raw
         .map((e) => SinavSonucu.fromJson(jsonDecode(e) as Map<String, dynamic>))
         .toList()
-        .reversed // en yeni önce
+        .reversed
         .toList();
+  }
+
+  /// Eski / tutarsız konuPerformans kayıtlarını analiz dışı bırakır.
+  static Future<void> _migrateAnalizVerisi() async {
+    final prefs = await SharedPreferences.getInstance();
+    if ((prefs.getInt(_analizMigrationKey) ?? 0) >= _analizMigrationVersion) {
+      return;
+    }
+
+    final raw = prefs.getStringList(_sinavKey) ?? [];
+    if (raw.isEmpty) {
+      await prefs.setInt(_analizMigrationKey, _analizMigrationVersion);
+      return;
+    }
+
+    final updated = <String>[];
+    for (final entry in raw) {
+      final j = Map<String, dynamic>.from(
+        jsonDecode(entry) as Map<String, dynamic>,
+      );
+      updated.add(jsonEncode(_stripZayifKonuAnalizi(j)));
+    }
+
+    await prefs.setStringList(_sinavKey, updated);
+    await prefs.setInt(_analizMigrationKey, _analizMigrationVersion);
+  }
+
+  static Map<String, dynamic> _stripZayifKonuAnalizi(Map<String, dynamic> j) {
+    j.remove('konuPerformans');
+    j.remove('analizVersiyonu');
+    return j;
+  }
+
+  /// Zayıf konu analiz geçmişini sıfırlar (sınav skor kayıtları kalır).
+  static Future<void> clearZayifKonuAnalizi() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw   = prefs.getStringList(_sinavKey) ?? [];
+    if (raw.isEmpty) return;
+
+    final updated = raw
+        .map((e) => jsonEncode(
+              _stripZayifKonuAnalizi(
+                Map<String, dynamic>.from(
+                  jsonDecode(e) as Map<String, dynamic>,
+                ),
+              ),
+            ))
+        .toList();
+
+    await prefs.setStringList(_sinavKey, updated);
   }
 
   static Future<void> saveSinavSonucu(SinavSonucu sonuc) async {
@@ -72,25 +81,14 @@ class IstatistikService {
     await prefs.setStringList(_sinavKey, raw);
   }
 
-  // ── Zayıf Kategori Özeti (tüm sınavlardan birleşik) ─────────────────────
-  /// Tüm sınavlardaki yanlış kategori sayılarını toplar.
-  /// Döndürür: {'Bağlaçlar ve Edatlar': 12, 'Modal Fiiller': 5, ...}
-  /// (en çok yanlıştan en aza sıralı)
-  static Future<Map<String, int>> getZayifKategoriler() async {
+  static Future<ZayifKonuOzet> getZayifKonuOzet() async {
     final sonuclar = await getSinavSonuclari();
-    final toplam   = <String, int>{};
+    return ZayifKonuService.hesapla(sonuclar);
+  }
 
-    for (final s in sonuclar) {
-      s.yanlisKategoriler.forEach((kat, count) {
-        toplam[kat] = (toplam[kat] ?? 0) + count;
-      });
-    }
-
-    final sorted = Map.fromEntries(
-      toplam.entries.toList()
-        ..sort((a, b) => b.value.compareTo(a.value)),
-    );
-    return sorted;
+  static Future<List<ZayifKonu>> getZayifKonular() async {
+    final ozet = await getZayifKonuOzet();
+    return ozet.konular;
   }
 
   static Future<void> clearAll() async {

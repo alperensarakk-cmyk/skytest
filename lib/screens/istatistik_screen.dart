@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import '../services/soru_secim_service.dart';
-import '../services/soru_son_gorulen_service.dart';
-import '../services/soru_yukleme_service.dart';
-import '../screens/konu_pratik_screen.dart';
+import '../models/sinav_sonucu.dart';
 import '../services/istatistik_service.dart';
 import '../services/kelime_istatistik_service.dart';
 import '../services/kelime_yanlis_service.dart';
@@ -27,7 +24,6 @@ class IstatistikScreen extends StatefulWidget {
 
 class _IstatistikScreenState extends State<IstatistikScreen> {
   List<SinavSonucu>?   _sonuclar;
-  Map<String, int>?    _zayifKat;
   Map<String, dynamic>? _kelimeStats;
   int _kelimeYanlisCount = 0;
 
@@ -39,13 +35,11 @@ class _IstatistikScreenState extends State<IstatistikScreen> {
 
   Future<void> _loadData() async {
     final s  = await IstatistikService.getSinavSonuclari();
-    final z  = await IstatistikService.getZayifKategoriler();
     final ks = await KelimeIstatistikService.getTodayStats();
     final kc = await KelimeYanlisService.getCountAsync();
     if (!mounted) return;
     setState(() {
       _sonuclar          = s;
-      _zayifKat          = z;
       _kelimeStats       = ks;
       _kelimeYanlisCount = kc;
     });
@@ -117,124 +111,9 @@ class _IstatistikScreenState extends State<IstatistikScreen> {
                 padding: const EdgeInsets.only(bottom: 10),
                 child: _ExamCard(sonuc: s),
               )),
-
-          const SizedBox(height: 28),
-
-          // ── Kart 2: Zayıf Konular ──────────────────────────────────────
-          _SectionHeader(
-            icon: Icons.trending_down_rounded,
-            title: 'Tekrar Gerektiren Konular',
-            subtitle: _zayifKat!.isEmpty
-                ? 'Henüz veri yok'
-                : '${_zayifKat!.length} konu başlığı',
-            iconColor: _cRed,
-          ),
-          if (_zayifKat!.isNotEmpty) ...[
-            const SizedBox(height: 6),
-            Row(
-              children: [
-                const Icon(Icons.touch_app_rounded, color: kAccent, size: 14),
-                const SizedBox(width: 5),
-                Text(
-                  'Bir konuya dokun — o konudan sorular gelsin.',
-                  style: TextStyle(
-                      color: kAccent.withValues(alpha: 0.75), fontSize: 12),
-                ),
-              ],
-            ),
-          ],
-          const SizedBox(height: 12),
-          if (_zayifKat!.isEmpty)
-            _noWeakTopics()
-          else
-            _WeakTopicsCard(
-              kategoriler: _zayifKat!,
-              onTopicTap:  _navigateToTopic,
-            ),
         ],
       ],
     );
-  }
-
-  Widget _noWeakTopics() => Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          color: _cCard2,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: const Row(
-          children: [
-            Icon(Icons.celebration_rounded, color: _cGold, size: 24),
-            SizedBox(width: 12),
-            Expanded(
-              child: Text(
-                'Hiç yanlış konun yok! Harika bir performans.',
-                style: TextStyle(color: _cMuted, fontSize: 13, height: 1.5),
-              ),
-            ),
-          ],
-        ),
-      );
-
-  // ── Konuya yönlendir ──────────────────────────────────────────────────────
-  Future<void> _navigateToTopic(String kategoriAdi) async {
-    // Yükleme göster
-    if (!mounted) return;
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (_) => const Center(
-        child: CircularProgressIndicator(color: kAccent),
-      ),
-    );
-
-    try {
-      final all = await SoruYuklemeService.tumSorulariYukle();
-
-      // kategoriAdi "Baglaclar ve Edatlar" (boşluklu), JSON "Baglaclar_ve_Edatlar"
-      final filtered = all
-          .where((s) => s.kategori.replaceAll('_', ' ') == kategoriAdi)
-          .toList();
-
-      final avoid = await SoruSonGorulenService.getAvoidSet();
-      final sorular = SoruSecimService.secDengeli(
-        filtered,
-        filtered.length,
-        useRandomization: true,
-        avoidRecentIds:   avoid,
-      );
-
-      if (!mounted) return;
-      Navigator.pop(context); // loading kapat
-
-      if (sorular.isEmpty) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Bu konuda soru bulunamadı.')),
-        );
-        return;
-      }
-
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (_) => KonuPratikScreen(
-            kategoriAdi: kategoriAdi,
-            sorular:     sorular,
-          ),
-        ),
-      );
-    } catch (e, st) {
-      debugPrint('istatistik _navigateToTopic: $e\n$st');
-      if (mounted) Navigator.pop(context);
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('Sorular yüklenemedi. Lütfen tekrar dene.'),
-            behavior: SnackBarBehavior.floating,
-          ),
-        );
-      }
-    }
   }
 
   Future<void> _confirmClear() async {
@@ -571,162 +450,6 @@ class _Tag extends StatelessWidget {
       child: Text(label,
           style: TextStyle(
               color: color, fontSize: 12, fontWeight: FontWeight.w600)),
-    );
-  }
-}
-
-// ─── Zayıf Konular Kartı ──────────────────────────────────────────────────────
-
-class _WeakTopicsCard extends StatelessWidget {
-  const _WeakTopicsCard({
-    required this.kategoriler,
-    required this.onTopicTap,
-  });
-  final Map<String, int>         kategoriler;
-  final void Function(String)    onTopicTap;
-
-  @override
-  Widget build(BuildContext context) {
-    final maxVal  = kategoriler.values.first.toDouble();
-    final entries = kategoriler.entries.toList();
-
-    return Container(
-      decoration: BoxDecoration(
-        color: _cCard2,
-        borderRadius: BorderRadius.circular(16),
-      ),
-      padding: const EdgeInsets.all(16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Uyarı satırı
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: BoxDecoration(
-              color: _cRed.withValues(alpha: 0.08),
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: _cRed.withValues(alpha: 0.20)),
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.info_outline_rounded, color: _cRed, size: 15),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    'Bu konularda en fazla hata yaptın. Öncelikli çalış!',
-                    style: TextStyle(
-                        color: _cRed.withValues(alpha: 0.85),
-                        fontSize: 12,
-                        height: 1.4),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 16),
-
-          // Konular
-          ...entries.map((e) => Padding(
-                padding: const EdgeInsets.only(bottom: 10),
-                child: _WeakTopicRow(
-                  name:   e.key,
-                  count:  e.value,
-                  maxVal: maxVal,
-                  onTap:  () => onTopicTap(e.key),
-                ),
-              )),
-        ],
-      ),
-    );
-  }
-}
-
-class _WeakTopicRow extends StatelessWidget {
-  const _WeakTopicRow({
-    required this.name,
-    required this.count,
-    required this.maxVal,
-    required this.onTap,
-  });
-  final String       name;
-  final int          count;
-  final double       maxVal;
-  final VoidCallback onTap;
-
-  Color _barColor(double ratio) {
-    if (ratio >= 0.75) return _cRed;
-    if (ratio >= 0.45) return _cGold;
-    return kAccent;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final ratio = count / maxVal;
-    final color = _barColor(ratio);
-
-    return Material(
-      color: Colors.transparent,
-      borderRadius: BorderRadius.circular(10),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(10),
-        onTap: onTap,
-        splashColor: color.withValues(alpha: 0.10),
-        highlightColor: color.withValues(alpha: 0.06),
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  // Tıklanabilir oku
-                  Container(
-                    width: 26,
-                    height: 26,
-                    decoration: BoxDecoration(
-                      color: color.withValues(alpha: 0.10),
-                      shape: BoxShape.circle,
-                    ),
-                    child: Icon(Icons.play_arrow_rounded, color: color, size: 15),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      name,
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w500),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                  Text(
-                    '$count yanlış',
-                    style: TextStyle(
-                        color: color,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 6),
-              Padding(
-                padding: const EdgeInsets.only(left: 36),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(4),
-                  child: LinearProgressIndicator(
-                    value: ratio,
-                    minHeight: 5,
-                    backgroundColor: Colors.white.withValues(alpha: 0.06),
-                    valueColor: AlwaysStoppedAnimation<Color>(color),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
     );
   }
 }
