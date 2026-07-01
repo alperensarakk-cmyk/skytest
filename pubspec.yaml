@@ -1,7 +1,7 @@
 name: aerotest
 description: AeroTest – Havacılık İngilizce Sınav Hazırlık Uygulaması
 publish_to: 'none'
-version: 1.0.13+23
+version: 1.0.14+24
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -20,6 +20,7 @@ dependencies:
   firebase_core: ^3.13.0
   cloud_firestore: ^5.6.9
   firebase_auth: ^5.5.2
+  google_fonts: ^8.1.0
 
 dev_dependencies:
   flutter_test:
@@ -46,3 +47,11 @@ flutter:
     - assets/user_sozluk_ai.json
     - assets/branding/logo_mark.png
     - assets/branding/logo_full.png
+    - assets/home/hero_bg.png
+    - assets/home/countdown_illustration.png
+    - assets/home/countdown_calendar.png
+    - assets/home/countdown_calendar_icon.png
+    - assets/home/card_konular.png
+    - assets/home/card_kelime.png
+    - assets/home/card_kaliplar.png
+    - assets/home/card_haftalik.png

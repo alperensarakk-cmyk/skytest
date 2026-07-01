@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/soru_model.dart';
 import '../services/app_review_service.dart';
+import '../services/calisma_istatistik_service.dart';
 import '../services/daily_limit_service.dart';
 import '../services/soru_son_gorulen_service.dart';
 import '../services/premium_service.dart';
@@ -37,6 +38,21 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
   int     _index   = 0;
   String? _secilen;
   bool    _reviewMilestoneQueued = false;
+  late final DateTime _sessionStart;
+  bool    _oturumKaydedildi = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _sessionStart = DateTime.now();
+  }
+
+  Future<void> _kaydetOturum() async {
+    if (_oturumKaydedildi) return;
+    _oturumKaydedildi = true;
+    final sn = DateTime.now().difference(_sessionStart).inSeconds;
+    await CalismaIstatistikService.recordOturum(saniye: sn);
+  }
 
   bool get _answered => _secilen != null;
   SoruModel get _soru  => widget.sorular[_index];
@@ -96,6 +112,7 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
 
   /// Konu oturumu: 5. sorudan sonra (veya daha az soru varsa son soruda) değerlendirme kartı.
   void _showDoneDialog() {
+    _kaydetOturum();
     showDialog(
       context: context,
       barrierDismissible: false,

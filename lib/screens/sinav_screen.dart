@@ -4,6 +4,7 @@ import '../models/soru_model.dart';
 import '../services/daily_limit_service.dart';
 import '../models/konu_performans.dart';
 import '../models/sinav_sonucu.dart';
+import '../services/calisma_istatistik_service.dart';
 import '../services/istatistik_service.dart';
 import '../services/zayif_konu_service.dart';
 import '../services/app_review_service.dart';
@@ -42,6 +43,7 @@ class _SinavScreenState extends State<SinavScreen> {
   final Map<int, String> _cevaplar = {};
   int   _currentIndex = 0;
   int   _remainingSec = 30 * 60;
+  int   _baslangicSureSec = 30 * 60;
   bool  _examAutoNext = true;          // ayardan okunur
   bool  _vocabAssistEnabled = false;   // yarı yardımlı kelime çevirisi
   bool  _showVocabAssistHint = false;
@@ -98,6 +100,7 @@ class _SinavScreenState extends State<SinavScreen> {
     setState(() {
       _sorular      = selected;
       _remainingSec = durMin * 60;
+      _baslangicSureSec = durMin * 60;
       _examAutoNext = autoNext;
       _isLoading    = false;
     });
@@ -318,6 +321,12 @@ class _SinavScreenState extends State<SinavScreen> {
     final not100     = SinavPuanFormat.alinanNot(correct, total);
 
     // ── Sınav istatistiğini kaydet ────────────────────────────────────────
+    final gecenSn = (_baslangicSureSec - _remainingSec).clamp(
+      0,
+      _baslangicSureSec,
+    );
+    await CalismaIstatistikService.recordOturum(saniye: gecenSn);
+
     await IstatistikService.saveSinavSonucu(
       SinavSonucu(
         tarih:             DateTime.now(),

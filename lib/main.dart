@@ -5,6 +5,7 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 
 import 'firebase_options.dart';
 import 'theme/app_theme.dart';
+import 'screens/splash_screen.dart';
 import 'screens/main_shell.dart';
 import 'screens/konular_screen.dart';
 import 'screens/sinav_screen.dart';
@@ -16,6 +17,7 @@ import 'screens/kelime_yanlislarim_screen.dart';
 import 'screens/premium_screen.dart';
 import 'screens/sky_fight_lobby_screen.dart';
 import 'screens/challenge_screen.dart';
+import 'navigation/route_observer.dart';
 import 'services/daily_limit_service.dart';
 import 'services/premium_service.dart';
 
@@ -42,6 +44,7 @@ class AeroTestApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: rootNavigatorKey,
+      navigatorObservers: [routeObserver],
       title: 'AeroTest',
       debugShowCheckedModeBanner: false,
       theme: buildAppTheme(),
@@ -55,8 +58,9 @@ class AeroTestApp extends StatelessWidget {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      initialRoute: '/',
+      initialRoute: '/splash',
       routes: {
+        '/splash':          (_) => const SplashScreen(),
         '/':                (_) => const MainShell(),
         '/konular':         (_) => const KonularScreen(),
         '/sinav_hazirlik':  (_) => const SinavHazirlikScreen(),

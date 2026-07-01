@@ -13,7 +13,7 @@ import 'yanlislarim_screen.dart';
 // ─── Renk sabitleri ───────────────────────────────────────────────────────────
 const _cMuted  = Color(0xFFA1B5D8);
 const _cRed    = Color(0xFFFF6B6B);
-const _cGold   = Color(0xFFFFD60A);
+enum _AcikAyar { none, soru, sure }
 
 // ─────────────────────────────────────────────────────────────────────────────
 
@@ -34,6 +34,7 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
     minGerekli: ZayifKonuService.minToplamCevaplanan,
   );
   bool             _loading     = true;
+  _AcikAyar        _acikAyar    = _AcikAyar.none;
 
   static const _soruSecenekleri = [10, 20, 30, 40, 50, 60, 80];
   static const _sureSecenekleri = [10, 20, 30, 45, 60, 90, 120];
@@ -88,6 +89,55 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
     Navigator.pushNamed(context, '/sinav').then((_) => _loadData());
   }
 
+  void _toggleAyar(_AcikAyar tip) {
+    setState(() {
+      _acikAyar = _acikAyar == tip ? _AcikAyar.none : tip;
+    });
+  }
+
+  Widget _ayarKolon({
+    required IconData icon,
+    required String label,
+    required String birim,
+    required int secili,
+    required List<int> secenekler,
+    required _AcikAyar tip,
+    required ValueChanged<int> onSelect,
+  }) {
+    final acik = _acikAyar == tip;
+    return Expanded(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _AyarOzetKarti(
+            icon: icon,
+            label: label,
+            birim: birim,
+            secili: secili,
+            acik: acik,
+            onTap: () => _toggleAyar(tip),
+          ),
+          AnimatedSize(
+            duration: const Duration(milliseconds: 220),
+            curve: Curves.easeOutCubic,
+            alignment: Alignment.topCenter,
+            child: acik
+                ? Padding(
+                    padding: const EdgeInsets.only(top: 6),
+                    child: _KompaktSecimSeridi(
+                      secenekler: secenekler,
+                      secili: secili,
+                      birim: birim,
+                      onSelect: onSelect,
+                    ),
+                  )
+                : const SizedBox.shrink(),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _openYanlislar() {
     Navigator.push(
       context,
@@ -133,9 +183,40 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
                 children: [
                   // Bilgi kartı
                   _InfoCard(),
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 12),
 
-                  // Yanlışlarım kısayolu
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _ayarKolon(
+                        icon: Icons.quiz_rounded,
+                        label: 'Soru Sayısı',
+                        birim: 'soru',
+                        secili: _soruSayisi,
+                        secenekler: _soruSecenekleri,
+                        tip: _AcikAyar.soru,
+                        onSelect: (v) => setState(() {
+                          _soruSayisi = v;
+                          _acikAyar = _AcikAyar.none;
+                        }),
+                      ),
+                      const SizedBox(width: 10),
+                      _ayarKolon(
+                        icon: Icons.timer_outlined,
+                        label: 'Sınav Süresi',
+                        birim: 'dk',
+                        secili: _sureDak,
+                        secenekler: _sureSecenekleri,
+                        tip: _AcikAyar.sure,
+                        onSelect: (v) => setState(() {
+                          _sureDak = v;
+                          _acikAyar = _AcikAyar.none;
+                        }),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
                   _YanlisCard(
                     count: _yanlisCount,
                     onTap: _openYanlislar,
@@ -145,37 +226,277 @@ class _SinavHazirlikScreenState extends State<SinavHazirlikScreen> {
                     ozet: _zayifOzet,
                     onAnalizCleared: _loadData,
                   ),
-                  const SizedBox(height: 24),
-
-                  // Sınav ayarları
-                  _AyarBaslik(
-                    icon:  Icons.quiz_rounded,
-                    label: 'Soru Sayısı',
-                  ),
-                  const SizedBox(height: 10),
-                  _SecenekSatiri(
-                    secenekler: _soruSecenekleri,
-                    secili:     _soruSayisi,
-                    birim:      'soru',
-                    onSelect:   (v) => setState(() => _soruSayisi = v),
-                  ),
-                  const SizedBox(height: 20),
-
-                  _AyarBaslik(
-                    icon:  Icons.timer_outlined,
-                    label: 'Süre',
-                  ),
-                  const SizedBox(height: 10),
-                  _SecenekSatiri(
-                    secenekler: _sureSecenekleri,
-                    secili:     _sureDak,
-                    birim:      'dk',
-                    onSelect:   (v) => setState(() => _sureDak = v),
-                  ),
                   const SizedBox(height: 8),
                 ],
               ),
             ),
+    );
+  }
+}
+
+// ─── Ayar özet kartı + kompakt seçim şeridi ──────────────────────────────────
+
+class _AyarOzetKarti extends StatelessWidget {
+  const _AyarOzetKarti({
+    required this.icon,
+    required this.label,
+    required this.birim,
+    required this.secili,
+    required this.acik,
+    required this.onTap,
+  });
+
+  final IconData icon;
+  final String label;
+  final String birim;
+  final int secili;
+  final bool acik;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: kBgCard,
+      borderRadius: BorderRadius.circular(14),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(14),
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: acik ? kAccent : Colors.white.withValues(alpha: 0.08),
+              width: acik ? 1.5 : 1,
+            ),
+          ),
+          child: Row(
+            children: [
+              Icon(icon, color: kAccent, size: 18),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      label,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: _cMuted,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '$secili $birim',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Icon(
+                acik
+                    ? Icons.keyboard_arrow_up_rounded
+                    : Icons.keyboard_arrow_down_rounded,
+                color: kAccent,
+                size: 22,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _KompaktSecimSeridi extends StatefulWidget {
+  const _KompaktSecimSeridi({
+    required this.secenekler,
+    required this.secili,
+    required this.birim,
+    required this.onSelect,
+  });
+
+  final List<int> secenekler;
+  final int secili;
+  final String birim;
+  final ValueChanged<int> onSelect;
+
+  @override
+  State<_KompaktSecimSeridi> createState() => _KompaktSecimSeridiState();
+}
+
+class _KompaktSecimSeridiState extends State<_KompaktSecimSeridi> {
+  late final ScrollController _scrollCtrl;
+  bool _canScroll = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollCtrl = ScrollController()..addListener(_syncScrollHint);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _syncScrollHint());
+  }
+
+  void _syncScrollHint() {
+    if (!_scrollCtrl.hasClients) return;
+    final canScroll = _scrollCtrl.position.maxScrollExtent > 4;
+    if (canScroll != _canScroll && mounted) {
+      setState(() => _canScroll = canScroll);
+    }
+  }
+
+  @override
+  void dispose() {
+    _scrollCtrl.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 118,
+      decoration: BoxDecoration(
+        color: const Color(0xFF152238),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: kAccent.withValues(alpha: 0.18)),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(11),
+        child: Stack(
+          children: [
+            RawScrollbar(
+              controller: _scrollCtrl,
+              thumbVisibility: true,
+              trackVisibility: true,
+              thickness: 5,
+              radius: const Radius.circular(4),
+              thumbColor: Colors.white,
+              trackColor: Colors.white.withValues(alpha: 0.14),
+              trackBorderColor: Colors.white.withValues(alpha: 0.35),
+              minThumbLength: 22,
+              interactive: true,
+              child: ListView.separated(
+                controller: _scrollCtrl,
+                padding: const EdgeInsets.fromLTRB(6, 6, 12, 6),
+                itemCount: widget.secenekler.length,
+                separatorBuilder: (_, __) => const SizedBox(height: 4),
+                itemBuilder: (_, i) {
+                  final v = widget.secenekler[i];
+                  final selected = v == widget.secili;
+                  return Material(
+                    color: Colors.transparent,
+                    child: InkWell(
+                      onTap: () => widget.onSelect(v),
+                      borderRadius: BorderRadius.circular(8),
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 180),
+                        height: 34,
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        decoration: BoxDecoration(
+                          color: selected
+                              ? kAccent.withValues(alpha: 0.18)
+                              : kBgCard,
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(
+                            color: selected
+                                ? kAccent
+                                : Colors.white.withValues(alpha: 0.08),
+                            width: selected ? 1.5 : 1,
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                '$v',
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  color: selected ? kAccent : Colors.white,
+                                  fontSize: 13,
+                                  fontWeight: selected
+                                      ? FontWeight.bold
+                                      : FontWeight.w500,
+                                ),
+                              ),
+                            ),
+                            Text(
+                              ' ${widget.birim}',
+                              style: TextStyle(
+                                color: selected
+                                    ? kAccent.withValues(alpha: 0.8)
+                                    : _cMuted,
+                                fontSize: 10,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            if (_canScroll) ...[
+              Positioned(
+                left: 0,
+                right: 12,
+                bottom: 0,
+                height: 28,
+                child: IgnorePointer(
+                  child: DecoratedBox(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          const Color(0xFF152238).withValues(alpha: 0),
+                          const Color(0xFF152238).withValues(alpha: 0.92),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Positioned(
+                left: 0,
+                right: 14,
+                bottom: 2,
+                child: IgnorePointer(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.keyboard_arrow_down_rounded,
+                        size: 14,
+                        color: Colors.white,
+                      ),
+                      const SizedBox(width: 2),
+                      Text(
+                        'Kaydır',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 9,
+                          fontWeight: FontWeight.w700,
+                          letterSpacing: 0.2,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
     );
   }
 }
@@ -231,50 +552,10 @@ class _InfoCard extends StatelessWidget {
           Container(height: 1, color: Colors.white.withValues(alpha: 0.07)),
           const SizedBox(height: 14),
           const Text(
-            'Karışık sorularla süre baskısı altında kendini test et. '
-            'Sınav sırasında doğru/yanlış gösterilmez; '
-            'bittiğinde detaylı sonuç ekranı açılır.',
+            'Süre baskısı altında kendini test et. '
+            'Soru sayısı ve süreyi yukarıdan ayarlayarak gerçek sınav koşullarını simüle et.',
             style: TextStyle(color: _cMuted, fontSize: 13, height: 1.65),
           ),
-          const SizedBox(height: 14),
-          Wrap(
-            spacing: 8,
-            runSpacing: 6,
-            children: const [
-              _Badge(icon: Icons.shuffle_rounded,       label: 'Rastgele Sorular'),
-              _Badge(icon: Icons.visibility_off_rounded, label: 'Geri Bildirim Yok'),
-              _Badge(icon: Icons.bar_chart_rounded,     label: 'Detaylı Sonuç'),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Badge extends StatelessWidget {
-  const _Badge({required this.icon, required this.label});
-  final IconData icon;
-  final String   label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      decoration: BoxDecoration(
-        color: const Color(0xFF233056),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: _cGold, size: 13),
-          const SizedBox(width: 5),
-          Text(label,
-              style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 11,
-                  fontWeight: FontWeight.w500)),
         ],
       ),
     );
@@ -347,103 +628,6 @@ class _YanlisCard extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-// ─── Ayar Başlığı ─────────────────────────────────────────────────────────────
-
-class _AyarBaslik extends StatelessWidget {
-  const _AyarBaslik({required this.icon, required this.label});
-  final IconData icon;
-  final String   label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Icon(icon, color: kAccent, size: 17),
-        const SizedBox(width: 8),
-        Text(
-          label,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// ─── Seçenek Satırı ──────────────────────────────────────────────────────────
-
-class _SecenekSatiri extends StatelessWidget {
-  const _SecenekSatiri({
-    required this.secenekler,
-    required this.secili,
-    required this.birim,
-    required this.onSelect,
-  });
-
-  final List<int>       secenekler;
-  final int             secili;
-  final String          birim;
-  final void Function(int) onSelect;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: secenekler.map((v) {
-        final isSelected = v == secili;
-        return Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 3),
-            child: GestureDetector(
-              onTap: () => onSelect(v),
-              child: AnimatedContainer(
-                duration: const Duration(milliseconds: 200),
-                height: 52,
-                decoration: BoxDecoration(
-                  color: isSelected
-                      ? kAccent.withValues(alpha: 0.18)
-                      : kBgCard,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: isSelected ? kAccent : Colors.white.withValues(alpha: 0.08),
-                    width: isSelected ? 2 : 1,
-                  ),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      '$v',
-                      style: TextStyle(
-                        color: isSelected ? kAccent : Colors.white,
-                        fontSize: 15,
-                        fontWeight: isSelected
-                            ? FontWeight.bold
-                            : FontWeight.w500,
-                      ),
-                    ),
-                    Text(
-                      birim,
-                      style: TextStyle(
-                        color: isSelected
-                            ? kAccent.withValues(alpha: 0.75)
-                            : _cMuted,
-                        fontSize: 10,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-        );
-      }).toList(),
     );
   }
 }

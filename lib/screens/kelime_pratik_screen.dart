@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import '../models/kelime_model.dart';
 import '../services/app_review_service.dart';
+import '../services/calisma_istatistik_service.dart';
 import '../services/daily_limit_service.dart';
 import '../services/kelime_mcq_options.dart';
 import '../services/kelime_istatistik_service.dart';
@@ -40,6 +41,8 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
   String? _secilen;
   List<String> _secenekler = [];
   bool    _reviewMilestoneQueued = false;
+  late final DateTime _sessionStart;
+  bool    _oturumKaydedildi = false;
 
   bool          get _answered  => _secilen != null;
   KelimeModel   get _kelime    => widget.kelimeler[_index];
@@ -48,7 +51,15 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
   @override
   void initState() {
     super.initState();
+    _sessionStart = DateTime.now();
     _buildOptions();
+  }
+
+  Future<void> _kaydetOturum() async {
+    if (_oturumKaydedildi) return;
+    _oturumKaydedildi = true;
+    final sn = DateTime.now().difference(_sessionStart).inSeconds;
+    await CalismaIstatistikService.recordOturum(saniye: sn);
   }
 
   // ── 4 şık oluştur (1 doğru + 3 yanlış) ──────────────────────────────────
@@ -123,6 +134,7 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
   }
 
   void _showDoneDialog() {
+    _kaydetOturum();
     showDialog(
       context: context,
       barrierDismissible: false,

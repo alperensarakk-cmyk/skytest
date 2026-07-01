@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../models/sinav_sonucu.dart';
+import 'calisma_istatistik_service.dart';
 import 'zayif_konu_service.dart';
 
 /// Tamamlanan sınav özetlerini SharedPreferences'a kaydeder.
@@ -94,5 +95,6 @@ class IstatistikService {
   static Future<void> clearAll() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_sinavKey);
+    await CalismaIstatistikService.clearAll();
   }
 }

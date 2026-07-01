@@ -10,7 +10,6 @@ import '../widgets/limit_exceeded_dialog.dart';
 import 'konu_pratik_screen.dart';
 
 // ─── Renk sabitleri ───────────────────────────────────────────────────────────
-const _cGold  = Color(0xFFFFD60A);
 const _cMuted = Color(0xFFA1B5D8);
 
 /// Sınav şablonu ile aynı soru tipleri (normalize anahtar → etiket).
@@ -290,51 +289,6 @@ class _InfoCard extends StatelessWidget {
               color: _cMuted,
               fontSize: 13,
               height: 1.65,
-            ),
-          ),
-
-          const SizedBox(height: 16),
-
-          // Özellik rozetleri
-          Wrap(
-            spacing: 8,
-            runSpacing: 6,
-            children: const [
-              _FeatureBadge(icon: Icons.flash_on_rounded,   label: 'Anında Geri Bildirim'),
-              _FeatureBadge(icon: Icons.lightbulb_rounded,  label: 'Taktik Açıklamaları'),
-              _FeatureBadge(icon: Icons.quiz_rounded,       label: 'Sınav odaklı çalışma'),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _FeatureBadge extends StatelessWidget {
-  const _FeatureBadge({required this.icon, required this.label});
-  final IconData icon;
-  final String   label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      decoration: BoxDecoration(
-        color: const Color(0xFF233056),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: _cGold, size: 13),
-          const SizedBox(width: 5),
-          Text(
-            label,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 11,
-              fontWeight: FontWeight.w500,
             ),
           ),
         ],

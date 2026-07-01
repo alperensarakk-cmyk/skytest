@@ -12,7 +12,6 @@ import 'kelime_yanlislarim_screen.dart';
 
 // ─── Renk sabitleri ───────────────────────────────────────────────────────────
 const _cMuted  = Color(0xFFA1B5D8);
-const _cGold   = Color(0xFFFFD60A);
 const _cPurple = Color(0xFF6C63FF);
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -194,47 +193,6 @@ class _InfoCard extends StatelessWidget {
             'Çoktan seçmeli sorularla çalış; kelimeler her oturumda karışık gelir. '
             'Yanlış yaptıklarını tekrar listene ekle, doğru yaptıklarını listeden çıkar.',
             style: TextStyle(color: _cMuted, fontSize: 13, height: 1.65),
-          ),
-          const SizedBox(height: 16),
-          Wrap(
-            spacing: 8,
-            runSpacing: 6,
-            children: const [
-              _Badge(icon: Icons.quiz_rounded, label: 'Çoktan Seçmeli'),
-              _Badge(icon: Icons.lightbulb_rounded, label: 'Örnek Cümleler'),
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _Badge extends StatelessWidget {
-  const _Badge({required this.icon, required this.label});
-  final IconData icon;
-  final String   label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      decoration: BoxDecoration(
-        color: const Color(0xFF233056),
-        borderRadius: BorderRadius.circular(20),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, color: _cGold, size: 13),
-          const SizedBox(width: 5),
-          Text(
-            label,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 11,
-              fontWeight: FontWeight.w500,
-            ),
           ),
         ],
       ),
