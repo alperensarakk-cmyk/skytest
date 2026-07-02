@@ -125,9 +125,13 @@ class PremiumService {
   static Future<bool> isPremiumUser() async => isPremiumNotifier.value;
 
   /// Yerel gün (takvim); mağaza bitiş tarihi yoksa null.
+  /// Debug build'de gerçek abonelik yoksa önizleme için 30 gün döner.
   static int? premiumCalendarDaysRemaining() {
     final exp = premiumExpirationNotifier.value;
-    if (exp == null) return null;
+    if (exp == null) {
+      if (isDeveloperMode && isPremiumNotifier.value) return 30;
+      return null;
+    }
     final now = DateTime.now();
     final expLocal = exp.toLocal();
     final today = DateTime(now.year, now.month, now.day);

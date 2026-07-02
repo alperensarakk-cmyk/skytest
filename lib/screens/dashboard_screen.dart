@@ -1,3 +1,5 @@
+import 'dart:math' as math;
+
 import 'package:flutter/material.dart';
 import '../data/app_mode_guides.dart';
 import '../navigation/route_observer.dart';
@@ -11,7 +13,6 @@ import '../theme/figma_home_layers.dart';
 import '../theme/figma_home_typography.dart';
 
 const Color _gold = Color(0xFFF7C948);
-const Color _premiumBorder = Color(0xFF3D3920);
 
 String _formatStat(int n) {
   final s = n.toString();
@@ -37,6 +38,7 @@ class _DashboardScreenState extends State<DashboardScreen>
     with SingleTickerProviderStateMixin, RouteAware {
   late final AnimationController _entranceCtrl;
   ModalRoute<void>? _route;
+  final _premiumCtaKey = GlobalKey<_DashboardPremiumCtaState>();
 
   int _tamamlananSinav = 0;
   int _basariYuzde = 0;
@@ -70,6 +72,7 @@ class _DashboardScreenState extends State<DashboardScreen>
   @override
   void didPopNext() {
     _loadStats();
+    _premiumCtaKey.currentState?.playFlipAnimation();
   }
 
   Future<void> _loadStats() async {
@@ -151,6 +154,7 @@ class _DashboardScreenState extends State<DashboardScreen>
                         scale: s,
                         width: constraints.maxWidth,
                         onInfo: () => _showInfoSheet(context),
+                        premiumCtaKey: _premiumCtaKey,
                       ),
                     ),
                   ),
@@ -418,11 +422,13 @@ class _TopScene extends StatelessWidget {
     required this.scale,
     required this.width,
     required this.onInfo,
+    this.premiumCtaKey,
   });
 
   final double scale;
   final double width;
   final VoidCallback onInfo;
+  final GlobalKey<_DashboardPremiumCtaState>? premiumCtaKey;
 
   @override
   Widget build(BuildContext context) {
@@ -472,7 +478,12 @@ class _TopScene extends StatelessWidget {
             right: 0,
             top: 0,
             height: headerH,
-            child: _TopHeaderBar(scale: s, width: width, onInfo: onInfo),
+            child: _TopHeaderBar(
+              scale: s,
+              width: width,
+              onInfo: onInfo,
+              premiumCtaKey: premiumCtaKey,
+            ),
           ),
           Positioned(
             left: FigmaHeroLayout.groupX * s,
@@ -507,11 +518,13 @@ class _TopHeaderBar extends StatelessWidget {
     required this.scale,
     required this.width,
     required this.onInfo,
+    this.premiumCtaKey,
   });
 
   final double scale;
   final double width;
   final VoidCallback onInfo;
+  final GlobalKey<_DashboardPremiumCtaState>? premiumCtaKey;
 
   @override
   Widget build(BuildContext context) {
@@ -576,7 +589,11 @@ class _TopHeaderBar extends StatelessWidget {
             top: FigmaHeaderLayout.premiumY * s,
             width: FigmaHeaderLayout.premiumW * s,
             height: FigmaHeaderLayout.premiumH * s,
-            child: _DashboardPremiumCta(scale: s, figmaHeader: true),
+            child: _DashboardPremiumCta(
+              key: premiumCtaKey,
+              scale: s,
+              figmaHeader: true,
+            ),
           ),
           Positioned(
             right: helpRight,
@@ -1115,6 +1132,7 @@ class _ModeCard extends StatelessWidget {
 
 class _DashboardPremiumCta extends StatefulWidget {
   const _DashboardPremiumCta({
+    super.key,
     required this.scale,
     this.figmaHeader = false,
   });
@@ -1127,69 +1145,92 @@ class _DashboardPremiumCta extends StatefulWidget {
 }
 
 class _DashboardPremiumCtaState extends State<_DashboardPremiumCta>
-    with WidgetsBindingObserver {
+    with WidgetsBindingObserver, SingleTickerProviderStateMixin {
+  late final AnimationController _flipCtrl;
+  bool _showingBack = false;
+
   @override
   void initState() {
     super.initState();
+    _flipCtrl = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 650),
+    );
     WidgetsBinding.instance.addObserver(this);
-    PremiumService.isPremiumNotifier.addListener(_onChanged);
-    PremiumService.premiumExpirationNotifier.addListener(_onChanged);
+    PremiumService.isPremiumNotifier.addListener(_onPremiumChanged);
+    PremiumService.premiumExpirationNotifier.addListener(_onPremiumChanged);
+    WidgetsBinding.instance.addPostFrameCallback((_) => playFlipAnimation());
   }
 
-  void _onChanged() {
-    if (mounted) setState(() {});
+  void _onPremiumChanged() {
+    if (!mounted) return;
+    final isPremium = PremiumService.isPremiumNotifier.value;
+    final days = PremiumService.premiumCalendarDaysRemaining();
+    if (!isPremium || days == null) {
+      _flipCtrl.reset();
+      setState(() => _showingBack = false);
+      return;
+    }
+    playFlipAnimation();
+  }
+
+  /// Ana ekrana gelindiğinde veya premium aktifleşince çağrılır.
+  void playFlipAnimation() {
+    if (!mounted) return;
+    final isPremium = PremiumService.isPremiumNotifier.value;
+    final days = PremiumService.premiumCalendarDaysRemaining();
+    if (!isPremium || days == null) return;
+    setState(() => _showingBack = false);
+    _flipCtrl.forward(from: 0).whenComplete(() {
+      if (mounted) setState(() => _showingBack = true);
+    });
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
-    PremiumService.isPremiumNotifier.removeListener(_onChanged);
-    PremiumService.premiumExpirationNotifier.removeListener(_onChanged);
+    PremiumService.isPremiumNotifier.removeListener(_onPremiumChanged);
+    PremiumService.premiumExpirationNotifier.removeListener(_onPremiumChanged);
+    _flipCtrl.dispose();
     super.dispose();
   }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    if (state == AppLifecycleState.resumed && mounted) setState(() {});
+    if (state == AppLifecycleState.resumed && mounted) playFlipAnimation();
   }
 
-  @override
-  Widget build(BuildContext context) {
-    final isPremium = PremiumService.isPremiumNotifier.value;
-    final days = PremiumService.premiumCalendarDaysRemaining();
+  Widget _wrapTap(Widget child) {
+    return InkWell(
+      onTap: () => Navigator.pushNamed(context, '/premium'),
+      borderRadius: BorderRadius.circular(999),
+      child: child,
+    );
+  }
 
-    final String label;
-    if (!isPremium) {
-      label = 'Premium';
-    } else if (days != null) {
-      label = 'Premium · $days g';
-    } else {
-      label = 'Premium';
-    }
+  BoxDecoration _pillDecoration(Color borderColor) {
+    return BoxDecoration(
+      color: Colors.black,
+      borderRadius: BorderRadius.circular(999),
+      border: Border.all(color: borderColor, width: 1),
+    );
+  }
 
-    final s = widget.scale;
-
-    if (widget.figmaHeader) {
-      return InkWell(
-        onTap: () => Navigator.pushNamed(context, '/premium'),
-        borderRadius: BorderRadius.circular(999),
-        child: DecoratedBox(
-          decoration: BoxDecoration(
-            color: Colors.black,
-            borderRadius: BorderRadius.circular(999),
-            border: Border.all(
-              color: _gold.withValues(alpha: 0.25),
-              width: 1,
-            ),
-          ),
-          child: Center(
+  Widget _goldFace(double s) {
+    return DecoratedBox(
+      decoration: _pillDecoration(_gold.withValues(alpha: 0.25)),
+      child: Center(
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6 * s),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Icon(
                   Icons.workspace_premium_rounded,
                   color: _gold,
-                  size: 13.22 * s,
+                  size: widget.figmaHeader ? 13.22 * s : 17 * s,
                 ),
                 SizedBox(width: 4 * s),
                 Text(
@@ -1206,44 +1247,102 @@ class _DashboardPremiumCtaState extends State<_DashboardPremiumCta>
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _greenFace(double s, int days) {
+    return DecoratedBox(
+      decoration: _pillDecoration(kAccentGreen.withValues(alpha: 0.45)),
+      child: Center(
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6 * s),
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(
+                  Icons.verified_rounded,
+                  color: kAccentGreen,
+                  size: widget.figmaHeader ? 13.22 * s : 17 * s,
+                ),
+                SizedBox(width: 4 * s),
+                Text(
+                  'Kalan Gün $days',
+                  maxLines: 1,
+                  style: TextStyle(
+                    color: kAccentGreen,
+                    fontSize: 10.881270408630371 * s,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.15,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _flipCard(double s, int days) {
+    if (_showingBack && !_flipCtrl.isAnimating) {
+      return _greenFace(s, days);
+    }
+
+    return AnimatedBuilder(
+      animation: _flipCtrl,
+      builder: (context, _) {
+        final t = _flipCtrl.value;
+        if (t >= 1.0) return _greenFace(s, days);
+
+        final angle = t * math.pi;
+        final showFront = t < 0.5;
+        return Transform(
+          alignment: Alignment.center,
+          transform: Matrix4.identity()
+            ..setEntry(3, 2, 0.002)
+            ..rotateY(angle),
+          child: showFront
+              ? _goldFace(s)
+              : Transform(
+                  alignment: Alignment.center,
+                  transform: Matrix4.rotationY(math.pi),
+                  child: _greenFace(s, days),
+                ),
+        );
+      },
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isPremium = PremiumService.isPremiumNotifier.value;
+    final days = PremiumService.premiumCalendarDaysRemaining();
+    final s = widget.scale;
+
+    if (!isPremium || days == null) {
+      if (widget.figmaHeader) {
+        return _wrapTap(_goldFace(s));
+      }
+      return _wrapTap(
+        Container(
+          padding: EdgeInsets.symmetric(horizontal: 12 * s, vertical: 7 * s),
+          child: _goldFace(s),
+        ),
       );
     }
 
-    return InkWell(
-      onTap: () => Navigator.pushNamed(context, '/premium'),
-      borderRadius: BorderRadius.circular(999),
-      child: Container(
-        padding: EdgeInsets.symmetric(
-          horizontal: 12 * s,
-          vertical: 7 * s,
-        ),
-        decoration: BoxDecoration(
-          color: Colors.black,
-          borderRadius: BorderRadius.circular(999),
-          border: Border.all(color: _premiumBorder, width: 1),
-        ),
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              Icons.workspace_premium_rounded,
-              color: _gold,
-              size: 17 * s,
-            ),
-            SizedBox(width: 5 * s),
-            Text(
-              label.length > 14 ? 'Premium' : label,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(
-                color: _gold,
-                fontSize: 10.881270408630371 * s,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 0.2,
-              ),
-            ),
-          ],
-        ),
+    final card = _flipCard(s, days);
+    if (widget.figmaHeader) {
+      return _wrapTap(card);
+    }
+
+    return _wrapTap(
+      Container(
+        padding: EdgeInsets.symmetric(horizontal: 12 * s, vertical: 7 * s),
+        child: card,
       ),
     );
   }
