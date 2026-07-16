@@ -3131,5 +3131,2072 @@
     },
     "correct": "A",
     "difficulty": "hard"
+  },
+  {
+    "id": 242,
+    "type": "terminology",
+    "question": "Perçin seçilirken iki levhanın toplam kalınlığını ifade eden terim hangisidir?",
+    "options": {
+      "A": "Grip length",
+      "B": "Thread pitch",
+      "C": "Edge distance",
+      "D": "Shank diameter"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 243,
+    "type": "definition",
+    "question": "Bir cıvatanın iki dişi arasındaki mesafeye ne ad verilir?",
+    "options": {
+      "A": "Grip length",
+      "B": "Thread pitch",
+      "C": "Thread angle",
+      "D": "Bolt stretch"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 244,
+    "type": "terminology",
+    "question": "Perçin başlarının üzerine çekilen boya çizgisi hangi amaçla kullanılır?",
+    "options": {
+      "A": "Corrosion protection",
+      "B": "Torque stripe",
+      "C": "Primer coating",
+      "D": "Identification marking"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 245,
+    "type": "definition",
+    "question": "Bakım sonrasında parçaların hareket edip etmediğini anlamak için yapılan referans işaretine ne denir?",
+    "options": {
+      "A": "Witness mark",
+      "B": "Index pin",
+      "C": "Reference hole",
+      "D": "Datum line"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 246,
+    "type": "terminology",
+    "question": "Kompozit panelin iç kısmında kullanılan hafif hücresel yapı hangisidir?",
+    "options": {
+      "A": "Honeycomb core",
+      "B": "Fiberglass cloth",
+      "C": "Sealant",
+      "D": "Primer"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 247,
+    "type": "definition",
+    "question": "Kompozit yapıda hücresel çekirdeğin ezilmesi sonucu oluşan hasara ne denir?",
+    "options": {
+      "A": "Core crush",
+      "B": "Delamination",
+      "C": "Crazing",
+      "D": "Peeling"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 248,
+    "type": "terminology",
+    "question": "Elektrik devresinde akımın hiç geçemediği arıza hangisidir?",
+    "options": {
+      "A": "Open circuit",
+      "B": "Short circuit",
+      "C": "Ground fault",
+      "D": "Overload"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 249,
+    "type": "definition",
+    "question": "İletkenin istenmeyen şekilde doğrudan temas etmesi sonucu oluşan elektrik arızası hangisidir?",
+    "options": {
+      "A": "Open circuit",
+      "B": "Short circuit",
+      "C": "Voltage drop",
+      "D": "Induction"
+    },
+    "correct": "B",
+    "difficulty": "easy"
+  },
+  {
+    "id": 250,
+    "type": "terminology",
+    "question": "Kablo izolasyonunun elektrik arkı nedeniyle karbonlaşarak bozulmasına ne denir?",
+    "options": {
+      "A": "Arc tracking",
+      "B": "Burnishing",
+      "C": "Oxidation",
+      "D": "Fretting"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 251,
+    "type": "definition",
+    "question": "Çok pinli havacılık elektrik konnektörlerinin arka koruyucu kısmına ne ad verilir?",
+    "options": {
+      "A": "Backshell",
+      "B": "Ferrule",
+      "C": "Sleeve",
+      "D": "Clamp"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 252,
+    "type": "terminology",
+    "question": "Vardiya değişiminde bakım bilgilerinin eksiksiz aktarılması sürecine ne ad verilir?",
+    "options": {
+      "A": "Shift handover",
+      "B": "Tool briefing",
+      "C": "Crew rotation",
+      "D": "Maintenance planning"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 253,
+    "type": "terminology",
+    "question": "İkinci bir teknisyen tarafından kritik bakım işleminin tekrar doğrulanmasına ne ad verilir?",
+    "options": {
+      "A": "Duplicate inspection",
+      "B": "Routine inspection",
+      "C": "General survey",
+      "D": "Receiving inspection"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 254,
+    "type": "definition",
+    "question": "Bakım sırasında farkında olmadan dikkat seviyesinin düşmesiyle oluşan insan faktörü hangisidir?",
+    "options": {
+      "A": "Complacency",
+      "B": "Stress",
+      "C": "Fatigue",
+      "D": "Communication"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 255,
+    "type": "terminology",
+    "question": "Hidrolik sistemde aşırı basıncı sınırlayan valf hangisidir?",
+    "options": {
+      "A": "Relief valve",
+      "B": "Selector valve",
+      "C": "Shutoff valve",
+      "D": "Priority valve"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 256,
+    "type": "definition",
+    "question": "Hidrolik sistemde akışın yalnızca tek yönde ilerlemesini sağlayan valf hangisidir?",
+    "options": {
+      "A": "Relief valve",
+      "B": "Check valve",
+      "C": "Bypass valve",
+      "D": "Servo valve"
+    },
+    "correct": "B",
+    "difficulty": "medium"
+  },
+  {
+    "id": 257,
+    "type": "terminology",
+    "question": "Yakıt tankları arasında yakıt transferine imkan veren valf hangisidir?",
+    "options": {
+      "A": "Crossfeed valve",
+      "B": "Relief valve",
+      "C": "Drain valve",
+      "D": "Metering valve"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 258,
+    "type": "definition",
+    "question": "Motor yağının kartere geri dönmesini sağlayan pompa hangisidir?",
+    "options": {
+      "A": "Pressure pump",
+      "B": "Scavenge pump",
+      "C": "Transfer pump",
+      "D": "Boost pump"
+    },
+    "correct": "B",
+    "difficulty": "hard"
+  },
+  {
+    "id": 259,
+    "type": "terminology",
+    "question": "Kompresör içerisindeki hava akışının bozulması sonucu oluşan durum hangisidir?",
+    "options": {
+      "A": "Compressor stall",
+      "B": "Flameout",
+      "C": "Overspeed",
+      "D": "Oil foaming"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 260,
+    "type": "definition",
+    "question": "Motor yanmasının istenmeyen şekilde tamamen sönmesine ne ad verilir?",
+    "options": {
+      "A": "Flameout",
+      "B": "Surge",
+      "C": "Rollback",
+      "D": "Spool down"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 261,
+    "type": "terminology",
+    "question": "Motor kompresöründeki bazı stator kanatlarının çalışma sırasında açısını değiştiren sistem hangisidir?",
+    "options": {
+      "A": "Variable stator vane",
+      "B": "Fan blade",
+      "C": "Inlet cone",
+      "D": "Guide rail"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 262,
+    "type": "definition",
+    "question": "Yapısal onarımlarda iki parçayı birleştirmek amacıyla kullanılan takviye parçasına ne denir?",
+    "options": {
+      "A": "Doubler",
+      "B": "Shim",
+      "C": "Spacer",
+      "D": "Bushing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 263,
+    "type": "terminology",
+    "question": "Yapısal bir parçanın yük aktarımını sağlayan bağlantı plakasına ne denir?",
+    "options": {
+      "A": "Gusset",
+      "B": "Bracket",
+      "C": "Fairing",
+      "D": "Cowling"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 264,
+    "type": "definition",
+    "question": "Kompozit tamirinde reçinenin yapışmasını önlemek amacıyla kullanılan özel kumaş hangisidir?",
+    "options": {
+      "A": "Peel ply",
+      "B": "Fiberglass tape",
+      "C": "Core fabric",
+      "D": "Bleeder cloth"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 265,
+    "type": "terminology",
+    "question": "Kompozit tamirinde laminatın sıkıştırılması için uygulanan yöntem hangisidir?",
+    "options": {
+      "A": "Vacuum bagging",
+      "B": "Heat soaking",
+      "C": "Shot peening",
+      "D": "Cold bonding"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 266,
+    "type": "definition",
+    "question": "Kompozit malzemeyi oluşturan tek bir lif tabakasına ne denir?",
+    "options": {
+      "A": "Ply",
+      "B": "Core",
+      "C": "Skin",
+      "D": "Mesh"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 267,
+    "type": "terminology",
+    "question": "Elektrik kablolarını gövdeye sabitlemek amacıyla kullanılan bağlantı elemanı hangisidir?",
+    "options": {
+      "A": "Cushion clamp",
+      "B": "Washer",
+      "C": "Bracket",
+      "D": "Spacer"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 268,
+    "type": "definition",
+    "question": "Elektrik konnektöründeki metal temas elemanına ne ad verilir?",
+    "options": {
+      "A": "Contact",
+      "B": "Shell",
+      "C": "Sleeve",
+      "D": "Latch"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 269,
+    "type": "terminology",
+    "question": "Bir konnektörden hasar vermeden pini çıkarmak için kullanılan özel alet hangisidir?",
+    "options": {
+      "A": "Pin extraction tool",
+      "B": "Crimp tool",
+      "C": "Torque driver",
+      "D": "Safety pliers"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 270,
+    "type": "definition",
+    "question": "Bakım sırasında dikkatin başka bir olaya yönelmesi sonucu oluşan insan faktörü hangisidir?",
+    "options": {
+      "A": "Distraction",
+      "B": "Norms",
+      "C": "Pressure",
+      "D": "Stress"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 271,
+    "type": "terminology",
+    "question": "Tekrarlayan uygunsuz çalışma alışkanlıklarının zamanla normal kabul edilmesine ne denir?",
+    "options": {
+      "A": "Norms",
+      "B": "Fatigue",
+      "C": "Complacency",
+      "D": "Violation"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 272,
+    "type": "definition",
+    "question": "Hi-Lok bağlantı elemanının en önemli özelliği hangisidir?",
+    "options": {
+      "A": "Controlled preload installation",
+      "B": "Quick manual removal",
+      "C": "Plastic construction",
+      "D": "Adhesive locking"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 273,
+    "type": "terminology",
+    "question": "Kırılarak tork değerini gösteren montaj bileziğine sahip bağlantı elemanı hangisidir?",
+    "options": {
+      "A": "Hi-Lok",
+      "B": "Clevis bolt",
+      "C": "Eye bolt",
+      "D": "Anchor nut"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 274,
+    "type": "definition",
+    "question": "Perçin deliğinin merkezinin malzeme kenarına olan minimum uzaklığı hangi terim ifade eder?",
+    "options": {
+      "A": "Edge distance",
+      "B": "Pitch",
+      "C": "Grip length",
+      "D": "Gauge"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 275,
+    "type": "terminology",
+    "question": "Aynı sıra üzerindeki iki perçin merkezi arasındaki mesafeye ne denir?",
+    "options": {
+      "A": "Pitch",
+      "B": "Clearance",
+      "C": "Offset",
+      "D": "Tolerance"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 276,
+    "type": "definition",
+    "question": "Paralel iki perçin sırası arasındaki mesafeye ne ad verilir?",
+    "options": {
+      "A": "Gauge",
+      "B": "Grip",
+      "C": "Edge distance",
+      "D": "Radius"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 277,
+    "type": "terminology",
+    "question": "Bir sistemde arızaya neden olan temel sebebi belirlemeye yönelik analiz hangisidir?",
+    "options": {
+      "A": "Root cause analysis",
+      "B": "Functional test",
+      "C": "Leak inspection",
+      "D": "Visual survey"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 278,
+    "type": "definition",
+    "question": "Bakım personelinin aynı anda birden fazla işe odaklanması nedeniyle hata yapma riskini artıran durum hangisidir?",
+    "options": {
+      "A": "Task interruption",
+      "B": "Calibration",
+      "C": "Inspection",
+      "D": "Planning"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 279,
+    "type": "terminology",
+    "question": "Kompozit malzemede liflerin reçineden ayrılması sonucu oluşan hasar hangisidir?",
+    "options": {
+      "A": "Fiber pull-out",
+      "B": "Core crush",
+      "C": "Peel ply",
+      "D": "Honeycomb"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 280,
+    "type": "definition",
+    "question": "Elektrik kablosunun ekranlama katmanına ne ad verilir?",
+    "options": {
+      "A": "Shield",
+      "B": "Core",
+      "C": "Sleeve",
+      "D": "Clamp"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 281,
+    "type": "terminology",
+    "question": "Elektriksel paraziti azaltmak amacıyla kullanılan örgü metal kaplama hangisidir?",
+    "options": {
+      "A": "Shield braid",
+      "B": "Heat sleeve",
+      "C": "Spiral wrap",
+      "D": "Cable tie"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 282,
+    "type": "definition",
+    "question": "Bakım sırasında kullanılan aletlerin eksiksiz geri alındığını doğrulayan prosedüre ne denir?",
+    "options": {
+      "A": "Tool accountability",
+      "B": "Material control",
+      "C": "Equipment release",
+      "D": "Parts inspection"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 283,
+    "type": "terminology",
+    "question": "İniş takımı amortisöründe darbe enerjisini sönümleyen ünite hangisidir?",
+    "options": {
+      "A": "Oleo strut",
+      "B": "Torque link",
+      "C": "Drag brace",
+      "D": "Axle"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 284,
+    "type": "definition",
+    "question": "İniş takımı amortisöründe kullanılan gaz hangisidir?",
+    "options": {
+      "A": "Nitrogen",
+      "B": "Oxygen",
+      "C": "Compressed air",
+      "D": "Carbon dioxide"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 285,
+    "type": "terminology",
+    "question": "İniş takımı pistonunun dönmesini önleyen bağlantı hangisidir?",
+    "options": {
+      "A": "Torque link",
+      "B": "Shimmy damper",
+      "C": "Side brace",
+      "D": "Actuator"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 286,
+    "type": "definition",
+    "question": "Burun iniş takımındaki titreşimleri azaltan hidrolik ünite hangisidir?",
+    "options": {
+      "A": "Shimmy damper",
+      "B": "Accumulator",
+      "C": "Snubber",
+      "D": "Metering valve"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 287,
+    "type": "terminology",
+    "question": "İniş takımını açık veya kapalı konumda mekanik olarak kilitleyen yapı hangisidir?",
+    "options": {
+      "A": "Downlock",
+      "B": "Pivot fitting",
+      "C": "Trunnion",
+      "D": "Bearing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 288,
+    "type": "definition",
+    "question": "Uçuş kumanda yüzeylerinin hareketini doğrudan sağlayan hidrolik eleman hangisidir?",
+    "options": {
+      "A": "Power Control Unit",
+      "B": "Accumulator",
+      "C": "Servo tab",
+      "D": "Trim wheel"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 289,
+    "type": "terminology",
+    "question": "Pilotun kumanda kuvvetini azaltmak amacıyla kullanılan küçük yardımcı yüzey hangisidir?",
+    "options": {
+      "A": "Servo tab",
+      "B": "Balance panel",
+      "C": "Spoiler",
+      "D": "Wing fence"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 290,
+    "type": "definition",
+    "question": "Kontrol yüzeyinin nötr konuma ayarlanmasını sağlayan sistem hangisidir?",
+    "options": {
+      "A": "Trim system",
+      "B": "Yaw damper",
+      "C": "Gust lock",
+      "D": "Speed brake"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 291,
+    "type": "terminology",
+    "question": "Motor kompresörüne giren hava akışını yönlendiren ilk sabit kanatlar hangisidir?",
+    "options": {
+      "A": "Inlet Guide Vanes",
+      "B": "Fan Blades",
+      "C": "Stator Case",
+      "D": "Diffuser"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 292,
+    "type": "definition",
+    "question": "Motorun ön kısmındaki aerodinamik konik parçaya ne ad verilir?",
+    "options": {
+      "A": "Spinner",
+      "B": "Nacelle",
+      "C": "Cowling",
+      "D": "Bullet fairing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 293,
+    "type": "terminology",
+    "question": "Motor fan kanatlarının çevresini saran yapıya ne ad verilir?",
+    "options": {
+      "A": "Fan case",
+      "B": "Combustor",
+      "C": "Exhaust cone",
+      "D": "Tail pipe"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 294,
+    "type": "definition",
+    "question": "Hidrolik sistemde ani basınç artışlarını sönümleyen eleman hangisidir?",
+    "options": {
+      "A": "Accumulator",
+      "B": "Check valve",
+      "C": "Selector valve",
+      "D": "Servo valve"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 295,
+    "type": "terminology",
+    "question": "Hidrolik akışı farklı devrelere yönlendiren valf hangisidir?",
+    "options": {
+      "A": "Selector valve",
+      "B": "Relief valve",
+      "C": "Drain valve",
+      "D": "Shuttle pin"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 296,
+    "type": "definition",
+    "question": "Hidrolik sıvının tanka geri döndüğü hatta ne ad verilir?",
+    "options": {
+      "A": "Return line",
+      "B": "Pressure line",
+      "C": "Supply line",
+      "D": "Bleed line"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 297,
+    "type": "terminology",
+    "question": "Hidrolik sistemde yalnızca belirli bir basınca ulaşıldığında sinyal üreten eleman hangisidir?",
+    "options": {
+      "A": "Pressure switch",
+      "B": "Pressure relief valve",
+      "C": "Accumulator",
+      "D": "Reservoir"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 298,
+    "type": "definition",
+    "question": "Bir yapısal parçanın tasarım yükünü güvenli şekilde taşıyabilme özelliği hangi terimle ifade edilir?",
+    "options": {
+      "A": "Structural integrity",
+      "B": "Elasticity",
+      "C": "Expansion",
+      "D": "Rigidity"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 299,
+    "type": "terminology",
+    "question": "Bakım sırasında teknik dokümandan sapılması gerektiğinde alınması gereken resmi onay hangisidir?",
+    "options": {
+      "A": "Engineering authorization",
+      "B": "Verbal approval",
+      "C": "Supervisor note",
+      "D": "Work pause"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 300,
+    "type": "definition",
+    "question": "Bir parçanın ömrü boyunca hangi uçakta ve hangi bakım işlemlerinde kullanıldığının takip edilmesine ne denir?",
+    "options": {
+      "A": "Component traceability",
+      "B": "Inventory control",
+      "C": "Material planning",
+      "D": "Tool tracking"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 301,
+    "type": "terminology",
+    "question": "İniş takımı gövde bağlantısında dönme ekseni görevi yapan ana bağlantı noktası hangisidir?",
+    "options": {
+      "A": "Trunnion",
+      "B": "Torque link",
+      "C": "Axle",
+      "D": "Downlock"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 302,
+    "type": "definition",
+    "question": "İniş takımının gövdeye doğru katlanmasını sağlayan hidrolik eleman hangisidir?",
+    "options": {
+      "A": "Retract actuator",
+      "B": "Shimmy damper",
+      "C": "Torque link",
+      "D": "Metering pin"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 303,
+    "type": "terminology",
+    "question": "Kanat üzerinde hava akışını iyileştirmek amacıyla yerleştirilen dikey aerodinamik yüzey hangisidir?",
+    "options": {
+      "A": "Wing fence",
+      "B": "Fairing",
+      "C": "Trim tab",
+      "D": "Balance tab"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 304,
+    "type": "definition",
+    "question": "Kontrol yüzeyindeki aerodinamik yükü azaltmak amacıyla ön kenara yerleştirilen ağırlığa ne denir?",
+    "options": {
+      "A": "Balance weight",
+      "B": "Counter spring",
+      "C": "Mass block",
+      "D": "Trim weight"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 305,
+    "type": "terminology",
+    "question": "Motor kompresöründen çıkan havanın hızını azaltıp basıncını artıran bölüm hangisidir?",
+    "options": {
+      "A": "Diffuser",
+      "B": "Nozzle",
+      "C": "Fan case",
+      "D": "Exhaust cone"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 306,
+    "type": "definition",
+    "question": "Yanma odasına yakıtı ince damlacıklar halinde püskürten parça hangisidir?",
+    "options": {
+      "A": "Fuel nozzle",
+      "B": "Fuel manifold",
+      "C": "Fuel filter",
+      "D": "Drain valve"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 307,
+    "type": "terminology",
+    "question": "Motor yağ sisteminde yağın sıcaklığını düşüren ünite hangisidir?",
+    "options": {
+      "A": "Oil cooler",
+      "B": "Scavenge pump",
+      "C": "Oil filter",
+      "D": "Chip detector"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 308,
+    "type": "definition",
+    "question": "Motor yağ sisteminde metal parçacıkları tespit etmek amacıyla kullanılan eleman hangisidir?",
+    "options": {
+      "A": "Chip detector",
+      "B": "Pressure switch",
+      "C": "Sight glass",
+      "D": "Fuel screen"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 309,
+    "type": "terminology",
+    "question": "Elektrik kablosunun ucuna terminal takmak için kullanılan işlem hangisidir?",
+    "options": {
+      "A": "Crimping",
+      "B": "Bonding",
+      "C": "Laminating",
+      "D": "Solder washing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 310,
+    "type": "definition",
+    "question": "Kablo terminalinin uygun şekilde sıkıldığını doğrulamak için yapılan çekme testine ne denir?",
+    "options": {
+      "A": "Pull test",
+      "B": "Load test",
+      "C": "Leak test",
+      "D": "Continuity test"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 311,
+    "type": "terminology",
+    "question": "Elektrik devresindeki voltaj düşümünü ölçmeye yönelik kontrol hangisidir?",
+    "options": {
+      "A": "Voltage drop test",
+      "B": "Ground test",
+      "C": "Megger test",
+      "D": "Loop test"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 312,
+    "type": "definition",
+    "question": "İzolasyon direncini yüksek voltaj kullanarak ölçen test cihazı hangisidir?",
+    "options": {
+      "A": "Megohmmeter",
+      "B": "Voltmeter",
+      "C": "Clamp meter",
+      "D": "Oscilloscope"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 313,
+    "type": "terminology",
+    "question": "Kompozit tamirinde reçinenin fazla kısmını emmek amacıyla kullanılan malzeme hangisidir?",
+    "options": {
+      "A": "Bleeder cloth",
+      "B": "Peel ply",
+      "C": "Core splice",
+      "D": "Glass tape"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 314,
+    "type": "definition",
+    "question": "Vakum torbalama işleminde havanın eşit şekilde dağılmasını sağlayan ağ malzemeye ne denir?",
+    "options": {
+      "A": "Breather cloth",
+      "B": "Honeycomb",
+      "C": "Seal tape",
+      "D": "Release film"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 315,
+    "type": "terminology",
+    "question": "Bakım sonrasında kontrol yüzeylerinin doğru yönde hareket ettiğini doğrulayan işlem hangisidir?",
+    "options": {
+      "A": "Rigging check",
+      "B": "Ground run",
+      "C": "Alignment check",
+      "D": "Power check"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 316,
+    "type": "definition",
+    "question": "Kontrol kablolarındaki gerginliğin üretici limitlerinde ayarlanmasına ne denir?",
+    "options": {
+      "A": "Cable tensioning",
+      "B": "Cable routing",
+      "C": "Cable shielding",
+      "D": "Cable splicing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 317,
+    "type": "terminology",
+    "question": "Bakım sırasında kullanılan özel aletlerin belirli aralıklarla doğrulanmasına ne denir?",
+    "options": {
+      "A": "Tool calibration",
+      "B": "Tool servicing",
+      "C": "Tool overhaul",
+      "D": "Tool balancing"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 318,
+    "type": "definition",
+    "question": "Bakım görevine başlamadan önce olası tehlikelerin değerlendirilmesi sürecine ne denir?",
+    "options": {
+      "A": "Risk assessment",
+      "B": "Root cause analysis",
+      "C": "Failure reporting",
+      "D": "Technical review"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 319,
+    "type": "terminology",
+    "question": "Bakım sırasında tespit edilen ancak güvenliği etkilemeyen küçük uygunsuzluğun kayıt altına alınmasına ne denir?",
+    "options": {
+      "A": "Non-conformance report",
+      "B": "Engineering order",
+      "C": "Flight release",
+      "D": "Component tag"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 320,
+    "type": "definition",
+    "question": "Bir bakım görevinin tüm adımlarının eksiksiz tamamlandığını doğrulamak amacıyla kullanılan liste hangisidir?",
+    "options": {
+      "A": "Completion checklist",
+      "B": "Dispatch list",
+      "C": "Inspection log",
+      "D": "Engineering file"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 321,
+    "type": "terminology",
+    "question": "Kabin havasının sıcaklığını otomatik olarak düzenleyen sistem hangisidir?",
+    "options": {
+      "A": "Temperature Control System",
+      "B": "Bleed Monitoring System",
+      "C": "Air Distribution System",
+      "D": "Recirculation System"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 322,
+    "type": "definition",
+    "question": "Kabin havasındaki partikülleri temizlemek amacıyla kullanılan filtre hangisidir?",
+    "options": {
+      "A": "HEPA filter",
+      "B": "Oil filter",
+      "C": "Hydraulic filter",
+      "D": "Fuel filter"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 323,
+    "type": "terminology",
+    "question": "Motor bleed havasının sıcaklığını düşüren ısı değiştirici hangisidir?",
+    "options": {
+      "A": "Primary heat exchanger",
+      "B": "Water separator",
+      "C": "Condenser",
+      "D": "Reheater"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 324,
+    "type": "definition",
+    "question": "Air Cycle Machine içerisinde havayı sıkıştıran bölüm hangisidir?",
+    "options": {
+      "A": "Compressor",
+      "B": "Separator",
+      "C": "Mixer",
+      "D": "Diffuser"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 325,
+    "type": "terminology",
+    "question": "Uçağın otomatik uçuş sisteminde pilot komutlarını uygulayan bilgisayar hangisidir?",
+    "options": {
+      "A": "Flight Control Computer",
+      "B": "Data Loader",
+      "C": "Display Unit",
+      "D": "Power Converter"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 326,
+    "type": "definition",
+    "question": "Otopilotun uçağı belirlenen başta tutma modu hangisidir?",
+    "options": {
+      "A": "Heading Hold",
+      "B": "Altitude Capture",
+      "C": "Vertical Speed",
+      "D": "Approach Mode"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 327,
+    "type": "terminology",
+    "question": "VHF haberleşme sisteminde anten ile telsiz arasında çalışan cihaz hangisidir?",
+    "options": {
+      "A": "Transceiver",
+      "B": "Servo",
+      "C": "Amplifier Relay",
+      "D": "Signal Mixer"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 328,
+    "type": "definition",
+    "question": "Cockpit Voice Recorder'ın temel görevi nedir?",
+    "options": {
+      "A": "Record cockpit audio",
+      "B": "Record engine vibration",
+      "C": "Record hydraulic pressure",
+      "D": "Record fuel quantity"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 329,
+    "type": "terminology",
+    "question": "Flight Data Recorder hangi bilgileri kaydeder?",
+    "options": {
+      "A": "Aircraft flight parameters",
+      "B": "Passenger announcements",
+      "C": "Cabin lighting",
+      "D": "Ground radio traffic"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 330,
+    "type": "definition",
+    "question": "Pitot ve statik sistemden gelen bilgileri kullanarak hava hızını hesaplayan gösterge hangisidir?",
+    "options": {
+      "A": "Airspeed Indicator",
+      "B": "Turn Coordinator",
+      "C": "Magnetic Compass",
+      "D": "Clock"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 331,
+    "type": "terminology",
+    "question": "Uçağın deniz seviyesine göre yüksekliğini gösteren cihaz hangisidir?",
+    "options": {
+      "A": "Altimeter",
+      "B": "Variometer",
+      "C": "Turn Indicator",
+      "D": "Slip Indicator"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 332,
+    "type": "definition",
+    "question": "Uçağın tırmanış veya alçalış hızını gösteren gösterge hangisidir?",
+    "options": {
+      "A": "Vertical Speed Indicator",
+      "B": "Airspeed Indicator",
+      "C": "Attitude Indicator",
+      "D": "Radio Altimeter"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 333,
+    "type": "terminology",
+    "question": "ILS yaklaşmalarında yatay doğrultu bilgisini sağlayan sinyal hangisidir?",
+    "options": {
+      "A": "Localizer",
+      "B": "Glideslope",
+      "C": "Marker Beacon",
+      "D": "DME"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 334,
+    "type": "definition",
+    "question": "ILS sisteminde alçalma açısını sağlayan sinyal hangisidir?",
+    "options": {
+      "A": "Glideslope",
+      "B": "Localizer",
+      "C": "ADF",
+      "D": "VOR"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 335,
+    "type": "terminology",
+    "question": "Uçağın manyetik kuzeye göre yönünü algılayan sensör hangisidir?",
+    "options": {
+      "A": "Magnetometer",
+      "B": "Gyroscope",
+      "C": "Accelerometer",
+      "D": "Resolver"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 336,
+    "type": "definition",
+    "question": "DME sisteminin temel görevi nedir?",
+    "options": {
+      "A": "Measure slant range distance",
+      "B": "Measure wind direction",
+      "C": "Measure cabin pressure",
+      "D": "Measure fuel quantity"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 337,
+    "type": "terminology",
+    "question": "TCAS sisteminin temel amacı nedir?",
+    "options": {
+      "A": "Prevent mid-air collision",
+      "B": "Measure runway length",
+      "C": "Control cabin temperature",
+      "D": "Monitor engine oil"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 338,
+    "type": "definition",
+    "question": "EGPWS sistemi pilotu hangi tehlikeye karşı uyarır?",
+    "options": {
+      "A": "Terrain collision",
+      "B": "Fuel imbalance",
+      "C": "Cabin smoke",
+      "D": "Brake overheating"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 339,
+    "type": "terminology",
+    "question": "ELT cihazı hangi durumda otomatik olarak devreye girebilir?",
+    "options": {
+      "A": "After a severe impact",
+      "B": "During engine start",
+      "C": "During taxi",
+      "D": "After refueling"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 340,
+    "type": "definition",
+    "question": "Mode S transponder'ın temel avantajı nedir?",
+    "options": {
+      "A": "Selective aircraft identification",
+      "B": "Fuel saving",
+      "C": "Cabin cooling",
+      "D": "Brake monitoring"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 341,
+    "type": "terminology",
+    "question": "Motor kompresöründe stall riskini azaltmak amacıyla stator kanat açısını otomatik ayarlayan sistem hangisidir?",
+    "options": {
+      "A": "Variable geometry compressor control",
+      "B": "Fan blade pitch system",
+      "C": "Exhaust nozzle actuator",
+      "D": "Inlet cone heater"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 342,
+    "type": "definition",
+    "question": "Jet motorunda yanma odasını çevreleyen dış yapıya ne ad verilir?",
+    "options": {
+      "A": "Combustion case",
+      "B": "Fan duct",
+      "C": "Diffuser",
+      "D": "Tail cone"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 343,
+    "type": "terminology",
+    "question": "Motor yağ filtresinin tıkanması durumunda yağ akışının devam etmesini sağlayan valf hangisidir?",
+    "options": {
+      "A": "Bypass valve",
+      "B": "Relief valve",
+      "C": "Drain valve",
+      "D": "Selector valve"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 344,
+    "type": "definition",
+    "question": "Motor fan kanatlarının yabancı cisim nedeniyle hasar görmesi sonrası yapılan ilk inceleme hangisidir?",
+    "options": {
+      "A": "Fan blade inspection",
+      "B": "Fuel leak check",
+      "C": "Cabin pressure test",
+      "D": "Hydraulic servicing"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 345,
+    "type": "terminology",
+    "question": "Hidrolik sistemde yalnızca öncelikli sistemlere akış sağlayan valf hangisidir?",
+    "options": {
+      "A": "Priority valve",
+      "B": "Relief valve",
+      "C": "Drain valve",
+      "D": "Check valve"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 346,
+    "type": "definition",
+    "question": "Hidrolik sistemde pompa çıkışındaki titreşimleri azaltan elemana ne ad verilir?",
+    "options": {
+      "A": "Pulsation damper",
+      "B": "Accumulator",
+      "C": "Reservoir",
+      "D": "Pressure switch"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 347,
+    "type": "terminology",
+    "question": "Elektrik sisteminde alternatif akımı doğru akıma çeviren ünite hangisidir?",
+    "options": {
+      "A": "Transformer Rectifier Unit",
+      "B": "Static Inverter",
+      "C": "Bus Controller",
+      "D": "Generator Control Unit"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 348,
+    "type": "definition",
+    "question": "DC elektriği AC elektriğe dönüştüren cihaz hangisidir?",
+    "options": {
+      "A": "Static inverter",
+      "B": "Rectifier",
+      "C": "Alternator",
+      "D": "Battery charger"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 349,
+    "type": "terminology",
+    "question": "Kabloların elektromanyetik girişimden korunmasını sağlayan yöntem hangisidir?",
+    "options": {
+      "A": "Shielding",
+      "B": "Bonding",
+      "C": "Crimping",
+      "D": "Routing"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 350,
+    "type": "definition",
+    "question": "Elektrik kablosunun mekanik zorlanmayı azaltan destek bölümüne ne ad verilir?",
+    "options": {
+      "A": "Strain relief",
+      "B": "Backshell",
+      "C": "Terminal lug",
+      "D": "Sleeving"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 351,
+    "type": "terminology",
+    "question": "Kompozit tamirinde vakum torbasının sızdırmazlığını sağlayan bant hangisidir?",
+    "options": {
+      "A": "Sealant tape",
+      "B": "Fiberglass tape",
+      "C": "Masking tape",
+      "D": "Bonding strip"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 352,
+    "type": "definition",
+    "question": "Kompozit tamirinde reçinenin kalıba yapışmasını önleyen ince film hangisidir?",
+    "options": {
+      "A": "Release film",
+      "B": "Bleeder cloth",
+      "C": "Peel ply",
+      "D": "Core sheet"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 353,
+    "type": "terminology",
+    "question": "Uçuş kumanda sisteminde pilot girdisini hidrolik sisteme ileten ünite hangisidir?",
+    "options": {
+      "A": "Servo control valve",
+      "B": "Trim actuator",
+      "C": "Balance tab",
+      "D": "Torque tube"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 354,
+    "type": "definition",
+    "question": "Kanat flaplarının asimetrik açılmasını algılayan sistem hangisidir?",
+    "options": {
+      "A": "Flap asymmetry protection",
+      "B": "Spoiler monitor",
+      "C": "Speed brake control",
+      "D": "Wing load limiter"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 355,
+    "type": "terminology",
+    "question": "İniş takımının yanlışlıkla toplanmasını önleyen emniyet sistemi hangisidir?",
+    "options": {
+      "A": "Squat switch logic",
+      "B": "Shimmy lock",
+      "C": "Brake interlock",
+      "D": "Drag brace"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 356,
+    "type": "definition",
+    "question": "Fren sisteminde aşırı sıcaklık oluştuğunu algılayan sistem hangisidir?",
+    "options": {
+      "A": "Brake temperature monitoring",
+      "B": "Brake accumulator",
+      "C": "Anti-skid valve",
+      "D": "Brake metering unit"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 357,
+    "type": "terminology",
+    "question": "Yakıt tankının en alt noktasında biriken su ve kirin toplanmasını sağlayan bölüme ne ad verilir?",
+    "options": {
+      "A": "Sump",
+      "B": "Baffle",
+      "C": "Vent box",
+      "D": "Surge tank"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 358,
+    "type": "definition",
+    "question": "Yakıtın tank içerisinde dalgalanmasını azaltan yapı hangisidir?",
+    "options": {
+      "A": "Baffle",
+      "B": "Boost pump",
+      "C": "Standpipe",
+      "D": "Crossfeed valve"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 359,
+    "type": "terminology",
+    "question": "Bakım sırasında teknik dokümanda belirtilen ölçülerin doğrulanması amacıyla kullanılan işlem hangisidir?",
+    "options": {
+      "A": "Dimensional inspection",
+      "B": "Leak inspection",
+      "C": "Operational check",
+      "D": "Ground run"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 360,
+    "type": "definition",
+    "question": "Bir bakım görevi tamamlandıktan sonra çalışma alanının emniyet açısından son kez kontrol edilmesine ne ad verilir?",
+    "options": {
+      "A": "Final area inspection",
+      "B": "Release inspection",
+      "C": "Shift review",
+      "D": "Engineering audit"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 361,
+    "type": "terminology",
+    "question": "Pnömatik sistemde basınçlı havanın geri akmasını önleyen valf hangisidir?",
+    "options": {
+      "A": "Non-return valve",
+      "B": "Relief valve",
+      "C": "Shutoff valve",
+      "D": "Metering valve"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 362,
+    "type": "definition",
+    "question": "APU çalışırken egzoz gazlarının dışarı atıldığı bölüm hangisidir?",
+    "options": {
+      "A": "Exhaust duct",
+      "B": "Air inlet",
+      "C": "Compressor case",
+      "D": "Plenum chamber"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 363,
+    "type": "terminology",
+    "question": "Kargo kapısının tam kilitlendiğini algılayan sensör hangisidir?",
+    "options": {
+      "A": "Proximity sensor",
+      "B": "Pressure switch",
+      "C": "Flow sensor",
+      "D": "Accelerometer"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 364,
+    "type": "definition",
+    "question": "Kokpit ön camındaki buz çözme sistemi hangi yöntemle çalışır?",
+    "options": {
+      "A": "Electrical heating",
+      "B": "Hydraulic pressure",
+      "C": "Vacuum suction",
+      "D": "Compressed nitrogen"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 365,
+    "type": "terminology",
+    "question": "Motor fan kanadının kök kısmındaki aşınmayı kontrol etmek amacıyla yapılan inceleme hangisidir?",
+    "options": {
+      "A": "Blade root inspection",
+      "B": "Tip clearance check",
+      "C": "Compressor wash",
+      "D": "Borescope alignment"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 366,
+    "type": "definition",
+    "question": "Motor iç parçalarının sökülmeden incelenmesini sağlayan yöntem hangisidir?",
+    "options": {
+      "A": "Borescope inspection",
+      "B": "Dye penetrant inspection",
+      "C": "Magnetic particle inspection",
+      "D": "Pressure decay test"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 367,
+    "type": "terminology",
+    "question": "Motor kompresör kanatlarının temizlenmesi işlemine ne ad verilir?",
+    "options": {
+      "A": "Compressor wash",
+      "B": "Fuel flushing",
+      "C": "Hot section cleaning",
+      "D": "Oil servicing"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 368,
+    "type": "definition",
+    "question": "Motor fan kanadının uç kısmındaki aşınma nedeniyle fan kasasına sürtme riskini artıran durum hangisidir?",
+    "options": {
+      "A": "Excessive blade tip wear",
+      "B": "Edge distance reduction",
+      "C": "Core crush",
+      "D": "Oil foaming"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 369,
+    "type": "terminology",
+    "question": "Kapıların acil durumda manuel açılmasını sağlayan mekanizma hangisidir?",
+    "options": {
+      "A": "Emergency operating mechanism",
+      "B": "Assist actuator",
+      "C": "Door damper",
+      "D": "Locking cam"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 370,
+    "type": "definition",
+    "question": "Kabin kapılarında dış ortamla sızdırmazlığı sağlayan eleman hangisidir?",
+    "options": {
+      "A": "Door seal",
+      "B": "Guide rail",
+      "C": "Latch fitting",
+      "D": "Door hinge"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 371,
+    "type": "terminology",
+    "question": "Pnömatik sistemde hava kaçağını dinleyerek tespit etmek için kullanılan cihaz hangisidir?",
+    "options": {
+      "A": "Ultrasonic leak detector",
+      "B": "Pressure gauge",
+      "C": "Flow meter",
+      "D": "Hydrometer"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 372,
+    "type": "definition",
+    "question": "Kabin camlarında oluşan buğulanmayı önlemek amacıyla kullanılan sistem hangisidir?",
+    "options": {
+      "A": "Window anti-fog system",
+      "B": "Cabin recirculation",
+      "C": "Pitot heating",
+      "D": "Ram air cooling"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 373,
+    "type": "terminology",
+    "question": "APU'nun çalışmasını elektronik olarak yöneten kontrol ünitesi hangisidir?",
+    "options": {
+      "A": "Electronic Control Unit",
+      "B": "Generator Control Unit",
+      "C": "Power Distribution Unit",
+      "D": "Flight Control Computer"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 374,
+    "type": "definition",
+    "question": "APU hava giriş kapağını açıp kapatan mekanizma hangisidir?",
+    "options": {
+      "A": "Inlet door actuator",
+      "B": "Shutoff valve",
+      "C": "Pressure regulator",
+      "D": "Fuel metering unit"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 375,
+    "type": "terminology",
+    "question": "Motor kompresör kanatlarında yabancı cisim nedeniyle oluşan küçük çentiklere ne ad verilir?",
+    "options": {
+      "A": "Blade nick",
+      "B": "Core crush",
+      "C": "Exfoliation",
+      "D": "Spalling"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 376,
+    "type": "definition",
+    "question": "Kargo bölmesindeki dumanı algılayan sistem hangisidir?",
+    "options": {
+      "A": "Cargo smoke detection system",
+      "B": "Fire handle",
+      "C": "Bleed monitoring system",
+      "D": "Cabin pressure controller"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 377,
+    "type": "terminology",
+    "question": "Kapı kilit mekanizmasının doğru konumda olduğunu gösteren işaret hangisidir?",
+    "options": {
+      "A": "Lock indication",
+      "B": "Witness mark",
+      "C": "Torque stripe",
+      "D": "Rigging mark"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 378,
+    "type": "definition",
+    "question": "Pnömatik sistemde hava basıncını istenilen seviyede tutan eleman hangisidir?",
+    "options": {
+      "A": "Pressure regulator",
+      "B": "Flow divider",
+      "C": "Hydraulic fuse",
+      "D": "Accumulator"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 379,
+    "type": "terminology",
+    "question": "Bakım sırasında üretici tarafından yayımlanan teknik çizimlerin genel adı hangisidir?",
+    "options": {
+      "A": "Engineering drawings",
+      "B": "Task cards",
+      "C": "Service records",
+      "D": "Inspection reports"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 380,
+    "type": "definition",
+    "question": "Bir bakım işlemi tamamlandıktan sonra sistemin tüm fonksiyonlarının doğrulandığı son teste ne denir?",
+    "options": {
+      "A": "System verification test",
+      "B": "Receiving inspection",
+      "C": "Dimensional inspection",
+      "D": "Material review"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 381,
+    "type": "terminology",
+    "question": "Yakıt sisteminde motor beslemesini kesmek amacıyla kullanılan valf hangisidir?",
+    "options": {
+      "A": "Fuel shutoff valve",
+      "B": "Crossfeed valve",
+      "C": "Check valve",
+      "D": "Pressure relief valve"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 382,
+    "type": "definition",
+    "question": "Yakıtın motor besleme hattına toplanarak yönlendirildiği tank bölümüne ne ad verilir?",
+    "options": {
+      "A": "Collector cell",
+      "B": "Sump",
+      "C": "Vent box",
+      "D": "Surge tank"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 383,
+    "type": "terminology",
+    "question": "Yakıt tankındaki havalandırma sisteminin temel amacı nedir?",
+    "options": {
+      "A": "Prevent pressure differential",
+      "B": "Increase fuel pressure",
+      "C": "Cool the fuel",
+      "D": "Filter contaminants"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 384,
+    "type": "definition",
+    "question": "Yakıt tankında serbest suyun tahliye edilmesi işlemine ne denir?",
+    "options": {
+      "A": "Fuel sump draining",
+      "B": "Fuel balancing",
+      "C": "Fuel trimming",
+      "D": "Fuel transfer"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 385,
+    "type": "terminology",
+    "question": "Motor fan kanadının ön kenarında meydana gelen aşınma türü hangisidir?",
+    "options": {
+      "A": "Leading edge erosion",
+      "B": "Core crush",
+      "C": "Arc tracking",
+      "D": "Heat soak"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 386,
+    "type": "definition",
+    "question": "Motor içindeki sıcak bölümün genel adı hangisidir?",
+    "options": {
+      "A": "Hot section",
+      "B": "Cold section",
+      "C": "Fan section",
+      "D": "Accessory section"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 387,
+    "type": "terminology",
+    "question": "Motor aksesuarlarının tahrik edildiği dişli kutusuna ne ad verilir?",
+    "options": {
+      "A": "Accessory gearbox",
+      "B": "Reduction gearbox",
+      "C": "Transfer case",
+      "D": "Power box"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 388,
+    "type": "definition",
+    "question": "Motor aksesuarlarını döndüren mil hangisidir?",
+    "options": {
+      "A": "Tower shaft",
+      "B": "Main shaft",
+      "C": "Torque shaft",
+      "D": "Drive tube"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 389,
+    "type": "terminology",
+    "question": "Elektrik kablo demetlerinin belirli güzergâhlardan geçirilmesi işlemine ne denir?",
+    "options": {
+      "A": "Wire routing",
+      "B": "Wire bonding",
+      "C": "Wire stripping",
+      "D": "Wire locking"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 390,
+    "type": "definition",
+    "question": "Kablo izolasyonunun kontrollü şekilde soyulması işlemine ne denir?",
+    "options": {
+      "A": "Wire stripping",
+      "B": "Wire routing",
+      "C": "Wire dressing",
+      "D": "Wire shielding"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 391,
+    "type": "terminology",
+    "question": "Bir elektrik terminalinin kablodan ayrılmasını önlemek amacıyla yapılan mekanik kontrol hangisidir?",
+    "options": {
+      "A": "Retention check",
+      "B": "Continuity check",
+      "C": "Voltage check",
+      "D": "Resistance check"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 392,
+    "type": "definition",
+    "question": "Elektrik konnektörlerinde pinlerin yanlış yerleştirilmesini önleyen özelliğe ne denir?",
+    "options": {
+      "A": "Keying",
+      "B": "Shielding",
+      "C": "Bonding",
+      "D": "Grounding"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 393,
+    "type": "terminology",
+    "question": "Uçak gövdesine yıldırım çarpması sonrası yapılan ilk teknik kontrol hangisidir?",
+    "options": {
+      "A": "Lightning strike inspection",
+      "B": "Fuel leak inspection",
+      "C": "Pressure test",
+      "D": "Rigging check"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 394,
+    "type": "definition",
+    "question": "Yıldırım akımının uçak yapısından güvenli şekilde geçmesini sağlayan tasarım özelliği hangisidir?",
+    "options": {
+      "A": "Lightning protection",
+      "B": "Heat shielding",
+      "C": "Fire sealing",
+      "D": "Static balancing"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 395,
+    "type": "terminology",
+    "question": "Kompozit yapılarda yıldırım koruması amacıyla kullanılan ince metal ağ hangisidir?",
+    "options": {
+      "A": "Expanded copper foil",
+      "B": "Honeycomb mesh",
+      "C": "Steel braid",
+      "D": "Glass fabric"
+    },
+    "correct": "A",
+    "difficulty": "hard"
+  },
+  {
+    "id": 396,
+    "type": "definition",
+    "question": "Kabin içindeki oksijen maskelerinin otomatik açılmasını sağlayan olay hangisidir?",
+    "options": {
+      "A": "Cabin depressurization",
+      "B": "Engine shutdown",
+      "C": "Hydraulic failure",
+      "D": "Brake overheat"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 397,
+    "type": "terminology",
+    "question": "Kimyasal oksijen jeneratörünün temel görevi nedir?",
+    "options": {
+      "A": "Generate breathable oxygen",
+      "B": "Cool cabin air",
+      "C": "Pressurize oxygen bottles",
+      "D": "Filter cabin smoke"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 398,
+    "type": "definition",
+    "question": "Bakım sırasında sökülen parçaların karışmasını önlemek amacıyla uygulanan yöntem hangisidir?",
+    "options": {
+      "A": "Parts identification",
+      "B": "Ground run",
+      "C": "Functional test",
+      "D": "System servicing"
+    },
+    "correct": "A",
+    "difficulty": "easy"
+  },
+  {
+    "id": 399,
+    "type": "terminology",
+    "question": "Bakım sırasında sökülen bağlantı elemanlarının ait olduğu yere göre ayrılarak saklanması uygulamasına ne denir?",
+    "options": {
+      "A": "Hardware segregation",
+      "B": "Component balancing",
+      "C": "Material rotation",
+      "D": "Fastener alignment"
+    },
+    "correct": "A",
+    "difficulty": "medium"
+  },
+  {
+    "id": 400,
+    "type": "definition",
+    "question": "Bir bakım işlemi tamamlandıktan sonra yapılan son teknik gözden geçirme sürecine ne denir?",
+    "options": {
+      "A": "Final maintenance review",
+      "B": "Engineering drawing",
+      "C": "Work planning",
+      "D": "Material inspection"
+    },
+    "correct": "A",
+    "difficulty": "medium"
   }
 ]

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../models/soru_model.dart';
 import '../services/daily_limit_service.dart';
 import '../services/premium_service.dart';
@@ -6,11 +7,49 @@ import '../services/soru_secim_service.dart';
 import '../services/soru_son_gorulen_service.dart';
 import '../services/soru_yukleme_service.dart';
 import '../theme/app_theme.dart';
+import '../theme/figma_home_layers.dart';
+import '../theme/figma_home_layout.dart';
+import '../theme/figma_home_typography.dart';
 import '../widgets/limit_exceeded_dialog.dart';
 import 'konu_pratik_screen.dart';
 
-// ─── Renk sabitleri ───────────────────────────────────────────────────────────
-const _cMuted = Color(0xFFA1B5D8);
+/// Scroll içinde güvenli Figma yüzeyi (`StackFit.expand` kullanmaz).
+class _FigmaPanel extends StatelessWidget {
+  const _FigmaPanel({
+    required this.layers,
+    required this.child,
+  });
+
+  final FigmaCardLayers layers;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final r = layers.cornerRadius;
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(r),
+        gradient: layers.baseGradient,
+        border: Border.all(
+          color: layers.strokeColor.withValues(alpha: layers.strokeOpacity),
+          width: layers.strokeWeight,
+        ),
+        boxShadow: layers.shadows,
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(r),
+        child: layers.overlayColor != null && (layers.overlayOpacity ?? 0) > 0
+            ? ColoredBox(
+                color: layers.overlayColor!.withValues(
+                  alpha: layers.overlayOpacity!,
+                ),
+                child: child,
+              )
+            : child,
+      ),
+    );
+  }
+}
 
 /// Sınav şablonu ile aynı soru tipleri (normalize anahtar → etiket).
 const _konuSoruTipleri = <String, String>{
@@ -22,7 +61,15 @@ const _konuSoruTipleri = <String, String>{
   'Bosluk_Doldurma': 'Boşluk doldurma',
 };
 
-// ─────────────────────────────────────────────────────────────────────────────
+const _konuSoruTipiIkon = <String, IconData>{
+  'Yapi': Icons.account_tree_rounded,
+  'Ceviri': Icons.translate_rounded,
+  'Kelime': Icons.spellcheck_rounded,
+  'Okuma': Icons.menu_book_rounded,
+  'Cumle_Tamamlama': Icons.short_text_rounded,
+  'Bosluk_Doldurma': Icons.space_bar_rounded,
+};
+
 class KonularScreen extends StatefulWidget {
   const KonularScreen({super.key});
 
@@ -31,14 +78,12 @@ class KonularScreen extends StatefulWidget {
 }
 
 class _KonularScreenState extends State<KonularScreen> {
-  List<String>      _kategoriler = [];
-  List<SoruModel>   _tumSorular  = [];
-  bool              _loading     = true;
+  List<SoruModel> _tumSorular = [];
+  bool _loading = true;
 
   /// true: tüm havuz dengeli (alt satırlar görselde seçili değil).
   bool _karisikMod = true;
   final Set<String> _seciliTipler = {};
-  bool _soruTipiPanelAcik = false;
 
   @override
   void initState() {
@@ -47,9 +92,9 @@ class _KonularScreenState extends State<KonularScreen> {
   }
 
   String _soruTipiOzet() {
-    if (_karisikMod) return 'Tüm soru tipleri, dengeli dağılım';
+    if (_karisikMod) return 'Tüm tipler dengeli dağılır';
     final n = _seciliTipler.length;
-    if (n == 0) return 'Alttan en az bir soru tipi seç';
+    if (n == 0) return 'En az bir tip seç';
     if (n == 1) {
       final k = _seciliTipler.first;
       return _konuSoruTipleri[k] ?? k;
@@ -60,14 +105,10 @@ class _KonularScreenState extends State<KonularScreen> {
   Future<void> _loadData() async {
     final list = await SoruYuklemeService.tumSorulariYukle();
 
-    // Benzersiz kategoriler (sıralı)
-    final cats = list.map((s) => s.kategori).toSet().toList()..sort();
-
     if (!mounted) return;
     setState(() {
-      _tumSorular  = list;
-      _kategoriler = cats;
-      _loading     = false;
+      _tumSorular = list;
+      _loading = false;
     });
   }
 
@@ -82,7 +123,6 @@ class _KonularScreenState extends State<KonularScreen> {
         .toList();
   }
 
-  /// Pratik ekranı AppBar: karışık / tek tip / çoklu tip etiketi.
   String _pratikAppBarBasligi() {
     if (_karisikMod) return 'Karışık';
     final keys = _seciliTipler.toList()..sort();
@@ -124,13 +164,15 @@ class _KonularScreenState extends State<KonularScreen> {
       pool,
       n,
       useRandomization: true,
-      avoidRecentIds:   avoid,
+      avoidRecentIds: avoid,
     );
     if (!mounted) return;
     if (sorular.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Şu an çözülecek soru bulunamadı. Veri yüklemesini kontrol edin.'),
+          content: Text(
+            'Şu an çözülecek soru bulunamadı. Veri yüklemesini kontrol edin.',
+          ),
         ),
       );
       return;
@@ -140,420 +182,171 @@ class _KonularScreenState extends State<KonularScreen> {
       MaterialPageRoute(
         builder: (_) => KonuPratikScreen(
           kategoriAdi: _pratikAppBarBasligi(),
-          sorular:     sorular,
+          sorular: sorular,
         ),
       ),
     );
   }
 
+  bool get _canStart => !_loading && (_karisikMod || _seciliTipler.isNotEmpty);
+
   @override
   Widget build(BuildContext context) {
+    final s = figmaHomeScale(context);
+
     return Scaffold(
-      backgroundColor: kBgDark,
+      backgroundColor: kBgPrimary,
       appBar: AppBar(
-        backgroundColor: kBgCard,
+        backgroundColor: kBgPrimary,
         elevation: 0,
+        surfaceTintColor: Colors.transparent,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded,
+              color: kAccent, size: 20),
           onPressed: () => Navigator.pop(context),
         ),
-        title: buildAeroTestAppBarTitle('Konulara Yönelik Çalışma'),
+        title: buildAeroTestAppBarTitle(
+          'Konulara Yönelik',
+          subtitleFontSize: 18,
+        ),
       ),
-
-      // ── Sabit Alt Buton ────────────────────────────────────────────────────
       bottomNavigationBar: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(24, 8, 24, 16),
-          child: _StartButton(
-            enabled: !_loading && (_karisikMod || _seciliTipler.isNotEmpty),
-            onTap:   () => _baslat(),
+          padding: EdgeInsets.fromLTRB(20 * s, 8 * s, 20 * s, 16 * s),
+          child: FilledButton.icon(
+            onPressed: _canStart ? _baslat : null,
+            icon: const Icon(Icons.play_arrow_rounded, size: 22),
+            label: const Text('ÇALIŞMAYA BAŞLA'),
           ),
         ),
       ),
-
-      // ── Gövde ─────────────────────────────────────────────────────────────
-      body: _loading
-          ? const Center(
-              child: CircularProgressIndicator(color: kAccent),
-            )
-          : SingleChildScrollView(
-              padding: const EdgeInsets.fromLTRB(20, 24, 20, 8),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  // ── 1. Karşılama Kartı ───────────────────────────────────
-                  const _InfoCard(),
-                  const SizedBox(height: 20),
-
-                  // ── 2. Soru tipi: Karışık veya seçili tipler ─────────────
-                  _SoruTipiAcilirKart(
-                    acik: _soruTipiPanelAcik,
-                    ozet: _soruTipiOzet(),
-                    karisikMod: _karisikMod,
-                    seciliTipler: _seciliTipler,
-                    onBaslik: () => setState(
-                      () => _soruTipiPanelAcik = !_soruTipiPanelAcik,
-                    ),
-                    onTipToggle: (tipKey, secili) => setState(() {
-                      _karisikMod = false;
-                      if (secili) {
-                        _seciliTipler.add(tipKey);
-                      } else {
-                        _seciliTipler.remove(tipKey);
-                        if (_seciliTipler.isEmpty) {
-                          _karisikMod = true;
-                        }
-                      }
-                    }),
-                    onKarisikChanged: (karisik) => setState(() {
-                      _karisikMod = karisik;
-                      if (karisik) _seciliTipler.clear();
-                    }),
-                  ),
-                ],
-              ),
-            ),
-    );
-  }
-}
-
-// ─── Karşılama Kartı ──────────────────────────────────────────────────────────
-
-class _InfoCard extends StatelessWidget {
-  const _InfoCard();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kBgCard,
-        borderRadius: BorderRadius.circular(18),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.30),
-            blurRadius: 16,
-            offset: const Offset(0, 6),
+      body: DecoratedBox(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [kBgGradientTop, kBgGradientBottom],
           ),
-        ],
-      ),
-      padding: const EdgeInsets.all(22),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // İkon + başlık
-          Row(
-            children: [
-              Container(
-                width: 46,
-                height: 46,
-                decoration: BoxDecoration(
-                  color: kAccent.withValues(alpha: 0.12),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Icon(
-                  Icons.menu_book_rounded,
-                  color: kAccent,
-                  size: 24,
-                ),
-              ),
-              const SizedBox(width: 14),
-              const Expanded(
-                child: Text(
-                  'Sistem ve Gramer\nOdaklı Pratik',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 17,
-                    fontWeight: FontWeight.bold,
-                    height: 1.35,
-                  ),
-                ),
-              ),
-            ],
-          ),
-
-          const SizedBox(height: 16),
-
-          // Ayırıcı
-          Container(
-            height: 1,
-            color: Colors.white.withValues(alpha: 0.07),
-          ),
-
-          const SizedBox(height: 16),
-
-          // Açıklama
-          const Text(
-            'Bu modda süre stresi yok. Soruları çözerken anında taktikleri, '
-            'çevirileri ve gramer kurallarını öğrenerek ilerleyeceksin.',
-            style: TextStyle(
-              color: _cMuted,
-              fontSize: 13,
-              height: 1.65,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-// ─── Soru tipi: alta açılan çoklu seçim ───────────────────────────────────────
-
-class _SoruTipiAcilirKart extends StatelessWidget {
-  const _SoruTipiAcilirKart({
-    required this.acik,
-    required this.ozet,
-    required this.karisikMod,
-    required this.seciliTipler,
-    required this.onBaslik,
-    required this.onTipToggle,
-    required this.onKarisikChanged,
-  });
-
-  final bool acik;
-  final String ozet;
-  final bool karisikMod;
-  final Set<String> seciliTipler;
-  final VoidCallback onBaslik;
-  final void Function(String tipKey, bool secili) onTipToggle;
-  final void Function(bool karisik) onKarisikChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: kBgCard,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: Colors.white.withValues(alpha: 0.06)),
-      ),
-      clipBehavior: Clip.antiAlias,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: onBaslik,
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(16, 14, 8, acik ? 10 : 14),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Icon(
-                      Icons.filter_list_rounded,
-                      color: kAccent.withValues(alpha: 0.9),
-                      size: 22,
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'Soru tipi',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            ozet,
-                            style: const TextStyle(
-                              color: _cMuted,
-                              fontSize: 12,
-                              height: 1.35,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    AnimatedRotation(
-                      turns: acik ? 0.5 : 0,
-                      duration: const Duration(milliseconds: 220),
-                      curve: Curves.easeInOut,
-                      child: Icon(
-                        Icons.expand_more_rounded,
-                        color: kAccent.withValues(alpha: 0.95),
-                        size: 28,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          AnimatedSize(
-            duration: const Duration(milliseconds: 260),
-            curve: Curves.easeInOut,
-            alignment: Alignment.topCenter,
-            child: acik
-                ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
+        ),
+        child: _loading
+            ? const Center(child: CircularProgressIndicator(color: kAccent))
+            : LayoutBuilder(
+                builder: (context, constraints) {
+                  return ListView(
+                    padding: EdgeInsets.only(bottom: 24 * s),
                     children: [
-                      Divider(
-                        height: 1,
-                        thickness: 1,
-                        color: Colors.white.withValues(alpha: 0.07),
+                      _KonularHero(
+                        scale: s,
+                        width: constraints.maxWidth,
                       ),
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 12, 16, 14),
+                        padding: EdgeInsets.fromLTRB(
+                          kHomePaddingH * s,
+                          16 * s,
+                          kHomePaddingH * s,
+                          0,
+                        ),
                         child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
-                            const Text(
-                              'Karışık açıkken tüm tipler dengeli gelir. Karışık kapalıyken yalnızca işaretlediğin tipler havuza girer.',
-                              style: TextStyle(
-                                color: _cMuted,
-                                fontSize: 12,
-                                height: 1.4,
-                              ),
+                            _IntroCard(
+                              scale: s,
                             ),
-                            const SizedBox(height: 12),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(bottom: 10),
-                                  child: Material(
-                                    color: const Color(0xFF253354),
-                                    borderRadius: BorderRadius.circular(12),
-                                    child: InkWell(
-                                      onTap: () =>
-                                          onKarisikChanged(!karisikMod),
-                                      borderRadius: BorderRadius.circular(12),
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                          horizontal: 6,
-                                          vertical: 6,
-                                        ),
-                                        child: Row(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            Checkbox(
-                                              value: karisikMod,
-                                              onChanged: (v) =>
-                                                  onKarisikChanged(v ?? false),
-                                              activeColor: kAccent,
-                                              checkColor:
-                                                  const Color(0xFF0B132B),
-                                              side: BorderSide(
-                                                color: Colors.white
-                                                    .withValues(alpha: 0.28),
-                                              ),
-                                            ),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                children: [
-                                                  const Text(
-                                                    'Karışık',
-                                                    style: TextStyle(
-                                                      color: Colors.white,
-                                                      fontSize: 15,
-                                                      fontWeight:
-                                                          FontWeight.w700,
-                                                    ),
-                                                  ),
-                                                  const SizedBox(height: 2),
-                                                  Text(
-                                                    'Tüm soru tipleri, dengeli dağılım',
-                                                    style: TextStyle(
-                                                      color: _cMuted
-                                                          .withValues(
-                                                              alpha: 0.95),
-                                                      fontSize: 12,
-                                                      height: 1.35,
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                top: 10,
-                                                right: 6,
-                                              ),
-                                              child: Icon(
-                                                Icons.shuffle_rounded,
-                                                color: kAccent.withValues(
-                                                  alpha: 0.9,
-                                                ),
-                                                size: 22,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                for (final e in _konuSoruTipleri.entries)
-                                  Padding(
-                                    padding: const EdgeInsets.only(bottom: 8),
-                                    child: Material(
-                                      color: const Color(0xFF1C2541),
-                                      borderRadius: BorderRadius.circular(12),
-                                      child: InkWell(
-                                        onTap: () {
-                                          final suAn =
-                                              !karisikMod &&
-                                              seciliTipler.contains(e.key);
-                                          onTipToggle(e.key, !suAn);
-                                        },
-                                        borderRadius: BorderRadius.circular(12),
-                                        child: Padding(
-                                          padding: const EdgeInsets.symmetric(
-                                            horizontal: 6,
-                                            vertical: 4,
-                                          ),
-                                          child: Row(
-                                            children: [
-                                              Checkbox(
-                                                value: !karisikMod &&
-                                                    seciliTipler.contains(
-                                                      e.key,
-                                                    ),
-                                                onChanged: (v) =>
-                                                    onTipToggle(
-                                                  e.key,
-                                                  v ?? false,
-                                                ),
-                                                activeColor: kAccent,
-                                                checkColor:
-                                                    const Color(0xFF0B132B),
-                                                side: BorderSide(
-                                                  color: Colors.white
-                                                      .withValues(alpha: 0.25),
-                                                ),
-                                              ),
-                                              Expanded(
-                                                child: Text(
-                                                  e.value,
-                                                  style: const TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 14,
-                                                    fontWeight: FontWeight.w500,
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                              ],
+                            SizedBox(height: 12 * s),
+                            _SoruTipiCard(
+                              scale: s,
+                              ozet: _soruTipiOzet(),
+                              karisikMod: _karisikMod,
+                              seciliTipler: _seciliTipler,
+                              onKarisik: () => setState(() {
+                                _karisikMod = true;
+                                _seciliTipler.clear();
+                              }),
+                              onOzel: () => setState(() {
+                                _karisikMod = false;
+                              }),
+                              onTipToggle: (tipKey) => setState(() {
+                                _karisikMod = false;
+                                if (_seciliTipler.contains(tipKey)) {
+                                  _seciliTipler.remove(tipKey);
+                                } else {
+                                  _seciliTipler.add(tipKey);
+                                }
+                              }),
                             ),
                           ],
                         ),
                       ),
                     ],
-                  )
-                : const SizedBox.shrink(),
+                  );
+                },
+              ),
+      ),
+    );
+  }
+}
+
+// ─── Hero ────────────────────────────────────────────────────────────────────
+
+class _KonularHero extends StatelessWidget {
+  const _KonularHero({
+    required this.scale,
+    required this.width,
+  });
+
+  final double scale;
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+    final heroH = FigmaHomeLayout.heroH * s;
+    final gradUp = FigmaHeroLayout.gradientExtendUp * s;
+
+    return SizedBox(
+      width: width,
+      height: heroH,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 0,
+            height: heroH,
+            child: FigmaImageFill.hero(
+              asset: 'assets/home/hero_bg.png',
+              width: width,
+              height: heroH,
+              m00: FigmaHeroLayout.imageM00,
+              m01: FigmaHeroLayout.imageM01,
+              m02: FigmaHeroLayout.imageM02,
+              m10: FigmaHeroLayout.imageM10,
+              m11: FigmaHeroLayout.imageM11,
+              m12: FigmaHeroLayout.imageM12,
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: -gradUp,
+            height: heroH + gradUp,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: kFigmaGradHeroOverlay,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 16 * s,
+            top: 12 * s,
+            right: width * 0.38,
+            child: Text(
+              'Süre stresi yok, adım adım öğren.',
+              style: FigmaHomeTypography.heroTitle(s),
+              maxLines: 2,
+              softWrap: true,
+            ),
           ),
         ],
       ),
@@ -561,74 +354,275 @@ class _SoruTipiAcilirKart extends StatelessWidget {
   }
 }
 
-// ─── Çalışmaya Başla Butonu ───────────────────────────────────────────────────
+// ─── Giriş kartı ─────────────────────────────────────────────────────────────
 
-class _StartButton extends StatelessWidget {
-  const _StartButton({
-    required this.enabled,
+class _IntroCard extends StatelessWidget {
+  const _IntroCard({
+    required this.scale,
+  });
+
+  final double scale;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+    return _FigmaPanel(
+      layers: kFigmaLayersKonular,
+      child: SizedBox(
+        height: 110 * s,
+        child: Stack(
+          children: [
+            Positioned(
+              right: 4 * s,
+              bottom: 0,
+              width: 110 * s,
+              height: 110 * s,
+              child: Image.asset(
+                'assets/home/card_konular.png',
+                fit: BoxFit.contain,
+                alignment: Alignment.bottomRight,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(16 * s, 22 * s, 100 * s, 16 * s),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Konu çalışması',
+                    style: FigmaHomeTypography.studyTitle(s * 1.05),
+                  ),
+                  SizedBox(height: 8 * s),
+                  Text(
+                    'Anında açıklama ve ipuçları ile çalışmaya başla.',
+                    style: FigmaHomeTypography.studySubKonular(s),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// ─── Soru tipi (segment + sessiz liste) ───────────────────────────────────────
+
+class _SoruTipiCard extends StatelessWidget {
+  const _SoruTipiCard({
+    required this.scale,
+    required this.ozet,
+    required this.karisikMod,
+    required this.seciliTipler,
+    required this.onKarisik,
+    required this.onOzel,
+    required this.onTipToggle,
+  });
+
+  final double scale;
+  final String ozet;
+  final bool karisikMod;
+  final Set<String> seciliTipler;
+  final VoidCallback onKarisik;
+  final VoidCallback onOzel;
+  final ValueChanged<String> onTipToggle;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+
+    return _FigmaPanel(
+      layers: kFigmaLayersStats,
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(16 * s, 16 * s, 16 * s, 14 * s),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('Soru tipi', style: FigmaHomeTypography.countdownLabel(s)),
+            SizedBox(height: 6 * s),
+            Text(ozet, style: FigmaHomeTypography.studySubKonular(s)),
+            SizedBox(height: 14 * s),
+            _SegmentedMode(
+              scale: s,
+              karisik: karisikMod,
+              onKarisik: onKarisik,
+              onOzel: onOzel,
+            ),
+            if (!karisikMod) ...[
+              SizedBox(height: 12 * s),
+              ..._konuSoruTipleri.entries.map((e) {
+                final selected = seciliTipler.contains(e.key);
+                return _TipRow(
+                  scale: s,
+                  label: e.value,
+                  icon: _konuSoruTipiIkon[e.key] ?? Icons.quiz_outlined,
+                  selected: selected,
+                  onTap: () => onTipToggle(e.key),
+                );
+              }),
+              if (seciliTipler.isEmpty) ...[
+                SizedBox(height: 8 * s),
+                Text(
+                  'Devam etmek için en az bir tip seç.',
+                  style: FigmaHomeTypography.studySubAccent(s),
+                ),
+              ],
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _SegmentedMode extends StatelessWidget {
+  const _SegmentedMode({
+    required this.scale,
+    required this.karisik,
+    required this.onKarisik,
+    required this.onOzel,
+  });
+
+  final double scale;
+  final bool karisik;
+  final VoidCallback onKarisik;
+  final VoidCallback onOzel;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+    return Container(
+      padding: EdgeInsets.all(3 * s),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.06),
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: _SegItem(
+              scale: s,
+              label: 'Karışık',
+              selected: karisik,
+              onTap: onKarisik,
+            ),
+          ),
+          Expanded(
+            child: _SegItem(
+              scale: s,
+              label: 'Seçerek',
+              selected: !karisik,
+              onTap: onOzel,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _SegItem extends StatelessWidget {
+  const _SegItem({
+    required this.scale,
+    required this.label,
+    required this.selected,
     required this.onTap,
   });
-  final bool enabled;
+
+  final double scale;
+  final String label;
+  final bool selected;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: enabled ? onTap : null,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
-        height: 58,
-        decoration: BoxDecoration(
-          gradient: enabled
-              ? const LinearGradient(
-                  colors: [Color(0xFF48CAE4), Color(0xFF0096C7)],
-                  begin: Alignment.centerLeft,
-                  end: Alignment.centerRight,
-                )
-              : const LinearGradient(
-                  colors: [Color(0xFF2D4A5A), Color(0xFF1A3040)],
-                ),
-          borderRadius: BorderRadius.circular(16),
-          boxShadow: enabled
-              ? [
-                  BoxShadow(
-                    color: const Color(0xFF48CAE4).withValues(alpha: 0.35),
-                    blurRadius: 18,
-                    offset: const Offset(0, 6),
-                  ),
-                ]
-              : [],
+    final s = scale;
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(10),
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 180),
+          padding: EdgeInsets.symmetric(vertical: 11 * s),
+          decoration: BoxDecoration(
+            color: selected
+                ? Colors.white.withValues(alpha: 0.14)
+                : Colors.transparent,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Text(
+            label,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: selected ? Colors.white : kTextSecondary,
+              fontSize: 14 * s,
+              fontWeight: selected ? FontWeight.w700 : FontWeight.w500,
+            ),
+          ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            if (!enabled)
-              const SizedBox(
-                width: 18,
-                height: 18,
-                child: CircularProgressIndicator(
-                  strokeWidth: 2,
-                  color: Colors.white54,
-                ),
-              )
-            else ...[
-              const Icon(
-                Icons.play_circle_fill_rounded,
-                color: Color(0xFF0B132B),
-                size: 22,
+      ),
+    );
+  }
+}
+
+class _TipRow extends StatelessWidget {
+  const _TipRow({
+    required this.scale,
+    required this.label,
+    required this.icon,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final double scale;
+  final String label;
+  final IconData icon;
+  final bool selected;
+  final VoidCallback onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(10),
+        child: Padding(
+          padding: EdgeInsets.symmetric(vertical: 10 * s, horizontal: 4 * s),
+          child: Row(
+            children: [
+              Icon(
+                icon,
+                size: 18 * s,
+                color: selected ? kAccentTeal : kTextSecondary,
               ),
-              const SizedBox(width: 10),
-              const Text(
-                'ÇALIŞMAYA BAŞLA',
-                style: TextStyle(
-                  color: Color(0xFF0B132B),
-                  fontSize: 16,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: 1.0,
+              SizedBox(width: 12 * s),
+              Expanded(
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    color: selected ? Colors.white : kTextSecondary,
+                    fontSize: 14 * s,
+                    fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
+                  ),
+                ),
+              ),
+              AnimatedOpacity(
+                opacity: selected ? 1 : 0.25,
+                duration: const Duration(milliseconds: 150),
+                child: Icon(
+                  selected
+                      ? Icons.check_circle_rounded
+                      : Icons.circle_outlined,
+                  size: 20 * s,
+                  color: selected ? kAccentTeal : kTextSecondary,
                 ),
               ),
             ],
-          ],
+          ),
         ),
       ),
     );

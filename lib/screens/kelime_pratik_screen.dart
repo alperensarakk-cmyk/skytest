@@ -3,13 +3,11 @@ import 'package:flutter/material.dart';
 import '../models/kelime_model.dart';
 import '../services/app_review_service.dart';
 import '../services/calisma_istatistik_service.dart';
-import '../services/daily_limit_service.dart';
 import '../services/kelime_mcq_options.dart';
 import '../services/kelime_istatistik_service.dart';
+import '../services/kelime_session_service.dart';
 import '../services/kelime_yanlis_service.dart';
-import '../services/premium_service.dart';
 import '../theme/app_theme.dart';
-import '../widgets/limit_exceeded_dialog.dart';
 
 // ─── Renk sabitleri ───────────────────────────────────────────────────────────
 const _cCorrect   = Color(0xFF4CAF50);
@@ -27,10 +25,14 @@ class KelimePratikScreen extends StatefulWidget {
     super.key,
     required this.kelimeler,
     required this.tumKelimeler,
+    this.isSessionMode = false,
+    this.sessionMod = KelimeZorlukModu.kolay,
   });
 
   final List<KelimeModel> kelimeler;
   final List<KelimeModel> tumKelimeler;
+  final bool isSessionMode;
+  final KelimeZorlukModu sessionMod;
 
   @override
   State<KelimePratikScreen> createState() => _KelimePratikScreenState();
@@ -43,6 +45,7 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
   bool    _reviewMilestoneQueued = false;
   late final DateTime _sessionStart;
   bool    _oturumKaydedildi = false;
+  int     _dogruSayisi = 0;
 
   bool          get _answered  => _secilen != null;
   KelimeModel   get _kelime    => widget.kelimeler[_index];
@@ -85,22 +88,14 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
       correct: dogruMu,
     );
     if (dogruMu) {
+      _dogruSayisi++;
       KelimeYanlisService.removeYanlis(_kelime.id);
     } else {
       KelimeYanlisService.addYanlis(_kelime.id);
     }
 
-    if (!await PremiumService.isPremiumUser()) {
-      await DailyLimitService.recordKelimeAnswered();
-      final rem = await DailyLimitService.kelimeRemaining();
-      if (!mounted) return;
-      if (rem <= 0) {
-        final r = await showDailyLimitExceededDialog(context);
-        if (!mounted) return;
-        if (r != LimitExceededResult.premium) {
-          Navigator.pop(context);
-        }
-      }
+    if (widget.isSessionMode) {
+      await KelimeSessionService.recordTestAnswer(_kelime.id, dogruMu);
     }
   }
 
@@ -135,32 +130,95 @@ class _KelimePratikScreenState extends State<KelimePratikScreen> {
 
   void _showDoneDialog() {
     _kaydetOturum();
+
+    final sessionMode = widget.isSessionMode;
+    final zorMod = widget.sessionMod == KelimeZorlukModu.zor;
+    final passed = sessionMode &&
+        KelimeSessionService.canCompleteSession(
+          mod: widget.sessionMod,
+          correctCount: _dogruSayisi,
+          total: _total,
+        );
+    final perfect = _dogruSayisi == _total;
+
+    late final String title;
+    late final String message;
+    late final String actionLabel;
+
+    if (!sessionMode) {
+      title = 'Oturum Tamamlandı!';
+      message =
+          '$_total kelimeyi tamamladın. Yanlış yaptıkların "Yanlış Kelimelerim" listene eklendi.';
+      actionLabel = 'Geri Dön';
+    } else if (zorMod && !passed) {
+      title = 'Tekrar Dene';
+      message =
+          '$_dogruSayisi/$_total doğru.\n\n'
+          'Yeni kelimeleri görebilmek için 10/10 yapmalısın. Daha çok çalış!';
+      actionLabel = 'Listeye Dön';
+    } else if (perfect) {
+      title = 'Tebrikler!';
+      message = '$_dogruSayisi/$_total — yeni kelimelere geçebilirsin.';
+      actionLabel = 'Geri Dön';
+    } else {
+      title = 'Oturum Tamamlandı!';
+      message = '$_dogruSayisi/$_total ile oturumu tamamladın.';
+      actionLabel = 'Geri Dön';
+    }
+
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (_) => AlertDialog(
         backgroundColor: kBgCard,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Row(
+        title: Row(
           children: [
-            Icon(Icons.emoji_events_rounded, color: _cGold, size: 24),
-            SizedBox(width: 10),
-            Text('Oturum Tamamlandı!',
-                style: TextStyle(color: Colors.white, fontSize: 18)),
+            Icon(
+              zorMod && !passed
+                  ? Icons.replay_circle_filled_rounded
+                  : Icons.emoji_events_rounded,
+              color: zorMod && !passed ? _cWrong : _cGold,
+              size: 24,
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Text(
+                title,
+                style: const TextStyle(color: Colors.white, fontSize: 18),
+              ),
+            ),
           ],
         ),
         content: Text(
-          '$_total kelimeyi tamamladın. Yanlış yaptıkların "Yanlış Kelimelerim" listene eklendi.',
+          message,
           style: const TextStyle(color: _cMuted, fontSize: 14, height: 1.5),
         ),
         actions: [
           TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-              Navigator.pop(context);
+            onPressed: () async {
+              final navigator = Navigator.of(context);
+              navigator.pop();
+              if (!sessionMode) {
+                navigator.pop();
+                return;
+              }
+              if (zorMod && !passed) {
+                await KelimeSessionService.retryHardSession();
+                navigator.pop();
+                return;
+              }
+              await KelimeSessionService.completeSession(widget.kelimeler);
+              navigator.pop();
+              navigator.pop();
             },
-            child: const Text('Geri Dön',
-                style: TextStyle(color: kAccent, fontWeight: FontWeight.w600)),
+            child: Text(
+              actionLabel,
+              style: const TextStyle(
+                color: kAccent,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
           ),
         ],
       ),
@@ -321,24 +379,6 @@ class _WordCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Modül rozeti
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-            decoration: BoxDecoration(
-              color: _cPurple.withValues(alpha: 0.15),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Text(
-              kelime.modul,
-              style: const TextStyle(
-                color: _cPurple,
-                fontSize: 11,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ),
-          const SizedBox(height: 16),
-          // İngilizce kelime
           Text(
             kelime.ingilizce,
             style: const TextStyle(

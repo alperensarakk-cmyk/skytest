@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '../models/kalip_model.dart';
@@ -22,17 +21,55 @@ class _KaliplarScreenState extends State<KaliplarScreen>
   late final TabController _tabCtrl;
   late final Future<List<KalipModel>> _allFuture;
   late final Future<List<KalipModel>> _sikFuture;
+  bool _premium = false;
 
   @override
   void initState() {
     super.initState();
     _tabCtrl = TabController(length: 2, vsync: this, initialIndex: 0);
+    _tabCtrl.addListener(_guardPriorityTab);
+    PremiumService.isPremiumNotifier.addListener(_onPremiumChanged);
     _allFuture = _loadAll();
     _sikFuture = _loadSik();
+    _syncPremium();
+  }
+
+  Future<void> _syncPremium() async {
+    final p = await PremiumService.isPremiumUser();
+    if (mounted) setState(() => _premium = p);
+  }
+
+  void _onPremiumChanged() {
+    if (!mounted) return;
+    setState(() => _premium = PremiumService.isPremiumNotifier.value);
+  }
+
+  void _guardPriorityTab() {
+    if (!_tabCtrl.indexIsChanging) return;
+    if (_tabCtrl.index == 1 && !_premium) {
+      _tabCtrl.index = 0;
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _openPremiumForPriority();
+      });
+    }
+  }
+
+  Future<void> _openPriorityTab() async {
+    if (await PremiumService.isPremiumUser()) {
+      if (mounted) _tabCtrl.animateTo(1);
+    } else if (mounted) {
+      _openPremiumForPriority();
+    }
+  }
+
+  void _openPremiumForPriority() {
+    Navigator.pushNamed(context, '/premium');
   }
 
   @override
   void dispose() {
+    _tabCtrl.removeListener(_guardPriorityTab);
+    PremiumService.isPremiumNotifier.removeListener(_onPremiumChanged);
     _tabCtrl.dispose();
     super.dispose();
   }
@@ -43,8 +80,7 @@ class _KaliplarScreenState extends State<KaliplarScreen>
     final out = list
         .map((e) => KalipModel.fromJson(e as Map<String, dynamic>))
         .toList();
-    out.shuffle(Random());
-    return out;
+    return DailyLimitService.kaliplarDeckForToday(out);
   }
 
   Future<List<KalipModel>> _loadSik() async {
@@ -94,8 +130,8 @@ class _KaliplarScreenState extends State<KaliplarScreen>
             fontWeight: FontWeight.w500,
             fontSize: 12,
           ),
-          tabs: const [
-            Tab(
+          tabs: [
+            const Tab(
               height: 44,
               child: Row(
                 mainAxisSize: MainAxisSize.min,
@@ -111,9 +147,17 @@ class _KaliplarScreenState extends State<KaliplarScreen>
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Icon(Icons.star_rounded, size: 16, color: Color(0xFFFFD60A)),
-                  SizedBox(width: 6),
-                  Text('Öncelikli Kalıplar'),
+                  const Icon(Icons.star_rounded, size: 16, color: Color(0xFFFFD60A)),
+                  const SizedBox(width: 6),
+                  const Text('Öncelikli Kalıplar'),
+                  if (!_premium) ...[
+                    const SizedBox(width: 5),
+                    Icon(
+                      Icons.lock_rounded,
+                      size: 13,
+                      color: const Color(0xFFFFD60A).withValues(alpha: 0.85),
+                    ),
+                  ],
                 ],
               ),
             ),
@@ -122,19 +166,25 @@ class _KaliplarScreenState extends State<KaliplarScreen>
       ),
       body: TabBarView(
         controller: _tabCtrl,
+        physics: _premium
+            ? const AlwaysScrollableScrollPhysics()
+            : const NeverScrollableScrollPhysics(),
         children: [
           _KalipTabBody(
             future: _allFuture,
             emptyMessage: 'Kalıp yüklenemedi.',
             header: _AllTabHint(
-              onGoPriority: () => _tabCtrl.animateTo(1),
+              onGoPriority: _openPriorityTab,
+              isPremium: _premium,
             ),
           ),
-          _KalipTabBody(
-            future: _sikFuture,
-            emptyMessage: 'Öncelikli kalıp bulunamadı.',
-            header: const _PriorityHeader(),
-          ),
+          _premium
+              ? _KalipTabBody(
+                  future: _sikFuture,
+                  emptyMessage: 'Öncelikli kalıp bulunamadı.',
+                  header: const _PriorityHeader(),
+                )
+              : const _PriorityPremiumGate(),
         ],
       ),
     );
@@ -181,9 +231,13 @@ class _PriorityHeader extends StatelessWidget {
 }
 
 class _AllTabHint extends StatelessWidget {
-  const _AllTabHint({required this.onGoPriority});
+  const _AllTabHint({
+    required this.onGoPriority,
+    required this.isPremium,
+  });
 
   final VoidCallback onGoPriority;
+  final bool isPremium;
 
   @override
   Widget build(BuildContext context) {
@@ -199,15 +253,17 @@ class _AllTabHint extends StatelessWidget {
             color: const Color(0xFFFFD60A).withValues(alpha: 0.4),
           ),
         ),
-        child: const Row(
+        child: Row(
           children: [
-            Icon(Icons.star_rounded, color: Color(0xFFFFD60A), size: 18),
-            SizedBox(width: 10),
+            const Icon(Icons.star_rounded, color: Color(0xFFFFD60A), size: 18),
+            const SizedBox(width: 10),
             Expanded(
               child: Text(
-                'Sınavına çalışmaya geç kaldıysan Öncelikli Kalıplar '
-                'sekmesine geç.',
-                style: TextStyle(
+                isPremium
+                    ? 'Sınavına çalışmaya geç kaldıysan Öncelikli Kalıplar '
+                        'sekmesine geç.'
+                    : 'Öncelikli Kalıplar (sınavda en sık geçenler) Premium\'da.',
+                style: const TextStyle(
                   color: Color(0xFFA1B5D8),
                   fontSize: 12,
                   height: 1.4,
@@ -215,8 +271,64 @@ class _AllTabHint extends StatelessWidget {
                 ),
               ),
             ),
-            Icon(Icons.chevron_right_rounded,
-                color: Color(0xFFFFD60A), size: 22),
+            Icon(
+              isPremium ? Icons.chevron_right_rounded : Icons.lock_rounded,
+              color: const Color(0xFFFFD60A),
+              size: isPremium ? 22 : 18,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _PriorityPremiumGate extends StatelessWidget {
+  const _PriorityPremiumGate();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 28),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.star_rounded, color: Color(0xFFFFD60A), size: 48),
+            const SizedBox(height: 16),
+            const Text(
+              'Öncelikli Kalıplar',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            const SizedBox(height: 10),
+            const Text(
+              'Soru bankasında en sık geçen kalıplar Premium üyeler için.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Color(0xFF8DA5C8),
+                fontSize: 14,
+                height: 1.45,
+              ),
+            ),
+            const SizedBox(height: 24),
+            FilledButton.icon(
+              style: FilledButton.styleFrom(
+                backgroundColor: kAccent,
+                foregroundColor: const Color(0xFF0B132B),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              ),
+              onPressed: () => Navigator.pushNamed(context, '/premium'),
+              icon: const Icon(Icons.workspace_premium_rounded, size: 20),
+              label: const Text(
+                'Premium\'a Geç',
+                style: TextStyle(fontWeight: FontWeight.w700),
+              ),
+            ),
           ],
         ),
       ),

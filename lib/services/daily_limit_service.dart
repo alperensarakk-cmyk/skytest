@@ -1,23 +1,26 @@
+import 'dart:math';
+
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../models/kalip_model.dart';
+import 'kelime_session_service.dart';
 import 'premium_service.dart';
 
 /// Ücretsiz kullanıcı günlük limitleri (yerel takvim günü).
 class DailyLimitService {
   DailyLimitService._();
 
-  static const int freeDailyLimit = 10;
-
-  static const int freeExamQuestionsPerDay = freeDailyLimit;
-  static const int freeKonuPerDay          = freeDailyLimit;
-  static const int freeKaliplarCardsPerDay = freeDailyLimit;
-  static const int freeKelimePerDay        = freeDailyLimit;
+  static const int freeExamQuestionsPerDay = 10;
+  static const int freeKonuPerDay          = 5;
+  static const int freeKaliplarCardsPerDay = 5;
+  static const int freeKelimeSessionsPerDay = 1;
 
   static const _kDate       = 'daily_limit_date_yyyy_mm_dd';
   static const _kExamQ      = 'daily_limit_exam_questions';
   static const _kKonuQ      = 'daily_limit_konu_answers';
   static const _kKalipMaxIx = 'daily_limit_kalip_max_index';
-  static const _kKelime     = 'daily_limit_kelime_answers';
+  static const _kKalipOrderIds = 'daily_limit_kalip_order_ids';
+  static const _kKelimeSessions = 'daily_limit_kelime_sessions';
 
   static String _today() {
     final n = DateTime.now();
@@ -38,7 +41,9 @@ class DailyLimitService {
     await prefs.setInt(_kExamQ, 0);
     await prefs.setInt(_kKonuQ, 0);
     await prefs.setInt(_kKalipMaxIx, -1);
-    await prefs.setInt(_kKelime, 0);
+    await prefs.remove(_kKalipOrderIds);
+    await prefs.setInt(_kKelimeSessions, 0);
+    await KelimeSessionService.onDayChanged();
   }
 
   static Future<bool> _isPremium() => PremiumService.isPremiumUser();
@@ -104,24 +109,61 @@ class DailyLimitService {
     return (await _p()).getInt(_kKalipMaxIx) ?? -1;
   }
 
-  // ── Kelime pratiği: cevaplanan kelime ─────────────────────────────────────
-  static Future<int> kelimeAnsweredToday() async {
+  /// Ücretsiz: günün sabit 5 kalıbı (giriş-çıkışta aynı liste). Premium: tümü karışık.
+  static Future<List<KalipModel>> kaliplarDeckForToday(
+    List<KalipModel> all,
+  ) async {
+    if (await _isPremium()) {
+      final out = List<KalipModel>.from(all)..shuffle(Random());
+      return out;
+    }
+    await ensureDay();
+    final orderIds = await _getOrCreateKalipOrderIds(all);
+    final byId = {for (final k in all) k.id: k};
+    final ordered = [
+      for (final id in orderIds)
+        if (byId.containsKey(id)) byId[id]!,
+    ];
+    return ordered.take(freeKaliplarCardsPerDay).toList();
+  }
+
+  static Future<List<int>> _getOrCreateKalipOrderIds(List<KalipModel> all) async {
+    final prefs = await _p();
+    final allIds = all.map((k) => k.id).toSet();
+    final raw = prefs.getString(_kKalipOrderIds);
+    if (raw != null && raw.isNotEmpty) {
+      final saved = raw
+          .split(',')
+          .map(int.tryParse)
+          .whereType<int>()
+          .where(allIds.contains)
+          .toList();
+      if (saved.isNotEmpty) return saved;
+    }
+    final shuffled = List<KalipModel>.from(all)..shuffle(Random());
+    final ids = shuffled.map((k) => k.id).toList();
+    await prefs.setString(_kKalipOrderIds, ids.join(','));
+    return ids;
+  }
+
+  // ── Kelime oturumu: tamamlanan oturum (10 liste + 10 test) ────────────────
+  static Future<int> kelimeSessionsCompletedToday() async {
     await ensureDay();
     if (await _isPremium()) return 0;
-    return (await _p()).getInt(_kKelime) ?? 0;
+    return (await _p()).getInt(_kKelimeSessions) ?? 0;
   }
 
-  static Future<int> kelimeRemaining() async {
+  static Future<int> kelimeSessionsRemaining() async {
     if (await _isPremium()) return 999999;
-    final u = await kelimeAnsweredToday();
-    return (freeKelimePerDay - u).clamp(0, freeKelimePerDay);
+    final u = await kelimeSessionsCompletedToday();
+    return (freeKelimeSessionsPerDay - u).clamp(0, freeKelimeSessionsPerDay);
   }
 
-  static Future<void> recordKelimeAnswered() async {
+  static Future<void> recordKelimeSessionCompleted() async {
     if (await _isPremium()) return;
     await ensureDay();
     final prefs = await _p();
-    final cur = prefs.getInt(_kKelime) ?? 0;
-    await prefs.setInt(_kKelime, cur + 1);
+    final cur = prefs.getInt(_kKelimeSessions) ?? 0;
+    await prefs.setInt(_kKelimeSessions, cur + 1);
   }
 }

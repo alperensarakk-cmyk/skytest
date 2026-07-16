@@ -8,14 +8,73 @@ import '../services/app_review_service.dart';
 import '../services/challenge_service.dart';
 import '../services/sky_fight_service.dart';
 import '../theme/app_theme.dart';
+import '../theme/figma_home_layers.dart';
+import '../theme/figma_home_layout.dart';
+import '../theme/figma_home_typography.dart';
 
 const _cGold    = Color(0xFFFFD60A);
 const _cMuted   = Color(0xFFA1B5D8);
 const _cCard    = Color(0xFF1C2541);
 const _cCorrect = Color(0xFF4CAF50);
 const _cWrong   = Color(0xFFF44336);
-const _cGreen   = Color(0xFF083D5A);
 const _kPilotNameKey = 'skyfight_pilot_name';
+const _kChallengeInProgressPrefix = 'challenge_in_progress_';
+
+String _challengeInProgressKey(String challengeId) =>
+    '$_kChallengeInProgressPrefix$challengeId';
+
+Future<void> _markChallengeInProgress(String challengeId) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.setBool(_challengeInProgressKey(challengeId), true);
+}
+
+Future<void> _clearChallengeInProgress(String challengeId) async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.remove(_challengeInProgressKey(challengeId));
+}
+
+Future<bool> _hasChallengeInProgress(String challengeId) async {
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getBool(_challengeInProgressKey(challengeId)) == true;
+}
+
+/// Scroll içinde güvenli Figma yüzeyi.
+class _FigmaPanel extends StatelessWidget {
+  const _FigmaPanel({
+    required this.layers,
+    required this.child,
+  });
+
+  final FigmaCardLayers layers;
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    final r = layers.cornerRadius;
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(r),
+        gradient: layers.baseGradient,
+        border: Border.all(
+          color: layers.strokeColor.withValues(alpha: layers.strokeOpacity),
+          width: layers.strokeWeight,
+        ),
+        boxShadow: layers.shadows,
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(r),
+        child: layers.overlayColor != null && (layers.overlayOpacity ?? 0) > 0
+            ? ColoredBox(
+                color: layers.overlayColor!.withValues(
+                  alpha: layers.overlayOpacity!,
+                ),
+                child: child,
+              )
+            : child,
+      ),
+    );
+  }
+}
 
 const _kBannedWords = <String>[
   // Türkçe
@@ -95,112 +154,208 @@ class _ChallengeHomeScreenState extends State<ChallengeHomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final s = figmaHomeScale(context);
+
     return Scaffold(
-      backgroundColor: kBgDark,
+      backgroundColor: kBgPrimary,
       appBar: AppBar(
-        backgroundColor: kBgCard,
+        backgroundColor: kBgPrimary,
         elevation: 0,
+        surfaceTintColor: Colors.transparent,
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back_ios_new_rounded, color: kAccent),
+          icon: const Icon(Icons.arrow_back_ios_new_rounded,
+              color: kAccent, size: 20),
           onPressed: () => Navigator.pop(context),
         ),
-        title: buildAeroTestAppBarTitle('Haftalık Test',
-            subtitleFontSize: 18),
+        title: buildAeroTestAppBarTitle('Haftalık Test', subtitleFontSize: 18),
       ),
-      body: _userId == null
-          ? const Center(child: CircularProgressIndicator(color: kAccent))
-          : Column(
+      body: DecoratedBox(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [kBgGradientTop, kBgGradientBottom],
+          ),
+        ),
+        child: _userId == null
+            ? const Center(child: CircularProgressIndicator(color: kAccent))
+            : Column(
+                children: [
+                  LayoutBuilder(
+                    builder: (context, constraints) => _ChallengeHero(
+                      scale: s,
+                      width: constraints.maxWidth,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(
+                      kHomePaddingH * s,
+                      12 * s,
+                      kHomePaddingH * s,
+                      0,
+                    ),
+                    child: _PilotNameBar(
+                      scale: s,
+                      pilotName: _pilotName,
+                      onEdit: _editPilotName,
+                    ),
+                  ),
+                  Expanded(
+                    child: _ChallengeTab(
+                      challenge: ChallengeService.thisWeekly(),
+                      userId: _userId!,
+                      pilotName: _pilotName,
+                      onRequestName: () =>
+                          _showNamePicker(canDismiss: false),
+                    ),
+                  ),
+                ],
+              ),
+      ),
+    );
+  }
+}
+
+// ─── Hero ────────────────────────────────────────────────────────────────────
+
+class _ChallengeHero extends StatelessWidget {
+  const _ChallengeHero({
+    required this.scale,
+    required this.width,
+  });
+
+  final double scale;
+  final double width;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+    final heroH = FigmaHomeLayout.heroH * s;
+    final gradUp = FigmaHeroLayout.gradientExtendUp * s;
+
+    return SizedBox(
+      width: width,
+      height: heroH,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Positioned(
+            left: 0,
+            right: 0,
+            top: 0,
+            height: heroH,
+            child: FigmaImageFill.hero(
+              asset: 'assets/home/hero_bg.png',
+              width: width,
+              height: heroH,
+              m00: FigmaHeroLayout.imageM00,
+              m01: FigmaHeroLayout.imageM01,
+              m02: FigmaHeroLayout.imageM02,
+              m10: FigmaHeroLayout.imageM10,
+              m11: FigmaHeroLayout.imageM11,
+              m12: FigmaHeroLayout.imageM12,
+            ),
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            top: -gradUp,
+            height: heroH + gradUp,
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: kFigmaGradHeroOverlay,
+              ),
+            ),
+          ),
+          Positioned(
+            left: 16 * s,
+            top: 12 * s,
+            right: width * 0.38,
+            child: Text(
+              'Bu hafta sıralamada yerini al.',
+              style: FigmaHomeTypography.heroTitle(s),
+              maxLines: 2,
+              softWrap: true,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _PilotNameBar extends StatelessWidget {
+  const _PilotNameBar({
+    required this.scale,
+    required this.pilotName,
+    required this.onEdit,
+  });
+
+  final double scale;
+  final String pilotName;
+  final VoidCallback onEdit;
+
+  @override
+  Widget build(BuildContext context) {
+    final s = scale;
+    final name = pilotName.isEmpty ? 'Belirtilmedi' : pilotName;
+    final initial = pilotName.isEmpty ? '?' : pilotName[0].toUpperCase();
+
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        onTap: onEdit,
+        borderRadius: BorderRadius.circular(kFigmaLayersStats.cornerRadius),
+        child: _FigmaPanel(
+          layers: kFigmaLayersStats,
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 14 * s, vertical: 12 * s),
+            child: Row(
               children: [
-                // ── Pilot şeridi ─────────────────────────────────────────
-                GestureDetector(
-                  onTap: _editPilotName,
-                  child: Container(
-                    color: kBgCard,
-                    padding: const EdgeInsets.fromLTRB(16, 10, 16, 10),
-                    child: Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 20,
-                          backgroundColor:
-                              const Color(0xFF0D1B2A),
-                          child: Text(
-                            (_pilotName.isEmpty ? '?' : _pilotName[0])
-                                .toUpperCase(),
-                            style: const TextStyle(
-                              color: _cGold,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 12),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Text(
-                                'Kullanıcı Adı',
-                                style: TextStyle(
-                                    color: _cMuted, fontSize: 11),
-                              ),
-                              const SizedBox(height: 2),
-                              Text(
-                                _pilotName.isEmpty
-                                    ? 'Belirtilmedi'
-                                    : _pilotName,
-                                style: TextStyle(
-                                  color: _pilotName.isEmpty
-                                      ? _cMuted
-                                      : Colors.white,
-                                  fontWeight: FontWeight.w700,
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 12, vertical: 6),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFF0D1B2A),
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(
-                                color: kAccent.withValues(alpha: 0.4)),
-                          ),
-                          child: const Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              Icon(Icons.edit_rounded,
-                                  size: 13, color: kAccent),
-                              SizedBox(width: 5),
-                              Text(
-                                'Değiştir',
-                                style: TextStyle(
-                                  color: kAccent,
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
+                Container(
+                  width: 36 * s,
+                  height: 36 * s,
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                    color: Colors.white.withValues(alpha: 0.1),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Text(
+                    initial,
+                    style: TextStyle(
+                      color: _cGold,
+                      fontWeight: FontWeight.w800,
+                      fontSize: 14 * s,
                     ),
                   ),
                 ),
-                // ── İçerik ──────────────────────────────────────────────
+                SizedBox(width: 12 * s),
                 Expanded(
-                  child: _ChallengeTab(
-                    challenge: ChallengeService.thisWeekly(),
-                    userId: _userId!,
-                    pilotName: _pilotName,
-                    onRequestName: () => _showNamePicker(canDismiss: false),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Kullanıcı adı',
+                        style: FigmaHomeTypography.studySubKonular(s * 0.9),
+                      ),
+                      SizedBox(height: 2 * s),
+                      Text(
+                        name,
+                        style: FigmaHomeTypography.studyTitle(s * 0.9),
+                      ),
+                    ],
                   ),
+                ),
+                Icon(
+                  Icons.edit_rounded,
+                  color: kAccent.withValues(alpha: 0.9),
+                  size: 18 * s,
                 ),
               ],
             ),
+          ),
+        ),
+      ),
     );
   }
 }
@@ -237,9 +392,35 @@ class _ChallengeTabState extends State<_ChallengeTab> {
     _load();
   }
 
+  Future<void> _settleAbandonedAttempt() async {
+    if (await _hasChallengeInProgress(widget.challenge.id) != true) return;
+    final existing = await ChallengeService.myResult(
+      widget.challenge.id,
+      widget.userId,
+      challengeType: widget.challenge.type,
+    );
+    if (existing != null) {
+      await _clearChallengeInProgress(widget.challenge.id);
+      return;
+    }
+    final name = widget.pilotName.trim().isEmpty ? 'Pilot' : widget.pilotName;
+    try {
+      await ChallengeService.submitResult(
+        challengeId: widget.challenge.id,
+        userId: widget.userId,
+        pilotName: name,
+        score: 0,
+        totalQuestions: widget.challenge.questionIds.length,
+        totalMs: 0,
+      );
+    } catch (_) {}
+    await _clearChallengeInProgress(widget.challenge.id);
+  }
+
   Future<void> _load() async {
     setState(() => _loading = true);
     try {
+      await _settleAbandonedAttempt();
       final results = await Future.wait([
         ChallengeService.myResult(
           widget.challenge.id,
@@ -300,6 +481,8 @@ class _ChallengeTabState extends State<_ChallengeTab> {
       return;
     }
 
+    await _markChallengeInProgress(widget.challenge.id);
+
     final result = await Navigator.push<ChallengeResult>(
       context,
       MaterialPageRoute(
@@ -312,16 +495,20 @@ class _ChallengeTabState extends State<_ChallengeTab> {
       ),
     );
 
-    if (result != null && mounted) {
-      setState(() {
-        _myResult = result;
-      });
-      _load(); // leaderboard'u yenile
+    if (!mounted) return;
+    if (result == null) {
+      // Uygulama kesilirse / beklenmeyen pop: terk edilmiş denemeyi kapat.
+      await _settleAbandonedAttempt();
+    } else {
+      setState(() => _myResult = result);
     }
+    _load(); // leaderboard'u yenile
   }
 
   @override
   Widget build(BuildContext context) {
+    final s = figmaHomeScale(context);
+
     if (_loading) {
       return const Center(
           child: CircularProgressIndicator(color: kAccent));
@@ -331,66 +518,61 @@ class _ChallengeTabState extends State<_ChallengeTab> {
       onRefresh: _load,
       color: kAccent,
       child: ListView(
-        padding: const EdgeInsets.all(16),
+        padding: EdgeInsets.fromLTRB(
+          kHomePaddingH * s,
+          14 * s,
+          kHomePaddingH * s,
+          24 * s,
+        ),
         children: [
-          // ── Önceki dönem şampiyonu ────────────────────────────────────
-          if (_prevWinner != null)
+          if (_prevWinner != null) ...[
             _PreviousWinnerCard(
               winner: _prevWinner!,
               type: widget.challenge.type,
               isMe: _prevWinner!.userId == widget.userId,
             ),
-          if (_prevWinner != null) const SizedBox(height: 12),
-
-          // ── Başlık kartı ─────────────────────────────────────────────
+            SizedBox(height: 12 * s),
+          ],
           _ChallengeHeaderCard(
+            scale: s,
             challenge: widget.challenge,
             myResult: _myResult,
             onStart: (_myResult == null && !_loading) ? _startChallenge : null,
           ),
-          const SizedBox(height: 20),
-
-          // ── Leaderboard başlığı ───────────────────────────────────────
+          SizedBox(height: 20 * s),
           Row(
             children: [
-              const Icon(Icons.leaderboard_rounded,
-                  color: _cGold, size: 18),
-              const SizedBox(width: 8),
-              const Text(
+              Icon(Icons.leaderboard_rounded, color: _cGold, size: 18 * s),
+              SizedBox(width: 8 * s),
+              Text(
                 'Sıralama',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: FigmaHomeTypography.studyTitle(s),
               ),
               const Spacer(),
               Text(
                 '${_board.length} katılımcı',
-                style: const TextStyle(color: _cMuted, fontSize: 12),
+                style: FigmaHomeTypography.studySubKonular(s),
               ),
             ],
           ),
-          const SizedBox(height: 12),
-
+          SizedBox(height: 12 * s),
           if (_board.isEmpty)
-            Container(
-              padding: const EdgeInsets.all(24),
-              decoration: BoxDecoration(
-                color: _cCard,
-                borderRadius: BorderRadius.circular(14),
-              ),
-              child: const Column(
-                children: [
-                  Icon(Icons.emoji_events_outlined,
-                      color: _cMuted, size: 40),
-                  SizedBox(height: 12),
-                  Text(
-                    'Henüz kimse katılmadı.\nİlk sen ol!',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: _cMuted, fontSize: 14),
-                  ),
-                ],
+            _FigmaPanel(
+              layers: kFigmaLayersStats,
+              child: Padding(
+                padding: EdgeInsets.all(24 * s),
+                child: Column(
+                  children: [
+                    Icon(Icons.emoji_events_outlined,
+                        color: _cMuted, size: 40 * s),
+                    SizedBox(height: 12 * s),
+                    Text(
+                      'Henüz kimse katılmadı.\nİlk sen ol!',
+                      textAlign: TextAlign.center,
+                      style: FigmaHomeTypography.studySubKonular(s),
+                    ),
+                  ],
+                ),
               ),
             )
           else
@@ -412,10 +594,12 @@ class _ChallengeTabState extends State<_ChallengeTab> {
 
 class _ChallengeHeaderCard extends StatelessWidget {
   const _ChallengeHeaderCard({
+    required this.scale,
     required this.challenge,
     required this.myResult,
     required this.onStart,
   });
+  final double scale;
   final Challenge challenge;
   final ChallengeResult? myResult;
   final VoidCallback? onStart;
@@ -430,114 +614,119 @@ class _ChallengeHeaderCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final s = scale;
     final total = challenge.questionIds.length;
-    final done  = myResult != null;
+    final done = myResult != null;
 
-    return Container(
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF083D5A), Color(0xFF0B2B45)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(
-            color: _cCorrect.withValues(alpha: 0.2)),
-      ),
+    return _FigmaPanel(
+      layers: kFigmaLayersHaftalik,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              _remainingText(),
-              style: TextStyle(
-                color: _cGold.withValues(alpha: 0.92),
-                fontSize: 12,
-                fontWeight: FontWeight.w600,
-                letterSpacing: 0.2,
-              ),
-            ),
-          ),
-          const SizedBox(height: 12),
-          Text(
-            'Bakım bilgilerini diğer kullanıcılar karşısında test et.',
-            style: TextStyle(
-              color: Colors.white.withValues(alpha: 0.92),
-              fontSize: 15,
-              height: 1.45,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 0.15,
-            ),
-          ),
-          const SizedBox(height: 16),
-
-          if (done) ...[
-            // Sonuç göster
-            Row(
+          SizedBox(
+            height: 108 * s,
+            child: Stack(
               children: [
-                const Icon(Icons.check_circle_rounded,
-                    color: _cCorrect, size: 18),
-                const SizedBox(width: 8),
-                Text(
-                  'Tamamladın: ${myResult!.score}/$total doğru',
-                  style: const TextStyle(
-                      color: _cCorrect,
-                      fontWeight: FontWeight.w600),
+                Positioned(
+                  right: 4 * s,
+                  bottom: 0,
+                  width: 104 * s,
+                  height: 104 * s,
+                  child: Image.asset(
+                    'assets/home/card_haftalik.png',
+                    fit: BoxFit.contain,
+                    alignment: Alignment.bottomRight,
+                  ),
                 ),
-                const Spacer(),
-                Text(
-                  _formatMs(myResult!.totalMs),
-                  style: const TextStyle(color: _cMuted, fontSize: 12),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(16 * s, 18 * s, 100 * s, 12 * s),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Haftalık yarışma',
+                        style: FigmaHomeTypography.studyTitle(s * 1.05),
+                      ),
+                      SizedBox(height: 8 * s),
+                      Text(
+                        'Bakım bilgini diğer kullanıcılarla karşılaştır.',
+                        style: FigmaHomeTypography.studySubAccent(s),
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
-            const SizedBox(height: 8),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: LinearProgressIndicator(
-                value: myResult!.score / total,
-                minHeight: 8,
-                backgroundColor: const Color(0xFF253354),
-                valueColor:
-                    const AlwaysStoppedAnimation<Color>(_cCorrect),
-              ),
-            ),
-          ] else ...[
-            SizedBox(
-              width: double.infinity,
-              height: 46,
-              child: FilledButton.icon(
-                style: FilledButton.styleFrom(
-                  backgroundColor: _cCorrect,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12)),
-                ),
-                onPressed: onStart,
-                icon: const Icon(Icons.play_arrow_rounded,
-                    color: Colors.white),
-                label: const Text(
-                  'Yarışmaya Katıl',
+          ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(16 * s, 0, 16 * s, 16 * s),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  _remainingText(),
                   style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15,
+                    color: _cGold.withValues(alpha: 0.92),
+                    fontSize: 12 * s,
+                    fontWeight: FontWeight.w600,
                   ),
                 ),
-              ),
+                SizedBox(height: 12 * s),
+                if (done) ...[
+                  Row(
+                    children: [
+                      Icon(Icons.check_circle_rounded,
+                          color: _cCorrect, size: 18 * s),
+                      SizedBox(width: 8 * s),
+                      Expanded(
+                        child: Text(
+                          'Tamamladın: ${myResult!.score}/$total doğru',
+                          style: TextStyle(
+                            color: _cCorrect,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14 * s,
+                          ),
+                        ),
+                      ),
+                      Text(
+                        _formatMs(myResult!.totalMs),
+                        style: FigmaHomeTypography.studySubKonular(s),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10 * s),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(6),
+                    child: LinearProgressIndicator(
+                      value: total > 0 ? myResult!.score / total : 0,
+                      minHeight: 8,
+                      backgroundColor: Colors.white.withValues(alpha: 0.08),
+                      valueColor:
+                          const AlwaysStoppedAnimation<Color>(_cCorrect),
+                    ),
+                  ),
+                ] else
+                  SizedBox(
+                    width: double.infinity,
+                    child: FilledButton.icon(
+                      onPressed: onStart,
+                      icon: const Icon(Icons.play_arrow_rounded, size: 22),
+                      label: const Text('YARIŞMAYA KATIL'),
+                    ),
+                  ),
+              ],
             ),
-          ],
+          ),
         ],
       ),
     );
   }
 
   String _formatMs(int ms) {
-    final s = ms ~/ 1000;
-    final m = s ~/ 60;
-    final rs = s % 60;
-    return m > 0 ? '${m}dk ${rs}sn' : '${s}sn';
+    final sec = ms ~/ 1000;
+    final m = sec ~/ 60;
+    final rs = sec % 60;
+    return m > 0 ? '${m}dk ${rs}sn' : '${sec}sn';
   }
 }
 
@@ -694,6 +883,7 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
   bool    _answered   = false;
   String? _selected;
   bool    _finished   = false;
+  bool    _submitting = false;
 
   // Süre sayacı (soru başına 20 saniye)
   int    _secondsLeft = 20;
@@ -706,6 +896,43 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
   void initState() {
     super.initState();
     _startTimer();
+  }
+
+  Future<bool> _confirmLeave() async {
+    final leave = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: kBgCard,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Text(
+          'Sınavı bırak?',
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+        content: const Text(
+          'Çıkarsan mevcut doğru sayın kaydedilir, cevaplanmayan sorular yanlış sayılır ve bu hafta tekrar giremezsin.',
+          style: TextStyle(color: _cMuted, fontSize: 14, height: 1.4),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Devam et', style: TextStyle(color: _cMuted)),
+          ),
+          FilledButton(
+            style: FilledButton.styleFrom(backgroundColor: _cWrong),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Sınavı bitir'),
+          ),
+        ],
+      ),
+    );
+    return leave == true;
+  }
+
+  Future<void> _handleLeaveRequest() async {
+    if (_finished || _submitting) return;
+    final leave = await _confirmLeave();
+    if (!leave || !mounted) return;
+    await _finish(leftEarly: true);
   }
 
   void _startTimer() {
@@ -758,9 +985,17 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
     });
   }
 
-  Future<void> _finish() async {
+  Future<void> _finish({bool leftEarly = false}) async {
+    if (_finished || _submitting) return;
     _timer?.cancel();
-    setState(() => _finished = true);
+    setState(() {
+      _finished = true;
+      _submitting = true;
+    });
+
+    if (!_answered) {
+      _totalMs += DateTime.now().millisecondsSinceEpoch - _qStartMs;
+    }
 
     try {
       await ChallengeService.submitResult(
@@ -774,12 +1009,14 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
     } catch (_) {
       // Kayıt başarısız olsa bile sonuç ekranı gösterilsin.
     }
+    await _clearChallengeInProgress(widget.challenge.id);
 
     if (!mounted) return;
-    _showResult();
+    setState(() => _submitting = false);
+    _showResult(leftEarly: leftEarly);
   }
 
-  void _showResult() {
+  void _showResult({bool leftEarly = false}) {
     final total    = widget.questions.length;
     final accuracy = total > 0 ? _score / total : 0.0;
     final mins     = _totalMs ~/ 60000;
@@ -788,9 +1025,19 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
 
     Color color;
     String emoji;
-    if (accuracy >= 0.8) { color = _cCorrect; emoji = '🏆'; }
-    else if (accuracy >= 0.5) { color = _cGold;    emoji = '👍'; }
-    else { color = _cWrong;   emoji = '📚'; }
+    if (leftEarly) {
+      color = _cGold;
+      emoji = '⚠️';
+    } else if (accuracy >= 0.8) {
+      color = _cCorrect;
+      emoji = '🏆';
+    } else if (accuracy >= 0.5) {
+      color = _cGold;
+      emoji = '👍';
+    } else {
+      color = _cWrong;
+      emoji = '📚';
+    }
 
     showDialog(
       context: context,
@@ -800,7 +1047,7 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20)),
         title: Text(
-          '$emoji Pratik tamamlandı',
+          leftEarly ? '$emoji Sınav sonlandırıldı' : '$emoji Pratik tamamlandı',
           textAlign: TextAlign.center,
           style: TextStyle(
               color: color, fontSize: 22, fontWeight: FontWeight.bold),
@@ -818,9 +1065,9 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
               ),
               textAlign: TextAlign.center,
             ),
-            Text(
+            const Text(
               'doğru cevap',
-              style: const TextStyle(color: _cMuted, fontSize: 13),
+              style: TextStyle(color: _cMuted, fontSize: 13),
             ),
             const SizedBox(height: 12),
             Row(
@@ -837,9 +1084,11 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
               ],
             ),
             const SizedBox(height: 8),
-            const Text(
-              'Sonucun sıralamaya kaydedildi.',
-              style: TextStyle(color: _cMuted, fontSize: 12),
+            Text(
+              leftEarly
+                  ? 'Cevaplanmayan sorular yanlış sayıldı. Bu hafta tekrar giremezsin.'
+                  : 'Sonucun sıralamaya kaydedildi.',
+              style: const TextStyle(color: _cMuted, fontSize: 12),
               textAlign: TextAlign.center,
             ),
           ],
@@ -864,7 +1113,9 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
                 accuracy: accuracy,
                 submittedAt: DateTime.now(),
               );
-              await AppReviewService.tryShowAfterCompletion(context);
+              if (!leftEarly) {
+                await AppReviewService.tryShowAfterCompletion(context);
+              }
               if (context.mounted) Navigator.pop(context, result);
             },
             child: const Text(
@@ -894,12 +1145,23 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return PopScope(
+      canPop: false,
+      onPopInvokedWithResult: (didPop, _) async {
+        if (didPop || _finished || _submitting) return;
+        await _handleLeaveRequest();
+      },
+      child: Scaffold(
       backgroundColor: kBgDark,
       appBar: AppBar(
         backgroundColor: kBgCard,
         elevation: 0,
         automaticallyImplyLeading: false,
+        leading: IconButton(
+          icon: const Icon(Icons.close_rounded, color: _cMuted),
+          tooltip: 'Sınavı bırak',
+          onPressed: _finished || _submitting ? null : _handleLeaveRequest,
+        ),
         title: Row(
           children: [
             Expanded(
@@ -1068,6 +1330,7 @@ class _ChallengeExamScreenState extends State<ChallengeExamScreen> {
           ],
         ),
       ),
+    ),
     );
   }
 }

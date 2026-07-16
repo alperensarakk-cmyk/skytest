@@ -41,20 +41,27 @@ function loadQuestions() {
 async function uploadQuestions() {
   const questions = loadQuestions();
   const collectionRef = db.collection('sky_fight_challenges');
-  const batch = db.batch();
+  const BATCH_LIMIT = 400;
 
-  questions.forEach((q) => {
-    const docRef = collectionRef.doc(`q${q.id}`);
-    batch.set(docRef, {
-      type: q.type ?? 'terminology',
-      question: q.question,
-      options: q.options,
-      correct: q.correct,
-      difficulty: q.difficulty ?? 'easy',
+  for (let start = 0; start < questions.length; start += BATCH_LIMIT) {
+    const chunk = questions.slice(start, start + BATCH_LIMIT);
+    const batch = db.batch();
+    chunk.forEach((q) => {
+      const docRef = collectionRef.doc(`q${q.id}`);
+      batch.set(docRef, {
+        type: q.type ?? 'terminology',
+        question: q.question,
+        options: q.options,
+        correct: q.correct,
+        difficulty: q.difficulty ?? 'easy',
+      });
     });
-  });
+    await batch.commit();
+    console.log(
+      `✓ Yazıldı: q${chunk[0].id}..q${chunk[chunk.length - 1].id} (${chunk.length})`,
+    );
+  }
 
-  await batch.commit();
   console.log(`✅ ${questions.length} soru sky_fight_challenges koleksiyonuna yazıldı.`);
   process.exit(0);
 }

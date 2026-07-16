@@ -400,19 +400,6 @@ class _WordCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-            decoration: BoxDecoration(
-              color: _cWrong.withValues(alpha: 0.12),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: Text(kelime.modul,
-                style: const TextStyle(
-                    color: _cWrong,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w600)),
-          ),
-          const SizedBox(height: 16),
           Text(
             kelime.ingilizce,
             style: const TextStyle(

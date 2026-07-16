@@ -9,7 +9,7 @@ class ChallengeService {
 
   static const _questionsCol = 'sky_fight_challenges';
   static const _resultsCol   = 'challenge_results';
-  static const _kTotalQ      = 241; // Firestore q1..q241 (challenge havuzu)
+  static const _kTotalQ      = 400; // Firestore q1..q400 (challenge havuzu)
   static const _kDailyCount  = 10;
   static const _kWeeklyCount = 20;
 
@@ -332,9 +332,10 @@ class ChallengeService {
     return null;
   }
 
-  // ── Sonucu kaydet (doc ID sabit → tekrar oynayınca üzerine yazar) ─────────
+  // ── Sonucu kaydet (bir kez; mevcut kayıt varsa üzerine yazılmaz) ─────────
 
-  static Future<void> submitResult({
+  /// `true` = yeni kayıt yazıldı, `false` = zaten sonuç vardı.
+  static Future<bool> submitResult({
     required String challengeId,
     required String userId,
     required String pilotName,
@@ -342,10 +343,11 @@ class ChallengeService {
     required int totalQuestions,
     required int totalMs,
   }) async {
-    await _db
-        .collection(_resultsCol)
-        .doc(_docId(challengeId, userId))
-        .set({
+    final ref = _db.collection(_resultsCol).doc(_docId(challengeId, userId));
+    final existing = await ref.get();
+    if (existing.exists) return false;
+
+    await ref.set({
       'challengeId': challengeId,
       'userId': userId,
       'pilotName': pilotName,
@@ -355,6 +357,7 @@ class ChallengeService {
       'accuracy': totalQuestions > 0 ? score / totalQuestions : 0.0,
       'submittedAt': FieldValue.serverTimestamp(),
     });
+    return true;
   }
 
   // ── Önceki dönemin birincisi ──────────────────────────────────────────────

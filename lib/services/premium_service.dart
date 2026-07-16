@@ -75,6 +75,10 @@ class PremiumService {
     final p = await SharedPreferences.getInstance();
     final rc = p.getBool(_kPremiumCached) ?? false;
     final em = p.getString(_kSignedInEmail);
+    if (forceFreeTier) {
+      isPremiumNotifier.value = _isAdminEmail(em);
+      return;
+    }
     isPremiumNotifier.value =
         rc || isDeveloperMode || _isAdminEmail(em);
   }
