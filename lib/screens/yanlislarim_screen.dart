@@ -338,7 +338,7 @@ class _YanlislarimScreenState extends State<YanlislarimScreen> {
                 _SoruMetniVeyaYonlendirme(soru: _soru),
                 const SizedBox(height: 14),
 
-                ...['a', 'b', 'c', 'd'].map((k) {
+                ..._soru.secenekSirasi.map((k) {
                   final text = _soru.secenekler[k];
                   if (text == null) return const SizedBox.shrink();
                   return Padding(

@@ -249,7 +249,7 @@ class _KonuPratikScreenState extends State<KonuPratikScreen> {
                   const SizedBox(height: 16),
 
                   // ── Şıklar ────────────────────────────────────────────
-                  ...['a', 'b', 'c', 'd'].map((k) {
+                  ..._soru.secenekSirasi.map((k) {
                     final text = _soru.secenekler[k];
                     if (text == null) return const SizedBox.shrink();
                     return Padding(

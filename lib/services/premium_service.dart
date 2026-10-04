@@ -360,11 +360,11 @@ class PremiumService {
   }
 
   static Future<PurchaseOutcome> _executePurchase(
-    Future<CustomerInfo> Function() purchase,
+    Future<PurchaseResult> Function() purchase,
   ) async {
     try {
-      final info = await purchase();
-      await _applyCustomerInfo(info);
+      final result = await purchase();
+      await _applyCustomerInfo(result.customerInfo);
       return PurchaseOutcome.successStore;
     } on PlatformException catch (e, st) {
       if (PurchasesErrorHelper.getErrorCode(e) ==

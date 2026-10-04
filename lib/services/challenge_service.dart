@@ -3,14 +3,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/foundation.dart';
 import '../models/challenge.dart';
 import '../models/sky_fight_question.dart';
+import 'aviation_callsign_service.dart';
 
 class ChallengeService {
   static final _db = FirebaseFirestore.instance;
 
   static const _questionsCol = 'sky_fight_challenges';
-  static const _resultsCol   = 'challenge_results';
-  static const _kTotalQ      = 400; // Firestore q1..q400 (challenge havuzu)
-  static const _kDailyCount  = 10;
+  static const _resultsCol = 'challenge_results';
+  static const _kTotalQ = 400; // Firestore q1..q400 (challenge havuzu)
+  static const _kDailyCount = 10;
   static const _kWeeklyCount = 20;
 
   // ── Challenge ID üretimi (deterministic, sunucu gerekmez) ──────────────────
@@ -168,7 +169,7 @@ class ChallengeService {
   }
 
   static List<String> dailyQuestionIds([DateTime? date]) {
-    final d    = date ?? DateTime.now();
+    final d = date ?? DateTime.now();
     final seed = d.year * 10000 + d.month * 100 + d.day;
     return _pickQuestionIds(seed: seed, count: _kDailyCount);
   }
@@ -186,10 +187,22 @@ class ChallengeService {
   // ── Güncel challenge nesnesini oluştur ────────────────────────────────────
 
   static Challenge todayDaily() {
-    final now   = DateTime.now();
+    final now = DateTime.now();
     final today = DateTime(now.year, now.month, now.day);
-    final months = ['Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz',
-                    'Tem', 'Ağu', 'Eyl', 'Eki', 'Kas', 'Ara'];
+    final months = [
+      'Oca',
+      'Şub',
+      'Mar',
+      'Nis',
+      'May',
+      'Haz',
+      'Tem',
+      'Ağu',
+      'Eyl',
+      'Eki',
+      'Kas',
+      'Ara'
+    ];
     return Challenge(
       id: dailyChallengeId(now),
       type: 'daily',
@@ -201,9 +214,9 @@ class ChallengeService {
   }
 
   static Challenge thisWeekly() {
-    final now       = DateTime.now();
+    final now = DateTime.now();
     final weekStart = _mondayOfWeek(now);
-    final weekEnd   = weekStart.add(const Duration(days: 7));
+    final weekEnd = weekStart.add(const Duration(days: 7));
     return Challenge(
       id: weeklyChallengeId(now),
       type: 'weekly',
@@ -245,8 +258,8 @@ class ChallengeService {
         if (s.exists) {
           map[s.id] = SkyFightQuestion.fromFirestore(s.id, s.data()!)
               .withShuffledOptions(
-                seed: SkyFightQuestion.shuffleSeedForId(s.id),
-              );
+            seed: SkyFightQuestion.shuffleSeedForId(s.id),
+          );
         }
       }
       return map;
@@ -321,10 +334,8 @@ class ChallengeService {
     }
 
     for (final id in ids.toSet()) {
-      final snap = await _db
-          .collection(_resultsCol)
-          .doc(_docId(id, userId))
-          .get();
+      final snap =
+          await _db.collection(_resultsCol).doc(_docId(id, userId)).get();
       if (snap.exists) {
         return ChallengeResult.fromDoc(snap.id, snap.data()!);
       }
@@ -338,26 +349,27 @@ class ChallengeService {
   static Future<bool> submitResult({
     required String challengeId,
     required String userId,
-    required String pilotName,
     required int score,
     required int totalQuestions,
     required int totalMs,
   }) async {
     final ref = _db.collection(_resultsCol).doc(_docId(challengeId, userId));
-    final existing = await ref.get();
-    if (existing.exists) return false;
+    return _db.runTransaction<bool>((transaction) async {
+      final existing = await transaction.get(ref);
+      if (existing.exists) return false;
 
-    await ref.set({
-      'challengeId': challengeId,
-      'userId': userId,
-      'pilotName': pilotName,
-      'score': score,
-      'totalQuestions': totalQuestions,
-      'totalMs': totalMs,
-      'accuracy': totalQuestions > 0 ? score / totalQuestions : 0.0,
-      'submittedAt': FieldValue.serverTimestamp(),
+      transaction.set(ref, {
+        'challengeId': challengeId,
+        'userId': userId,
+        'pilotName': AviationCallsignService.fromUserId(userId),
+        'score': score,
+        'totalQuestions': totalQuestions,
+        'totalMs': totalMs,
+        'accuracy': totalQuestions > 0 ? score / totalQuestions : 0.0,
+        'submittedAt': FieldValue.serverTimestamp(),
+      });
+      return true;
     });
-    return true;
   }
 
   // ── Önceki dönemin birincisi ──────────────────────────────────────────────

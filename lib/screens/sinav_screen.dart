@@ -581,10 +581,10 @@ class _SinavScreenState extends State<SinavScreen> {
                     children: [
                       _buildQuestionCard(soru),
                       const SizedBox(height: 16),
-                      ...['a', 'b', 'c', 'd'].map(
+                      ...soru.secenekSirasi.map(
                         (k) => _buildOption(
                           label: k.toUpperCase(),
-                          text: soru.secenekler[k]!,
+                          text: soru.secenekler[k] ?? '',
                           isSelected: secili == k,
                           onTap: () => _selectOption(k),
                         ),

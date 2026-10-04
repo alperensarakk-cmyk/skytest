@@ -22,11 +22,28 @@ class SoruModel {
   /// Paragraf sorularında okunacak metin; boşsa gösterilmez.
   final String            paragraf;
   final String            soruMetni;
-  final Map<String,String> secenekler; // {'a': '...', 'b': '...', 'c': '...', 'd': '...'}
-  final String            dogruCevap;  // 'a' | 'b' | 'c' | 'd'
+  final Map<String,String> secenekler; // {'a'..'e': '...'}
+  final String            dogruCevap;  // 'a' | 'b' | 'c' | 'd' | 'e'
   final String            nedenDogru;
   final String            yanlislar;
   final String            tip;
+
+  static const List<String> secenekHarfSirasi = ['a', 'b', 'c', 'd', 'e'];
+
+  /// Dolu şıklar, sınav harf sırasıyla (A–E). Eksik harf atlanır.
+  List<String> get secenekSirasi {
+    final out = <String>[];
+    for (final k in secenekHarfSirasi) {
+      final text = secenekler[k];
+      if (text != null && text.trim().isNotEmpty) out.add(k);
+    }
+    if (out.isNotEmpty) return out;
+    final rest = secenekler.keys
+        .where((k) => (secenekler[k] ?? '').trim().isNotEmpty)
+        .toList()
+      ..sort();
+    return rest;
+  }
 
   /// Boşluk / satır sonu farklarını yok sayarak paragraf ile soru metni aynı mı.
   /// Aynıysa ekranda iki kez göstermemek için kullanılır.
