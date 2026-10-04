@@ -44,6 +44,7 @@ workflows:
 
       - name: Get Flutter packages
         script: |
+          flutter config --no-enable-swift-package-manager
           flutter pub get
 
       - name: Install CocoaPods dependencies
@@ -53,6 +54,7 @@ workflows:
       - name: Flutter build ipa
         script: |
           set -e
+          flutter config --no-enable-swift-package-manager
           flutter --version
           xcodebuild -version
           if [ -n "${APP_STORE_APPLE_ID:-}" ]; then
