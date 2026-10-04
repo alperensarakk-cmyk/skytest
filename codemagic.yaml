@@ -20,8 +20,8 @@ workflows:
     instance_type: mac_mini_m2
 
     integrations:
-      # Codemagic’te oluşturduğunuz App Store Connect API key’inin adı (ör. "AeroTest ASC").
-      app_store_connect: AeroTest ASC
+      # Codemagic Developer Portal entegrasyon adı (Integrations’daki key adı birebir aynı olmalı).
+      app_store_connect: AeroTest New 2
 
     environment:
       ios_signing:
